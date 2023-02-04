@@ -236,7 +236,6 @@ WordCallback = function(Response)
 	];
 	Words = arWords[Math.floor(Math.random() * arWords.length)];
 	Correct = Words[Math.floor(Math.random() * Words.length)];
-	console.log(Correct);
 	Words = Shuffle(Words);
 	FillWordColumns();
 }
