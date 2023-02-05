@@ -109,14 +109,6 @@ var gchars =
 	"/"
 ];
 
-Start = function()
-{
-	$.get("config.php", {
-		length: Difficulty,
-		count: Count
-	}, WordCallback);
-}
-
 window.onload = function()
 {
         var backgroundAudio = document.getElementById("bgAudio");
@@ -195,9 +187,13 @@ TogglePower = function()
 	}
 }
 
-JTypeFill = function(containerID, text, TypeSpeed, callback, TypeCharacter, Prefix)
+JTypeFill = function(containerID, text, TypeSpeed, callback = false, TypeCharacter, Prefix, Soundt = false)
 {
 	var cont = $("#" + containerID);
+	
+	if (Soundt) {
+		$('#soundt')[0].play();
+	}
 	
 	if (typeof TypeCharacter == 'undefined' || TypeCharacter == null)
 		TypeCharacter = "&#9608;";
@@ -217,25 +213,34 @@ JTypeFill = function(containerID, text, TypeSpeed, callback, TypeCharacter, Pref
 				var i = Math.round(i);
 				if (cont.text().substr(0, cont.text().length - 1 ) != insert)
 				{
-					if (Sound)
+					if (Sound && !Soundt) {
 						$("#audiostuff").find("audio").eq( Math.floor(Math.random() * $("#audiostuff").find("audio").length) )[0].play();
+					}
 				}
 				cont.html(insert + TypeCharacter);
 			},
-			complete: callback
+			complete: function() {
+				if (Soundt) {
+					$('#soundt')[0].pause();
+					$('#soundt')[0].currentTime = 0;
+				}
+				if (callback) {
+					callback();
+				}
+			}
 		}
 	);
 }
 
 WordCallback = function(Response)
 {
-	// Words = JSON.parse(Response).words;
 	const arWords = [
 		["STACKED","LARGEST","DEPARTS","CONTROL","ARMORED","PROTECT","JUNGLES","RUMBLES","TAUNTED","PRECISE","FACTION","DESPIRE"],
 		["GUARDED","ANDROID","PLAGUED","SHADOWS","WARRING","VIRTUAL","RAIDERS","STAYING","NOURISH","POISONS","FIGHTER","EXPLOSED"],
 	];
 	Words = arWords[Math.floor(Math.random() * arWords.length)];
 	Correct = Words[Math.floor(Math.random() * Words.length)];
+	// console.log(Correct);
 	Words = Shuffle(Words);
 	FillWordColumns();
 }
@@ -454,7 +459,7 @@ Failure = function()
 			complete : function()
 			{
 				$("#terminal").html("<div id='terminal-interior'><div id='overlay'></div><div id='adminalert'></div></div>");
-				JTypeFill("adminalert", "ТЕРМИНАЛ ЗАБЛОКИРОВАН <br />ПОЖАЛУЙСТА, СВЯЖИТЕСЬ С АДМИНИСТРАТОРОМ", 20, "", "", "");
+				JTypeFill("adminalert", "ТЕРМИНАЛ ЗАБЛОКИРОВАН <br />ПОЖАЛУЙСТА, СВЯЖИТЕСЬ С АДМИНИСТРАТОРОМ", 20, "", "", "", true);
 			}
 		});
 	}, 1500);
@@ -469,8 +474,9 @@ Success = function(delay = 1500)
 			С Днем Рождения Саша! 
 			<br /> 
 			Команда 4tochki(TM) поздравляет тебя с днем рождения!
-			`, 15, "", "", "");
-		hbdReturn();
+			`, 15, function(){
+				hbdReturn();
+			}, "", "", true);
 	}, delay);
 }
 
@@ -488,7 +494,7 @@ hbd = function(name)
 				<br />
 				<br />
 				<d onclick="hbdReturn();">[Назад]</d>
-				`, 15, "", "", "");
+				`, 15, "", "", "", true);
 			break;
 		case 'a':
 			JTypeFill("hbd-info", `
@@ -501,7 +507,7 @@ hbd = function(name)
 				<br />
 				<br />
 				<d onclick="hbdReturn();">[Назад]</d>
-				`, 15, "", "", "");
+				`, 15, "", "", "", true);
 			break;
 		case 'm':
 			JTypeFill("hbd-info", `
@@ -514,7 +520,7 @@ hbd = function(name)
 				<br />
 				<br />
 				<d onclick="hbdReturn();">[Назад]</d>
-				`, 15, "", "", "");
+				`, 15, "", "", "", true);
 			break;
 		case 'i':
 			JTypeFill("hbd-info", `
@@ -527,7 +533,7 @@ hbd = function(name)
 				<br />
 				<br />
 				<d onclick="hbdReturn();">[Назад]</d>
-				`, 15, "", "", "");
+				`, 15, "", "", "", true);
 			break;
 		case 'd':
 			JTypeFill("hbd-info", `
@@ -540,21 +546,26 @@ hbd = function(name)
 				<br />
 				<br />
 				<d onclick="hbdReturn();">[Назад]</d>
-				`, 15, "", "", "");
+				`, 15, "", "", "", true);
+			break;
+		case 'p':
+			JTypeFill("hbd-info", `
+				Информация о подарке:
+				<br /> 
+				<br /> 
+				ВЕС: 2.25кг
+				<br /> 
+				РАЗМЕРЫ: 30х30х30 см.
+				<br /> 
+				ДАТА ДОСТАВКИ: 08.02.2023
+				<br /> 
+				ВРЕМЯ ДОСТАВКИ: 10:00 - 23:00
+				<br />
+				<br />
+				<d onclick="hbdReturn();">[Назад]</d>
+				`, 15, "", "", "", true);
 			break;
 	}
-	// $("#terminal").html('<div id="terminal-interior"><div id="overlay"></div><div id="hbd-top"><div id="hbd-info"></div></div>');
-	// JTypeFill("hbd-info", `
-	// 	С Днем Рождения Саша! 
-	// 	<br /> 
-	// 	Желаю тебе счастья и здоровья!
-	// 	<br /> 
-	// 	<br /> 
-	// 	/// ВАСЯ
-	// 	<br />
-	// 	<br />
-	// 	<div class="hw" onclick="hbdReturn();">[Назад]</div>
-	// 	`, 15, "", "", "");
 }
 
 hbdReturn = function() {
@@ -564,7 +575,8 @@ hbdReturn = function() {
 			<d onclick="hbd('m')">[Поздравление от Максима]</d>
 			<d onclick="hbd('i')">[Поздравление от Вани]</d>
 			<d onclick="hbd('d')">[Поздравление от Дани]</d>
-		`, 15, "", "", "");
+			<d onclick="hbd('p')">[Информация о подарке]</d>
+		`, 15, "", "", "", true);
 }
 
 CompareWords = function(first, second)
