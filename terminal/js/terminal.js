@@ -485,7 +485,7 @@ hbd = function(name)
 	switch (name){
 		case 'v': 
 			JTypeFill("hbd-info", `
-				<img src="/graphics/v.jpg" width="300" height="157">
+				<img src="./graphics/v.jpg" width="300" height="157">
 				<br /> 
 				«Буду краток: С днём рождения!»
 				<br /> 
