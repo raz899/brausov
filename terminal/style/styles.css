@@ -143,6 +143,10 @@ body
 	margin-top: 25px;
 }
 
+#hbd-info a {
+	color: #33dd88;
+}
+
 #attempts
 {
 	width: 80%;
