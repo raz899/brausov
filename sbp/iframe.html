@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        window.addEventListener("message", callback, false); // init outside iframe
+        function callback (event) {
+            useData(event.data);
+            document.location = "myapp://someUrl"; // opening my app
+        }
+    </script>
 </head>
 <body style="
     width: 100vw;
@@ -12,8 +19,6 @@
     margin: 0;
 ">
     <iframe src="https://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&bank=100000000008&sum=100&cur=RUB&crc=18A9"
-            sandbox="allow -script"
-            name="main"
             width="100%"
             height="100%"
             scrolling="auto">
