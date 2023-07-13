@@ -1,0 +1,1138 @@
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width" name="MobileOptimized">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+
+    <title>Система быстрых платежей - Оплата по QR коду</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css?v1">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Yandex.Metrika counter -->
+    <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(86422051, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/86422051" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body class="loading is-mobile loaded">
+    <div class="preloader"></div>
+
+    <div class="main main--no-summ">
+        <header class="page-header" style="top: -75px;">
+            <div class="logo-sbp">
+                <img src="img/logo.svg" alt="СБП Системы Быстрых Платежей">
+            </div>
+            <div class="link">
+                <a href="https://sbp.nspk.ru/">sbp.nspk.ru</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="content__mobile">
+                <section class="info-sum">
+                    <div class="info-sum__text-sum">Сумма</div>
+                    <div class="info-sum__sum">0</div><span
+                        class="info-sum__rub">&nbsp;₽</span><!--&nbsp;₽&#8381; или &#x20bd;-->
+                    <div class="anistripe">
+                        <div class="i1"></div>
+                        <div class="i2"></div>
+                        <div class="i3"></div>
+                        <div class="i4"></div>
+                        <div class="i5"></div>
+                        <div class="i6"></div>
+                        <div class="i7"></div>
+                        <div class="i8"></div>
+                        <div class="i1"></div>
+                    </div>
+                    <div class="info-sum__text">Выберите банковское приложение и&nbsp;подтвердите&nbsp;оплату</div>
+                </section>
+
+                <section class="info-sum info-sum--no-sum">
+                    <div class="info-sum__title">Выберите</div>
+                    <div class="info-sum__text">банковское приложение и&nbsp;подтвердите&nbsp;оплату</div>
+                </section>
+
+                <section class="banks">
+                    <div class="banks__search">
+                        <input type="text" placeholder="Поиск" id="bank-search">
+                    </div>
+
+                    <div class="banks__title">Все банки</div>
+
+                    <div class="banks__list-wrap" style="top: 430px;">
+                        <div class="banks__list banks__list--square">
+                            <div class="banks__list-inner" id="banks-list">
+
+                                <a
+                                    href="bank100000000004://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000004.png"></div>
+                                    <span>Тинькофф Банк</span>
+                                </a><a
+                                    href="bank110000000005://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000005.png"></div><span>Банк
+                                        ВТБ</span>
+                                </a><a
+                                    href="bank100000000027://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000027.png"></div>
+                                    <span>Кредит Европа Банк (Россия)</span>
+                                </a><a
+                                    href="bank100000000049://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000049.png"></div><span>Банк
+                                        ВБРР</span>
+                                </a><a
+                                    href="bank100000000003://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000003.png"></div><span>Банк
+                                        Синара</span>
+                                </a><a
+                                    href="bank100000000111://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000111.png"></div>
+                                    <span>Сбербанк</span>
+                                </a><a
+                                    href="bank100000000008://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000008.png"></div>
+                                    <span>АЛЬФА-БАНК</span>
+                                </a><a
+                                    href="bank100000000007://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000007.png"></div>
+                                    <span>Райффайзенбанк</span>
+                                </a><a
+                                    href="bank100000000015://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000015.png"></div><span>Банк
+                                        ОТКРЫТИЕ</span>
+                                </a><a
+                                    href="bank100000000001://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000001.png"></div>
+                                    <span>Газпромбанк</span>
+                                </a><a
+                                    href="bank100000000010://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000010.png"></div>
+                                    <span>Промсвязьбанк</span>
+                                </a><a
+                                    href="bank100000000013://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000013.png"></div>
+                                    <span>Совкомбанк</span>
+                                </a><a
+                                    href="bank100000000012://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000012.png"></div>
+                                    <span>РОСБАНК</span>
+                                </a><a
+                                    href="bank100000000020://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000020.png"></div>
+                                    <span>Россельхозбанк</span>
+                                </a><a
+                                    href="bank100000000025://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000025.png"></div>
+                                    <span>МОСКОВСКИЙ КРЕДИТНЫЙ БАНК</span>
+                                </a><a
+                                    href="bank100000000030://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000030.png"></div>
+                                    <span>ЮниКредит Банк</span>
+                                </a><a
+                                    href="bank100000000043://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000043.png"></div>
+                                    <span>Газэнергобанк</span>
+                                </a><a
+                                    href="bank100000000028://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000028.png"></div><span>АКБ
+                                        АВАНГАРД</span>
+                                </a><a
+                                    href="bank100000000086://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000086.png"></div><span>ПНКО
+                                        ЭЛПЛАТ</span>
+                                </a><a
+                                    href="bank100000000011://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000011.png"></div><span>РНКБ
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000044://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000044.png"></div>
+                                    <span>Экспобанк</span>
+                                </a><a
+                                    href="bank100000000095://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000095.png"></div><span>АБ
+                                        РОССИЯ</span>
+                                </a><a
+                                    href="bank100000000900://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000900.png"></div><span>ДБО
+                                        Фактура</span>
+                                </a><a
+                                    href="bank100000000056://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000056.png"></div><span>КБ
+                                        Хлынов</span>
+                                </a><a
+                                    href="bank100000000053://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000053.png"></div>
+                                    <span>Бланк банк</span>
+                                </a><a
+                                    href="bank100000000121://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000121.png"></div><span>КБ
+                                        Солидарность</span>
+                                </a><a
+                                    href="bank100000000082://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000082.png"></div><span>Банк
+                                        ДОМ.РФ</span>
+                                </a><a
+                                    href="bank100000000127://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000127.png"></div>
+                                    <span>Хакасский муниципальный банк</span>
+                                </a><a
+                                    href="bank100000000017://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000017.png"></div>
+                                    <span>МТС-Банк</span>
+                                </a><a
+                                    href="bank100000000087://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000087.png"></div><span>Банк
+                                        ПСКБ</span>
+                                </a><a
+                                    href="bank100000000052://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000052.png"></div><span>Банк
+                                        Левобережный</span>
+                                </a><a
+                                    href="bank100000000006://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000006.png"></div><span>АК
+                                        БАРС БАНК</span>
+                                </a><a
+                                    href="bank100000000098://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000098.png"></div><span>КБ
+                                        РостФинанс</span>
+                                </a><a
+                                    href="bank100000000092://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000092.png"></div>
+                                    <span>БыстроБанк</span>
+                                </a><a
+                                    href="bank100000000229://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000229.png"></div><span>МС
+                                        Банк Рус</span>
+                                </a><a
+                                    href="bank100000000080://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000080.png"></div><span>АКБ
+                                        Алмазэргиэнбанк</span>
+                                </a><a
+                                    href="bank100000000122://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000122.png"></div><span>ИК
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000124://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000124.png"></div><span>БАНК
+                                        ОРЕНБУРГ</span>
+                                </a><a
+                                    href="bank100000000118://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000118.png"></div><span>КБ
+                                        АГРОПРОМКРЕДИТ</span>
+                                </a><a
+                                    href="bank100000000159://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000159.png"></div><span>АКБ
+                                        Энергобанк</span>
+                                </a><a
+                                    href="bank100000000146://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000146.png"></div>
+                                    <span>КОШЕЛЕВ-БАНК</span>
+                                </a><a
+                                    href="bank100000000069://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000069.png"></div>
+                                    <span>СДМ-Банк</span>
+                                </a><a
+                                    href="bank100000000140://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000140.png"></div><span>МБ
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000047://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000047.png"></div><span>АКБ
+                                        Абсолют Банк</span>
+                                </a><a
+                                    href="bank100000000099://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000099.png"></div><span>КБ
+                                        Модульбанк</span>
+                                </a><a
+                                    href="bank100000000135://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000135.png"></div><span>Банк
+                                        Акцепт</span>
+                                </a><a
+                                    href="bank100000000139://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000139.png"></div><span>КБ
+                                        ЭНЕРГОТРАНСБАНК</span>
+                                </a><a
+                                    href="bank100000000166://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000166.png"></div>
+                                    <span>СИБСОЦБАНК</span>
+                                </a><a
+                                    href="bank100000000172://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000172.png"></div><span>Банк
+                                        Развитие-Столица</span>
+                                </a><a
+                                    href="bank100000000187://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000187.png"></div><span>Банк
+                                        РЕСО Кредит</span>
+                                </a><a
+                                    href="bank100000000022://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000022.png"></div><span>НКО
+                                        ЮМани</span>
+                                </a><a
+                                    href="bank100000000029://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000029.png"></div><span>Банк
+                                        Санкт-Петербург</span>
+                                </a><a
+                                    href="bank100000000050://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000050.png"></div><span>КБ
+                                        Кубань Кредит</span>
+                                </a><a
+                                    href="bank100000000065://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000065.png"></div>
+                                    <span>Точка ФК Открытие</span>
+                                </a><a
+                                    href="bank100000000177://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000177.png"></div><span>АКБ
+                                        НОВИКОМБАНК</span>
+                                </a><a
+                                    href="bank100000000084://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000084.png"></div>
+                                    <span>РосДорБанк</span>
+                                </a><a
+                                    href="bank100000000088://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000088.png"></div><span>СКБ
+                                        Приморья Примсоцбанк</span>
+                                </a><a
+                                    href="bank100000000126://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000126.png"></div><span>Банк
+                                        Саратов</span>
+                                </a><a
+                                    href="bank100000000173://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000173.png"></div>
+                                    <span>Таврический Банк</span>
+                                </a><a
+                                    href="bank100000000152://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000152.png"></div>
+                                    <span>Тольяттихимбанк</span>
+                                </a><a
+                                    href="bank100000000201://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000201.png"></div><span>Банк
+                                        Кремлевский</span>
+                                </a><a
+                                    href="bank100000000034://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000034.png"></div><span>ТКБ
+                                        БАНК</span>
+                                </a><a
+                                    href="bank100000000094://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000094.png"></div>
+                                    <span>ЧЕЛЯБИНВЕСТБАНК</span>
+                                </a><a
+                                    href="bank100000000235://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000235.png"></div><span>АКБ
+                                        Держава</span>
+                                </a><a
+                                    href="bank100000000134://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000134.png"></div>
+                                    <span>НБД-Банк</span>
+                                </a><a
+                                    href="bank100000000091://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000091.png"></div><span>БАНК
+                                        СНГБ</span>
+                                </a><a
+                                    href="bank100000000258://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000258.png"></div><span>АИКБ
+                                        Енисейский объединенный банк</span>
+                                </a><a
+                                    href="bank100000000153://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000153.png"></div><span>Банк
+                                        Венец</span>
+                                </a><a
+                                    href="bank100000000016://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000016.png"></div>
+                                    <span>Почта Банк</span>
+                                </a><a
+                                    href="bank100000000014://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000014.png"></div><span>Банк
+                                        Русский Стандарт</span>
+                                </a><a
+                                    href="bank100000000083://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000083.png"></div>
+                                    <span>Дальневосточный банк</span>
+                                </a><a
+                                    href="bank100000000170://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000170.png"></div><span>Банк
+                                        Интеза</span>
+                                </a><a
+                                    href="bank100000000037://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000037.png"></div>
+                                    <span>ГЕНБАНК</span>
+                                </a><a
+                                    href="bank100000000215://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000215.png"></div>
+                                    <span>ВУЗ-банк</span>
+                                </a><a
+                                    href="bank100000000142://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000142.png"></div>
+                                    <span>УРАЛПРОМБАНК</span>
+                                </a><a
+                                    href="bank100000000243://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000243.png"></div><span>Банк
+                                        Национальный стандарт</span>
+                                </a><a
+                                    href="bank100000000090://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000090.png"></div><span>Банк
+                                        Екатеринбург</span>
+                                </a><a
+                                    href="bank100000000171://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000171.png"></div>
+                                    <span>МОРСКОЙ БАНК</span>
+                                </a><a
+                                    href="bank100000000064://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000064.png"></div>
+                                    <span>Кредит Урал Банк</span>
+                                </a><a
+                                    href="bank100000000093://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000093.png"></div>
+                                    <span>Углеметбанк</span>
+                                </a><a
+                                    href="bank100000000253://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000253.png"></div><span>РН
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000193://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000193.png"></div><span>КБ
+                                        СТРОЙЛЕСБАНК</span>
+                                </a><a
+                                    href="bank100000000158://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000158.png"></div><span>Банк
+                                        ИТУРУП</span>
+                                </a><a
+                                    href="bank100000000174://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000174.png"></div>
+                                    <span>Первый Инвестиционный Банк</span>
+                                </a><a
+                                    href="bank100000000183://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000183.png"></div>
+                                    <span>Газтрансбанк</span>
+                                </a><a
+                                    href="bank100000000106://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000106.png"></div>
+                                    <span>ЧЕЛИНДБАНК</span>
+                                </a><a
+                                    href="bank100000000115://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000115.png"></div>
+                                    <span>НИКО-БАНК</span>
+                                </a><a
+                                    href="bank100000000062://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000062.png"></div>
+                                    <span>НОКССБАНК</span>
+                                </a><a
+                                    href="bank100000000058://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000058.png"></div>
+                                    <span>ВЛАДБИЗНЕСБАНК</span>
+                                </a><a
+                                    href="bank100000000195://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000195.png"></div>
+                                    <span>Кузнецкбизнесбанк</span>
+                                </a><a
+                                    href="bank100000000130://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000130.png"></div>
+                                    <span>Автоградбанк</span>
+                                </a><a
+                                    href="bank100000000206://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000206.png"></div>
+                                    <span>Томскпромстройбанк</span>
+                                </a><a
+                                    href="bank100000000203://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000203.png"></div><span>АКБ
+                                        МЕЖДУНАРОДНЫЙ ФИНАНСОВЫЙ КЛУБ</span>
+                                </a><a
+                                    href="bank100000000081://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000081.png"></div><span>АКБ
+                                        Форштадт</span>
+                                </a><a
+                                    href="bank100000000230://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000230.png"></div><span>АКБ
+                                        Солид</span>
+                                </a><a
+                                    href="bank100000000211://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000211.png"></div><span>Банк
+                                        АЛЕКСАНДРОВСКИЙ</span>
+                                </a><a
+                                    href="bank100000000107://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000107.png"></div>
+                                    <span>АКИБАНК</span>
+                                </a><a
+                                    href="bank100000000185://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000185.png"></div>
+                                    <span>Нацинвестпромбанк</span>
+                                </a><a
+                                    href="bank100000000113://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000113.png"></div><span>АКБ
+                                        Алеф-Банк</span>
+                                </a><a
+                                    href="bank100000000248://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000248.png"></div><span>КБ
+                                        ВНЕШФИНБАНК</span>
+                                </a><a
+                                    href="bank100000000151://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000151.png"></div><span>КБ
+                                        Урал ФД</span>
+                                </a><a
+                                    href="bank100000000129://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000129.png"></div><span>КБ
+                                        АРЕСБАНК</span>
+                                </a><a
+                                    href="bank100000000208://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000208.png"></div>
+                                    <span>Северный Народный Банк</span>
+                                </a><a
+                                    href="bank100000000182://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000182.png"></div><span>Банк
+                                        Объединенный капитал</span>
+                                </a><a
+                                    href="bank100000000189://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000189.png"></div>
+                                    <span>ТАТСОЦБАНК</span>
+                                </a><a
+                                    href="bank100000000202://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000202.png"></div>
+                                    <span>Норвик Банк</span>
+                                </a><a
+                                    href="bank100000000213://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000213.png"></div><span>Джей
+                                        энд Ти Банк</span>
+                                </a><a
+                                    href="bank100000000071://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000071.png"></div><span>НС
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000066://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000066.png"></div>
+                                    <span>Земский банк</span>
+                                </a><a
+                                    href="bank100000000154://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000154.png"></div><span>Банк
+                                        Аверс</span>
+                                </a><a
+                                    href="bank100000000194://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000194.png"></div><span>КБ
+                                        РУСНАРБАНК</span>
+                                </a><a
+                                    href="bank100000000232://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000232.png"></div>
+                                    <span>РЕАЛИСТ БАНК</span>
+                                </a><a
+                                    href="bank100000000105://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000105.png"></div>
+                                    <span>Эс-Би-Ай Банк</span>
+                                </a><a
+                                    href="bank100000000136://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000136.png"></div>
+                                    <span>МЕТКОМБАНК</span>
+                                </a><a
+                                    href="bank100000000191://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000191.png"></div><span>КБЭР
+                                        Банк Казани</span>
+                                </a><a
+                                    href="bank100000000197://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000197.png"></div><span>АКБ
+                                        Трансстройбанк</span>
+                                </a><a
+                                    href="bank100000000205://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000205.png"></div><span>Банк
+                                        Заречье</span>
+                                </a><a
+                                    href="bank100000000059://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000059.png"></div><span>КБ
+                                        Центр-инвест</span>
+                                </a><a
+                                    href="bank100000000070://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000070.png"></div>
+                                    <span>Датабанк</span>
+                                </a><a
+                                    href="bank100000000112://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000112.png"></div><span>КБ
+                                        Гарант-Инвест</span>
+                                </a><a
+                                    href="bank100000000223://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000223.png"></div>
+                                    <span>СОЦИУМ-БАНК</span>
+                                </a><a
+                                    href="bank100000000148://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000148.png"></div><span>КБ
+                                        СИНКО-БАНК</span>
+                                </a><a
+                                    href="bank100000000199://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000199.png"></div>
+                                    <span>ИШБАНК</span>
+                                </a><a
+                                    href="bank100000000045://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000045.png"></div><span>Банк
+                                        ЗЕНИТ</span>
+                                </a><a
+                                    href="bank100000000217://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000217.png"></div><span>АКБ
+                                        ФОРА-БАНК</span>
+                                </a><a
+                                    href="bank100000000169://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000169.png"></div><span>МП
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000227://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000227.png"></div><span>Банк
+                                        БКФ</span>
+                                </a><a
+                                    href="bank100000000125://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000125.png"></div>
+                                    <span>ГОРБАНК</span>
+                                </a><a
+                                    href="bank100000000176://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000176.png"></div>
+                                    <span>МОСКОМБАНК</span>
+                                </a><a
+                                    href="bank100000000144://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000144.png"></div>
+                                    <span>Тимер Банк</span>
+                                </a><a
+                                    href="bank100000000221://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000221.png"></div>
+                                    <span>МОСОБЛБАНК</span>
+                                </a><a
+                                    href="bank100000000128://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000128.png"></div><span>КБ
+                                        Ситибанк</span>
+                                </a><a
+                                    href="bank100000000181://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000181.png"></div>
+                                    <span>Автоторгбанк</span>
+                                </a><a
+                                    href="bank100000000009://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000009.png"></div><span>КИВИ
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000026://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000026.png"></div><span>БАНК
+                                        УРАЛСИБ</span>
+                                </a><a
+                                    href="bank100000000078://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000078.png"></div><span>Банк
+                                        СОЮЗ</span>
+                                </a><a
+                                    href="bank100000000165://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000165.png"></div>
+                                    <span>Русьуниверсалбанк</span>
+                                </a><a
+                                    href="bank100000000031://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000031.png"></div><span>КБ
+                                        УБРиР</span>
+                                </a><a
+                                    href="bank100000000226://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000226.png"></div><span>АКБ
+                                        Приморье</span>
+                                </a><a
+                                    href="bank100000000236://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000236.png"></div><span>Банк
+                                        ИПБ</span>
+                                </a><a
+                                    href="bank100000000103://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000103.png"></div><span>КБ
+                                        Пойдём!</span>
+                                </a><a
+                                    href="bank100000000175://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000175.png"></div><span>АКБ
+                                        ТЕНДЕР-БАНК</span>
+                                </a><a
+                                    href="bank100000000018://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000018.png"></div><span>ОТП
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000212://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000212.png"></div><span>КБ
+                                        Крокус-Банк</span>
+                                </a><a
+                                    href="bank100000000024://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000024.png"></div><span>Хоум
+                                        кредит</span>
+                                </a><a
+                                    href="bank100000000032://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000032.png"></div><span>КБ
+                                        Ренессанс Кредит</span>
+                                </a><a
+                                    href="bank100000000225://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000225.png"></div><span>УКБ
+                                        Белгородсоцбанк</span>
+                                </a><a
+                                    href="bank100000000272://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000272.png"></div><span>Хайс
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000219://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000219.png"></div>
+                                    <span>Севергазбанк</span>
+                                </a><a
+                                    href="bank100000000184://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000184.png"></div><span>АКБ
+                                        НРБанк</span>
+                                </a><a
+                                    href="bank100000000110://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000110.png"></div><span>КБ
+                                        Москоммерцбанк</span>
+                                </a><a
+                                    href="bank100000000180://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000180.png"></div>
+                                    <span>Кубаньторгбанк</span>
+                                </a><a
+                                    href="bank100000000222://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000222.png"></div><span>УКБ
+                                        Новобанк</span>
+                                </a><a
+                                    href="bank100000000036://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000036.png"></div><span>СМП
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000233://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000233.png"></div><span>НК
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000138://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000138.png"></div>
+                                    <span>Тойота Банк</span>
+                                </a><a
+                                    href="bank100000000133://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000133.png"></div><span>ББР
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000245://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000245.png"></div><span>АКБ
+                                        Ланта-Банк</span>
+                                </a><a
+                                    href="bank100000000270://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000270.png"></div><span>КБ
+                                        Долинск</span>
+                                </a><a
+                                    href="bank100000000216://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000216.png"></div><span>Банк
+                                        Финсервис</span>
+                                </a><a
+                                    href="bank100000000042://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000042.png"></div><span>КБ
+                                        ЮНИСТРИМ</span>
+                                </a><a
+                                    href="bank100000000067://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000067.png"></div><span>КБ
+                                        Новый век</span>
+                                </a><a
+                                    href="bank100000000192://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000192.png"></div><span>Банк
+                                        МБА-МОСКВА</span>
+                                </a><a
+                                    href="bank100000000041://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000041.png"></div><span>БКС
+                                        Банк</span>
+                                </a><a
+                                    href="bank100000000200://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000200.png"></div><span>АКБ
+                                        СЛАВИЯ</span>
+                                </a><a
+                                    href="bank100000000167://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000167.png"></div><span>АКБ
+                                        ЕВРОФИНАНС МОСНАРБАНК</span>
+                                </a><a
+                                    href="bank100000000150://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000150.png"></div>
+                                    <span>Яндекс Банк</span>
+                                </a><a
+                                    href="bank100000000260://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000260.png"></div><span>Банк
+                                        БЖФ</span>
+                                </a><a
+                                    href="bank100000000161://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000161.png"></div><span>КБ
+                                        ЛОКО-Банк</span>
+                                </a><a
+                                    href="bank100000000234://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000234.png"></div><span>БАНК
+                                        МОСКВА-СИТИ</span>
+                                </a><a
+                                    href="bank100000000250://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000250.png"></div>
+                                    <span>Драйв Клик Банк</span>
+                                </a><a
+                                    href="bank100000000149://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000149.png"></div>
+                                    <span>ГУТА-БАНК</span>
+                                </a><a
+                                    href="bank100000000278://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000278.png"></div><span>БАНК
+                                        СИАБ</span>
+                                </a><a
+                                    href="bank100000000247://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000247.png"></div><span>банк
+                                        Раунд</span>
+                                </a><a
+                                    href="bank100000000228://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000228.png"></div>
+                                    <span>Прио-Внешторгбанк</span>
+                                </a><a
+                                    href="bank100000000196://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000196.png"></div>
+                                    <span>Инбанк</span>
+                                </a><a
+                                    href="bank100000000096://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000096.png"></div>
+                                    <span>Уралфинанс</span>
+                                </a><a
+                                    href="bank100000000102://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000102.png"></div><span>Банк
+                                        Агророс</span>
+                                </a><a
+                                    href="bank100000000160://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000160.png"></div>
+                                    <span>ЮГ-Инвестбанк</span>
+                                </a><a
+                                    href="bank100000000231://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000231.png"></div>
+                                    <span>ЦентроКредит</span>
+                                </a><a
+                                    href="bank100000000163://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000163.png"></div>
+                                    <span>Снежинский</span>
+                                </a><a
+                                    href="bank100000000040://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000040.png"></div><span>Банк
+                                        ФИНАМ</span>
+                                </a><a
+                                    href="bank100000000284://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000284.png"></div><span>Банк
+                                        Точка</span>
+                                </a><a
+                                    href="bank100000000266://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000266.png"></div><span>банк
+                                        Элита</span>
+                                </a><a
+                                    href="bank100000000046://qr.nspk.ru/AD10000KTNN8CREK9DM8R68SD93GGE80?type=02&amp;bank=100000000008&amp;sum=100&amp;cur=RUB&amp;crc=18A9">
+                                    <div class="banks__list-item-img"><img
+                                            src="https://qr.nspk.ru/proxyapp/logo/bank100000000046.png"></div>
+                                    <span>Металлинвестбанк</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="content__desktop" style="top: 100px;">
+                <section class="qr">
+                    <div class="qr__wrap"></div>
+                    <div class="qr__sum">
+                        <div class="qr__sum-row">
+                            <div class="qr__sum-text-sum">Сумма</div>
+                            <div class="qr__sum-sum">0</div><span class="qr__sum-rub">&nbsp;₽</span>
+                        </div>
+                        <div class="qr__sum-text">
+                            Для оплаты отсканируйте QR-код в&nbsp;мобильном приложении банка или штатной камерой
+                            телефона
+                        </div>
+                    </div>
+
+                    <div class="qr__sum qr__sum--no-sum">
+                        <div class="font90">Для оплаты</div>
+                        <div class="qr__sum-text">отсканируйте QR-код в&nbsp;мобильном приложении банка или штатной
+                            камерой телефона</div>
+                    </div>
+                </section>
+
+                <section class="faq" style="display:none;">
+                    <input type="checkbox" id="faq-tab-main">
+                    <label for="faq-tab-main" class="tab-label">Появились вопросы загляни сюда</label>
+                    <div class="tab-container">
+                        <input type="checkbox" name="faq-tab" id="faq-tab__tab-1" class="tab">
+                        <label for="faq-tab__tab-1">Как удалить настройки по&nbsp;умолчанию
+                            на&nbsp;ОС&nbsp;Android?</label>
+                        <div>
+                            <div>
+                                <p>Если вы&nbsp;установили мобильное приложение банка или браузер для открытия ссылок
+                                    СБП по&nbsp;умолчанию
+                                    и&nbsp;хотите сбросить выбор, то&nbsp;выполните следующие шаги:
+                                </p>
+                                <ol>
+                                    <li>Зайдите в&nbsp;меню «Настройки» на&nbsp;телефоне;</li>
+                                    <li>Выберите пункт «Приложения и&nbsp;уведомления»;</li>
+                                    <li>Выберите мобильное приложение банка или браузер;</li>
+                                    <li>Выберите пункт «Открывать по&nbsp;умолчанию»;</li>
+                                    <li>Нажмите на&nbsp;кнопку «Удалить настройки по&nbsp;умолчанию»;</li>
+                                </ol>
+                                <p>После выполнения этих шагов, при попытке открыть ссылку СБП на&nbsp;оплату вам будет
+                                    предложен список мобильных приложений банков, установленных на&nbsp;телефоне
+                                    и&nbsp;браузер.</p>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" name="faq-tab" id="faq-tab__tab-2">
+                        <label for="faq-tab__tab-2">А&nbsp;если у&nbsp;меня Xiaomi?</label>
+                        <div>
+                            <div>
+                                <p>Чтобы ссылки снова открывались в&nbsp;установленных на&nbsp;вашем Xiaomi приложениях,
+                                    нужно вручную выставить данную функциональность в&nbsp;настройках.</p>
+                                <p>Для этого нам необходимо зайти в&nbsp;общие Настройки устройства и&nbsp;прокрутить
+                                    список
+                                    разделов до&nbsp;пункта «Приложения».
+                                </p>
+                                <p>Нажимаем по&nbsp;нему и&nbsp;попадаем в&nbsp;меню глубоких настроек&nbsp;—
+                                    здесь
+                                    нам нужно выбрать пункт «Все приложения».</p>
+                                <p>Открывается список всех установленных на&nbsp;смартфоне приложений. </p>
+                                <p>В&nbsp;правом верхнем углу мы&nbsp;видим иконку в&nbsp;виде трех точек&nbsp;—
+                                    нажимаем на&nbsp;нее и&nbsp;наблюдаем появление нового окошка, в&nbsp;котором нам
+                                    необходимо выбрать пункт «Приложения по&nbsp;умолчанию»</p>
+                                <p>Выбираем настройки Браузера. Нам необходимо нажать на&nbsp;вариант
+                                    «Не&nbsp;выбрано»&nbsp;—
+                                    таким образом, смартфон не&nbsp;будет сразу направлять все открываемые ссылки именно
+                                    на&nbsp;браузер.
+                                    Это означает, что при открытии новой ссылки смартфон будет предлагать возможность
+                                    выбора
+                                    поддерживаемого приложения.</p>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" name="faq-tab" id="faq-tab__tab-3">
+                        <label for="faq-tab__tab-3">А&nbsp;что делать если у&nbsp;меня iOS?</label>
+                        <div class="">
+                            <div>
+                                <p>Специально для владельцев iPhone разных версий мы&nbsp;разработали приложение <a
+                                        href="https://apps.apple.com/ru/app/sbp-varia/id1541828520">SBPvaria</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__anistripe">
+                <div class="anistripe">
+                    <div class="i1"></div>
+                    <div class="i2"></div>
+                    <div class="i3"></div>
+                    <div class="i4"></div>
+                    <div class="i5"></div>
+                    <div class="i6"></div>
+                    <div class="i7"></div>
+                    <div class="i8"></div>
+                    <div class="i1"></div>
+                </div>
+            </div>
+            <div>
+                Все платежи проводятся Системой Быстрых Платежей.
+                <br>
+                © 2022 Система Быстрых Платежей. Все права защищены.
+            </div>
+        </footer>
+
+        <section class="cookies">
+            <div>Для улучшения качества нашего сервиса мы&nbsp;используем на&nbsp;сайте технологию cookies.</div>
+            <a href="javascript:void(0);">Согласен</a>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.min.js?v1"></script>
+
+</body>
+
+</html>
