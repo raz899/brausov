@@ -16,7 +16,7 @@ h1 span {
 }
 
 h2 {
-    font-size  : 60px;
+    font-size  : 50px;
     font-weight: 400;
 }
 
@@ -29,7 +29,7 @@ h4 {
 }
 
 span {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 /* буцтрап */
@@ -208,18 +208,20 @@ span {
 }
 
 .link-modal-map {
-    display        : block;
+    display        : flex;
     font-size      : 22px;
     font-style     : normal;
     font-weight    : 400;
-    line-height    : 32px;
+    align-items: center;
     text-decoration: none;
     color          : #fff;
 }
 
 .link-modal-map svg {
     margin-left: 15px;
-    transition : 1s;
+    transition : .5s;
+    width: 20px;
+    height: auto;
 }
 
 .link-modal-map:hover,
@@ -230,7 +232,9 @@ span {
 }
 
 .link-modal-map:hover svg {
-    transform: scale(2);
+    width: 25px;
+    height: auto;
+    /* transform: scale(2); */
 
 }
 
@@ -280,6 +284,8 @@ span {
     line-height  : 42px;
     color        : #fff; */
     margin-bottom: 100px;
+    font-size: 22px;
+    line-height: 33px;
 }
 
 .about__title {
@@ -419,6 +425,12 @@ span {
     right   : 20px;
     z-index : -1;
 }
+.fortochki-img {
+    position: relative;
+    left: 70px;
+    z-index: -1;
+    height: 100%;
+}
 
 /* link */
 .projects-link {
@@ -534,7 +546,7 @@ span {
 
 .projects__item-top span {
     font-weight  : 500;
-    font-size    : 80px;
+    font-size    : 70px;
     line-height  : 80px;
     margin-bottom: 10px;
 }
@@ -542,13 +554,13 @@ span {
 .projects__item-bottom {
     max-width  : 298px;
     font-weight: 400;
-    font-size  : 28px;
+    font-size  : 22px;
 }
 
 .projects__text {
     display      : block;
     margin-bottom: 40px;
-    font-size    : 22px;
+    font-size    : 20px;
     font-weight  : 400;
     line-height  : 32px;
 }
@@ -779,8 +791,10 @@ svg #map g:hover g {
         padding-bottom: 158px;
     }
 
+    .projects-fortochki,
     .projects-tochki {
-        padding: 0 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .about__bg-img {
@@ -952,6 +966,21 @@ svg #map g:hover g {
     .about__image {
         position: absolute;        
     }
+    .projects-fortochki__img-col,
+    .projects-tochki__img-col {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: .6;
+        filter: blur(13px);
+        z-index: -1;
+    }
+    .projects-tochki__img-col .tochki-img {
+        left: auto;
+    }
+    .projects-fortochki__img-col .fortochki-img {
+        right: 0;
+    }
 }
 
 @media (max-width: 785.98px) {
@@ -1028,6 +1057,7 @@ svg #map g:hover g {
         margin         : 0;
         flex-direction : column;
         justify-content: space-around;
+        gap: 30px;
     }
 
     .container-btn a {
