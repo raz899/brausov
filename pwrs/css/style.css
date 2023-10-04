@@ -217,6 +217,11 @@ span {
     color          : #fff;
 }
 
+.map_modal {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .link-modal-map svg {
     margin-left: 15px;
     transition : .5s;
@@ -628,7 +633,7 @@ span {
 }
 
 .modal-fullscreen .modal-body {
-    padding: 0 52px 79px 52px;
+    padding: 0 50px 50px 50px;
 }
 
 .studding__video {
@@ -1043,7 +1048,7 @@ svg #map g:hover g {
     }
 
     .container-btn-map {
-        margin         : 0;
+        margin         : 0 0 30px 0;
         flex-direction : column;
         justify-content: space-around;
     }
@@ -1073,6 +1078,9 @@ svg #map g:hover g {
 
 /* mobila */
 @media (max-width: 575.98px) {
+    .modal-fullscreen .modal-body {
+        padding: 0 20px 20px 20px;
+    }
     .navbar-toggler {
         padding: 4px 8px;
     }
