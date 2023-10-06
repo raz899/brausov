@@ -599,6 +599,11 @@ span {
     padding-top     : 120px;
 }
 
+#studding {
+    margin-top: -120px;
+    padding-top: 120px;
+}
+
 .studding-absolute {
     position: absolute;
     top     : 75px;
