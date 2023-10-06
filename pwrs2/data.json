@@ -1,0 +1,21 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 46893, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [55.827262, 37.368038]}, 
+                "properties": {"balloonContent": "Красногорск, ул. Спасская, д. 2А"}
+        },
+        {
+            "type": "Feature",
+            "id": 45472, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [56.331971486667484, 37.50788667461485]}, 
+                "properties": {"balloonContent": "Дмитров, Московская улица, д. 31"}
+        }
+    ]
+}

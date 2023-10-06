@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?v=12">
+    <title>pwrs</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+<body>
+    <header class="header-pwrs fixed-top">
+        <nav class="navbar navbar-expand-xl navbar-light col-12 col-md-10 offset-md-1">
+            <a class="navbar-brand m-0 p-0" href="/">
+                <svg width="229" height="60" viewBox="0 0 229 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
+                    <path d="M79.1562 6.52148H90.6245V20.5807H88.1542V8.75077H81.6265V20.5807H79.1562V6.52148Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M102.756 14.9977L100.326 9.37414L97.9158 14.9977H102.756ZM99.2211 6.42188H101.511L107.697 20.5809H105.086L103.66 17.1871H97.0117L95.5658 20.5809H93.0352L99.2211 6.42188Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M109.384 20.0987L110.328 18.2511C110.891 18.5725 111.433 18.6927 112.056 18.6927C112.678 18.6927 113.562 18.311 114.265 17.1664L108.4 6.52148H111.172L115.55 14.6962L119.407 6.52148H122.077L116.595 17.5077C115.41 19.8977 113.964 20.8017 112.136 20.8017C111.051 20.8017 110.208 20.5408 109.384 20.0987Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M123.242 18.4121L124.829 16.785C126.054 17.9101 127.178 18.6132 128.946 18.6132C131.336 18.6132 133.144 16.8858 133.525 14.5558H127.219V12.4472H133.505C133.083 10.1775 131.276 8.51054 128.946 8.51054C127.32 8.51054 126.074 9.17314 124.949 10.1775L123.544 8.49057C124.869 7.24521 126.396 6.28125 128.926 6.28125C133.164 6.28125 136.156 9.5748 136.156 13.5519C136.156 17.6287 133.124 20.8225 129.026 20.8225C126.375 20.8225 124.688 19.9384 123.242 18.4121Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M144.495 13.833C146.363 13.833 147.527 12.7887 147.527 11.2824C147.527 9.63538 146.343 8.77171 144.495 8.77171H141.623V13.833H144.495ZM139.152 6.52246H144.696C147.969 6.52246 150.038 8.39002 150.038 11.2624C150.038 14.4153 147.507 16.0623 144.414 16.0623H141.623V20.5812H139.152V6.52246Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M79.1562 24.5586H81.5866V34.8219L88.6965 24.5586H91.0062V38.6178H88.5758V28.3745L81.4863 38.6178H79.1562V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M94.6406 24.5586H97.1109V30.4032H103.819V24.5586H106.289V38.6178H103.819V32.6929H97.1109V38.6178H94.6406V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M113.361 26.8482H108.902V24.5586H120.31V26.8482H115.851V38.6178H113.361V26.8482Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M122.922 24.5586H133.346V26.7679H125.392V30.4232H132.442V32.6325H125.392V36.4085H133.446V38.6178H122.922V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M141.721 31.8691C143.589 31.8691 144.754 30.8248 144.754 29.3185C144.754 27.6715 143.569 26.8078 141.721 26.8078H138.849V31.8691H141.721ZM136.379 24.5586H141.922C145.196 24.5586 147.264 26.4262 147.264 29.2986C147.264 32.4514 144.734 34.0984 141.641 34.0984H138.849V38.6174H136.379V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M149.797 24.5586H152.267V30.4032H158.975V24.5586H161.446V38.6178H158.975V32.6929H152.267V38.6178H149.797V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M163.896 36.4482L165.484 34.8212C166.709 35.9463 167.833 36.6493 169.6 36.6493C171.99 36.6493 173.799 34.9219 174.18 32.5919H167.874V30.4833H174.16C173.738 28.2136 171.93 26.5467 169.6 26.5467C167.974 26.5467 166.728 27.2093 165.604 28.2136L164.198 26.5267C165.524 25.2813 167.05 24.3174 169.58 24.3174C173.818 24.3174 176.811 27.6109 176.811 31.588C176.811 35.6649 173.778 38.8586 169.681 38.8586C167.03 38.8586 165.342 37.9745 163.896 36.4482Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M179.805 24.5586H182.255V36.4085H187.778V24.5586H190.249V36.4085H195.772V24.5586H198.222V38.6178H179.805V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M201.84 24.5586H204.31V30.4032H211.018V24.5586H213.489V38.6178H211.018V32.6929H204.31V38.6178H201.84V24.5586Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M215.396 38.5575L215.637 36.5288C215.818 36.5891 216.139 36.6495 216.441 36.6495C217.867 36.6495 219.192 35.7454 219.192 27.3302V24.5586H228.833V38.6178H226.363V26.7879H221.502V28.0532C221.502 36.9908 219.875 38.7785 217.103 38.7785C216.561 38.7785 215.778 38.6578 215.396 38.5575Z" fill="#EF7A1C" stroke="#EF7A1C" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M79.1562 42.5938H81.6066V54.4437H87.1299V42.5938H89.6001V54.4437H95.1235V42.5938H97.5738V56.653H79.1562V42.5938Z" fill="#818282" stroke="#818282" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M101.188 42.5938H103.618V52.857L110.728 42.5938H113.037V56.653H110.607V46.4097L103.518 56.653H101.188V42.5938Z" fill="#818282" stroke="#818282" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M116.674 42.5938H119.144V48.4384H125.852V42.5938H128.323V56.653H125.852V50.728H119.144V56.653H116.674V42.5938Z" fill="#818282" stroke="#818282" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M144.572 42.5938H147.023V56.653H144.572V42.5938ZM137.563 54.4437C139.391 54.4437 140.455 53.6204 140.455 52.0338C140.455 50.5873 139.391 49.804 137.523 49.804H134.39V54.4437H137.563ZM131.939 42.5938H134.39V47.655H137.623C140.776 47.655 142.905 49.2217 142.905 52.0537C142.905 54.8857 140.857 56.653 137.603 56.653H131.939V42.5938Z" fill="#818282" stroke="#818282" stroke-width="0.0011623" stroke-miterlimit="10"/>
+                    <path d="M43.4417 12.5662L49.8995 0L61.4181 19.7218L51.1211 38.5709H42.3945L53.2154 19.8963L48.974 12.6309L43.4417 12.5662Z" fill="#EF7A1C"/>
+                    <path d="M31.0273 41.9727L35.214 49.2537H56.5111L67.4327 30.6869L63.5193 23.6787L52.747 41.9318L31.0273 41.9727Z" fill="#EF7A1C"/>
+                    <path d="M54.8699 52.4741L50.8225 60H28.878L18.6328 41.0277L22.5538 34.1973L33.1151 52.2844L54.8699 52.4741Z" fill="#818282"/>
+                    <path d="M25.4304 22.2129H17.1221L6.21289 40.9247L16.7609 59.8532H24.9969L14.5211 40.8524L25.4304 22.2129Z" fill="#818282"/>
+                    <path d="M12.5703 8.70201L17.2665 1.33301H38.5788L42.7693 8.70201L40.3128 14.626H46.454L49.7048 19.7558L45.298 26.4023L34.172 8.84651L12.5703 8.70201Z" fill="#BABABA"/>
+                    <path d="M0 30.3486L4.65013 37.3644L15.4187 19.0087H36.7927L32.3874 11.748H11.0951L0 30.3486Z" fill="#BABABA"/>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link p-0" aria-current="page" href="#">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#brands">Бренды</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Наши сервисы
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#projects-tochki">Интернет-магазин</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#projects-fortochki">B2B портал</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#studding">Ошиповка</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="#contacts_map">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" nav-link-mobile p-0" href="https://b2b.4tochki.ru/">Вход в B2B портал</a>
+                    </li>
+                </ul>
+                <a class="btn-text btn-text-header text-nowrap" href="https://b2b.4tochki.ru/">
+                    <span>Вход в B2B портал</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section class="about container-fluid">
+        <div class="row h-100">
+            <div class="col-xl-6 about__image">
+                <img class="about__bg-img" src="img/frame-about.png" srcset="img/frame-about.png 1x, img/frame-about@2x.png 2x">
+            </div>
+            <div class="about__container col-xl-6 col-12">
+                <div class="about__info">
+                    <h1 class="about__text">
+                        Пауэр Интернэшнл-шины – это проверенное <br> 
+                        качество услуг и заслуженное временем <br> 
+                        доверие потребителей
+                    </h1>
+                    <h3 class="wf-400">Более</h3>
+                    <div>
+                        <span class="about__title">30</span>
+                        <span class="about__subtitle">лет&nbsp;на&nbsp;рынке</span>
+                    </div>
+                    <span>Шин и дисков</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2 id="brands" class="brands__title">Бренды</h2>
+    <section class="brands">
+        <div class="brands__inner">
+            <div class="brands__items">
+                <div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Michelin.png" srcset="img/brand/Michelin.png 1x, img/brand/Michelin@2x.png 2x" alt="michelin">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Ikon_tyres.png" srcset="img/brand/Ikon_tyres.png 1x, img/brand/Ikon_tyres@2x.png 2x" alt="nokian">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Continental.png" srcset="img/brand/Continental.png 1x, img/brand/Continental@2x.png 2x" alt="continental">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Gislaved.png" srcset="img/brand/Gislaved.png 1x, img/brand/Gislaved@2x.png 2x" alt="gislaved">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Matador.png" srcset="img/brand/Matador.png 1x, img/brand/Matador@2x.png 2x" alt="matador">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Yokohama.png" srcset="img/brand/Yokohama.png 1x, img/brand/Yokohama@2x.png 2x" alt="yokohama">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Goodyear.png" srcset="img/brand/Goodyear.png 1x, img/brand/Goodyear@2x.png 2x" alt="goodyear">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Pirelli.png" srcset="img/brand/Pirelli.png 1x, img/brand/Pirelli@2x.png 2x" alt="pirelli">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brands__inner">
+            <div class="brands__items">
+                <div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Bridgestone.png" srcset="img/brand/Bridgestone.png 1x, img/brand/Bridgestone@2x.png 2x" alt="Bridgestone">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Hankook.png" srcset="img/brand/Hankook.png 1x, img/brand/Hankook@2x.png 2x" alt="Hankook">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Triangle.png" srcset="img/brand/Triangle.png 1x, img/brand/Triangle@2x.png 2x" alt="Triangle">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Sailun.png" srcset="img/brand/Sailun.png 1x, img/brand/Sailun@2x.png 2x" alt="Sailun">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Tracmax.png" srcset="img/brand/Tracmax.png 1x, img/brand/Tracmax@2x.png 2x" alt="Tracmax">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Hifly.png" srcset="img/brand/Hifly.png 1x, img/brand/Hifly@2x.png 2x" alt="Hifly">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Formula.png" srcset="img/brand/Formula.png 1x, img/brand/Formula@2x.png 2x" alt="Formula">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Antares.png" srcset="img/brand/Antares.png 1x, img/brand/Antares@2x.png 2x" alt="Antares">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brands__inner">
+            <div class="brands__items">
+                <div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/General.png" srcset="img/brand/General.png 1x, img/brand/General@2x.png 2x" alt="General">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Goodride.png" srcset="img/brand/Goodride.png 1x, img/brand/Goodride@2x.png 2x" alt="Goodride">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/LandSpider.png" srcset="img/brand/LandSpider.png 1x, img/brand/LandSpider@2x.png 2x" alt="LandSpider">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Leao.png" srcset="img/brand/Leao.png 1x, img/brand/Leao@2x.png 2x" alt="Leao">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Laufenn.png" srcset="img/brand/Laufenn.png 1x, img/brand/Laufenn@2x.png 2x" alt="Laufenn">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Marshal.png" srcset="img/brand/Marshal.png 1x, img/brand/Marshal@2x.png 2x" alt="Marshal">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Viatti.png" srcset="img/brand/Viatti.png 1x, img/brand/Viatti@2x.png 2x" alt="Viatti">
+                    </div>
+                    <div class="brands__item">
+                        <img class="brands__item-img" src="img/brand/Kama.png" srcset="img/brand/Kama.png 1x, img/brand/Kama@2x.png 2x" alt="Kama">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects-tochki">
+        <h2 id="projects-tochki" class="projects-tochki__title">Наши сервисы</h2>
+        <div class="col-12 offset-lg-1">
+            <div class="row position-relative">
+                <div class="col-12 col-lg-6">
+                    <svg class="projects-logo-img" xmlns="http://www.w3.org/2000/svg" width="256" height="79" viewBox="0 0 256 79"
+                    fill="none">
+                    <g clip-path="url(#clip0_4666_3529)">
+                        <path
+                            d="M248.874 26.0208C249.493 19.1234 246.764 13.958 240.687 10.5231C234.611 7.08978 225.58 5.33019 213.595 5.24431H156.708C151.361 4.76148 144.497 8.73434 136.114 17.1921L135.016 18.2144C136.506 18.7815 137.999 19.4069 139.488 20.0875C145.79 14.4976 151.306 11.4029 156.004 10.8634C156.764 10.7791 159.971 10.7791 165.598 10.8634H213.595C234.329 10.7791 246.089 15.831 248.874 26.0208Z"
+                            fill="#28508A" />
+                        <path
+                            d="M140.755 20.3143C140.559 20.2284 140.418 20.2009 140.333 20.1717C140.051 20.0308 139.77 19.9157 139.489 19.8023C137.999 19.1218 136.506 18.4964 135.016 17.9293C123.65 13.4461 113.043 11.458 103.225 11.9976C93.9115 12.0543 84.036 15.6026 73.5984 22.6134C64.6238 29.0847 52.9483 32.2912 38.6009 32.2053C17.8633 31.7225 4.97904 40.6906 0 59.1113C7.85013 46.0844 18.4271 39.0169 31.7634 37.9103C32.3257 37.8244 37.4748 37.6834 47.2093 37.4841C55.3397 37.2848 63.2741 35.044 70.9833 30.786C88.2293 18.6114 105.193 14.9772 121.934 19.8882L129.277 22.5843L134.565 24.5432L158.057 33.1986C175.501 40.0944 190.187 39.7266 202.088 32.1486C188.471 34.9015 176.457 34.2193 166.021 30.0747C164.754 29.5643 156.341 26.2995 140.756 20.3127"
+                            fill="#F47218" />
+                        <path
+                            d="M80.9969 34.1364C75.3422 38.166 72.0515 43.4172 71.123 49.8593C78.0156 39.3293 87.0177 34.3049 98.076 34.7893L113.663 34.5042C119.654 34.7893 125.675 32.5469 131.724 27.8061C132.68 26.7561 133.636 25.7645 134.566 24.8264L129.276 22.8691C126.379 24.9414 123.705 26.3883 121.229 27.239C119.006 28.6308 111.72 29.4247 99.3398 29.6531C91.1542 29.2821 85.02 30.7873 80.9969 34.1364Z"
+                            fill="#28508A" />
+                        <path
+                            d="M250.491 4.66177H251.409C251.848 4.66177 252.147 4.59695 252.307 4.46247C252.385 4.40003 252.447 4.32039 252.488 4.22985C252.53 4.13932 252.55 4.04035 252.547 3.94075C252.549 3.80595 252.509 3.67386 252.432 3.56323C252.352 3.45088 252.24 3.36509 252.111 3.31695C251.975 3.26187 251.722 3.23594 251.353 3.23594H250.492L250.491 4.66177ZM249.736 7.32222V2.59432H251.346C251.897 2.59432 252.294 2.63807 252.54 2.72394C252.782 2.80779 252.989 2.96895 253.13 3.18247C253.276 3.39797 253.349 3.62966 253.349 3.87432C253.35 4.04147 253.319 4.20726 253.256 4.36215C253.193 4.51704 253.1 4.65796 252.983 4.7768C252.725 5.03825 252.377 5.19225 252.01 5.20779C252.158 5.26602 252.293 5.35119 252.409 5.45893C252.597 5.64364 252.827 5.95635 253.101 6.39544L253.671 7.3206H252.748L252.333 6.5769C252.007 5.99037 251.742 5.62257 251.542 5.47513C251.405 5.36657 251.202 5.31311 250.936 5.31311H250.492V7.32222H249.736ZM251.648 1.22521C251.035 1.22521 250.439 1.38399 249.86 1.69994C249.285 2.01134 248.813 2.48229 248.499 3.05609C248.175 3.64425 248.01 4.25508 248.01 4.89346C248.01 5.52536 248.17 6.13296 248.491 6.71301C248.812 7.29306 249.261 7.74673 249.839 8.06916C250.416 8.39321 251.019 8.55523 251.646 8.55523C252.273 8.55523 252.876 8.39321 253.453 8.06916C254.029 7.74511 254.478 7.29306 254.797 6.71301C255.117 6.13296 255.277 5.52536 255.277 4.89346C255.277 4.2567 255.115 3.64425 254.789 3.05609C254.477 2.48119 254.005 2.00942 253.43 1.69832C252.885 1.39243 252.273 1.22966 251.648 1.22521ZM251.646 0.496094C252.378 0.496094 253.091 0.687284 253.788 1.06318C254.485 1.44394 255.027 1.98511 255.416 2.68992C255.805 3.39473 256 4.1287 256 4.89346C256 5.65012 255.807 6.37923 255.424 7.07756C255.054 7.76255 254.495 8.32708 253.814 8.7043C253.154 9.08265 252.407 9.28257 251.646 9.28435C250.893 9.28435 250.17 9.08992 249.48 8.7043C248.797 8.3272 248.238 7.76273 247.866 7.07756C247.489 6.41105 247.291 5.65892 247.289 4.89346C247.289 4.1287 247.484 3.39473 247.874 2.68992C248.264 1.98511 248.809 1.44394 249.506 1.0648C250.202 0.687284 250.915 0.496094 251.646 0.496094Z"
+                            fill="#315795" />
+                        <path
+                            d="M243.054 54.4319H234.302V78.2173H243.051V54.4319H243.054ZM152.066 60.4204V54.4319H122.637L119.74 57.4132V75.2068L122.637 78.2156H152.066V72.2855H128.491V60.4172H152.066V60.4204ZM181.381 54.4319V63.4001H166.64V54.4336H157.891V78.2189H166.64V69.3075H181.381V78.2189H190.215V54.4336L181.381 54.4319ZM90.3131 60.4204H105.054V72.2839H90.3099V60.4204H90.3131ZM84.4592 54.4319L81.5621 57.4132V75.2085L84.4575 78.214H110.907L113.888 75.2068V57.41L110.907 54.4287H84.4575L84.4592 54.4319ZM75.7098 60.4204V54.4319H43.3857V60.4204H55.0872V78.2156H63.9176V60.4204H75.7098Z"
+                            fill="#28508A" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M31.2291 68.6785H13.0255L31.2291 59.5403V68.6785ZM37.305 54.2891H31.8755C30.6652 54.2891 29.5116 54.5726 28.4147 55.1397L12.5475 63.6266C8.94572 65.4153 7.14562 67.23 7.17316 69.103C7.20071 72.2269 9.00405 73.7856 12.6043 73.7856H31.2291V77.9885H37.305V54.2891Z"
+                            fill="#F47218" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M204.816 54.4316H196.066V78.217H204.816V69.3023H209.796L218.293 78.2737L228.394 78.217L217.026 66.7504L228.394 54.4333H218.291L209.796 63.4014H204.816V54.4316Z"
+                            fill="#28508A" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4666_3529">
+                            <rect width="256" height="77.7721" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                    </defs>
+                    </svg>
+                    <span class="projects__text">Интернет-магазин 4точки осуществляет розничные продажи широкого
+                        ассортимента легковых и грузовых шин, а также колесных
+                        дисков. Доставка в кратчайшие сроки по всей России.</span>
+                    <div class="projects__items">
+                        <div class="projects__item">
+                            <div class="projects__item-top">
+                                <span>30</span>
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                        fill="#FE7200" />
+                                </svg>
+                            </div>
+                            <h4 class="projects__item-bottom">Лет на рынке</h4>
+                        </div>
+                        <div class="projects__item">
+                            <div class="projects__item-top">
+                                <span>280</span>
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                        fill="#FE7200" />
+                                </svg>
+                            </div>
+                            <h4 class="projects__item-bottom">Городов</h4>
+                        </div>
+                        <div class="projects__item">
+                            <div class="projects__item-top">
+                                <span>470</span>
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                        fill="#FE7200" />
+                                </svg>
+                            </div>
+                            <h4 class="projects__item-bottom">Точек выдачи</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a class="projects-link text-nowrap" href="https://www.4tochki.ru/">
+                            <span>Купить шины</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 projects-tochki__img-col">
+                    <img class="tochki-img" src="img/progekt-4tochki.png" srcset="img/progekt-4tochki.png 1x, img/progekt-4tochki@2x.png 2x" alt="bg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects-fortochki" class="projects-fortochki">
+        <div class="col-12 offset-lg-1">
+            <div class="row position-relative">
+                <div class="col-12 col-lg-6">
+                    <svg class="projects-logo-img" width="436" height="72" viewBox="0 0 436 72" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_4666_3663)">
+                            <path d="M436.219 20.4453H424.703V51.1687H436.219V20.4453Z" fill="white" />
+                            <path
+                                d="M281.494 20.4453L277.763 24.2857V47.3283L281.494 51.2754H316.041L319.985 47.3283V24.2857L316.041 20.4453H281.494ZM289.066 28.1262H308.364V43.4879H289.066V28.1262Z"
+                                fill="white" />
+                            <path
+                                d="M129.974 20.4453L126.242 24.2857V47.3283L129.974 51.2754H164.52L168.465 47.3283V24.2857L164.52 20.4453H129.974ZM137.544 28.1262H156.843V43.4879H137.544V28.1262Z"
+                                fill="white" />
+                            <path d="M268.176 28.1261V20.4453H225.953V28.1261H241.2V51.1687H252.822V28.1261H268.176Z" fill="white" />
+                            <path
+                                d="M386.211 20.4453H374.804V51.1687H386.211V39.6476H392.716L403.805 51.2754L417.025 51.1687L402.206 36.3404L417.025 20.4453H403.805L392.716 32.0732H386.211V20.4453Z"
+                                fill="white" />
+                            <path
+                                d="M366.257 51.1218V20.4453H360.852C357.311 20.4453 355.544 20.4453 353.869 20.9412C352.198 21.437 350.713 22.4015 347.746 24.3303L330.618 35.463C330.498 35.542 330.435 35.5817 330.378 35.6208C329.121 36.4913 328.349 37.9095 328.307 39.4401C328.304 39.5084 328.304 39.5811 328.304 39.7263C328.304 39.9821 328.304 40.1102 328.31 40.2181C328.421 42.7043 330.411 44.6945 332.897 44.8063C333.005 44.8115 333.134 44.8115 333.39 44.8115H354.861V51.1218H366.257ZM341.716 37.0107L354.861 28.5527V37.0107H341.716Z"
+                                fill="#F47117" />
+                            <path d="M81.3926 20.4453V51.1218H92.7867V41.7436H108.768V33.0228H92.7867V29.1662H117.328V20.4453H81.3926Z"
+                                fill="white" />
+                            <path
+                                d="M177.602 20.4453V51.1218H188.996V43.1462H205.649V51.1218H217.043V39.4648L214.896 37.3174L217.043 35.1702V24.3456L213.143 20.4453H177.602ZM205.649 34.6442H188.996V29.6921H205.649V34.6442Z"
+                                fill="white" />
+                            <path
+                                d="M24.7711 43.9414H24.7711C27.9092 43.9414 30.4531 41.3975 30.4531 38.2594L30.4531 18.9087C30.4531 15.7706 27.9092 13.2267 24.7711 13.2267H24.7711C21.633 13.2267 19.0891 15.7706 19.0891 18.9087L19.0891 38.2594C19.0891 41.3975 21.633 43.9414 24.7711 43.9414Z"
+                                fill="url(#paint0_linear_4666_3663)" />
+                            <path
+                                d="M62.484 43.9414H62.484C65.6221 43.9414 68.166 41.3975 68.166 38.2594V18.9087C68.166 15.7706 65.6221 13.2267 62.484 13.2267H62.484C59.3459 13.2267 56.802 15.7706 56.802 18.9087V38.2594C56.802 41.3975 59.3459 43.9414 62.484 43.9414Z"
+                                fill="url(#paint1_linear_4666_3663)" />
+                            <path
+                                d="M0.232422 33.2836C0.232422 30.1454 2.77637 27.6016 5.91447 27.6016C9.05257 27.6016 11.5966 30.1454 11.5966 33.2836V52.6343C11.5966 55.7722 9.05257 58.3162 5.91447 58.3162C2.77637 58.3162 0.232422 55.7722 0.232422 52.6343V33.2836Z"
+                                fill="url(#paint2_linear_4666_3663)" />
+                            <path
+                                d="M37.9453 33.2836C37.9453 30.1454 40.4893 27.6016 43.6272 27.6016C46.7654 27.6016 49.3093 30.1454 49.3093 33.2836V52.6343C49.3093 55.7722 46.7654 58.3162 43.6272 58.3162C40.4893 58.3162 37.9453 55.7722 37.9453 52.6343V33.2836Z"
+                                fill="url(#paint3_linear_4666_3663)" />
+                            <path
+                                d="M5.91446 38.9656C9.05257 38.9656 11.5965 36.4217 11.5965 33.2836C11.5965 30.1455 9.05257 27.6016 5.91446 27.6016C2.77636 27.6016 0.232422 30.1455 0.232422 33.2836C0.232422 36.4217 2.77636 38.9656 5.91446 38.9656Z"
+                                fill="url(#paint4_linear_4666_3663)" />
+                            <path
+                                d="M24.769 43.95C27.9071 43.95 30.451 41.406 30.451 38.2679C30.451 35.1299 27.9071 32.5859 24.769 32.5859C21.6309 32.5859 19.0869 35.1299 19.0869 38.2679C19.0869 41.406 21.6309 43.95 24.769 43.95Z"
+                                fill="url(#paint5_linear_4666_3663)" />
+                            <path
+                                d="M62.4857 43.95C65.6239 43.95 68.1678 41.406 68.1678 38.2679C68.1678 35.1299 65.6239 32.5859 62.4857 32.5859C59.3476 32.5859 56.8037 35.1299 56.8037 38.2679C56.8037 41.406 59.3476 43.95 62.4857 43.95Z"
+                                fill="url(#paint6_linear_4666_3663)" />
+                            <path
+                                d="M43.6274 38.9656C46.7655 38.9656 49.3094 36.4217 49.3094 33.2836C49.3094 30.1455 46.7655 27.6016 43.6274 27.6016C40.4892 27.6016 37.9453 30.1455 37.9453 33.2836C37.9453 36.4217 40.4892 38.9656 43.6274 38.9656Z"
+                                fill="url(#paint7_linear_4666_3663)" />
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_4666_3663" x1="24.771" y1="40.1194" x2="24.771" y2="9.4804"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_4666_3663" x1="62.4842" y1="40.1194" x2="62.4842" y2="9.4804"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_4666_3663" x1="5.91447" y1="30.201" x2="5.91447" y2="62.0625"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F47117" />
+                                <stop offset="0.907762" stop-color="#F47117" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_4666_3663" x1="43.6272" y1="30.201" x2="43.6272" y2="62.0625"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F47117" />
+                                <stop offset="0.907762" stop-color="#F47117" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint4_linear_4666_3663" x1="5.91446" y1="28.5633" x2="5.91446" y2="40.3517"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F47117" stop-opacity="0" />
+                                <stop offset="1" stop-color="#F47117" />
+                            </linearGradient>
+                            <linearGradient id="paint5_linear_4666_3663" x1="24.769" y1="33.5477" x2="24.769" y2="45.3361"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint6_linear_4666_3663" x1="62.4858" y1="33.5477" x2="62.4858" y2="45.3361"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="paint7_linear_4666_3663" x1="43.6274" y1="28.5633" x2="43.6274" y2="38.9657"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F47117" stop-opacity="0" />
+                                <stop offset="1" stop-color="#F47117" />
+                            </linearGradient>
+                            <clipPath id="clip0_4666_3663">
+                                <rect width="436" height="71.5414" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="projects__text">Автоматизированная система оптовой дистрибуции шин и дисков всех категорий
+                        корпоративным клиентам.</span>
+                    <div class="projects__items">
+                        <div class="projects__item">
+                            <div class="projects__item-top">
+                                <span>22</span>
+                            </div>
+                            <h4 class="projects__item-bottom">Филиала</h4>
+                        </div>
+                        <div class="projects__item align-items-center">
+                            <div class="projects__item-top">
+                                <span>645</span>
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                        fill="#FE7200" />
+                                </svg>
+                            </div>
+                            <h4 class="projects__item-bottom">Распределительных центров</h4>
+                        </div>
+                        <div class="projects__item">
+                            <div class="projects__item-top">
+                                <span>24-48</span>
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                        fill="#FE7200" />
+                                </svg>
+                            </div>
+                            <h4 class="projects__item-bottom">Часов доставки <br> по России</h4>
+                        </div>
+                    </div>
+                    <div class="container-btn-map">
+                        <a class="projects-link text-nowrap" href="https://b2b.4tochki.ru/">
+                            <span>Вход в B2B портал</span>
+                        </a>
+                        <div class="d-flex">
+                            <button type="button" class="btn link-modal-map text-nowrap" data-bs-toggle="modal" data-bs-target="#modalsMap">
+                                Карта присутствия
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.24805 10.4997C1.24805 10.3339 1.31389 10.175 1.4311 10.0578C1.54832 9.94055 1.70729 9.8747 1.87305 9.8747L16.6143 9.8747L12.6805 5.9422C12.5632 5.82484 12.4973 5.66567 12.4973 5.4997C12.4973 5.33373 12.5632 5.17456 12.6805 5.0572C12.7979 4.93984 12.9571 4.87391 13.123 4.87391C13.289 4.87391 13.4482 4.93984 13.5655 5.0572L18.5655 10.0572C18.6238 10.1153 18.6699 10.1842 18.7014 10.2602C18.7329 10.3361 18.7492 10.4175 18.7492 10.4997C18.7492 10.5819 18.7329 10.6633 18.7014 10.7392C18.6699 10.8152 18.6238 10.8841 18.5655 10.9422L13.5655 15.9422C13.4482 16.0596 13.289 16.1255 13.123 16.1255C12.9571 16.1255 12.7979 16.0596 12.6805 15.9422C12.5632 15.8248 12.4973 15.6657 12.4973 15.4997C12.4973 15.3337 12.5632 15.1746 12.6805 15.0572L16.6143 11.1247L1.87305 11.1247C1.70729 11.1247 1.54832 11.0588 1.4311 10.9416C1.31389 10.8244 1.24805 10.6655 1.24805 10.4997Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 projects-fortochki__img-col">
+                    <img class="fortochki-img" src="img/progekt-forto4ki.png" srcset="img/progekt-forto4ki.png 1x, img/progekt-forto4ki@2x.png 2x" alt="bg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects-fortochki" class="projects-fortochki d-none">
+        <div class="projects__container">
+            <svg class="projects-logo-img" width="436" height="72" viewBox="0 0 436 72" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4666_3663)">
+                    <path d="M436.219 20.4453H424.703V51.1687H436.219V20.4453Z" fill="white" />
+                    <path
+                        d="M281.494 20.4453L277.763 24.2857V47.3283L281.494 51.2754H316.041L319.985 47.3283V24.2857L316.041 20.4453H281.494ZM289.066 28.1262H308.364V43.4879H289.066V28.1262Z"
+                        fill="white" />
+                    <path
+                        d="M129.974 20.4453L126.242 24.2857V47.3283L129.974 51.2754H164.52L168.465 47.3283V24.2857L164.52 20.4453H129.974ZM137.544 28.1262H156.843V43.4879H137.544V28.1262Z"
+                        fill="white" />
+                    <path d="M268.176 28.1261V20.4453H225.953V28.1261H241.2V51.1687H252.822V28.1261H268.176Z"
+                        fill="white" />
+                    <path
+                        d="M386.211 20.4453H374.804V51.1687H386.211V39.6476H392.716L403.805 51.2754L417.025 51.1687L402.206 36.3404L417.025 20.4453H403.805L392.716 32.0732H386.211V20.4453Z"
+                        fill="white" />
+                    <path
+                        d="M366.257 51.1218V20.4453H360.852C357.311 20.4453 355.544 20.4453 353.869 20.9412C352.198 21.437 350.713 22.4015 347.746 24.3303L330.618 35.463C330.498 35.542 330.435 35.5817 330.378 35.6208C329.121 36.4913 328.349 37.9095 328.307 39.4401C328.304 39.5084 328.304 39.5811 328.304 39.7263C328.304 39.9821 328.304 40.1102 328.31 40.2181C328.421 42.7043 330.411 44.6945 332.897 44.8063C333.005 44.8115 333.134 44.8115 333.39 44.8115H354.861V51.1218H366.257ZM341.716 37.0107L354.861 28.5527V37.0107H341.716Z"
+                        fill="#F47117" />
+                    <path
+                        d="M81.3926 20.4453V51.1218H92.7867V41.7436H108.768V33.0228H92.7867V29.1662H117.328V20.4453H81.3926Z"
+                        fill="white" />
+                    <path
+                        d="M177.602 20.4453V51.1218H188.996V43.1462H205.649V51.1218H217.043V39.4648L214.896 37.3174L217.043 35.1702V24.3456L213.143 20.4453H177.602ZM205.649 34.6442H188.996V29.6921H205.649V34.6442Z"
+                        fill="white" />
+                    <path
+                        d="M24.7711 43.9414H24.7711C27.9092 43.9414 30.4531 41.3975 30.4531 38.2594L30.4531 18.9087C30.4531 15.7706 27.9092 13.2267 24.7711 13.2267H24.7711C21.633 13.2267 19.0891 15.7706 19.0891 18.9087L19.0891 38.2594C19.0891 41.3975 21.633 43.9414 24.7711 43.9414Z"
+                        fill="url(#paint0_linear_4666_3663)" />
+                    <path
+                        d="M62.484 43.9414H62.484C65.6221 43.9414 68.166 41.3975 68.166 38.2594V18.9087C68.166 15.7706 65.6221 13.2267 62.484 13.2267H62.484C59.3459 13.2267 56.802 15.7706 56.802 18.9087V38.2594C56.802 41.3975 59.3459 43.9414 62.484 43.9414Z"
+                        fill="url(#paint1_linear_4666_3663)" />
+                    <path
+                        d="M0.232422 33.2836C0.232422 30.1454 2.77637 27.6016 5.91447 27.6016C9.05257 27.6016 11.5966 30.1454 11.5966 33.2836V52.6343C11.5966 55.7722 9.05257 58.3162 5.91447 58.3162C2.77637 58.3162 0.232422 55.7722 0.232422 52.6343V33.2836Z"
+                        fill="url(#paint2_linear_4666_3663)" />
+                    <path
+                        d="M37.9453 33.2836C37.9453 30.1454 40.4893 27.6016 43.6272 27.6016C46.7654 27.6016 49.3093 30.1454 49.3093 33.2836V52.6343C49.3093 55.7722 46.7654 58.3162 43.6272 58.3162C40.4893 58.3162 37.9453 55.7722 37.9453 52.6343V33.2836Z"
+                        fill="url(#paint3_linear_4666_3663)" />
+                    <path
+                        d="M5.91446 38.9656C9.05257 38.9656 11.5965 36.4217 11.5965 33.2836C11.5965 30.1455 9.05257 27.6016 5.91446 27.6016C2.77636 27.6016 0.232422 30.1455 0.232422 33.2836C0.232422 36.4217 2.77636 38.9656 5.91446 38.9656Z"
+                        fill="url(#paint4_linear_4666_3663)" />
+                    <path
+                        d="M24.769 43.95C27.9071 43.95 30.451 41.406 30.451 38.2679C30.451 35.1299 27.9071 32.5859 24.769 32.5859C21.6309 32.5859 19.0869 35.1299 19.0869 38.2679C19.0869 41.406 21.6309 43.95 24.769 43.95Z"
+                        fill="url(#paint5_linear_4666_3663)" />
+                    <path
+                        d="M62.4857 43.95C65.6239 43.95 68.1678 41.406 68.1678 38.2679C68.1678 35.1299 65.6239 32.5859 62.4857 32.5859C59.3476 32.5859 56.8037 35.1299 56.8037 38.2679C56.8037 41.406 59.3476 43.95 62.4857 43.95Z"
+                        fill="url(#paint6_linear_4666_3663)" />
+                    <path
+                        d="M43.6274 38.9656C46.7655 38.9656 49.3094 36.4217 49.3094 33.2836C49.3094 30.1455 46.7655 27.6016 43.6274 27.6016C40.4892 27.6016 37.9453 30.1455 37.9453 33.2836C37.9453 36.4217 40.4892 38.9656 43.6274 38.9656Z"
+                        fill="url(#paint7_linear_4666_3663)" />
+                </g>
+                <defs>
+                    <linearGradient id="paint0_linear_4666_3663" x1="24.771" y1="40.1194" x2="24.771" y2="9.4804"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_4666_3663" x1="62.4842" y1="40.1194" x2="62.4842" y2="9.4804"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_4666_3663" x1="5.91447" y1="30.201" x2="5.91447" y2="62.0625"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F47117" />
+                        <stop offset="0.907762" stop-color="#F47117" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_4666_3663" x1="43.6272" y1="30.201" x2="43.6272" y2="62.0625"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F47117" />
+                        <stop offset="0.907762" stop-color="#F47117" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="paint4_linear_4666_3663" x1="5.91446" y1="28.5633" x2="5.91446" y2="40.3517"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F47117" stop-opacity="0" />
+                        <stop offset="1" stop-color="#F47117" />
+                    </linearGradient>
+                    <linearGradient id="paint5_linear_4666_3663" x1="24.769" y1="33.5477" x2="24.769" y2="45.3361"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="paint6_linear_4666_3663" x1="62.4858" y1="33.5477" x2="62.4858" y2="45.3361"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="paint7_linear_4666_3663" x1="43.6274" y1="28.5633" x2="43.6274" y2="38.9657"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F47117" stop-opacity="0" />
+                        <stop offset="1" stop-color="#F47117" />
+                    </linearGradient>
+                    <clipPath id="clip0_4666_3663">
+                        <rect width="436" height="71.5414" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <span class="projects__text">Автоматизированная система оптовой дистрибуции шин и дисков всех категорий
+                корпоративным клиентам.</span>
+            <div class="projects__items">
+                <div class="projects__item">
+                    <div class="projects__item-top">
+                        <span>22</span>
+                    </div>
+                    <h4 class="projects__item-bottom">Филиала</h4>
+                </div>
+                <div class="projects__item align-items-center">
+                    <div class="projects__item-top">
+                        <span>645</span>
+                        <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                fill="#FE7200" />
+                        </svg>
+                    </div>
+                    <h4 class="projects__item-bottom">Распределительных центров</h4>
+                </div>
+                <div class="projects__item">
+                    <div class="projects__item-top">
+                        <span>24-48</span>
+                        <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.1388 35.7925V0.75246H21.8588V35.7925H15.1388ZM0.57875 21.4725V15.1525H36.4188V21.4725H0.57875Z"
+                                fill="#FE7200" />
+                        </svg>
+                    </div>
+                    <h4 class="projects__item-bottom">Часов доставки <br> по России</h4>
+                </div>
+            </div>
+            <img class="fortochki-absolute" src="img/progekt-forto4ki.png"
+                srcset="img/progekt-forto4ki.png 1x, img/progekt-forto4ki@2x.png 2x" alt="bg">
+            <div class="container-btn-map">
+                <a class="projects-link text-nowrap" href="https://b2b.4tochki.ru/">
+                    <span>Вход в B2B портал</span>
+                </a>
+                <div class="d-flex">
+                    <button type="button" class="btn link-modal-map text-nowrap" data-bs-toggle="modal"
+                        data-bs-target="#modalsMap">
+                        Карта присутствия
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.24805 10.4997C1.24805 10.3339 1.31389 10.175 1.4311 10.0578C1.54832 9.94055 1.70729 9.8747 1.87305 9.8747L16.6143 9.8747L12.6805 5.9422C12.5632 5.82484 12.4973 5.66567 12.4973 5.4997C12.4973 5.33373 12.5632 5.17456 12.6805 5.0572C12.7979 4.93984 12.9571 4.87391 13.123 4.87391C13.289 4.87391 13.4482 4.93984 13.5655 5.0572L18.5655 10.0572C18.6238 10.1153 18.6699 10.1842 18.7014 10.2602C18.7329 10.3361 18.7492 10.4175 18.7492 10.4997C18.7492 10.5819 18.7329 10.6633 18.7014 10.7392C18.6699 10.8152 18.6238 10.8841 18.5655 10.9422L13.5655 15.9422C13.4482 16.0596 13.289 16.1255 13.123 16.1255C12.9571 16.1255 12.7979 16.0596 12.6805 15.9422C12.5632 15.8248 12.4973 15.6657 12.4973 15.4997C12.4973 15.3337 12.5632 15.1746 12.6805 15.0572L16.6143 11.1247L1.87305 11.1247C1.70729 11.1247 1.54832 11.0588 1.4311 10.9416C1.31389 10.8244 1.24805 10.6655 1.24805 10.4997Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="studding"></div>
+    <section class="studding">
+        <img class="studding-absolute" src="img/studding-bg.png"
+            srcset="img/studding-bg.png 1x, img/studding-bg@2x.png 2x" alt="bg">
+        <div class="studding-container">
+            <div class="studding__info">
+                <h2>Ошиповка легковых <br> и легкогрузовых шин</h2>
+                <span class="studding__text">Профессиональная заводская ошиповка широкого ассортимента зимних шипуемых
+                    шин для легковых и
+                    легкогрузовых автомобилей от 13” до 24” посадочного диаметра. <br>
+                    Многоуровневая проверка стабильности качества выпускаемой продукции в соответствии с ГОСТ
+                    33672–2015.
+                </span>
+                <div class="container-btn">
+                    <a class="projects-link text-nowrap" href="https://davydovotyres.ru/">
+                        <span>Подробнее</span>
+                    </a>
+                    <div class="d-none">
+                        <button type="button" class="btn link-modal text-nowrap" data-bs-toggle="modal" data-bs-target="#modalsVideo">
+                            <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="50" height="37" viewBox="0 0 50 37" fill="none">
+                                <path
+                                    d="M48.9671 6.18569C48.3933 3.99355 46.6718 2.27115 44.5295 1.68396C40.6274 0.587891 25.0191 0.587891 25.0191 0.587891C25.0191 0.587891 9.33435 0.587891 5.47054 1.68396C3.32823 2.27115 1.64499 3.99355 1.0329 6.18569C0 10.1785 0 18.5165 0 18.5165C0 18.5165 0 26.8153 1.0329 30.8082C1.60673 33.0395 3.32823 34.7227 5.47054 35.3491C9.37261 36.406 24.9809 36.406 24.9809 36.406C24.9809 36.406 40.6656 36.406 44.5295 35.3491C46.6718 34.7619 48.355 33.0003 48.9671 30.8082C50 26.8153 50 18.5165 50 18.5165C50 18.5165 50 10.1785 48.9671 6.18569Z"
+                                    fill="#DC3030" />
+                                <path d="M20.0039 26.1868L33.0108 18.5143L20.0039 10.8418V26.1868Z" fill="white" />
+                            </svg>Видеоэкскурсия по цеху
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts_map" class="map">
+        <div class="map-yandex d-none d-xl-block position-relative">
+            <div class="map__info">
+                <div class="map__container">
+                    <span class="map__title text-nowrap">ООО «Пауэр Интернэшнл – шины»</span>
+                    <div>Адрес:<span class="map__item">г. Москва, БЦ ARCUS 4, Ленинградский проспект, 37а к.5</span></div>
+                    <div>Телефон:<span class="map__item"><a href="tel:+7 (495) 38-000-77">+7 (495) 38-000-77</a></span></div>
+                    <div>E-mail:<span class="map__item"><a href="mailto:info@pwrs.ru">info@pwrs.ru</a></span></div>
+                </div>
+                <span class="map__name-icon">Мы в социальных сетях:</span>
+                <div class="map__social">
+                    <a href="https://t.me/tyresexpert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <g clip-path="url(#clip0_4704_14193)">
+                                <path
+                                    d="M32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16ZM16.574 11.812C15.018 12.46 11.906 13.8 7.242 15.832C6.486 16.132 6.088 16.428 6.052 16.716C5.992 17.202 6.602 17.394 7.432 17.656L7.782 17.766C8.598 18.032 9.698 18.342 10.268 18.354C10.788 18.366 11.366 18.154 12.004 17.714C16.362 14.772 18.612 13.286 18.752 13.254C18.852 13.23 18.992 13.202 19.084 13.286C19.178 13.368 19.168 13.526 19.158 13.568C19.098 13.826 16.704 16.05 15.466 17.202C15.08 17.562 14.806 17.816 14.75 17.874C14.6267 18 14.5013 18.124 14.374 18.246C13.614 18.978 13.046 19.526 14.404 20.422C15.058 20.854 15.582 21.208 16.104 21.564C16.672 21.952 17.24 22.338 17.976 22.822C18.162 22.942 18.342 23.072 18.516 23.196C19.178 23.668 19.776 24.092 20.51 24.024C20.938 23.984 21.38 23.584 21.604 22.384C22.134 19.55 23.176 13.412 23.416 10.882C23.4306 10.6717 23.4219 10.4604 23.39 10.252C23.3712 10.0838 23.2898 9.92892 23.162 9.818C22.98 9.69238 22.7631 9.6273 22.542 9.632C21.942 9.642 21.016 9.964 16.574 11.812Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_4704_14193">
+                                    <rect width="32" height="32" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://vk.com/4tochki_carclub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <g clip-path="url(#clip0_4704_14268)">
+                                <path
+                                    d="M27.103 0H4.16969C1.86683 0 0 1.91025 0 4.26667V27.7333C0 30.0898 1.86683 32 4.16969 32H27.103C29.4058 32 31.2727 30.0898 31.2727 27.7333V4.26667C31.2727 1.91025 29.4058 0 27.103 0Z"
+                                    fill="white" />
+                                <path
+                                    d="M23.5581 11.4146C23.6624 10.988 23.5581 10.668 23.0369 10.668H20.9521C20.5351 10.668 20.3266 10.8813 20.2224 11.2013C20.2224 11.2013 19.1799 13.6546 17.8248 15.2546C17.4078 15.788 17.1993 15.8946 16.8866 15.8946C16.8866 15.8946 16.5739 15.788 16.5739 15.3613V11.4146C16.5739 10.8813 16.4696 10.668 16.0527 10.668H12.9254C12.7169 10.668 12.5084 10.8813 12.5084 11.0946C12.5084 11.628 13.2381 11.7346 13.3424 13.0146V16.0013C13.3424 16.6413 13.1339 16.748 12.9254 16.748C12.3 16.748 10.6321 14.2946 9.79814 11.4146C9.58966 10.8813 9.38117 10.668 8.85996 10.668H6.87936C6.35815 10.668 6.25391 10.8813 6.25391 11.2013C6.25391 11.7346 6.87936 14.4013 9.38117 17.8146C10.9448 20.1613 13.1339 21.4413 15.2187 21.4413C16.4696 21.4413 16.5739 21.1213 16.5739 20.6946C16.5739 18.4546 16.5739 18.2413 17.0951 18.2413C17.4078 18.2413 17.929 18.348 19.0757 19.5213C20.3266 20.8013 20.5351 21.4413 21.369 21.4413H23.2454C23.7666 21.4413 24.0793 21.1213 23.9751 20.588C23.5581 19.5213 21.0563 16.9613 20.9521 16.8546C20.6393 16.428 20.7436 16.3213 20.9521 16.0013C20.9521 16.0013 23.3496 12.588 23.5581 11.4146Z"
+                                    fill="#2D2D2D" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_4704_14268">
+                                    <rect width="31.2727" height="32" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/c/%D0%A8%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9%D0%AD%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="139" height="32" viewBox="0 0 139 32" fill="none">
+                            <g clip-path="url(#clip0_4704_14271)">
+                                <path
+                                    d="M43.5471 5.29371C43.0399 3.35641 41.5186 1.83425 39.6253 1.31533C36.1768 0.34668 22.3831 0.34668 22.3831 0.34668C22.3831 0.34668 8.52168 0.34668 5.10704 1.31533C3.21378 1.83425 1.72622 3.35641 1.18528 5.29371C0.272461 8.82236 0.272461 16.191 0.272461 16.191C0.272461 16.191 0.272461 23.5251 1.18528 27.0537C1.69241 29.0256 3.21378 30.5132 5.10704 31.0667C8.55549 32.0007 22.3493 32.0007 22.3493 32.0007C22.3493 32.0007 36.2107 32.0007 39.6253 31.0667C41.5186 30.5478 43.0061 28.991 43.5471 27.0537C44.4599 23.5251 44.4599 16.191 44.4599 16.191C44.4599 16.191 44.4599 8.82236 43.5471 5.29371Z"
+                                    fill="white" />
+                                <path d="M17.9541 22.9712L29.4489 16.1907L17.9541 9.41016V22.9712Z" fill="#2D2D2D" />
+                                <path
+                                    d="M69.3101 26.0513C69.5467 25.394 69.6482 24.3215 69.6482 22.8686V16.7107C69.6482 15.2923 69.5467 14.2545 69.3101 13.5972C69.0734 12.9053 68.6339 12.594 68.0254 12.594C67.4506 12.594 67.0111 12.9399 66.7745 13.5972C66.5378 14.2545 66.4364 15.2923 66.4364 16.7107V22.834C66.4364 24.3215 66.5378 25.3594 66.7745 26.0167C66.9773 26.674 67.4168 26.9853 68.0254 26.9853C68.6339 26.9853 69.0396 26.6394 69.3101 26.0167V26.0513ZM64.4079 29.1648C63.4764 28.4772 62.8167 27.4708 62.5484 26.328C62.1223 24.6811 61.9287 22.9802 61.9737 21.2772V18.3367C61.9737 16.2264 62.2103 14.5313 62.6499 13.2167C63.0555 11.9021 63.6979 10.968 64.6107 10.3799C65.6741 9.74096 66.8947 9.42871 68.1268 9.48044C69.5467 9.48044 70.6962 9.79179 71.5752 10.3799C72.4204 11.0026 73.0628 11.9367 73.4685 13.2167C73.8742 14.4967 74.0432 16.2264 74.0432 18.3367V21.2426C74.0432 23.3183 73.8742 25.048 73.4685 26.328C73.0966 27.608 72.4542 28.5421 71.5752 29.1302C70.6962 29.7183 69.5467 30.0296 68.0254 30.0296C66.7592 30.1018 65.5005 29.7888 64.4079 29.1302V29.1648ZM132.058 12.9745C131.792 13.3866 131.64 13.8649 131.619 14.3583C131.551 14.981 131.517 15.9496 131.517 17.2296V18.648H134.695V17.2988C134.695 15.9842 134.695 15.0502 134.594 14.3929C134.561 13.8965 134.397 13.4184 134.121 13.0091C133.918 12.7323 133.546 12.594 133.106 12.594C132.633 12.594 132.295 12.7323 132.092 13.0091L132.058 12.9745ZM131.517 21.2772V22.315C131.517 23.595 131.551 24.5291 131.619 25.1864C131.686 25.8091 131.855 26.2588 132.092 26.5702C132.329 26.8469 132.667 26.9853 133.174 26.9853C133.816 26.9853 134.256 26.7431 134.526 26.2242C134.729 25.7053 134.864 24.8404 134.898 23.6296L138.651 23.8718L138.685 24.5637C138.685 26.3972 138.211 27.781 137.231 28.6804C136.217 29.5799 134.864 30.0642 133.072 30.0642C130.909 30.0642 129.421 29.3723 128.542 27.9886C127.543 26.0058 127.098 23.779 127.257 21.554V18.0945C127.257 15.1194 127.697 12.9745 128.61 11.5907C129.489 10.2069 131.01 9.51504 133.208 9.51504C134.695 9.51504 135.845 9.82639 136.622 10.3799C137.434 10.9334 137.975 11.7983 138.313 13.0091C138.651 14.1853 138.82 15.8113 138.82 17.9215V21.3118H131.517V21.2772ZM53.7921 20.9313L48.8223 2.59612H53.1497L54.9078 10.8988C55.3473 12.9745 55.6515 14.7042 55.8882 16.1572H55.9896C56.1587 15.1194 56.4629 13.3896 57.0039 10.968L58.7619 2.56152H63.0894L58.0519 20.8967V29.7529H53.7583V20.9313H53.7921ZM88.1413 9.93017V29.7183H84.7266L84.3548 27.2967H84.2533C83.3405 29.1302 81.9206 30.0642 80.0949 30.0642C78.8102 30.0642 77.8636 29.6145 77.2212 28.7496C76.6127 27.8848 76.3084 26.5702 76.3084 24.7367V9.93017H80.7035V24.4599C80.7035 25.3594 80.7711 25.9821 80.9739 26.3626C81.143 26.7086 81.4811 26.9161 81.9206 26.9161C82.3116 26.9 82.691 26.7757 83.0185 26.5564C83.3459 26.337 83.6091 26.031 83.78 25.6707V9.93017H88.1413ZM110.489 9.93017V29.7183H107.108L106.702 27.2967H106.634C105.688 29.1302 104.302 30.0642 102.442 30.0642C101.157 30.0642 100.211 29.6145 99.6023 28.7496C98.9937 27.8848 98.6895 26.5702 98.6895 24.7367V9.93017H103.051V24.4599C103.051 25.3594 103.152 25.9821 103.321 26.3626C103.524 26.7086 103.828 26.9161 104.268 26.9161C104.659 26.9 105.038 26.7757 105.366 26.5564C105.693 26.337 105.956 26.031 106.127 25.6707V9.93017H110.522H110.489Z"
+                                    fill="white" />
+                                <path
+                                    d="M100.007 6.19385H95.6117V29.7182H91.3519V6.22845H87.0244V2.59602H99.9392V6.22845L100.007 6.19385ZM120.968 21.1733C120.968 22.6263 120.866 23.7333 120.765 24.5636C120.664 25.3939 120.427 25.9474 120.19 26.2933C120.057 26.4636 119.887 26.5993 119.693 26.6895C119.499 26.7797 119.287 26.8217 119.075 26.8122C118.721 26.8212 118.372 26.7288 118.068 26.5454C117.763 26.3619 117.514 26.0949 117.35 25.7744V14.5312C117.477 14.0319 117.734 13.5774 118.094 13.2166C118.406 12.8907 118.832 12.7041 119.278 12.6976C119.717 12.6976 120.055 12.8706 120.292 13.2166C120.528 13.5625 120.697 14.1852 120.799 15.0155C120.9 15.8803 120.934 17.0912 120.934 18.6133V21.1733H120.968ZM124.923 13.0782C124.687 11.8328 124.247 10.9333 123.639 10.3798C122.976 9.78891 122.117 9.47953 121.238 9.51494C120.427 9.51494 119.683 9.7571 118.973 10.2068C118.297 10.6912 117.756 11.2793 117.384 12.0403H117.35V1.59277H113.124V29.7528H116.742L117.181 27.8847H117.283C117.621 28.5766 118.128 29.0955 118.804 29.476C119.48 29.8566 120.224 30.0641 121.036 30.0641C121.718 30.0942 122.394 29.912 122.973 29.5415C123.552 29.171 124.008 28.6295 124.281 27.9885C124.957 26.6047 125.329 24.4252 125.329 21.4501V18.3366C125.329 16.0879 125.194 14.3582 124.923 13.1474V13.0782Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_4704_14271">
+                                    <rect width="138.614" height="32" fill="white" transform="translate(0.272461)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7913a6fe195fe6b82fcec79b575c1c4c5fc81534bbe84374b8b8e3fb0b3d4cc5&amp;width=100%25&amp;height=795&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <div class="map-yandex d-xl-none">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3ae8fb66c2798d3dd291b7d529c78c4bd1e2df7e70d8e05c2f8977edf8fff788&amp;width=100%25&amp;height=795&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+    </section>
+    <div class="map-info__mobile">
+        <div class="map__container">
+            <span class="map__title">ООО «Пауэр Интернэшнл – шины»</span>
+            <span>Адрес: <span class="map__item">г. Москва, БЦ ARCUS 4, Ленинградский проспект, 37а к.5</span></span>
+            <span>Телефон: <span class="map__item">(495) 38-000-77</span></span>
+            <span>E-mail: <span class="map__item">info@pwrs.ru</span></span>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="40" viewBox="0 0 44 40" fill="none">
+                    <path
+                        d="M28.2043 9.15672L32.397 0.998047L39.8755 13.8025L33.1902 26.0404H27.5244L34.5499 13.9158L31.7962 9.1987L28.2043 9.15672Z"
+                        fill="#BABABA" />
+                    <path
+                        d="M20.1445 28.2505L22.8628 32.9777H36.6899L43.7808 20.9232L41.2401 16.373L34.2461 28.2239L20.1445 28.2505Z"
+                        fill="#BABABA" />
+                    <path
+                        d="M35.6247 35.0684L32.9969 39.9546H18.7494L12.0977 27.6368L14.6434 23.2021L21.5003 34.9453L35.6247 35.0684Z"
+                        fill="#BABABA" />
+                    <path
+                        d="M16.5122 15.4199H11.118L4.03516 27.5686L10.8835 39.858H16.2307L9.42932 27.5217L16.5122 15.4199Z"
+                        fill="#BABABA" />
+                    <path
+                        d="M8.16211 6.64861L11.2112 1.86426H25.0482L27.7689 6.64861L26.174 10.4948H30.1612L32.2718 13.8253L29.4107 18.1406L22.1871 6.74243L8.16211 6.64861Z"
+                        fill="#BABABA" />
+                    <path d="M0 20.7024L3.01911 25.2575L10.0106 13.34H23.8878L21.0276 8.62598H7.20353L0 20.7024Z"
+                        fill="#BABABA" />
+                </svg>
+                <ul class="footer__list p-0 m-0">
+                    <ol class="nav-item p-0">
+                        <a class="nav-link p-0" aria-current="page" href="#">О компании</a>
+                    </ol>
+                    <ol class="nav-item p-0">
+                        <a class="nav-link p-0" href="#brands">Бренды</a>
+                    </ol>
+                    <ol class="nav-item p-0">
+                        <a class="nav-link p-0" href="#projects-tochki">Наши сервисы</a>
+                    </ol>
+                    <ol class="nav-item p-0">
+                        <a class="nav-link p-0" href="#map">Контакты</a>
+                    </ol>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center">© 2006–2023 ООО "Пауэр Интернэшнл-шины"</div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- модалки с видео  -->
+    <div class="modal fade" id="modalsVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" data-bs-theme="dark">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="studding__video">
+                        <iframe src="https://www.youtube.com/embed/Z4DgeZ3rNRQ?si=o5j5-q0ivdokHL2l" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- модалка с картой -->
+    <div class="modal fade" id="modalsMap" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header" data-bs-theme="dark">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="map" class="map_modal" style="height:100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script>
+        // map
+        const mapShm = {
+            devmode: false,
+            dataUrl: '/src/data.json',
+            instance: null,
+            objectManager: null,
+            selectedPointId: null,
+            newIconLayout: null,
+            zoom: 9,
+            areaRadius: 90e3,
+            center: [55.76, 37.64],
+            filter: [],
+            init: () => {
+                ymaps.ready(init);
+                function init() {
+                    const map = new ymaps.Map('map', {
+                        center: mapShm.center,
+                        zoom: mapShm.zoom,
+                        // controls: [],
+                        maxAnimationZoomDifference: Infinity,
+                    });
+                    mapShm.instance = map;
+                    const objectManager = new ymaps.ObjectManager({ // ObjectManager принимает те же опции, что и кластеризатор.
+                        clusterize: true, // кластеризация меток
+                        gridSize: 128, // TODO: цвет кластера сделать primary
+                    });
+                    const newIconLayout = ymaps.templateLayoutFactory.createClass(markerTpl, {
+                        build: function () {
+                            newIconLayout.superclass.build.call(this);
+                            const parent = this._parentElement;
+                            const markerWidth = parent.querySelector('.mapShm-marker').offsetWidth;
+                            const markerHeight = parent.querySelector('.mapShm-marker').offsetHeight;
+                            const containerWidth = parent.querySelector('.mapShm-marker__container').offsetWidth;
+                            this.getData().options.set('shape', { // кликабельная область
+                                type: 'Rectangle',
+                                coordinates: [
+                                    [0, 0],
+                                    [containerWidth + (markerWidth / 2), markerHeight - 10],
+                                ],
+                            });
+                        },
+                    });
+                    mapShm.newIconLayout = newIconLayout;
+                    map.geoObjects.add(objectManager);
+                    mapShm.objectManager = objectManager;
+
+                    mapShm.bindEventsMap();
+                    mapShm.loadMapMarkers();
+                    // mapShm.bindEventsControls();
+                    mapShm.setDevMode(mapShm.devmode);
+                }
+            },
+            loadMapMarkers: () => {
+                mapShm.objectManager.removeAll();
+                let listData = {};
+                // const w = document.querySelector('input[name="width"]').value;
+                // const p = document.querySelector('input[name="height"]').value;
+                // const d = document.querySelector('input[name="diameter"]').value;
+                // if (!w && !p && !d) {
+                //     listData = {
+                //         'latitude': '55.7522',
+                //         'longitude': '37.6156',
+                //         'stoRadios': 500000,
+                //     };
+                // } else if (!w || !p || !d) {
+                //     return false;
+                // } else {
+                //     // ToDo: прикрутить геопозиционирование
+                //     listData = {
+                //         'sh': w,
+                //         'prof': p,
+                //         'd': d,
+                //         'runflat': 0,
+                //         'indexC': 0,
+                //         'latitude': '55.7522',
+                //         'longitude': '37.6156',
+                //         'stoRadios': 500000,
+                //     };
+                // }
+                listData = {
+                    'latitude': '55.7522',
+                    'longitude': '37.6156',
+                    'stoRadios': 500000,
+                };
+
+                fetch('./data.json')
+                    .then(response => response.json())
+                    .then((data) => {
+                        // data = data.json();
+                        // const newData = {
+                        //     "type": "FeatureCollection",
+                        //     "features": [],
+                        // }
+                        // data.shops.forEach((el) => {
+                        //     // const auth = document.querySelector('#auth-user').value;
+                        //     el.type = 'Feature',
+                        //     el.geometry = el.geoData;
+                        //     el.properties = {
+                        //         'iconCaption': el.name,
+                        //         'filter': ['масло'],
+                        //     };
+                        //     el.id = el.stoId;
+                        //     el.rating = 4.2;
+                        //     // el.auth = auth;
+                        //     console.log(el);
+                        // });
+                        // newData.features = data.shops;
+                        // console.log(newData);
+                        mapShm.objectManager.add(data);
+                        // mapShm.objectManager.objects.options.set({
+                        //     'iconLayout': mapShm.newIconLayout,
+                        //     'iconOffset': [-20, -50],
+                        // });
+                });
+            },
+            bindEventsMap: () => {
+                mapShm.objectManager.objects.events.add('click', function (e) {
+                    const auth = document.querySelector('#auth-user').value;
+                    const objectId = e.get('objectId');
+                    const obj = mapShm.objectManager.objects.getById(objectId);
+                    const $mapContainer = document.querySelector('.map-container');
+                    if (mapShm.selectedPointId !== null) {
+                        if (mapShm.selectedPointId !== objectId) {
+                            const selectedObj = mapShm.objectManager.objects.getById(mapShm.selectedPointId);
+                            selectedObj.properties.selected = false;
+                            mapShm.objectManager.objects.setObjectOptions(mapShm.selectedPointId, {
+                                'iconLayout': mapShm.newIconLayout,
+                            });
+                        }
+                    }
+
+                    const inps = document.querySelector('input[name="stoid"]');
+                    if (inps) {
+                        inps.value = obj.id;
+                    }
+                    const inpn = document.querySelector('input[name="name"]');
+                    if (inpn) {
+                        inpn.value = obj.name;
+                    }
+                    const inpad = document.querySelector('input[name="address"]');
+                    if (inpad) {
+                        inpad.value = obj.address;
+                    }
+                    const inpam = document.querySelector('input[name="amount"]');
+                    if (inpam) {
+                        inpam.value = obj.amount;
+                    }
+                    const inpsc = document.querySelector('input[name="serviceCode"]');
+                    if (inpsc) {
+                        inpsc.value = obj.serviceCode;
+                    }
+
+                    obj.properties.selected = true;
+                    mapShm.objectManager.objects.setObjectOptions(objectId, {
+                        'iconLayout': mapShm.newIconLayout,
+                    });
+                    mapShm.instance.setCenter(obj.geometry.coordinates, mapShm.instance.getZoom(), {
+                        duration: 250,
+                    });
+                    mapShm.selectedPointId = objectId;
+                    setTimeout(() => {
+                        $mapContainer.classList.add('map-sidebar--open');
+                    }, 350);
+                    requestGet(apiUrls.domain + apiUrls.actionGetStoInfo, { 'stoId': obj.id }).then((res) => {
+                        const obj = res.workschedulePickup[0];
+                        const fh = obj.hourFrom.toString().length < 2 ? '0' + obj.hourFrom : obj.hourFrom;
+                        const fm = obj.minutesFrom.toString().length < 2 ? '0' + obj.minutesFrom : obj.minutesFrom;
+                        const th = obj.hourTo.toString().length < 2 ? '0' + obj.hourTo : obj.hourTo;
+                        const tm = obj.minutesTo.toString().length < 2 ? '0' + obj.minutesTo : obj.minutesTo;
+                        document.querySelector('.map-sidebar__content .work-time').textContent = fh + ':' + fm + ' - ' + th + ':' + tm;
+                    });
+                    document.querySelector('.map-sidebar__content .tire-service__title').textContent = obj.name;
+                    document.querySelector('.map-sidebar__content .tire-service-info__address').textContent = obj.address;
+                    document.querySelector('.map-sidebar__content .tire-slider-reviews__evaluation').textContent = obj.rating;
+                    const formatterRUB = new Intl.NumberFormat('ru-RU');
+                    if (auth === '1') {
+                        document.querySelector('.map-sidebar__content .tire-service-prise__sum .amount').textContent = formatterRUB.format(obj.amount);
+                        if (document.querySelector('.order-calendar.active')) {
+                            mapShm.loadTimes(obj.id, mapShm.formatApiDate(mapShm.calendar.selectedDates[0]));
+                        } else {
+                            mapShm.initDateTimePicker(obj.id);
+                        }
+                    }
+                });
+            },
+            bindEventsControls: () => {
+                const $mapContainer = document.querySelector('.map-container');
+                const $btnOptions = document.querySelector('.map-control--options');
+                const $btnGeo = document.querySelector('.map-control--geo');
+                const $btnfull = document.querySelector('.map-control--full');
+                const $btnSidebarClose = document.querySelector('.tire-slider-btn-close');
+                const $btnZoomIn = document.querySelector('.map-control--zoomIn');
+                const $btnZoomOut = document.querySelector('.map-control--zoomOut');
+                const $btnLayers = document.querySelector('.map-control--layers');
+                const $mapTypeRadio = document.querySelector('.map-control__dropdown');
+
+                $btnZoomIn.addEventListener('click', mapShm.setZoomIn);
+                $btnZoomOut.addEventListener('click', mapShm.setZoomOut);
+                $btnGeo.addEventListener('click', mapShm.setGeolocation);
+                $btnfull.addEventListener('click', mapShm.setFullscreen);
+
+                $btnOptions.addEventListener('click', () => {
+                    if ($mapContainer.classList.contains('map-options--open')) {
+                        $mapContainer.classList.remove('map-options--open');
+                        mapShm.fitToViewport();
+                    } else {
+                        $mapContainer.classList.add('map-options--open');
+                    }
+                });
+
+                $btnSidebarClose.addEventListener('click', () => {
+                    mapShm.closeSidebar();
+                });
+
+                document.querySelectorAll('.map-options .form-check-input').forEach((el) => {
+                    el.addEventListener('change', function (e) {
+                        const filterString = e.target.dataset.filter;
+                        if (e.target.checked) {
+                            mapShm.filter.push(filterString);
+                        } else {
+                            const index = mapShm.filter.indexOf(filterString);
+                            if (index > -1) {
+                                mapShm.filter.splice(index, 1);
+                            }
+                        }
+                        mapShm.initFilters(mapShm.filter);
+                    });
+                });
+
+                $btnLayers.addEventListener('click', () => {
+                    $mapTypeRadio.hidden = !$mapTypeRadio.hidden;
+                    $btnLayers.dataset.checked = !($btnLayers.dataset.checked === 'true');
+                });
+
+                $mapTypeRadio.querySelectorAll('input[type=radio]').forEach((el) => {
+                    el.addEventListener('change', function () {
+                        mapShm.setType(this.dataset.type);
+                    });
+                });
+
+                carSelector.init();
+            },
+            fitToViewport: () => {
+                const $mapContainer = document.querySelector('.map-container');
+                const $isSidebarOpen = $mapContainer.classList.contains('map-sidebar--open');
+                const $isOptionsOpen = $mapContainer.classList.contains('map-options--open');
+                if (!$isSidebarOpen && !$isOptionsOpen) {
+                    setTimeout(() => {
+                        mapShm.instance.container.fitToViewport();
+                    }, 350);
+                }
+            },
+            initFilters: (filterArray) => {
+                if (filterArray.length) {
+                    mapShm.objectManager.setFilter(function (object) {
+                        return object.properties.filter.some((el) => filterArray.includes(el));
+                    });
+                } else {
+                    mapShm.objectManager.setFilter();
+                }
+            },
+            setZoom: (zoom) => {
+                mapShm.instance.setZoom(zoom, { duration: 150 });
+            },
+            setZoomIn: () => {
+                mapShm.zoom = mapShm.instance.getZoom() + 1;
+                mapShm.setZoom(mapShm.zoom);
+            },
+            setZoomOut: () => {
+                mapShm.zoom = mapShm.instance.getZoom() - 1;
+                mapShm.setZoom(mapShm.zoom);
+            },
+            setType: (type = 'map') => {
+                mapShm.instance.setType(`yandex#${type}`);
+            },
+            setFullscreen: () => {
+                const $mapContainer = document.querySelector('.map-container');
+                const $btnfullSvg = document.querySelector('.map-control--full svg use');
+                if ($mapContainer.classList.contains('map-full--open')) {
+                    $mapContainer.classList.remove('map-full--open');
+                    document.body.style.overflowY = 'auto';
+                    $btnfullSvg.setAttribute('href', $btnfullSvg.getAttribute('href').replace('-on', '-off'));
+                } else {
+                    $mapContainer.classList.add('map-full--open');
+                    document.body.style.overflowY = 'hidden';
+                    $btnfullSvg.setAttribute('href', $btnfullSvg.getAttribute('href').replace('-off', '-on'));
+                }
+                mapShm.instance.container.fitToViewport();
+            },
+            setTrafficView: (show = true) => {
+                const actualProvider = new ymaps.traffic.provider.Actual({}, {
+                    infoLayerShown: false, // Показывать слой дорожных событий (ДТП, дорожные работы и тп)
+                });
+                if (show) {
+                    actualProvider.setMap(mapShm.instance);
+                } else {
+                    actualProvider.setMap(null); // СКРЫТИЕ НЕ РАБОТАЕТ !!
+                }
+            },
+            setGeolocation: () => {
+                const geolocation = ymaps.geolocation;
+                geolocation.get({
+                    provider: 'auto',
+                    mapStateAutoApply: true,
+                    autoReverseGeocode: false, // ВАЖНО для бесплатного использования api!
+                }).then(function (result) {
+                    mapShm.instance.setCenter(result.geoObjects.position, mapShm.instance.getZoom(), {
+                        duration: 300,
+                    });
+                });
+            },
+            initDateTimePicker: (id) => {
+                const today = new Date();
+                let tomorrow = new Date(today);
+                import('flatpickr').then(function () {
+                    mapShm.calendar = flatpickr('.flatpickr', {
+                        'locale': Russian,
+                        'minDate': 'today',
+                        'dateFormat': 'd.m.Y',
+                        'maxDate': today.fp_incr(14),
+                        'defaultDate': today,
+                        'onReady': function (selectedDates, dateStr, instance) {
+                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(today))
+                        },
+                        'onChange': function (selectedDates, dateStr, instance) {
+                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(selectedDates[0]))
+                        },
+                    });
+                    document.querySelector('.order-calendar').classList.add('active');
+                    document.querySelector('.order-calendar__left').addEventListener('click', () => {
+                        if (today <= (tomorrow - 1)) {
+                            tomorrow = tomorrow.fp_incr(-1);
+                            mapShm.calendar.setDate(tomorrow)
+                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(tomorrow))
+                        }
+                    });
+                    document.querySelector('.order-calendar__right').addEventListener('click', () => {
+                        if ((tomorrow) < today.fp_incr(14)) {
+                            tomorrow = tomorrow.fp_incr(1);
+                            mapShm.calendar.setDate(tomorrow)
+                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(tomorrow))
+                        }
+                    });
+                });
+            },
+            loadTimes: (id, date) => {
+                if (id && date) {
+                    const $orderTime = document.querySelector('.order-time');
+                    spinner.show($orderTime);
+                    const inpd = document.querySelector('input[name="datesto"]');
+                    if (inpd) {
+                        inpd.value = date;
+                    }
+                    requestGet(apiUrls.domain + apiUrls.actionGetSchedule, { 'stoId': id, 'date': date }).then((res) => {
+                        let timesArray = res.scheduleItems[0].availableTime;
+                        $orderTime.innerHTML = timesArray.map((time, index) => {
+                            return `
+                    <div>
+                        <input type="radio" class="btn-check" data-value="${time}" name="btnradio" id="btnradio${index}" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio${index}">${time}</label>
+                    </div>
+                `;
+                        }).join('');
+                    });
+                }
+            },
+            formatApiDate: (date) => {
+                return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+            },
+            setDevMode: (show = true) => { // может пригодиться, для проверки, правильно ли api отдает данные
+                if (show) {
+                    const myCircle = new ymaps.Circle([
+                        mapShm.center,
+                        mapShm.areaRadius,
+                    ], {
+                        hintContent: `Радиус круга - ${mapShm.areaRadius / 1000} км`,
+                    }, {
+                        fillColor: '#4AD87277',
+                        strokeColor: '#DC3030',
+                        strokeOpacity: 0.8,
+                        strokeWidth: 5,
+                    });
+                    mapShm.instance.geoObjects.add(myCircle);
+
+                    mapShm.instance.events.add('actionend', function () {
+                        if (mapShm.instance.getZoom() > mapShm.zoom) { // если масштаб увеличился
+                            mapShm.areaRadius = mapShm.areaRadius / 2; // делим радиус на 2 и сохраняем
+                        } else if (mapShm.instance.getZoom() < mapShm.zoom) { // если масштаб уменьшился
+                            mapShm.areaRadius = mapShm.areaRadius * 2; // сохраняем удвоенный радиус
+                        }
+                        myCircle.geometry.setRadius(mapShm.areaRadius); // меняем радиус на новый
+                        myCircle.properties.set('hintContent', `Радиус круга - ${mapShm.areaRadius / 1000} км`); // меняем текст в круге по наведению
+                        mapShm.zoom = mapShm.instance.getZoom(); // сохраняем новый масштаб
+                        myCircle.geometry.setCoordinates(mapShm.instance.getCenter()); // центрируем круг
+                    });
+                }
+            },
+            closeSidebar: () => {
+                const $mapContainer = document.querySelector('.map-container');
+                if ($mapContainer.classList.contains('map-sidebar--open')) {
+                    $mapContainer.classList.remove('map-sidebar--open');
+                    mapShm.fitToViewport();
+                    if (mapShm.selectedPointId !== null) {
+                        const selectedObj = mapShm.objectManager.objects.getById(mapShm.selectedPointId);
+                        selectedObj.properties.selected = false;
+                        mapShm.objectManager.objects.setObjectOptions(mapShm.selectedPointId, {
+                            'iconLayout': mapShm.newIconLayout,
+                        });
+                    }
+                }
+            },
+        };
+        mapShm.init();
+
+        markerTpl = `
+            <div class="mapShm-marker{% if properties.selected %} selected{% endif %}">
+                <div class="mapShm-marker__icon">
+                    <svg width="40" height="50">
+                        <use href="/images/svg/map.bundle.svg#map-marker"></use>
+                    </svg>
+                </div>
+                <div class="mapShm-marker__container">
+                    <div class="mapShm-marker__content">
+                        <div class="mapShm-marker__content-top">
+                            {{ name }}
+                            <svg width="17" height="15" class="text-info">
+                                <use href="/images/svg/common.bundle.svg#icon-star"></use>
+                            </svg>
+                            {{ rating }}
+                        </div>
+                        {% if auth === '1' && amount %}<div class="mapShm-marker__price"> {{amount}} ₽</div>{% endif %}
+                    </div>
+                </div>
+            </div>
+        `;
+    </script>
+    <script>
+        function handleMarquee() {
+            const marquee = document.querySelectorAll('.brands__inner');
+            let speed = 1;
+            let lastScrollPos = 0;
+            let timer;
+            marquee.forEach(function (el) {
+                const container = el.querySelector('.brands__items');
+                const content = el.querySelector('.brands__items div');
+                //Get total width
+                const elWidth = content.offsetWidth;
+                //Duplicate content
+                let clone = content.cloneNode(true);
+                container.appendChild(clone);
+                let progress = 1;
+                function loop() {
+                    progress = progress - speed;
+                    if (progress <= elWidth * -1) {
+                        progress = 0;
+                    }
+                    container.style.transform = 'translateX(' + progress + 'px)';
+                    container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+                    window.requestAnimationFrame(loop);
+                }
+                loop();
+            });
+        };
+        handleMarquee();
+    </script>
+</body>
+
+</html>
