@@ -1137,7 +1137,7 @@ svg #map g:hover g {
 
     .about {
         padding-bottom: 60px;
-        /* height: calc(100vh - 68px); */
+        height: auto;
     }
 
     .about__bg-img {
