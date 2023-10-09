@@ -173,7 +173,6 @@ span {
 .container-btn-map {
     display    : flex;
     align-items: center;
-    justify-content: center;
     margin     : 0 115px 156px 42px;
 }
 
@@ -184,11 +183,12 @@ span {
 .container-btn {
     display    : flex;
     align-items: center;
+    justify-content: center;
     margin     : 0 0 220px 42px;
 }
 
 .container-btn a {
-    /* margin-right: 115px; */
+    margin-right: 115px;
 }
 
 .link-modal {
