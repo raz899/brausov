@@ -784,12 +784,11 @@
         // map
         const mapShm = {
             devmode: false,
-            dataUrl: '/src/data.json',
-            instance: null,
+            dataUrl: './jfp.json',
             objectManager: null,
             selectedPointId: null,
             newIconLayout: null,
-            zoom: 9,
+            zoom: 4,
             areaRadius: 90e3,
             center: [55.76, 37.64],
             filter: [],
@@ -800,75 +799,30 @@
                         center: mapShm.center,
                         zoom: mapShm.zoom,
                         // controls: [],
-                        maxAnimationZoomDifference: Infinity,
+                        // maxAnimationZoomDifference: Infinity,
                     });
-                    mapShm.instance = map;
                     const objectManager = new ymaps.ObjectManager({ // ObjectManager принимает те же опции, что и кластеризатор.
                         clusterize: true, // кластеризация меток
                         gridSize: 128, // TODO: цвет кластера сделать primary
                     });
-                    const newIconLayout = ymaps.templateLayoutFactory.createClass(markerTpl, {
-                        build: function () {
-                            newIconLayout.superclass.build.call(this);
-                            const parent = this._parentElement;
-                            const markerWidth = parent.querySelector('.mapShm-marker').offsetWidth;
-                            const markerHeight = parent.querySelector('.mapShm-marker').offsetHeight;
-                            const containerWidth = parent.querySelector('.mapShm-marker__container').offsetWidth;
-                            this.getData().options.set('shape', { // кликабельная область
-                                type: 'Rectangle',
-                                coordinates: [
-                                    [0, 0],
-                                    [containerWidth + (markerWidth / 2), markerHeight - 10],
-                                ],
-                            });
-                        },
-                    });
-                    mapShm.newIconLayout = newIconLayout;
                     map.geoObjects.add(objectManager);
                     mapShm.objectManager = objectManager;
 
-                    mapShm.bindEventsMap();
                     mapShm.loadMapMarkers();
-                    // mapShm.bindEventsControls();
-                    mapShm.setDevMode(mapShm.devmode);
                 }
             },
             loadMapMarkers: () => {
                 mapShm.objectManager.removeAll();
 
-                fetch('https://b2b.4tochki.ru/export_data/sto/jfp.json')
+                fetch(mapShm.dataUrl)
                     .then(response => response.json())
                     .then((data) => {
-                        // data = data.json();
-                        // const newData = {
-                        //     "type": "FeatureCollection",
-                        //     "features": [],
-                        // }
-                        // data.shops.forEach((el) => {
-                        //     // const auth = document.querySelector('#auth-user').value;
-                        //     el.type = 'Feature',
-                        //     el.geometry = el.geoData;
-                        //     el.properties = {
-                        //         'iconCaption': el.name,
-                        //         'filter': ['масло'],
-                        //     };
-                        //     el.id = el.stoId;
-                        //     el.rating = 4.2;
-                        //     // el.auth = auth;
-                        //     console.log(el);
-                        // });
-                        // newData.features = data.shops;
-                        // console.log(newData);
                         mapShm.objectManager.add(data);
-                        // mapShm.objectManager.objects.options.set({
-                        //     'iconLayout': mapShm.newIconLayout,
-                        //     'iconOffset': [-20, -50],
-                        // });
                 });
             },
             bindEventsMap: () => {
                 mapShm.objectManager.objects.events.add('click', function (e) {
-                    const auth = document.querySelector('#auth-user').value;
+                    // const auth = document.querySelector('#auth-user').value;
                     const objectId = e.get('objectId');
                     const obj = mapShm.objectManager.objects.getById(objectId);
                     const $mapContainer = document.querySelector('.map-container');
@@ -903,7 +857,7 @@
                         inpsc.value = obj.serviceCode;
                     }
 
-                    obj.properties.selected = true;
+                    // obj.properties.selected = true;
                     mapShm.objectManager.objects.setObjectOptions(objectId, {
                         'iconLayout': mapShm.newIconLayout,
                     });
@@ -936,256 +890,8 @@
                     }
                 });
             },
-            bindEventsControls: () => {
-                const $mapContainer = document.querySelector('.map-container');
-                const $btnOptions = document.querySelector('.map-control--options');
-                const $btnGeo = document.querySelector('.map-control--geo');
-                const $btnfull = document.querySelector('.map-control--full');
-                const $btnSidebarClose = document.querySelector('.tire-slider-btn-close');
-                const $btnZoomIn = document.querySelector('.map-control--zoomIn');
-                const $btnZoomOut = document.querySelector('.map-control--zoomOut');
-                const $btnLayers = document.querySelector('.map-control--layers');
-                const $mapTypeRadio = document.querySelector('.map-control__dropdown');
-
-                $btnZoomIn.addEventListener('click', mapShm.setZoomIn);
-                $btnZoomOut.addEventListener('click', mapShm.setZoomOut);
-                $btnGeo.addEventListener('click', mapShm.setGeolocation);
-                $btnfull.addEventListener('click', mapShm.setFullscreen);
-
-                $btnOptions.addEventListener('click', () => {
-                    if ($mapContainer.classList.contains('map-options--open')) {
-                        $mapContainer.classList.remove('map-options--open');
-                        mapShm.fitToViewport();
-                    } else {
-                        $mapContainer.classList.add('map-options--open');
-                    }
-                });
-
-                $btnSidebarClose.addEventListener('click', () => {
-                    mapShm.closeSidebar();
-                });
-
-                document.querySelectorAll('.map-options .form-check-input').forEach((el) => {
-                    el.addEventListener('change', function (e) {
-                        const filterString = e.target.dataset.filter;
-                        if (e.target.checked) {
-                            mapShm.filter.push(filterString);
-                        } else {
-                            const index = mapShm.filter.indexOf(filterString);
-                            if (index > -1) {
-                                mapShm.filter.splice(index, 1);
-                            }
-                        }
-                        mapShm.initFilters(mapShm.filter);
-                    });
-                });
-
-                $btnLayers.addEventListener('click', () => {
-                    $mapTypeRadio.hidden = !$mapTypeRadio.hidden;
-                    $btnLayers.dataset.checked = !($btnLayers.dataset.checked === 'true');
-                });
-
-                $mapTypeRadio.querySelectorAll('input[type=radio]').forEach((el) => {
-                    el.addEventListener('change', function () {
-                        mapShm.setType(this.dataset.type);
-                    });
-                });
-
-                carSelector.init();
-            },
-            fitToViewport: () => {
-                const $mapContainer = document.querySelector('.map-container');
-                const $isSidebarOpen = $mapContainer.classList.contains('map-sidebar--open');
-                const $isOptionsOpen = $mapContainer.classList.contains('map-options--open');
-                if (!$isSidebarOpen && !$isOptionsOpen) {
-                    setTimeout(() => {
-                        mapShm.instance.container.fitToViewport();
-                    }, 350);
-                }
-            },
-            initFilters: (filterArray) => {
-                if (filterArray.length) {
-                    mapShm.objectManager.setFilter(function (object) {
-                        return object.properties.filter.some((el) => filterArray.includes(el));
-                    });
-                } else {
-                    mapShm.objectManager.setFilter();
-                }
-            },
-            setZoom: (zoom) => {
-                mapShm.instance.setZoom(zoom, { duration: 150 });
-            },
-            setZoomIn: () => {
-                mapShm.zoom = mapShm.instance.getZoom() + 1;
-                mapShm.setZoom(mapShm.zoom);
-            },
-            setZoomOut: () => {
-                mapShm.zoom = mapShm.instance.getZoom() - 1;
-                mapShm.setZoom(mapShm.zoom);
-            },
-            setType: (type = 'map') => {
-                mapShm.instance.setType(`yandex#${type}`);
-            },
-            setFullscreen: () => {
-                const $mapContainer = document.querySelector('.map-container');
-                const $btnfullSvg = document.querySelector('.map-control--full svg use');
-                if ($mapContainer.classList.contains('map-full--open')) {
-                    $mapContainer.classList.remove('map-full--open');
-                    document.body.style.overflowY = 'auto';
-                    $btnfullSvg.setAttribute('href', $btnfullSvg.getAttribute('href').replace('-on', '-off'));
-                } else {
-                    $mapContainer.classList.add('map-full--open');
-                    document.body.style.overflowY = 'hidden';
-                    $btnfullSvg.setAttribute('href', $btnfullSvg.getAttribute('href').replace('-off', '-on'));
-                }
-                mapShm.instance.container.fitToViewport();
-            },
-            setTrafficView: (show = true) => {
-                const actualProvider = new ymaps.traffic.provider.Actual({}, {
-                    infoLayerShown: false, // Показывать слой дорожных событий (ДТП, дорожные работы и тп)
-                });
-                if (show) {
-                    actualProvider.setMap(mapShm.instance);
-                } else {
-                    actualProvider.setMap(null); // СКРЫТИЕ НЕ РАБОТАЕТ !!
-                }
-            },
-            setGeolocation: () => {
-                const geolocation = ymaps.geolocation;
-                geolocation.get({
-                    provider: 'auto',
-                    mapStateAutoApply: true,
-                    autoReverseGeocode: false, // ВАЖНО для бесплатного использования api!
-                }).then(function (result) {
-                    mapShm.instance.setCenter(result.geoObjects.position, mapShm.instance.getZoom(), {
-                        duration: 300,
-                    });
-                });
-            },
-            initDateTimePicker: (id) => {
-                const today = new Date();
-                let tomorrow = new Date(today);
-                import('flatpickr').then(function () {
-                    mapShm.calendar = flatpickr('.flatpickr', {
-                        'locale': Russian,
-                        'minDate': 'today',
-                        'dateFormat': 'd.m.Y',
-                        'maxDate': today.fp_incr(14),
-                        'defaultDate': today,
-                        'onReady': function (selectedDates, dateStr, instance) {
-                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(today))
-                        },
-                        'onChange': function (selectedDates, dateStr, instance) {
-                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(selectedDates[0]))
-                        },
-                    });
-                    document.querySelector('.order-calendar').classList.add('active');
-                    document.querySelector('.order-calendar__left').addEventListener('click', () => {
-                        if (today <= (tomorrow - 1)) {
-                            tomorrow = tomorrow.fp_incr(-1);
-                            mapShm.calendar.setDate(tomorrow)
-                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(tomorrow))
-                        }
-                    });
-                    document.querySelector('.order-calendar__right').addEventListener('click', () => {
-                        if ((tomorrow) < today.fp_incr(14)) {
-                            tomorrow = tomorrow.fp_incr(1);
-                            mapShm.calendar.setDate(tomorrow)
-                            mapShm.loadTimes(mapShm.selectedPointId, mapShm.formatApiDate(tomorrow))
-                        }
-                    });
-                });
-            },
-            loadTimes: (id, date) => {
-                if (id && date) {
-                    const $orderTime = document.querySelector('.order-time');
-                    spinner.show($orderTime);
-                    const inpd = document.querySelector('input[name="datesto"]');
-                    if (inpd) {
-                        inpd.value = date;
-                    }
-                    requestGet(apiUrls.domain + apiUrls.actionGetSchedule, { 'stoId': id, 'date': date }).then((res) => {
-                        let timesArray = res.scheduleItems[0].availableTime;
-                        $orderTime.innerHTML = timesArray.map((time, index) => {
-                            return `
-                    <div>
-                        <input type="radio" class="btn-check" data-value="${time}" name="btnradio" id="btnradio${index}" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btnradio${index}">${time}</label>
-                    </div>
-                `;
-                        }).join('');
-                    });
-                }
-            },
-            formatApiDate: (date) => {
-                return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-            },
-            setDevMode: (show = true) => { // может пригодиться, для проверки, правильно ли api отдает данные
-                if (show) {
-                    const myCircle = new ymaps.Circle([
-                        mapShm.center,
-                        mapShm.areaRadius,
-                    ], {
-                        hintContent: `Радиус круга - ${mapShm.areaRadius / 1000} км`,
-                    }, {
-                        fillColor: '#4AD87277',
-                        strokeColor: '#DC3030',
-                        strokeOpacity: 0.8,
-                        strokeWidth: 5,
-                    });
-                    mapShm.instance.geoObjects.add(myCircle);
-
-                    mapShm.instance.events.add('actionend', function () {
-                        if (mapShm.instance.getZoom() > mapShm.zoom) { // если масштаб увеличился
-                            mapShm.areaRadius = mapShm.areaRadius / 2; // делим радиус на 2 и сохраняем
-                        } else if (mapShm.instance.getZoom() < mapShm.zoom) { // если масштаб уменьшился
-                            mapShm.areaRadius = mapShm.areaRadius * 2; // сохраняем удвоенный радиус
-                        }
-                        myCircle.geometry.setRadius(mapShm.areaRadius); // меняем радиус на новый
-                        myCircle.properties.set('hintContent', `Радиус круга - ${mapShm.areaRadius / 1000} км`); // меняем текст в круге по наведению
-                        mapShm.zoom = mapShm.instance.getZoom(); // сохраняем новый масштаб
-                        myCircle.geometry.setCoordinates(mapShm.instance.getCenter()); // центрируем круг
-                    });
-                }
-            },
-            closeSidebar: () => {
-                const $mapContainer = document.querySelector('.map-container');
-                if ($mapContainer.classList.contains('map-sidebar--open')) {
-                    $mapContainer.classList.remove('map-sidebar--open');
-                    mapShm.fitToViewport();
-                    if (mapShm.selectedPointId !== null) {
-                        const selectedObj = mapShm.objectManager.objects.getById(mapShm.selectedPointId);
-                        selectedObj.properties.selected = false;
-                        mapShm.objectManager.objects.setObjectOptions(mapShm.selectedPointId, {
-                            'iconLayout': mapShm.newIconLayout,
-                        });
-                    }
-                }
-            },
         };
         mapShm.init();
-
-        markerTpl = `
-            <div class="mapShm-marker{% if properties.selected %} selected{% endif %}">
-                <div class="mapShm-marker__icon">
-                    <svg width="40" height="50">
-                        <use href="/images/svg/map.bundle.svg#map-marker"></use>
-                    </svg>
-                </div>
-                <div class="mapShm-marker__container">
-                    <div class="mapShm-marker__content">
-                        <div class="mapShm-marker__content-top">
-                            {{ name }}
-                            <svg width="17" height="15" class="text-info">
-                                <use href="/images/svg/common.bundle.svg#icon-star"></use>
-                            </svg>
-                            {{ rating }}
-                        </div>
-                        {% if auth === '1' && amount %}<div class="mapShm-marker__price"> {{amount}} ₽</div>{% endif %}
-                    </div>
-                </div>
-            </div>
-        `;
     </script>
     <script>
         function handleMarquee() {

@@ -1,21 +1,6613 @@
 {
-    "type": "FeatureCollection",
     "features": [
         {
-            "type": "Feature",
-            "id": 46893, 
             "geometry": {
-                "type": "Point", 
-                "coordinates": [55.827262, 37.368038]}, 
-                "properties": {"balloonContent": "Красногорск, ул. Спасская, д. 2А"}
+                "coordinates": [
+                    55.05051753445488,
+                    82.92279789814755
+                ],
+                "type": "Point"
+            },
+            "id": 44712,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Николая Островского, д.37/1"
+            },
+            "type": "Feature"
         },
         {
-            "type": "Feature",
-            "id": 45472, 
             "geometry": {
-                "type": "Point", 
-                "coordinates": [56.331971486667484, 37.50788667461485]}, 
-                "properties": {"balloonContent": "Дмитров, Московская улица, д. 31"}
+                "coordinates": [
+                    56.5087485465663,
+                    84.98607387731538
+                ],
+                "type": "Point"
+            },
+            "id": 44787,
+            "properties": {
+                "balloonContent": "Томск, Путевой переулок, д.36"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.823743953148075,
+                    49.195652144180194
+                ],
+                "type": "Point"
+            },
+            "id": 44790,
+            "properties": {
+                "balloonContent": "Казань, улица Журналистов, д.56Б, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.63806,
+                    47.934086
+                ],
+                "type": "Point"
+            },
+            "id": 44803,
+            "properties": {
+                "balloonContent": "Йошкар-Ола, ул. Мира, д.70г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    64.438288,
+                    76.495786
+                ],
+                "type": "Point"
+            },
+            "id": 44856,
+            "properties": {
+                "balloonContent": "Губкинский, микрорайон. 13, д.22"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.681891,
+                    37.758581
+                ],
+                "type": "Point"
+            },
+            "id": 44861,
+            "properties": {
+                "balloonContent": "Новороссийск, ул. Шоссейная, д.150"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.719569,
+                    37.836366
+                ],
+                "type": "Point"
+            },
+            "id": 44880,
+            "properties": {
+                "balloonContent": "Новороссийск, ш. Сухумское, д.110А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.684781,
+                    37.770789
+                ],
+                "type": "Point"
+            },
+            "id": 44881,
+            "properties": {
+                "balloonContent": "Новороссийск, ул. Волгоградская, д.105"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.929881,
+                    56.142567
+                ],
+                "type": "Point"
+            },
+            "id": 44882,
+            "properties": {
+                "balloonContent": "Пермь, ул. Промышленная, д.101"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.362828,
+                    42.127178
+                ],
+                "type": "Point"
+            },
+            "id": 44883,
+            "properties": {
+                "balloonContent": "Выкса, ш. Досчатинское, д.44/19"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    48.76107,
+                    44.50819
+                ],
+                "type": "Point"
+            },
+            "id": 44884,
+            "properties": {
+                "balloonContent": "Волгоград, ул. им. Землячки, д.74г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.638378,
+                    33.518146
+                ],
+                "type": "Point"
+            },
+            "id": 44885,
+            "properties": {
+                "balloonContent": "Тихвин, ул. Машиностроителей, д.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.352885,
+                    78.379796
+                ],
+                "type": "Point"
+            },
+            "id": 44886,
+            "properties": {
+                "balloonContent": "Барабинск, ул. Луначарского, д.13А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.77924,
+                    87.128929
+                ],
+                "type": "Point"
+            },
+            "id": 44887,
+            "properties": {
+                "balloonContent": "Новокузнецк, Строителей. проспект, д.95"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.55618,
+                    84.925433
+                ],
+                "type": "Point"
+            },
+            "id": 44888,
+            "properties": {
+                "balloonContent": "Томск, ул. Причальная, д.11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.857699,
+                    53.051752
+                ],
+                "type": "Point"
+            },
+            "id": 44890,
+            "properties": {
+                "balloonContent": "Азнакаево, ул. Лениногорский тракт, д.22"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.361721,
+                    83.712932
+                ],
+                "type": "Point"
+            },
+            "id": 44893,
+            "properties": {
+                "balloonContent": "Барнаул, ул. Покровская, д.25А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.155994,
+                    40.37549
+                ],
+                "type": "Point"
+            },
+            "id": 44896,
+            "properties": {
+                "balloonContent": "Владимир, ул. Лакина, д.1Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.169132,
+                    40.395585
+                ],
+                "type": "Point"
+            },
+            "id": 44898,
+            "properties": {
+                "balloonContent": "Владимир, ул. Куйбышева, д.26К"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.09133443448002,
+                    40.23999562698361
+                ],
+                "type": "Point"
+            },
+            "id": 44899,
+            "properties": {
+                "balloonContent": "Владимир, Ноябрьская улица, д.129"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.146904,
+                    40.396906
+                ],
+                "type": "Point"
+            },
+            "id": 44900,
+            "properties": {
+                "balloonContent": "Владимир, ул. Юрьевская, д.1/2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    48.697554,
+                    44.47161
+                ],
+                "type": "Point"
+            },
+            "id": 44901,
+            "properties": {
+                "balloonContent": "Волгоград, ул. им Саши Филиппова, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.608883,
+                    47.848126
+                ],
+                "type": "Point"
+            },
+            "id": 44903,
+            "properties": {
+                "balloonContent": "Йошкар-Ола, ул. Крылова, д.47/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.621919,
+                    47.857145
+                ],
+                "type": "Point"
+            },
+            "id": 44904,
+            "properties": {
+                "balloonContent": "Йошкар-Ола, ул. Строителей, д.93д"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.019513,
+                    39.026813
+                ],
+                "type": "Point"
+            },
+            "id": 44906,
+            "properties": {
+                "balloonContent": "Краснодар, ул. Ставропольская, д.218"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.038802,
+                    38.944501
+                ],
+                "type": "Point"
+            },
+            "id": 44907,
+            "properties": {
+                "balloonContent": "Краснодар, ул. Кожевенная, д.77"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.018725,
+                    92.818831
+                ],
+                "type": "Point"
+            },
+            "id": 44908,
+            "properties": {
+                "balloonContent": "Красноярск, ул. Красномосковская, д.1, cтр.А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.05109197635689,
+                    92.95415257672117
+                ],
+                "type": "Point"
+            },
+            "id": 44909,
+            "properties": {
+                "balloonContent": "Красноярск, проспект Металлургов, д.22/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.890412,
+                    40.565807
+                ],
+                "type": "Point"
+            },
+            "id": 44910,
+            "properties": {
+                "balloonContent": "Курганинск, ул. Энгельса, д.178"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.561024,
+                    42.040212
+                ],
+                "type": "Point"
+            },
+            "id": 44912,
+            "properties": {
+                "balloonContent": "Муром, ш. Меленковское, д.2б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.375143,
+                    36.750932
+                ],
+                "type": "Point"
+            },
+            "id": 44913,
+            "properties": {
+                "balloonContent": "Наро-Фоминск, пер. Зеленый, д.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.617383,
+                    51.819982
+                ],
+                "type": "Point"
+            },
+            "id": 44914,
+            "properties": {
+                "balloonContent": "Нижнекамск, ул. Первопроходцев, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.996676,
+                    82.850442
+                ],
+                "type": "Point"
+            },
+            "id": 44915,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Станционная, д.37/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.117289,
+                    65.525848
+                ],
+                "type": "Point"
+            },
+            "id": 44928,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Федюнинского, д.4а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.285594,
+                    48.357515
+                ],
+                "type": "Point"
+            },
+            "id": 44929,
+            "properties": {
+                "balloonContent": "Ульяновск, ул. Локомотивная, д.14"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.331171,
+                    83.663444
+                ],
+                "type": "Point"
+            },
+            "id": 44953,
+            "properties": {
+                "balloonContent": "Барнаул, проезд. Северный Власихинский, д.67"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.220826,
+                    34.320028
+                ],
+                "type": "Point"
+            },
+            "id": 44960,
+            "properties": {
+                "balloonContent": "Брянск, пр-кт. Станке Димитрова, к.77Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.58656269830533,
+                    37.915604915344254
+                ],
+                "type": "Point"
+            },
+            "id": 44962,
+            "properties": {
+                "balloonContent": "Лыткарино, 3-й микрорайон, квартал 3А, улица Степана Степанова, cтр.11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.140439,
+                    47.215281
+                ],
+                "type": "Point"
+            },
+            "id": 44963,
+            "properties": {
+                "balloonContent": "Чебоксары, ул. Пирогова, д.10Г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.152638,
+                    65.613389
+                ],
+                "type": "Point"
+            },
+            "id": 45221,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Дамбовская, д.48"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.366485,
+                    41.306612
+                ],
+                "type": "Point"
+            },
+            "id": 45234,
+            "properties": {
+                "balloonContent": "Ковров, ул. Малеева, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.21207238158234,
+                    41.33001172090146
+                ],
+                "type": "Point"
+            },
+            "id": 45238,
+            "properties": {
+                "balloonContent": "деревня Сенинские Дворики, М-7, д.19"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    58.284625,
+                    68.270497
+                ],
+                "type": "Point"
+            },
+            "id": 45240,
+            "properties": {
+                "balloonContent": "Тобольск, №3. БСИ-2, квартал 2,, д.7/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.251764,
+                    39.647055
+                ],
+                "type": "Point"
+            },
+            "id": 45291,
+            "properties": {
+                "balloonContent": "Ростов-на-Дону, ул. Шаповалова, д.6, к.Ф"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    43.630629,
+                    39.716917
+                ],
+                "type": "Point"
+            },
+            "id": 45362,
+            "properties": {
+                "balloonContent": "Сочи, Виноградный. переулок, д.2а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.908423,
+                    37.966972
+                ],
+                "type": "Point"
+            },
+            "id": 45369,
+            "properties": {
+                "balloonContent": "Крымск, ул. Новороссийская, д.42, к.А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.737788,
+                    37.7941
+                ],
+                "type": "Point"
+            },
+            "id": 45370,
+            "properties": {
+                "balloonContent": "Новороссийск, ул. Северная, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    46.683891,
+                    38.277151
+                ],
+                "type": "Point"
+            },
+            "id": 45373,
+            "properties": {
+                "balloonContent": "Ейск, ул. Мичурина, д.12/10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.715944,
+                    37.771723
+                ],
+                "type": "Point"
+            },
+            "id": 45673,
+            "properties": {
+                "balloonContent": "Новороссийск, ул. Фисанова, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.432569,
+                    39.528666
+                ],
+                "type": "Point"
+            },
+            "id": 45681,
+            "properties": {
+                "balloonContent": "Хадыженск, ул. Первомайская, д.165"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.75309833571772,
+                    60.71720014817986
+                ],
+                "type": "Point"
+            },
+            "id": 45615,
+            "properties": {
+                "balloonContent": "Екатеринбург, улица Черняховского, д.57, к.Е"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.58209,
+                    38.215716
+                ],
+                "type": "Point"
+            },
+            "id": 45726,
+            "properties": {
+                "balloonContent": "Раменское, ш. Северное, д.1, cтр.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.09709510570359,
+                    72.64101628836055
+                ],
+                "type": "Point"
+            },
+            "id": 45728,
+            "properties": {
+                "balloonContent": "Нефтеюганск, Усть-Балыкская улица, д.3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.938736,
+                    73.369326
+                ],
+                "type": "Point"
+            },
+            "id": 45729,
+            "properties": {
+                "balloonContent": "Омск, ул. 9-я Ленинская, д.55"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    58.364308,
+                    45.509353
+                ],
+                "type": "Point"
+            },
+            "id": 45730,
+            "properties": {
+                "balloonContent": "Шарья, ул. Свердлова, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.283395,
+                    38.123872
+                ],
+                "type": "Point"
+            },
+            "id": 45741,
+            "properties": {
+                "balloonContent": "Сергиев Посад, ш. Московское, д.42"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    46.676577,
+                    38.282173
+                ],
+                "type": "Point"
+            },
+            "id": 45752,
+            "properties": {
+                "balloonContent": "Ейск, ул. Мичурина, д.22/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.829015,
+                    35.921113
+                ],
+                "type": "Point"
+            },
+            "id": 45799,
+            "properties": {
+                "balloonContent": "Тверь, ул. Коминтерна, д.91/14"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.128169,
+                    47.215038
+                ],
+                "type": "Point"
+            },
+            "id": 45810,
+            "properties": {
+                "balloonContent": "Чебоксары, ул. Гражданская, д.51"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.364158,
+                    50.595273
+                ],
+                "type": "Point"
+            },
+            "id": 45811,
+            "properties": {
+                "balloonContent": "Чистополь, ул. Энгельса, д.177"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.78385475183314,
+                    56.071785841275776
+                ],
+                "type": "Point"
+            },
+            "id": 45835,
+            "properties": {
+                "balloonContent": "Уфа, улица Новожёнова, д.13"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.34037,
+                    30.551703
+                ],
+                "type": "Point"
+            },
+            "id": 45879,
+            "properties": {
+                "balloonContent": "Великие Луки, пр-кт. Гагарина, д.68В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.327429578351925,
+                    30.51769794376799
+                ],
+                "type": "Point"
+            },
+            "id": 45933,
+            "properties": {
+                "balloonContent": "Великие Луки, Октябрьский проспект, д.77"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.804693570484275,
+                    55.15964475919794
+                ],
+                "type": "Point"
+            },
+            "id": 45958,
+            "properties": {
+                "balloonContent": "Оренбург, проезд Автоматики, д.30/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.50777819321123,
+                    42.149205298947955
+                ],
+                "type": "Point"
+            },
+            "id": 45965,
+            "properties": {
+                "balloonContent": "Волгодонск, Степная улица, д.16/9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    60.042344735472405,
+                    30.317535761390868
+                ],
+                "type": "Point"
+            },
+            "id": 45966,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Выборгское шоссе, д.7, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.75,
+                    37.64
+                ],
+                "type": "Point"
+            },
+            "id": 45969,
+            "properties": {
+                "balloonContent": "Унеча, Кирова, д.3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.75,
+                    37.64
+                ],
+                "type": "Point"
+            },
+            "id": 45970,
+            "properties": {
+                "balloonContent": "Брянск, Московский пр-кт, д.37"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.610822013647606,
+                    60.584116342851566
+                ],
+                "type": "Point"
+            },
+            "id": 45971,
+            "properties": {
+                "balloonContent": "Серов, улица Фуфачёва, д.21А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.507866,
+                    46.382309
+                ],
+                "type": "Point"
+            },
+            "id": 44823,
+            "properties": {
+                "balloonContent": "Шумерля, ул. Ленина, д.45"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.403447,
+                    38.697482
+                ],
+                "type": "Point"
+            },
+            "id": 44892,
+            "properties": {
+                "balloonContent": "Александров, ул. Двориковское Шоссе, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.372854,
+                    83.66216
+                ],
+                "type": "Point"
+            },
+            "id": 44894,
+            "properties": {
+                "balloonContent": "Барнаул, ул. Солнечная Поляна, д.24"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.149006420100214,
+                    40.36060292888639
+                ],
+                "type": "Point"
+            },
+            "id": 44954,
+            "properties": {
+                "balloonContent": "Владимир, посёлок РТС, д.1, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.120408,
+                    38.732651
+                ],
+                "type": "Point"
+            },
+            "id": 44956,
+            "properties": {
+                "balloonContent": "Коломна, ул. Октябрьской революции, д.69"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.687934,
+                    37.760485
+                ],
+                "type": "Point"
+            },
+            "id": 45161,
+            "properties": {
+                "balloonContent": "Новороссийск, ул. Волгоградская, д.5А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.107788,
+                    65.641802
+                ],
+                "type": "Point"
+            },
+            "id": 45229,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Республики, д.256, cтр.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.08393604084433,
+                    40.22044303439331
+                ],
+                "type": "Point"
+            },
+            "id": 45233,
+            "properties": {
+                "balloonContent": "Владимир, Ноябрьская улица, д.141Г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.0465326428434,
+                    92.8351484074096
+                ],
+                "type": "Point"
+            },
+            "id": 45286,
+            "properties": {
+                "balloonContent": "Красноярск, ул. Маерчака, д.117"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.041295,
+                    92.925802
+                ],
+                "type": "Point"
+            },
+            "id": 45298,
+            "properties": {
+                "balloonContent": "Красноярск, ул. Авиаторов, д.1, cтр.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.034129,
+                    92.923727
+                ],
+                "type": "Point"
+            },
+            "id": 45300,
+            "properties": {
+                "balloonContent": "Красноярск, ул. Партизана Железняка, д.40А/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.115554,
+                    92.94199
+                ],
+                "type": "Point"
+            },
+            "id": 45301,
+            "properties": {
+                "balloonContent": "Красноярск, тракт. Енисейский, д.83"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.045695,
+                    92.89225
+                ],
+                "type": "Point"
+            },
+            "id": 45302,
+            "properties": {
+                "balloonContent": "Красноярск, ул. Шахтеров, д.66/5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.0257148508971,
+                    92.78787689682001
+                ],
+                "type": "Point"
+            },
+            "id": 45303,
+            "properties": {
+                "balloonContent": "Красноярск, Телевизорный переулок, д.3/5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.68087587289359,
+                    91.64434911469301
+                ],
+                "type": "Point"
+            },
+            "id": 45304,
+            "properties": {
+                "balloonContent": "село Селиваниха, Магистральная улица, д.19"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    60.9400147106765,
+                    76.53794735670076
+                ],
+                "type": "Point"
+            },
+            "id": 45364,
+            "properties": {
+                "balloonContent": "Нижневартовск, улица Ленина, д.3П, cтр.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.98945,
+                    82.987327
+                ],
+                "type": "Point"
+            },
+            "id": 45365,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Большевистская, д.243"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.774839234404666,
+                    87.12167028836055
+                ],
+                "type": "Point"
+            },
+            "id": 45383,
+            "properties": {
+                "balloonContent": "Новокузнецк, Фестивальная улица, д.23"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.775124824767246,
+                    87.21864918650813
+                ],
+                "type": "Point"
+            },
+            "id": 45384,
+            "properties": {
+                "balloonContent": "Новокузнецк, улица Обнорского, д.126"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.426383,
+                    86.298356
+                ],
+                "type": "Point"
+            },
+            "id": 45385,
+            "properties": {
+                "balloonContent": "Белово, ул. Чкалова, д.32"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.401884,
+                    86.276643
+                ],
+                "type": "Point"
+            },
+            "id": 45386,
+            "properties": {
+                "balloonContent": "Белово, мкр. 6-й, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.824769,
+                    37.364418
+                ],
+                "type": "Point"
+            },
+            "id": 45402,
+            "properties": {
+                "balloonContent": "Красногорск, б-р. Павшинский, д.2а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.897840975302046,
+                    37.48328397224429
+                ],
+                "type": "Point"
+            },
+            "id": 45403,
+            "properties": {
+                "balloonContent": "Химки, Совхозная улица, cтр.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.3279,
+                    36.702144
+                ],
+                "type": "Point"
+            },
+            "id": 45404,
+            "properties": {
+                "balloonContent": "Клин, ш. Волоколамское, д.22"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.537985,
+                    49.284487
+                ],
+                "type": "Point"
+            },
+            "id": 45416,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Борковская, д.101"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.5456,
+                    49.347504
+                ],
+                "type": "Point"
+            },
+            "id": 45417,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Тополиная, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.485708,
+                    49.485808
+                ],
+                "type": "Point"
+            },
+            "id": 45418,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Ярославская, д.61"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.506894,
+                    49.26865
+                ],
+                "type": "Point"
+            },
+            "id": 45419,
+            "properties": {
+                "balloonContent": "Тольятти, б-р. Приморский, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.51076,
+                    49.439958
+                ],
+                "type": "Point"
+            },
+            "id": 45421,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Мира, д.109б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.217958,
+                    50.224906
+                ],
+                "type": "Point"
+            },
+            "id": 45422,
+            "properties": {
+                "balloonContent": "Самара, ул. Ставропольская, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.888222,
+                    52.355953
+                ],
+                "type": "Point"
+            },
+            "id": 45428,
+            "properties": {
+                "balloonContent": "Альметьевск, ул. Полевая, д.17"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.008269,
+                    50.443484
+                ],
+                "type": "Point"
+            },
+            "id": 45429,
+            "properties": {
+                "balloonContent": "Богатые Сабы пгт, Закирова. Г., д.80А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.526413,
+                    52.787746
+                ],
+                "type": "Point"
+            },
+            "id": 45430,
+            "properties": {
+                "balloonContent": "Бугульма, ул. Вацлава Воровского, д.47"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.83825172350535,
+                    37.434014219573925
+                ],
+                "type": "Point"
+            },
+            "id": 45456,
+            "properties": {
+                "balloonContent": "Москва, Строительный проезд, д.4А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.86322716495919,
+                    37.388816262244816
+                ],
+                "type": "Point"
+            },
+            "id": 45471,
+            "properties": {
+                "balloonContent": "деревня Путилково, Путилковское шоссе, д.дом 26"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.008674,
+                    39.02128
+                ],
+                "type": "Point"
+            },
+            "id": 45476,
+            "properties": {
+                "balloonContent": "Краснодар, ул. им. Болотникова, д.24/3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.096976,
+                    61.388513
+                ],
+                "type": "Point"
+            },
+            "id": 45481,
+            "properties": {
+                "balloonContent": "Челябинск, тракт. Троицкий, д.60Щ"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.238449,
+                    61.36036
+                ],
+                "type": "Point"
+            },
+            "id": 45483,
+            "properties": {
+                "balloonContent": "Челябинск, ул. Новгородская, д.1Г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.12814,
+                    61.367699
+                ],
+                "type": "Point"
+            },
+            "id": 45484,
+            "properties": {
+                "balloonContent": "Челябинск, ул. Дарвина, д.18/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.441596,
+                    61.278065
+                ],
+                "type": "Point"
+            },
+            "id": 45485,
+            "properties": {
+                "balloonContent": "Южноуральск, ул. Мира, д.56"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.19638,
+                    39.407151
+                ],
+                "type": "Point"
+            },
+            "id": 45487,
+            "properties": {
+                "balloonContent": "Ростов, ул. Достоевского, д.13"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    58.040252,
+                    38.789155
+                ],
+                "type": "Point"
+            },
+            "id": 45488,
+            "properties": {
+                "balloonContent": "Рыбинск, пр-кт. Революции, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.888708,
+                    29.103241
+                ],
+                "type": "Point"
+            },
+            "id": 45489,
+            "properties": {
+                "balloonContent": "Сосновый Бор, ул. Мира, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.011617,
+                    40.996478
+                ],
+                "type": "Point"
+            },
+            "id": 45490,
+            "properties": {
+                "balloonContent": "Иваново, ул. Сарментовой, д.9, к.А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.02319595110697,
+                    40.90492093817721
+                ],
+                "type": "Point"
+            },
+            "id": 45491,
+            "properties": {
+                "balloonContent": "деревня Беляницы, Дачная, д.162"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.973169,
+                    40.953304
+                ],
+                "type": "Point"
+            },
+            "id": 45492,
+            "properties": {
+                "balloonContent": "Иваново, ул. Некрасова, д.100"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.016047,
+                    40.981431
+                ],
+                "type": "Point"
+            },
+            "id": 45493,
+            "properties": {
+                "balloonContent": "Иваново, ул. Карла Маркса, д.46"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.888008,
+                    60.526265
+                ],
+                "type": "Point"
+            },
+            "id": 45495,
+            "properties": {
+                "balloonContent": "Екатеринбург, ул. Монтажников, д.18"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.241902,
+                    60.06675
+                ],
+                "type": "Point"
+            },
+            "id": 45496,
+            "properties": {
+                "balloonContent": "Новоуральск, 15-й микрорайон, д.1А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.013773,
+                    61.473925
+                ],
+                "type": "Point"
+            },
+            "id": 45497,
+            "properties": {
+                "balloonContent": "Асбест, ул. Садовая, д.1А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.005505,
+                    61.45162
+                ],
+                "type": "Point"
+            },
+            "id": 45499,
+            "properties": {
+                "balloonContent": "Асбест, Ладыженского. ул., д.11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.771900644295265,
+                    60.61467074603273
+                ],
+                "type": "Point"
+            },
+            "id": 45505,
+            "properties": {
+                "balloonContent": "Екатеринбург, улица Титова, д.31А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.84033,
+                    60.567372
+                ],
+                "type": "Point"
+            },
+            "id": 45506,
+            "properties": {
+                "balloonContent": "Екатеринбург, ул. Долорес Ибаррури, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.88390560248017,
+                    60.636680803565966
+                ],
+                "type": "Point"
+            },
+            "id": 45507,
+            "properties": {
+                "balloonContent": "Екатеринбург, улица Старых Большевиков, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.834193,
+                    28.339871
+                ],
+                "type": "Point"
+            },
+            "id": 45511,
+            "properties": {
+                "balloonContent": "Псков, ул. Олега Кошевого, д.33"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.835554,
+                    28.303759
+                ],
+                "type": "Point"
+            },
+            "id": 45512,
+            "properties": {
+                "balloonContent": "Псков, ул. Ижорского Батальона, д.4А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.329337,
+                    30.515932
+                ],
+                "type": "Point"
+            },
+            "id": 45513,
+            "properties": {
+                "balloonContent": "Великие Луки, пр-кт. Октябрьский, д.88"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.997523422121,
+                    30.27165264418025
+                ],
+                "type": "Point"
+            },
+            "id": 45542,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Богатырский проспект, д.12Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.114806,
+                    91.423181
+                ],
+                "type": "Point"
+            },
+            "id": 45543,
+            "properties": {
+                "balloonContent": "Саяногорск, ул. Ветеранов труда, к.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.7295,
+                    91.427853
+                ],
+                "type": "Point"
+            },
+            "id": 45545,
+            "properties": {
+                "balloonContent": "Абакан, ул. Ленинского Комсомола, д.91"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    43.923532,
+                    42.721638
+                ],
+                "type": "Point"
+            },
+            "id": 45547,
+            "properties": {
+                "balloonContent": "Кисловодск, ул. Набережная, д.11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.09605,
+                    39.09107
+                ],
+                "type": "Point"
+            },
+            "id": 45549,
+            "properties": {
+                "balloonContent": "Краснодар, ул. Магаданская, д.19"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    63.176447115561494,
+                    75.43055914342382
+                ],
+                "type": "Point"
+            },
+            "id": 45550,
+            "properties": {
+                "balloonContent": "Ноябрьск, Магистральная улица, д.22"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.23119,
+                    49.598493
+                ],
+                "type": "Point"
+            },
+            "id": 45553,
+            "properties": {
+                "balloonContent": "Димитровград, ул. Осипенко, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.959692,
+                    48.281437
+                ],
+                "type": "Point"
+            },
+            "id": 45809,
+            "properties": {
+                "balloonContent": "Буинск, ул. Ефремова, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.292777,
+                    43.876117
+                ],
+                "type": "Point"
+            },
+            "id": 45880,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Удмуртская, д.41В, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.116581673970686,
+                    47.255070675588016
+                ],
+                "type": "Point"
+            },
+            "id": 45963,
+            "properties": {
+                "balloonContent": "Ленинский район, Лесная улица, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.11463065623199,
+                    47.25689191270801
+                ],
+                "type": "Point"
+            },
+            "id": 45964,
+            "properties": {
+                "balloonContent": "Чебоксары, переулок Бабушкина, д.2, к.А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.07132345692017,
+                    41.930090383603684
+                ],
+                "type": "Point"
+            },
+            "id": 45973,
+            "properties": {
+                "balloonContent": "Ставрополь, проспект Кулакова, д.20В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.88226,
+                    53.262586
+                ],
+                "type": "Point"
+            },
+            "id": 46014,
+            "properties": {
+                "balloonContent": "Ижевск, ул. Салютовская, д.73"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.959864,
+                    56.273622
+                ],
+                "type": "Point"
+            },
+            "id": 46016,
+            "properties": {
+                "balloonContent": "Пермь, ул. Героев Хасана, д.105, к.71"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.902946,
+                    61.367061
+                ],
+                "type": "Point"
+            },
+            "id": 46024,
+            "properties": {
+                "balloonContent": "Коркино, ул. 30 лет ВЛКСМ, д.143"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.70811,
+                    41.44718
+                ],
+                "type": "Point"
+            },
+            "id": 46040,
+            "properties": {
+                "balloonContent": "Тамбов, проезд Пролетарский, д.2а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.805730045041535,
+                    34.28877046825948
+                ],
+                "type": "Point"
+            },
+            "id": 46060,
+            "properties": {
+                "balloonContent": "Петрозаводск, Новосулажгорская улица, д.19"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.130523,
+                    36.621961
+                ],
+                "type": "Point"
+            },
+            "id": 46074,
+            "properties": {
+                "balloonContent": "Обнинск, ул. Кабицынская, д.18А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.130488370483114,
+                    36.62155451640201
+                ],
+                "type": "Point"
+            },
+            "id": 46075,
+            "properties": {
+                "balloonContent": "Обнинск, Кабицынская улица, д.18А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.250169,
+                    37.611104
+                ],
+                "type": "Point"
+            },
+            "id": 46076,
+            "properties": {
+                "balloonContent": "Тула, ш. Московское, д.2а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.952816,
+                    82.902823
+                ],
+                "type": "Point"
+            },
+            "id": 44916,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Сибиряков-Гвардейцев, д.47/2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.92230671731034,
+                    82.95254596430296
+                ],
+                "type": "Point"
+            },
+            "id": 44917,
+            "properties": {
+                "balloonContent": "Новосибирск, Советское шоссе, д.1А/3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.120696,
+                    36.642092
+                ],
+                "type": "Point"
+            },
+            "id": 44918,
+            "properties": {
+                "balloonContent": "Обнинск, ш. Киевское, д.49а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.961225,
+                    56.135444
+                ],
+                "type": "Point"
+            },
+            "id": 44919,
+            "properties": {
+                "balloonContent": "Пермь, ш. Космонавтов, д.224"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.221574,
+                    45.184459
+                ],
+                "type": "Point"
+            },
+            "id": 44921,
+            "properties": {
+                "balloonContent": "Саранск, ул. Лодыгина, д.10Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.28446,
+                    73.375946
+                ],
+                "type": "Point"
+            },
+            "id": 44922,
+            "properties": {
+                "balloonContent": "Сургут, ул. Аэрофлотская, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.25593,
+                    73.345592
+                ],
+                "type": "Point"
+            },
+            "id": 44924,
+            "properties": {
+                "balloonContent": "Сургут, тракт. Югорский, д.7/5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.531997,
+                    49.431182
+                ],
+                "type": "Point"
+            },
+            "id": 44926,
+            "properties": {
+                "balloonContent": "Тольятти, б-р. 50 лет Октября, д.75"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.125146,
+                    65.502393
+                ],
+                "type": "Point"
+            },
+            "id": 44927,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Калужская, д.59"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.14165,
+                    37.478908
+                ],
+                "type": "Point"
+            },
+            "id": 44931,
+            "properties": {
+                "balloonContent": "Чехов, ул. Садовая, д.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    60.03031107236705,
+                    30.33564048454301
+                ],
+                "type": "Point"
+            },
+            "id": 45538,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Северный проспект, д.7, к.секция 70"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.340082,
+                    48.365061
+                ],
+                "type": "Point"
+            },
+            "id": 45554,
+            "properties": {
+                "balloonContent": "Ульяновск, ул. Маяковского, д.34"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.27516607602263,
+                    50.274653365081754
+                ],
+                "type": "Point"
+            },
+            "id": 45561,
+            "properties": {
+                "balloonContent": "Самара, Московское шоссе, 18-й километр, д.27Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.89161903552189,
+                    30.378388465606648
+                ],
+                "type": "Point"
+            },
+            "id": 45574,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, улица Салова, д.45Г5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.844258959882985,
+                    37.68225746560668
+                ],
+                "type": "Point"
+            },
+            "id": 45576,
+            "properties": {
+                "balloonContent": "Москва, улица Красная Сосна, д.30"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.34037242077821,
+                    30.55164935581971
+                ],
+                "type": "Point"
+            },
+            "id": 45578,
+            "properties": {
+                "balloonContent": "Великие Луки, проспект Гагарина, д.68Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.80044277736804,
+                    39.19421812435912
+                ],
+                "type": "Point"
+            },
+            "id": 45579,
+            "properties": {
+                "balloonContent": "территория Промышленная, зона 2, д.27А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.094682,
+                    39.098373
+                ],
+                "type": "Point"
+            },
+            "id": 45580,
+            "properties": {
+                "balloonContent": "Краснодар, пер. Дорожный, д.11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.055091,
+                    92.845753
+                ],
+                "type": "Point"
+            },
+            "id": 45581,
+            "properties": {
+                "balloonContent": "Солонцы п, пр-кт. Котельникова, д.9, к.Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.319774,
+                    43.847551
+                ],
+                "type": "Point"
+            },
+            "id": 45582,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Чаадаева, д.1, к. ХХ"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.727568,
+                    37.737488
+                ],
+                "type": "Point"
+            },
+            "id": 45584,
+            "properties": {
+                "balloonContent": "Новороссийск, ул. Луначарского, д.29А, к.Е"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.335271,
+                    30.507272
+                ],
+                "type": "Point"
+            },
+            "id": 45585,
+            "properties": {
+                "balloonContent": "Великие Луки, пер. Пушкина, д.4, к.В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.147672,
+                    37.922982
+                ],
+                "type": "Point"
+            },
+            "id": 45598,
+            "properties": {
+                "balloonContent": "Череповец, ул. Городского Питомника, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.191816,
+                    42.045701
+                ],
+                "type": "Point"
+            },
+            "id": 45606,
+            "properties": {
+                "balloonContent": "Черкесск, ул. Театральная, д.2А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.0238784617467,
+                    43.12924199159239
+                ],
+                "type": "Point"
+            },
+            "id": 45611,
+            "properties": {
+                "balloonContent": "посёлок Горячеводский, Р-217 Кавказ, 374-й километр, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.111979,
+                    61.397218
+                ],
+                "type": "Point"
+            },
+            "id": 45612,
+            "properties": {
+                "balloonContent": "Челябинск, ул. Физкультурная, д.34А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.733619,
+                    55.896285
+                ],
+                "type": "Point"
+            },
+            "id": 45613,
+            "properties": {
+                "balloonContent": "Уфа, ул. Благоварская, д.22"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.912501,
+                    56.160803
+                ],
+                "type": "Point"
+            },
+            "id": 45616,
+            "properties": {
+                "balloonContent": "Пермь, ул. Промышленная д.125 к.А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.82150029299631,
+                    49.20202474603264
+                ],
+                "type": "Point"
+            },
+            "id": 45617,
+            "properties": {
+                "balloonContent": "Казань, 1-я Владимирская улица, д.108"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.553571,
+                    49.310781
+                ],
+                "type": "Point"
+            },
+            "id": 45618,
+            "properties": {
+                "balloonContent": "Тольятти, ш. Южное, д.22, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.564019,
+                    39.89543
+                ],
+                "type": "Point"
+            },
+            "id": 45619,
+            "properties": {
+                "balloonContent": "Ярославль, ул. Пожарского, д.66, к.Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.395087,
+                    43.847263
+                ],
+                "type": "Point"
+            },
+            "id": 45623,
+            "properties": {
+                "balloonContent": "Арзамас, ул. 9 Мая, д.2/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.104996,
+                    61.351206
+                ],
+                "type": "Point"
+            },
+            "id": 45683,
+            "properties": {
+                "balloonContent": "Челябинск, ул. Блюхера, д.121В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.039304,
+                    92.846113
+                ],
+                "type": "Point"
+            },
+            "id": 45800,
+            "properties": {
+                "balloonContent": "Красноярск, ул. 2-я Брянская, д.12, cтр.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.30452,
+                    43.87158
+                ],
+                "type": "Point"
+            },
+            "id": 45881,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Кузбасская, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.830826847138106,
+                    30.350205613236582
+                ],
+                "type": "Point"
+            },
+            "id": 45967,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Дунайский проспект, д.21"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.89070324441976,
+                    30.30292967632966
+                ],
+                "type": "Point"
+            },
+            "id": 45968,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Ташкентская улица, д.13Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.08197,
+                    54.119678
+                ],
+                "type": "Point"
+            },
+            "id": 46080,
+            "properties": {
+                "balloonContent": "Белебей, ул. Советская, д.140"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.08197,
+                    54.119678
+                ],
+                "type": "Point"
+            },
+            "id": 46081,
+            "properties": {
+                "balloonContent": "Белебей, ул. Советская, д.140"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.791241,
+                    53.180256
+                ],
+                "type": "Point"
+            },
+            "id": 46116,
+            "properties": {
+                "balloonContent": "Ижевск, ул. Леваневского, д.119"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.04785179116937,
+                    92.85719335714718
+                ],
+                "type": "Point"
+            },
+            "id": 46117,
+            "properties": {
+                "balloonContent": "Красноярск, 2-я Брянская улица, д.59Д"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.657428,
+                    55.989261
+                ],
+                "type": "Point"
+            },
+            "id": 46118,
+            "properties": {
+                "balloonContent": "Стерлитамак, ул. Бабушкина, д.12а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.59896835511778,
+                    55.90749903754336
+                ],
+                "type": "Point"
+            },
+            "id": 46119,
+            "properties": {
+                "balloonContent": "село Новая Отрадовка, Прибрежная улица, д.62"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.622035,
+                    55.92398
+                ],
+                "type": "Point"
+            },
+            "id": 46120,
+            "properties": {
+                "balloonContent": "Стерлитамак, ул. Черноморская, д.29б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.198472,
+                    39.82414
+                ],
+                "type": "Point"
+            },
+            "id": 46171,
+            "properties": {
+                "balloonContent": "Вологда, ул. Ленинградская, д.115"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.95777110761884,
+                    37.338980259260964
+                ],
+                "type": "Point"
+            },
+            "id": 46172,
+            "properties": {
+                "balloonContent": "Химки, Ленинградское шоссе, 29-й километр, д.вл1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.80457326666726,
+                    37.61656552348483
+                ],
+                "type": "Point"
+            },
+            "id": 46174,
+            "properties": {
+                "balloonContent": "Москва, Шереметьевская улица, д.22А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.26290886646175,
+                    50.24455337753936
+                ],
+                "type": "Point"
+            },
+            "id": 46176,
+            "properties": {
+                "balloonContent": "Самара, Московское шоссе, 16-й километр, д.1В, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.036284,
+                    47.768221
+                ],
+                "type": "Point"
+            },
+            "id": 46191,
+            "properties": {
+                "balloonContent": "Балаково, ул. 60 лет СССР, д.32/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.007005,
+                    47.826
+                ],
+                "type": "Point"
+            },
+            "id": 46193,
+            "properties": {
+                "balloonContent": "Балаково, ул. Саратовское шоссе, д.52/3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.037895,
+                    92.801053
+                ],
+                "type": "Point"
+            },
+            "id": 46209,
+            "properties": {
+                "balloonContent": "Красноярск, ул. Калинина, д.76А/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.480107,
+                    65.332449
+                ],
+                "type": "Point"
+            },
+            "id": 46210,
+            "properties": {
+                "balloonContent": "Курган, ул. Бурова-Петрова, д.119"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.218052,
+                    58.49309
+                ],
+                "type": "Point"
+            },
+            "id": 46215,
+            "properties": {
+                "balloonContent": "Орск, ул. Пржевальского, д.1А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.217307,
+                    58.493701
+                ],
+                "type": "Point"
+            },
+            "id": 46216,
+            "properties": {
+                "balloonContent": "Орск, ул. Вяземская, д.35А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.218605,
+                    58.613913
+                ],
+                "type": "Point"
+            },
+            "id": 46217,
+            "properties": {
+                "balloonContent": "Орск, ул. Путейская, д.3А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.3403,
+                    37.512487
+                ],
+                "type": "Point"
+            },
+            "id": 46230,
+            "properties": {
+                "balloonContent": "Дмитров, пер. Кооперативный, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    43.436955,
+                    39.920368
+                ],
+                "type": "Point"
+            },
+            "id": 46231,
+            "properties": {
+                "balloonContent": "Сочи, ул. Ромашек, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.256276,
+                    46.665179
+                ],
+                "type": "Point"
+            },
+            "id": 46264,
+            "properties": {
+                "balloonContent": "Котлас, ул. Ленина, д.165, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.877518,
+                    86.679699
+                ],
+                "type": "Point"
+            },
+            "id": 46271,
+            "properties": {
+                "balloonContent": "Прокопьевск, ул. Высокогорная, д.14/3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.879651,
+                    37.336705
+                ],
+                "type": "Point"
+            },
+            "id": 46301,
+            "properties": {
+                "balloonContent": "Анапа, ул. Астраханская, д.122"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.994264,
+                    37.274569
+                ],
+                "type": "Point"
+            },
+            "id": 46302,
+            "properties": {
+                "balloonContent": "Анапа, переулок. 2-ой Черноморский, д.6Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.806257,
+                    28.346231
+                ],
+                "type": "Point"
+            },
+            "id": 46311,
+            "properties": {
+                "balloonContent": "Псков, ул. Яна Фабрициуса, д.5А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.982786,
+                    73.328327
+                ],
+                "type": "Point"
+            },
+            "id": 46313,
+            "properties": {
+                "balloonContent": "Омск, ул. Конева, д.12"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.46817,
+                    84.993427
+                ],
+                "type": "Point"
+            },
+            "id": 46316,
+            "properties": {
+                "balloonContent": "Томск, ул. Шевченко, д.49е"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.809803,
+                    49.199524
+                ],
+                "type": "Point"
+            },
+            "id": 46351,
+            "properties": {
+                "balloonContent": "Казань, ул. Академика Губкина, д.39/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.84923493301849,
+                    60.559370568122844
+                ],
+                "type": "Point"
+            },
+            "id": 46352,
+            "properties": {
+                "balloonContent": "Екатеринбург, улица Бебеля, д.116"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.95942,
+                    56.177997
+                ],
+                "type": "Point"
+            },
+            "id": 46358,
+            "properties": {
+                "balloonContent": "Пермь, ул. Космонавта Леонова, д.82/14"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.74299008387755,
+                    37.55972684127581
+                ],
+                "type": "Point"
+            },
+            "id": 46432,
+            "properties": {
+                "balloonContent": "Москва, Киевская улица, д.14, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.79254909351534,
+                    37.38822746825948
+                ],
+                "type": "Point"
+            },
+            "id": 46433,
+            "properties": {
+                "balloonContent": "Москва, улица Твардовского, д.8, к.5, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.70378903645664,
+                    37.63995626455465
+                ],
+                "type": "Point"
+            },
+            "id": 46435,
+            "properties": {
+                "balloonContent": "Москва, Автозаводская улица, д.23, к.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.151019,
+                    61.431057
+                ],
+                "type": "Point"
+            },
+            "id": 46466,
+            "properties": {
+                "balloonContent": "Челябинск, переезд. Сибирский, д.111а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.66311755164771,
+                    37.24242424851866
+                ],
+                "type": "Point"
+            },
+            "id": 46467,
+            "properties": {
+                "balloonContent": "село Акулово, Центральная улица, д.11-1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.116805000000000,
+                    65.651888000000000
+                ],
+                "type": "Point"
+            },
+            "id": 40087,
+            "properties": {
+                "balloonContent": "Тюмень, улица Чекистов, д.36"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.93346337470473,
+                    38.394312390213024
+                ],
+                "type": "Point"
+            },
+            "id": 40151,
+            "properties": {
+                "balloonContent": "село Ямкино, улица Центральная Усадьба, д.50В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.603836522429596,
+                    38.42905994619369
+                ],
+                "type": "Point"
+            },
+            "id": 42898,
+            "properties": {
+                "balloonContent": "деревня Трошково, д.уч.21"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.63583210483882,
+                    47.933746440475446
+                ],
+                "type": "Point"
+            },
+            "id": 43017,
+            "properties": {
+                "balloonContent": "Йошкар-Ола, улица Кирова, д.16А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.607395158798305,
+                    47.87894216931152
+                ],
+                "type": "Point"
+            },
+            "id": 43012,
+            "properties": {
+                "balloonContent": "Йошкар-Ола, Кокшайский проезд, д.46"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.21549525125576,
+                    39.614041999999955
+                ],
+                "type": "Point"
+            },
+            "id": 44180,
+            "properties": {
+                "balloonContent": "Ростов-на-Дону, улица Малиновского, д.42Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.051494,
+                    82.878433
+                ],
+                "type": "Point"
+            },
+            "id": 44805,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Гипсовая, д.3, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.037419,
+                    39.104311
+                ],
+                "type": "Point"
+            },
+            "id": 45101,
+            "properties": {
+                "balloonContent": "Краснодар, ул. Сормовская, д.202"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.497955,
+                    49.398582
+                ],
+                "type": "Point"
+            },
+            "id": 45420,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Баныкина, д.3А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.165679,
+                    48.430315
+                ],
+                "type": "Point"
+            },
+            "id": 45423,
+            "properties": {
+                "balloonContent": "Сызрань, пер. Опорный, д.16"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.165614,
+                    48.492424
+                ],
+                "type": "Point"
+            },
+            "id": 45424,
+            "properties": {
+                "balloonContent": "Сызрань, ул. Декабристов, д.34"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.331971486667484,
+                    37.50788667461485
+                ],
+                "type": "Point"
+            },
+            "id": 45472,
+            "properties": {
+                "balloonContent": "Дмитров, Московская улица, д.31"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.025699,
+                    39.008479
+                ],
+                "type": "Point"
+            },
+            "id": 45473,
+            "properties": {
+                "balloonContent": "Краснодар, ул. им. Шевченко, д.166/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.035235,
+                    39.127856
+                ],
+                "type": "Point"
+            },
+            "id": 45474,
+            "properties": {
+                "balloonContent": "Краснодар, Бершанской. Евдокии, д.351/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.042833,
+                    39.106764
+                ],
+                "type": "Point"
+            },
+            "id": 45475,
+            "properties": {
+                "balloonContent": "Краснодар, ул. Уральская, д.186/3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.909485,
+                    59.957595
+                ],
+                "type": "Point"
+            },
+            "id": 45500,
+            "properties": {
+                "balloonContent": "Первоуральск, ул. Строителей, д.16"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.844978,
+                    60.586434
+                ],
+                "type": "Point"
+            },
+            "id": 45501,
+            "properties": {
+                "balloonContent": "Екатеринбург, ул. Челюскинцев, д.44"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.877637,
+                    60.621019
+                ],
+                "type": "Point"
+            },
+            "id": 45502,
+            "properties": {
+                "balloonContent": "Екатеринбург, ул. Фронтовых бригад, д.14"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.928435,
+                    59.952026
+                ],
+                "type": "Point"
+            },
+            "id": 45504,
+            "properties": {
+                "balloonContent": "Первоуральск, ул. 3 Интернационала, д.137"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.857362,
+                    32.028362
+                ],
+                "type": "Point"
+            },
+            "id": 45508,
+            "properties": {
+                "balloonContent": "Печерск с, ул. Минская, д.31"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.757966,
+                    32.065472
+                ],
+                "type": "Point"
+            },
+            "id": 45509,
+            "properties": {
+                "balloonContent": "Смоленск, ул. Крупской, д.68А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.079107,
+                    32.756995
+                ],
+                "type": "Point"
+            },
+            "id": 45510,
+            "properties": {
+                "balloonContent": "Ярцево, ул. Восточная, д.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.349056,
+                    30.567244
+                ],
+                "type": "Point"
+            },
+            "id": 45514,
+            "properties": {
+                "balloonContent": "Великие Луки, ул. Гражданская, д.11А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.011001,
+                    29.93368
+                ],
+                "type": "Point"
+            },
+            "id": 45515,
+            "properties": {
+                "balloonContent": "Невель, пер. Маншук Маметовой, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.205473,
+                    45.179258
+                ],
+                "type": "Point"
+            },
+            "id": 45556,
+            "properties": {
+                "balloonContent": "Саранск, ул. Пролетарская, д.132/5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.224981,
+                    39.869343
+                ],
+                "type": "Point"
+            },
+            "id": 45599,
+            "properties": {
+                "balloonContent": "Вологда, пр-кт. Победы, д.81"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.758615,
+                    52.265483
+                ],
+                "type": "Point"
+            },
+            "id": 45601,
+            "properties": {
+                "balloonContent": "Бузулук, ул. Суворова, д.2б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.589934722478525,
+                    33.494178056280155
+                ],
+                "type": "Point"
+            },
+            "id": 45602,
+            "properties": {
+                "balloonContent": "Севастополь, улица Руднева, д.35Г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.92506083697725,
+                    34.06976552382749
+                ],
+                "type": "Point"
+            },
+            "id": 45603,
+            "properties": {
+                "balloonContent": "Симферополь, улица Данилова, д.68"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    58.574051,
+                    31.27676
+                ],
+                "type": "Point"
+            },
+            "id": 45604,
+            "properties": {
+                "balloonContent": "Великий Новгород, ул. Рабочая, д.55"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    62.144847,
+                    65.403533
+                ],
+                "type": "Point"
+            },
+            "id": 45629,
+            "properties": {
+                "balloonContent": "Нягань, ул. Чернышова, д.4А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.862248,
+                    35.875191
+                ],
+                "type": "Point"
+            },
+            "id": 45640,
+            "properties": {
+                "balloonContent": "Тверь, пер. Беляковский, д.48"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.227495,
+                    39.935711
+                ],
+                "type": "Point"
+            },
+            "id": 45686,
+            "properties": {
+                "balloonContent": "Вологда, ул. Дальняя, д.17"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.06349979176709,
+                    38.89185347784043
+                ],
+                "type": "Point"
+            },
+            "id": 45953,
+            "properties": {
+                "balloonContent": "Краснодар, Прикубанский внутригородской округ, Западная промышленная зона, проезд Мирный, д.12, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.77646,
+                    41.382996
+                ],
+                "type": "Point"
+            },
+            "id": 46038,
+            "properties": {
+                "balloonContent": "Тамбов, ул. Мичуринская, д.243"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.84098,
+                    55.149255
+                ],
+                "type": "Point"
+            },
+            "id": 46079,
+            "properties": {
+                "balloonContent": "Оренбург, ул. Просторная, д.17"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.331193,
+                    86.136704
+                ],
+                "type": "Point"
+            },
+            "id": 46272,
+            "properties": {
+                "balloonContent": "Кемерово, пр-кт. Химиков, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.39784663195606,
+                    39.03216913491818
+                ],
+                "type": "Point"
+            },
+            "id": 46320,
+            "properties": {
+                "balloonContent": "Егорьевск, Владимирская улица, д.10А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.127340273183634,
+                    39.01147252062559
+                ],
+                "type": "Point"
+            },
+            "id": 46510,
+            "properties": {
+                "balloonContent": "садовое товарищество Автомагистраль, Грушевая улица, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.091354,
+                    38.973651
+                ],
+                "type": "Point"
+            },
+            "id": 46512,
+            "properties": {
+                "balloonContent": "Краснодар, ул. им. Богдана Хмельницкого, д.175"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.064035,
+                    60.10217
+                ],
+                "type": "Point"
+            },
+            "id": 46514,
+            "properties": {
+                "balloonContent": "Миасс, ш. Динамовское, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.82662,
+                    49.194287
+                ],
+                "type": "Point"
+            },
+            "id": 46538,
+            "properties": {
+                "balloonContent": "Казань, ул. Журналистов, д.97"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.835195,
+                    60.63753
+                ],
+                "type": "Point"
+            },
+            "id": 46853,
+            "properties": {
+                "balloonContent": "Екатеринбург, ул. Вишневая, д.2В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.960447,
+                    73.437239
+                ],
+                "type": "Point"
+            },
+            "id": 46857,
+            "properties": {
+                "balloonContent": "Омск, ул. 5-я Кордная, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.681891,
+                    37.758581
+                ],
+                "type": "Point"
+            },
+            "id": 46867,
+            "properties": {
+                "balloonContent": "Варваровка с, пер. Калинина, д.10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.791247,
+                    87.132513
+                ],
+                "type": "Point"
+            },
+            "id": 46868,
+            "properties": {
+                "balloonContent": "Новокузнецк, шоссе. Ильинское, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.75181126258222,
+                    87.0609677096099
+                ],
+                "type": "Point"
+            },
+            "id": 46869,
+            "properties": {
+                "balloonContent": "Новокузнецк, улица Димитрова, д.24"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.51353,
+                    85.160522
+                ],
+                "type": "Point"
+            },
+            "id": 46870,
+            "properties": {
+                "balloonContent": "Бийск, ул. имени Героя Советского Союза Трофимова, д.19"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.524627,
+                    85.245737
+                ],
+                "type": "Point"
+            },
+            "id": 46871,
+            "properties": {
+                "balloonContent": "Бийск, ул. Вячеслава Шишкова, д.41б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.126729,
+                    65.594847
+                ],
+                "type": "Point"
+            },
+            "id": 47617,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Республики, д.201А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.740738,
+                    87.161915
+                ],
+                "type": "Point"
+            },
+            "id": 47669,
+            "properties": {
+                "balloonContent": "Новокузнецк, шоссе. Кондомское, д.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.602759,
+                    38.862736
+                ],
+                "type": "Point"
+            },
+            "id": 47710,
+            "properties": {
+                "balloonContent": "Давыдово д, ул. Заводская, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.0629526596481,
+                    40.45394334117212
+                ],
+                "type": "Point"
+            },
+            "id": 44957,
+            "properties": {
+                "balloonContent": "Владимир, М-7, подъезд к Иваново, д.17-й километр"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.949541,
+                    43.11334
+                ],
+                "type": "Point"
+            },
+            "id": 44958,
+            "properties": {
+                "balloonContent": "Большое Давыдово с, ул. Дорожная, д.66"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.725681,
+                    37.378917
+                ],
+                "type": "Point"
+            },
+            "id": 44959,
+            "properties": {
+                "balloonContent": "Немчиновка с, ул. Московская, д.63"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.895565,
+                    38.052959
+                ],
+                "type": "Point"
+            },
+            "id": 45371,
+            "properties": {
+                "balloonContent": "Новоукраинский х, ул. Темченко, д.46А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.832995,
+                    38.673263
+                ],
+                "type": "Point"
+            },
+            "id": 45372,
+            "properties": {
+                "balloonContent": "Северская ст-ца, ул. Южная, д.53а/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.8363315361207,
+                    53.25101604800408
+                ],
+                "type": "Point"
+            },
+            "id": 45946,
+            "properties": {
+                "balloonContent": "Ижевск, улица Орджоникидзе, д.13Г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.0927258215236,
+                    72.57909146825949
+                ],
+                "type": "Point"
+            },
+            "id": 45948,
+            "properties": {
+                "balloonContent": "Нефтеюганск, проезд 5П, д.8/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.743931,
+                    36.226971
+                ],
+                "type": "Point"
+            },
+            "id": 46037,
+            "properties": {
+                "balloonContent": "Курск, ул. Западный парк, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.44881399558122,
+                    37.620351872755975
+                ],
+                "type": "Point"
+            },
+            "id": 46177,
+            "properties": {
+                "balloonContent": "село Покров, д.150"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.805259,
+                    55.056783
+                ],
+                "type": "Point"
+            },
+            "id": 46270,
+            "properties": {
+                "balloonContent": "Оренбург, пр-кт. Братьев Коростелевых, д.163"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.042813,
+                    47.289023
+                ],
+                "type": "Point"
+            },
+            "id": 46349,
+            "properties": {
+                "balloonContent": "Кугеси п, ул. Тепличная, д.2а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.683899,
+                    52.435328
+                ],
+                "type": "Point"
+            },
+            "id": 46350,
+            "properties": {
+                "balloonContent": "Набережные Челны, тракт. Мензелинский, д.112А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    60.07837039966651,
+                    30.266008153266544
+                ],
+                "type": "Point"
+            },
+            "id": 46425,
+            "properties": {
+                "balloonContent": "посёлок Парголово, Выборгское шоссе, д.232"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.974867364878165,
+                    30.3817831296364
+                ],
+                "type": "Point"
+            },
+            "id": 46428,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Полюстровский проспект, д.59"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.668903,
+                    39.129644
+                ],
+                "type": "Point"
+            },
+            "id": 46459,
+            "properties": {
+                "balloonContent": "Воронеж, ул. Холмистая, д.56Б, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.768822,
+                    32.005491
+                ],
+                "type": "Point"
+            },
+            "id": 46519,
+            "properties": {
+                "balloonContent": "Смоленск, ш. Краснинское, д.4а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.228029989965975,
+                    50.30116089153826
+                ],
+                "type": "Point"
+            },
+            "id": 46537,
+            "properties": {
+                "balloonContent": "Самара, улица Литвинова, д.302"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.238681,
+                    104.294333
+                ],
+                "type": "Point"
+            },
+            "id": 46825,
+            "properties": {
+                "balloonContent": "Иркутск, ул. Старо-Кузьмихинская, д.86/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.373016,
+                    44.057577
+                ],
+                "type": "Point"
+            },
+            "id": 46851,
+            "properties": {
+                "balloonContent": "Бор, ул. Кольцова, д.20"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.028987,
+                    82.966064
+                ],
+                "type": "Point"
+            },
+            "id": 46872,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Бориса Богаткова, д.163А, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.881831,
+                    52.288777
+                ],
+                "type": "Point"
+            },
+            "id": 46884,
+            "properties": {
+                "balloonContent": "Альметьевск, ул. Базовая, д.32а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.8435,
+                    49.137316
+                ],
+                "type": "Point"
+            },
+            "id": 46954,
+            "properties": {
+                "balloonContent": "Казань, ул. Фатыха Амирхана, д.48"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.76638,
+                    52.412852
+                ],
+                "type": "Point"
+            },
+            "id": 46958,
+            "properties": {
+                "balloonContent": "Набережные Челны, пр-кт. Чулман, д.101"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.49924,
+                    84.994604
+                ],
+                "type": "Point"
+            },
+            "id": 46959,
+            "properties": {
+                "balloonContent": "Томск, ул. Северный городок, д.48"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.402397,
+                    86.277398
+                ],
+                "type": "Point"
+            },
+            "id": 46960,
+            "properties": {
+                "balloonContent": "Белово, мкр. 6-й, д.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.01756,
+                    82.952733
+                ],
+                "type": "Point"
+            },
+            "id": 46961,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Чехова, д.114"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.017679,
+                    82.966064
+                ],
+                "type": "Point"
+            },
+            "id": 46962,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Никитина, д.81"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.971512,
+                    82.871561
+                ],
+                "type": "Point"
+            },
+            "id": 46963,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Немировича-Данченко, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.089491,
+                    61.562966
+                ],
+                "type": "Point"
+            },
+            "id": 46964,
+            "properties": {
+                "balloonContent": "Троицк, ул. им. Ю.А. Гагарина, д.114"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.077543,
+                    63.641613
+                ],
+                "type": "Point"
+            },
+            "id": 46965,
+            "properties": {
+                "balloonContent": "Шадринск, ул. Володарского, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.049224,
+                    60.222949
+                ],
+                "type": "Point"
+            },
+            "id": 46966,
+            "properties": {
+                "balloonContent": "Верхний Уфалей, ул. Ленина, д.198/7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.854667,
+                    40.156337
+                ],
+                "type": "Point"
+            },
+            "id": 47048,
+            "properties": {
+                "balloonContent": "Тихорецк, ул. Ачкасова, д.92"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.855772,
+                    40.153867
+                ],
+                "type": "Point"
+            },
+            "id": 47049,
+            "properties": {
+                "balloonContent": "Тихорецк, ул. Гоголя, д.2/5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    43.059446,
+                    44.617541
+                ],
+                "type": "Point"
+            },
+            "id": 47261,
+            "properties": {
+                "balloonContent": "Владикавказ, ул. Владивостокская, д.12"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.23119,
+                    49.598493
+                ],
+                "type": "Point"
+            },
+            "id": 47321,
+            "properties": {
+                "balloonContent": "Димитровград, ул. Осипенко, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.898001605241696,
+                    37.631468523827515
+                ],
+                "type": "Point"
+            },
+            "id": 47361,
+            "properties": {
+                "balloonContent": "Москва, улица Корнейчука, д.31"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    46.704813,
+                    38.283107
+                ],
+                "type": "Point"
+            },
+            "id": 47504,
+            "properties": {
+                "balloonContent": "Ейск, ул. Свердлова, д.152/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    58.058174,
+                    38.798534
+                ],
+                "type": "Point"
+            },
+            "id": 47529,
+            "properties": {
+                "balloonContent": "Рыбинск, ул. Танкистов, д.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.045025,
+                    43.069394
+                ],
+                "type": "Point"
+            },
+            "id": 47534,
+            "properties": {
+                "balloonContent": "Пятигорск,  Р-217 Кавказ, 374-й километр, 5, посёлок Горячеводскийтерритория рынка 21Век"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.690151,
+                    60.557913
+                ],
+                "type": "Point"
+            },
+            "id": 47589,
+            "properties": {
+                "balloonContent": "Кыштым, ул. Южная 2-я, д.2А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    52.977458,
+                    49.710181
+                ],
+                "type": "Point"
+            },
+            "id": 47614,
+            "properties": {
+                "balloonContent": "Чапаевск, ул. Ленина, д.34А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.805318,
+                    53.192365
+                ],
+                "type": "Point"
+            },
+            "id": 48007,
+            "properties": {
+                "balloonContent": "Ижевск, ул. Пойма, д.22, к.Л"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.262614,
+                    73.434256
+                ],
+                "type": "Point"
+            },
+            "id": 48013,
+            "properties": {
+                "balloonContent": "Сургут, ул. Профсоюзов, д.61"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.102251,
+                    61.61761
+                ],
+                "type": "Point"
+            },
+            "id": 48119,
+            "properties": {
+                "balloonContent": "Копейск, ул. Калинина, д.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    60.93952,
+                    76.522278
+                ],
+                "type": "Point"
+            },
+            "id": 48128,
+            "properties": {
+                "balloonContent": "Нижневартовск, ул. Индустриальная, д.47, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.22784,
+                    43.943895
+                ],
+                "type": "Point"
+            },
+            "id": 48129,
+            "properties": {
+                "balloonContent": "Нижний Новгород, пр-кт. Гагарина, д.228А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.31552,
+                    44.068815
+                ],
+                "type": "Point"
+            },
+            "id": 48134,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Родионова, д.163"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.972913,
+                    34.089655
+                ],
+                "type": "Point"
+            },
+            "id": 44996,
+            "properties": {
+                "balloonContent": "Симферополь, ул. Железнодорожная, д.30а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.362501,
+                    39.069259
+                ],
+                "type": "Point"
+            },
+            "id": 45160,
+            "properties": {
+                "balloonContent": "Егорьевск, ш. Коломенское, д.3А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.246051,
+                    39.691845
+                ],
+                "type": "Point"
+            },
+            "id": 45289,
+            "properties": {
+                "balloonContent": "Ростов-на-Дону, ул. Нансена, д.85"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.220346,
+                    39.612802
+                ],
+                "type": "Point"
+            },
+            "id": 45290,
+            "properties": {
+                "balloonContent": "Ростов-на-Дону, ул. Малиновского, д.15а/2г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.39471912627405,
+                    36.73804119776152
+                ],
+                "type": "Point"
+            },
+            "id": 45393,
+            "properties": {
+                "balloonContent": "Наро-Фоминск, Парковая улица, д.3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.94171209710843,
+                    30.506111414236283
+                ],
+                "type": "Point"
+            },
+            "id": 45675,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, улица Коммуны, д.9, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.916975496726295,
+                    30.34202056563078
+                ],
+                "type": "Point"
+            },
+            "id": 45676,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Звенигородская улица, д.9-11К"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.244596,
+                    38.961111
+                ],
+                "type": "Point"
+            },
+            "id": 45678,
+            "properties": {
+                "balloonContent": "Новотитаровская ст-ца, ул. Крайняя, д.96/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.906297,
+                    37.332788
+                ],
+                "type": "Point"
+            },
+            "id": 45680,
+            "properties": {
+                "balloonContent": "Анапа, ш. Симферопольское, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.704374,
+                    40.224313
+                ],
+                "type": "Point"
+            },
+            "id": 46847,
+            "properties": {
+                "balloonContent": "Шахты, ул. Советская, д.105"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.225995,
+                    38.895848
+                ],
+                "type": "Point"
+            },
+            "id": 46848,
+            "properties": {
+                "balloonContent": "Таганрог, ул. Александровская, д.220"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.213877,
+                    38.874684
+                ],
+                "type": "Point"
+            },
+            "id": 46849,
+            "properties": {
+                "balloonContent": "Таганрог, ул. Поляковское Шоссе, д.12"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    58.221975,
+                    68.268755
+                ],
+                "type": "Point"
+            },
+            "id": 46858,
+            "properties": {
+                "balloonContent": "Тобольск, ул. Семена Ремезова, д.111а, к.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.870814,
+                    86.75258
+                ],
+                "type": "Point"
+            },
+            "id": 46874,
+            "properties": {
+                "balloonContent": "Прокопьевск, пр-кт. Шахтеров, д.1/10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.7963,
+                    34.3299
+                ],
+                "type": "Point"
+            },
+            "id": 47262,
+            "properties": {
+                "balloonContent": "Петрозаводск, Шотмана. ул., д.40"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.762519,
+                    36.130097
+                ],
+                "type": "Point"
+            },
+            "id": 47536,
+            "properties": {
+                "balloonContent": "Курск, ул. 50 лет Октября, д.126"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.254027,
+                    34.315437
+                ],
+                "type": "Point"
+            },
+            "id": 47552,
+            "properties": {
+                "balloonContent": "Ржев, ул. Декабристов, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.415107,
+                    59.058364
+                ],
+                "type": "Point"
+            },
+            "id": 47596,
+            "properties": {
+                "balloonContent": "Магнитогорск, ул. Тевосяна, д.21А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.98928,
+                    73.300838
+                ],
+                "type": "Point"
+            },
+            "id": 47619,
+            "properties": {
+                "balloonContent": "Омск, ул. Степанца, д.3, пом.17П"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.202735,
+                    45.150494
+                ],
+                "type": "Point"
+            },
+            "id": 47620,
+            "properties": {
+                "balloonContent": "Саранск, ул. Строительная, д.36, cтр.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.102946325745464,
+                    59.68676372883606
+                ],
+                "type": "Point"
+            },
+            "id": 47834,
+            "properties": {
+                "balloonContent": "Златоуст, улица имени И.В. Панфилова, д.4А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.241404,
+                    38.106364
+                ],
+                "type": "Point"
+            },
+            "id": 48010,
+            "properties": {
+                "balloonContent": "Славянск-на-Кубани, ул. Пролетарская, д.50А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.749317,
+                    40.971828
+                ],
+                "type": "Point"
+            },
+            "id": 48124,
+            "properties": {
+                "balloonContent": "Кострома, ул. Северной правды, д.22"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    46.682487,
+                    38.28688
+                ],
+                "type": "Point"
+            },
+            "id": 45374,
+            "properties": {
+                "balloonContent": "Ейск, ул. Горького, д.32/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.833451173858016,
+                    38.96902291534424
+                ],
+                "type": "Point"
+            },
+            "id": 45401,
+            "properties": {
+                "balloonContent": "Орехово-Зуево, Малодубенское шоссе, д.30, cтр.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.310218,
+                    30.514557
+                ],
+                "type": "Point"
+            },
+            "id": 45516,
+            "properties": {
+                "balloonContent": "Великие Луки, пр-кт. Октябрьский, д.146"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.883169736195434,
+                    30.382939539849602
+                ],
+                "type": "Point"
+            },
+            "id": 45539,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, улица Фучика, д.12, к.1В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.987808297812755,
+                    30.272196706969147
+                ],
+                "type": "Point"
+            },
+            "id": 45540,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Заусадебная улица, д.31"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.94248801661929,
+                    30.414694635419664
+                ],
+                "type": "Point"
+            },
+            "id": 45541,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Якорная улица, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.823856,
+                    91.343654
+                ],
+                "type": "Point"
+            },
+            "id": 45544,
+            "properties": {
+                "balloonContent": "Черногорск, ул. Генерала Тихонова, д.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.719622,
+                    91.408521
+                ],
+                "type": "Point"
+            },
+            "id": 45546,
+            "properties": {
+                "balloonContent": "Абакан, ул. Кравченко, д.11Ц, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.800929,
+                    44.152861
+                ],
+                "type": "Point"
+            },
+            "id": 45548,
+            "properties": {
+                "balloonContent": "Буденновск, пр-кт. Космонавтов, д.24"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.946452,
+                    82.853739
+                ],
+                "type": "Point"
+            },
+            "id": 45586,
+            "properties": {
+                "balloonContent": "Новосибирск, ул. Петухова, д.35, к.8"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.243812,
+                    39.581676
+                ],
+                "type": "Point"
+            },
+            "id": 45620,
+            "properties": {
+                "balloonContent": "Ростов-на-Дону, ул. Доватора, д.160/2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.92587777801161,
+                    34.10738103176208
+                ],
+                "type": "Point"
+            },
+            "id": 45621,
+            "properties": {
+                "balloonContent": "Симферополь, Балаклавская улица, д.68Щ"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.383009,
+                    43.820862
+                ],
+                "type": "Point"
+            },
+            "id": 45622,
+            "properties": {
+                "balloonContent": "Арзамас, ул. Ленина, д.35"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.711265,
+                    33.86098
+                ],
+                "type": "Point"
+            },
+            "id": 45627,
+            "properties": {
+                "balloonContent": "Первомайское пгт, ул. Ленина, д.117"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    61.010184,
+                    69.04957
+                ],
+                "type": "Point"
+            },
+            "id": 45630,
+            "properties": {
+                "balloonContent": "Ханты-Мансийск, ул. Строителей, д.115"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.56765076712389,
+                    42.04473338360371
+                ],
+                "type": "Point"
+            },
+            "id": 45951,
+            "properties": {
+                "balloonContent": "Муром, Октябрьская улица, д.67"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.62059788734646,
+                    39.85875443386615
+                ],
+                "type": "Point"
+            },
+            "id": 45952,
+            "properties": {
+                "balloonContent": "Ярославль, проспект Толбухина, д.8/75"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.05616386239616,
+                    38.93186015081111
+                ],
+                "type": "Point"
+            },
+            "id": 45954,
+            "properties": {
+                "balloonContent": "Краснодар, улица Красных Партизан, д.247"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.657579050664985,
+                    37.734940255898586
+                ],
+                "type": "Point"
+            },
+            "id": 46032,
+            "properties": {
+                "balloonContent": "Москва, улица Нижние Поля, д.27А, cтр.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.935376,
+                    60.063875
+                ],
+                "type": "Point"
+            },
+            "id": 46072,
+            "properties": {
+                "balloonContent": "Волчанск, ул. Первомайская, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.357769,
+                    43.80506
+                ],
+                "type": "Point"
+            },
+            "id": 46088,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Гаугеля, д.2А/2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.078566,
+                    32.708037
+                ],
+                "type": "Point"
+            },
+            "id": 46173,
+            "properties": {
+                "balloonContent": "Ярцево, ул. Халтурина, д.61"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.448862,
+                    84.988414
+                ],
+                "type": "Point"
+            },
+            "id": 46324,
+            "properties": {
+                "balloonContent": "Томск, ул. Мокрушина, д.9, к.40"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.482727,
+                    84.977608
+                ],
+                "type": "Point"
+            },
+            "id": 46325,
+            "properties": {
+                "balloonContent": "Томск, ул. Сибирская, д.40, cтр.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.982205,
+                    37.257195
+                ],
+                "type": "Point"
+            },
+            "id": 46420,
+            "properties": {
+                "balloonContent": "Зеленоград, проезд. 4921-й, д.5"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.813905,
+                    38.436692
+                ],
+                "type": "Point"
+            },
+            "id": 46422,
+            "properties": {
+                "balloonContent": "Электросталь, ул. Северная, д.1, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.31878309351917,
+                    38.647498496681216
+                ],
+                "type": "Point"
+            },
+            "id": 46423,
+            "properties": {
+                "balloonContent": "село Новлянское, Сельская улица, д.9В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.809898,
+                    30.369444
+                ],
+                "type": "Point"
+            },
+            "id": 46426,
+            "properties": {
+                "balloonContent": "Шушары п, пр-кт. Новгородский, д.6, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.697555,
+                    30.372507
+                ],
+                "type": "Point"
+            },
+            "id": 46429,
+            "properties": {
+                "balloonContent": "Пушкин, ул. Сапёрная, д.67, к.В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.65439419311951,
+                    37.763722693138995
+                ],
+                "type": "Point"
+            },
+            "id": 46430,
+            "properties": {
+                "balloonContent": "Москва, Братиславская улица, д.26"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.962528,
+                    37.931992
+                ],
+                "type": "Point"
+            },
+            "id": 46431,
+            "properties": {
+                "balloonContent": "Ивантеевка, ул. Толмачева, д.27"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.895181,
+                    37.42721
+                ],
+                "type": "Point"
+            },
+            "id": 46436,
+            "properties": {
+                "balloonContent": "Химки, ш. Ленинградское, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.83261746627627,
+                    37.64228660848322
+                ],
+                "type": "Point"
+            },
+            "id": 46437,
+            "properties": {
+                "balloonContent": "Москва, 2-й Сельскохозяйственный проезд, д.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.593543,
+                    38.09597
+                ],
+                "type": "Point"
+            },
+            "id": 46440,
+            "properties": {
+                "balloonContent": "Жуковский, ул. Кооперативная, д.19А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.83969085785891,
+                    38.27366633120498
+                ],
+                "type": "Point"
+            },
+            "id": 46441,
+            "properties": {
+                "balloonContent": "городской округ Кашира, cтр.вблизи пос. Новоселки"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.933484,
+                    37.826161
+                ],
+                "type": "Point"
+            },
+            "id": 46442,
+            "properties": {
+                "balloonContent": "Королёв, ш. Болшевское, д.39, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.89899671286124,
+                    38.074720951065046
+                ],
+                "type": "Point"
+            },
+            "id": 46443,
+            "properties": {
+                "balloonContent": "Ступино, Пристанционная улица, д.7А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.913391,
+                    37.452956
+                ],
+                "type": "Point"
+            },
+            "id": 46444,
+            "properties": {
+                "balloonContent": "Серпухов, ш. Окское, д.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.427463,
+                    37.535475
+                ],
+                "type": "Point"
+            },
+            "id": 46445,
+            "properties": {
+                "balloonContent": "Подольск, ул. Кирова, д.15"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.662197,
+                    37.962516
+                ],
+                "type": "Point"
+            },
+            "id": 46446,
+            "properties": {
+                "balloonContent": "Люберцы, ул. Гаршина, д.11В"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.69138578749211,
+                    37.599810862450546
+                ],
+                "type": "Point"
+            },
+            "id": 46449,
+            "properties": {
+                "balloonContent": "Москва, Большая Черёмушкинская улица, д.2А, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.77165158009554,
+                    37.54471923546691
+                ],
+                "type": "Point"
+            },
+            "id": 46450,
+            "properties": {
+                "balloonContent": "Москва, улица Брянский Пост, д.5А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.7256422096113,
+                    37.44974852382749
+                ],
+                "type": "Point"
+            },
+            "id": 46451,
+            "properties": {
+                "balloonContent": "Москва, Кутузовский проспект, д.88"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.752997972433256,
+                    37.819260095420546
+                ],
+                "type": "Point"
+            },
+            "id": 46452,
+            "properties": {
+                "balloonContent": "Москва, Свободный проспект, д.33"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.86096878529814,
+                    37.482618592596296
+                ],
+                "type": "Point"
+            },
+            "id": 46453,
+            "properties": {
+                "balloonContent": "Москва, Смольная улица, д.24Г, cтр.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.90661116696961,
+                    30.378268358186094
+                ],
+                "type": "Point"
+            },
+            "id": 46454,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Глухоозёрское шоссе, д.9"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.96070015306305,
+                    30.286752925931584
+                ],
+                "type": "Point"
+            },
+            "id": 46455,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Большая Разночинная улица, д.24, к.Г"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.831501464412824,
+                    30.34619946825948
+                ],
+                "type": "Point"
+            },
+            "id": 46456,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Дунайский проспект, д.20"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.86151676836346,
+                    30.21284584127583
+                ],
+                "type": "Point"
+            },
+            "id": 46457,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, улица Маршала Казакова, д.29, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.88743621859051,
+                    30.384738841275823
+                ],
+                "type": "Point"
+            },
+            "id": 46458,
+            "properties": {
+                "balloonContent": "Санкт-Петербург, Софийская улица, д.2Щ"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.80755514605234,
+                    60.57909574359639
+                ],
+                "type": "Point"
+            },
+            "id": 46460,
+            "properties": {
+                "balloonContent": "Екатеринбург, жилой район Юго-Западный, Амурская улица, д.10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.012829,
+                    39.072439
+                ],
+                "type": "Point"
+            },
+            "id": 46461,
+            "properties": {
+                "balloonContent": "Краснодар, ул. им. Мачуги В.Н., д.45"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    43.423442,
+                    39.931695
+                ],
+                "type": "Point"
+            },
+            "id": 46462,
+            "properties": {
+                "balloonContent": "Сочи, ул. Станиславского, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.298052,
+                    43.848781
+                ],
+                "type": "Point"
+            },
+            "id": 46463,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Ухтомского, д.39"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.228675,
+                    39.641701
+                ],
+                "type": "Point"
+            },
+            "id": 46464,
+            "properties": {
+                "balloonContent": "Ростов-на-Дону, пер. Сортовой, д.52"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.195376,
+                    50.148684
+                ],
+                "type": "Point"
+            },
+            "id": 46465,
+            "properties": {
+                "balloonContent": "Самара, ул. Дачная, д.10А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.827262,
+                    37.368038
+                ],
+                "type": "Point"
+            },
+            "id": 46893,
+            "properties": {
+                "balloonContent": "Красногорск, ул. Спасская, д.2А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.872142206334004,
+                    37.398620965683044
+                ],
+                "type": "Point"
+            },
+            "id": 46895,
+            "properties": {
+                "balloonContent": "деревня Путилково, жилой комплекс Путилково, cтр.напротив дома 35"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.88399,
+                    55.052543
+                ],
+                "type": "Point"
+            },
+            "id": 48116,
+            "properties": {
+                "balloonContent": "Ленина п, ул. Придорожная, д.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.389096,
+                    58.985295
+                ],
+                "type": "Point"
+            },
+            "id": 48122,
+            "properties": {
+                "balloonContent": "Магнитогорск, пр-кт. Ленина, д.114, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.168446,
+                    45.21961
+                ],
+                "type": "Point"
+            },
+            "id": 45557,
+            "properties": {
+                "balloonContent": "Саранск, ул. Рабочая, д.19А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.989672,
+                    73.457172
+                ],
+                "type": "Point"
+            },
+            "id": 45587,
+            "properties": {
+                "balloonContent": "Омск, ул. 10 лет Октября, д.182, к.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.638074,
+                    51.863038
+                ],
+                "type": "Point"
+            },
+            "id": 45801,
+            "properties": {
+                "balloonContent": "Нижнекамск, ул. Соболековская, д.11"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.167642,
+                    61.297226
+                ],
+                "type": "Point"
+            },
+            "id": 46353,
+            "properties": {
+                "balloonContent": "Челябинск, ул. Академика Макеева, д.10"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.409877,
+                    56.830129
+                ],
+                "type": "Point"
+            },
+            "id": 46854,
+            "properties": {
+                "balloonContent": "Березники, ул. Юбилейная, д.54а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.931224,
+                    56.149574
+                ],
+                "type": "Point"
+            },
+            "id": 46855,
+            "properties": {
+                "balloonContent": "Пермь, ул. Промышленная, д.111а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.415107,
+                    59.058364
+                ],
+                "type": "Point"
+            },
+            "id": 46856,
+            "properties": {
+                "balloonContent": "Магнитогорск, ул. Кирова, д.88"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.768775,
+                    49.176671
+                ],
+                "type": "Point"
+            },
+            "id": 46897,
+            "properties": {
+                "balloonContent": "Казань, ул. Гвардейская, д.54, к.А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.8825,
+                    37.923718
+                ],
+                "type": "Point"
+            },
+            "id": 47046,
+            "properties": {
+                "balloonContent": "Верхнеадагум х, Краснодар-Новороссийск. км. 116+850 м (слева) автодорога"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.159552,
+                    61.477374
+                ],
+                "type": "Point"
+            },
+            "id": 47337,
+            "properties": {
+                "balloonContent": "Челябинск, пр-кт. Ленина, д.2А, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.751102,
+                    60.712153
+                ],
+                "type": "Point"
+            },
+            "id": 46015,
+            "properties": {
+                "balloonContent": "Озерск, ул. Кыштымская, д.34а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.153203,
+                    38.9923
+                ],
+                "type": "Point"
+            },
+            "id": 46207,
+            "properties": {
+                "balloonContent": "Краснодар, ул. им. Карла Гусника, д.20"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.42825,
+                    65.283446
+                ],
+                "type": "Point"
+            },
+            "id": 46211,
+            "properties": {
+                "balloonContent": "Курган, ул. Коли Мяготина, д.12"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.293187,
+                    90.502022
+                ],
+                "type": "Point"
+            },
+            "id": 46213,
+            "properties": {
+                "balloonContent": "Ачинск, ул. Льва Толстого, д.51"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.18258755721847,
+                    36.9774534980087
+                ],
+                "type": "Point"
+            },
+            "id": 46268,
+            "properties": {
+                "balloonContent": "Солнечногорск, улица Баранова, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.453222,
+                    65.344675
+                ],
+                "type": "Point"
+            },
+            "id": 46515,
+            "properties": {
+                "balloonContent": "Курган, ул. Некрасова, д.16, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    64.565047,
+                    40.568897
+                ],
+                "type": "Point"
+            },
+            "id": 46887,
+            "properties": {
+                "balloonContent": "Архангельск, ш. Окружное, д.3, к.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    64.532811,
+                    40.597302
+                ],
+                "type": "Point"
+            },
+            "id": 46888,
+            "properties": {
+                "balloonContent": "Архангельск, ул. Октябрят, д.23"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.521888,
+                    36.286476
+                ],
+                "type": "Point"
+            },
+            "id": 46891,
+            "properties": {
+                "balloonContent": "Калуга, ш. Грабцевское, д.20"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    46.333864,
+                    48.041012
+                ],
+                "type": "Point"
+            },
+            "id": 47061,
+            "properties": {
+                "balloonContent": "Астрахань, ул. Николая Островского, д.124Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.292957,
+                    43.881543
+                ],
+                "type": "Point"
+            },
+            "id": 47528,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Удмуртская, д.3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.343204,
+                    30.572517
+                ],
+                "type": "Point"
+            },
+            "id": 47531,
+            "properties": {
+                "balloonContent": "Великие Луки, пр-кт. Гагарина, д.105"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.820376,
+                    55.160349
+                ],
+                "type": "Point"
+            },
+            "id": 47557,
+            "properties": {
+                "balloonContent": "Оренбург, ул. Транспортная, д.4"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.360549,
+                    59.013125
+                ],
+                "type": "Point"
+            },
+            "id": 47623,
+            "properties": {
+                "balloonContent": "Магнитогорск, проезд. Сиреневый, д.1А, cтр.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.156305,
+                    37.637219
+                ],
+                "type": "Point"
+            },
+            "id": 47825,
+            "properties": {
+                "balloonContent": "Тула, ш. Новомосковское, д.58А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.433174,
+                    42.516023
+                ],
+                "type": "Point"
+            },
+            "id": 47828,
+            "properties": {
+                "balloonContent": "Кулебаки, ул. Воровского, д.84/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    48.781223,
+                    44.811452
+                ],
+                "type": "Point"
+            },
+            "id": 48066,
+            "properties": {
+                "balloonContent": "Волжский, ул. Пушкина, д.73, к.Е"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    48.75192936639668,
+                    44.47309138623044
+                ],
+                "type": "Point"
+            },
+            "id": 48067,
+            "properties": {
+                "balloonContent": "Волгоград, Лесогорская улица, д.83"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.437628,
+                    42.155762
+                ],
+                "type": "Point"
+            },
+            "id": 46175,
+            "properties": {
+                "balloonContent": "Кинешма, ул. Подгорная, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.831596,
+                    28.293904
+                ],
+                "type": "Point"
+            },
+            "id": 46312,
+            "properties": {
+                "balloonContent": "Псков, ул. Чудская, д.5А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.201354,
+                    65.601091
+                ],
+                "type": "Point"
+            },
+            "id": 46314,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Щербакова, д.223"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    59.816893,
+                    30.405134
+                ],
+                "type": "Point"
+            },
+            "id": 46881,
+            "properties": {
+                "balloonContent": "Шушары п, ул. Ленина, д.8"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.469796,
+                    65.370655
+                ],
+                "type": "Point"
+            },
+            "id": 46885,
+            "properties": {
+                "balloonContent": "Курган, ул. Омская, д.163"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.742189,
+                    52.455935
+                ],
+                "type": "Point"
+            },
+            "id": 46957,
+            "properties": {
+                "balloonContent": "Набережные Челны, ул. Машиностроительная, д.103"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.332355,
+                    41.605248
+                ],
+                "type": "Point"
+            },
+            "id": 47050,
+            "properties": {
+                "balloonContent": "Меленки, ул. 60 лет Октября, д.35"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    47.06591142741075,
+                    39.747091698939634
+                ],
+                "type": "Point"
+            },
+            "id": 47201,
+            "properties": {
+                "balloonContent": "Батайск, Самарское шоссе, д.25/1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.316684,
+                    43.900111
+                ],
+                "type": "Point"
+            },
+            "id": 48135,
+            "properties": {
+                "balloonContent": "Нижний Новгород, проезд. Бурнаковский, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.318701,
+                    44.06514
+                ],
+                "type": "Point"
+            },
+            "id": 48136,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Родионова, д.134"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.493606,
+                    84.970412
+                ],
+                "type": "Point"
+            },
+            "id": 46297,
+            "properties": {
+                "balloonContent": "Томск, ул. Яковлева, д.26"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.86956980818049,
+                    38.43821476322935
+                ],
+                "type": "Point"
+            },
+            "id": 46303,
+            "properties": {
+                "balloonContent": "Ногинск, улица Декабристов, д.38"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    44.98782,
+                    34.157702
+                ],
+                "type": "Point"
+            },
+            "id": 46852,
+            "properties": {
+                "balloonContent": "Симферополь, пр-кт. Победы, д.289"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.35139,
+                    86.061883
+                ],
+                "type": "Point"
+            },
+            "id": 48012,
+            "properties": {
+                "balloonContent": "Кемерово, пр-кт. Кузнецкий, д.41"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.79451836429887,
+                    38.97297669444272
+                ],
+                "type": "Point"
+            },
+            "id": 46889,
+            "properties": {
+                "balloonContent": "Орехово-Зуево, Егорьевская улица, д.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    46.360005,
+                    48.070198
+                ],
+                "type": "Point"
+            },
+            "id": 47059,
+            "properties": {
+                "balloonContent": "Астрахань, ул. Минусинская, д.8д"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.824774,
+                    53.185062
+                ],
+                "type": "Point"
+            },
+            "id": 47206,
+            "properties": {
+                "balloonContent": "Ижевск, ул. Азина, д.75"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    45.008183,
+                    41.124883
+                ],
+                "type": "Point"
+            },
+            "id": 47269,
+            "properties": {
+                "balloonContent": "Армавир, Мечта. Ефремова ул СНТ, д.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.19399209673669,
+                    36.608348259217564
+                ],
+                "type": "Point"
+            },
+            "id": 47319,
+            "properties": {
+                "balloonContent": "Балабаново, микрорайон Балабаново-1, Нету, д.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.217958,
+                    50.224906
+                ],
+                "type": "Point"
+            },
+            "id": 47322,
+            "properties": {
+                "balloonContent": "Самара, ул. Ставропольская, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.165679,
+                    48.430315
+                ],
+                "type": "Point"
+            },
+            "id": 47323,
+            "properties": {
+                "balloonContent": "Сызрань, пер. Опорный, д.16"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.165614,
+                    48.492424
+                ],
+                "type": "Point"
+            },
+            "id": 47324,
+            "properties": {
+                "balloonContent": "Сызрань, ул. Декабристов, д.34"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.506894,
+                    49.26865
+                ],
+                "type": "Point"
+            },
+            "id": 47325,
+            "properties": {
+                "balloonContent": "Тольятти, б-р. Приморский, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.537985,
+                    49.284487
+                ],
+                "type": "Point"
+            },
+            "id": 47326,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Борковская, д.101"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.51076,
+                    49.439958
+                ],
+                "type": "Point"
+            },
+            "id": 47327,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Мира, д.109Б"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.5456,
+                    49.347504
+                ],
+                "type": "Point"
+            },
+            "id": 47328,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Тополиная, д.1а"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.485708,
+                    49.485808
+                ],
+                "type": "Point"
+            },
+            "id": 47329,
+            "properties": {
+                "balloonContent": "Тольятти, ул. Ярославская, д.61"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    51.494854,
+                    81.196239
+                ],
+                "type": "Point"
+            },
+            "id": 47358,
+            "properties": {
+                "balloonContent": "Рубцовск, ул. Сельмашская, д.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.013855,
+                    37.205129
+                ],
+                "type": "Point"
+            },
+            "id": 47559,
+            "properties": {
+                "balloonContent": "Зеленоград, пр-кт. Панфиловский, д.2А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.115124,
+                    65.651657
+                ],
+                "type": "Point"
+            },
+            "id": 47613,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Чекистов, д.32, cтр.16"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.154625,
+                    65.442879
+                ],
+                "type": "Point"
+            },
+            "id": 47616,
+            "properties": {
+                "balloonContent": "Тюмень, ул. Авторемонтная, д.47, cтр.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.924019,
+                    43.307627
+                ],
+                "type": "Point"
+            },
+            "id": 47621,
+            "properties": {
+                "balloonContent": "Саров, ул. Димитрова, д.20А"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    53.343699,
+                    83.715843
+                ],
+                "type": "Point"
+            },
+            "id": 47674,
+            "properties": {
+                "balloonContent": "Барнаул, ул. Заринская, д.14, к.2"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.430595,
+                    42.501183
+                ],
+                "type": "Point"
+            },
+            "id": 47827,
+            "properties": {
+                "balloonContent": "Кулебаки, ул. Кулибина, д.43"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    54.976958,
+                    73.340481
+                ],
+                "type": "Point"
+            },
+            "id": 47837,
+            "properties": {
+                "balloonContent": "Омск, ул. Енисейская, д.3"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.106916,
+                    69.470611
+                ],
+                "type": "Point"
+            },
+            "id": 47839,
+            "properties": {
+                "balloonContent": "Ишим, ул. Гаранина, д.1, cтр.6"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.641659,
+                    39.880015
+                ],
+                "type": "Point"
+            },
+            "id": 47840,
+            "properties": {
+                "balloonContent": "Ярославль, пр-кт. Ленина, д.7"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    55.754856,
+                    49.12942
+                ],
+                "type": "Point"
+            },
+            "id": 47844,
+            "properties": {
+                "balloonContent": "Казань, ул. Техническая, д.27, к.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.129875,
+                    47.298492
+                ],
+                "type": "Point"
+            },
+            "id": 47845,
+            "properties": {
+                "balloonContent": "Чебоксары, проезд. Хозяйственный, д.21"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.780397,
+                    40.977011
+                ],
+                "type": "Point"
+            },
+            "id": 48123,
+            "properties": {
+                "balloonContent": "Кострома, ул. Галичская, д.105"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    57.779864,
+                    40.9855
+                ],
+                "type": "Point"
+            },
+            "id": 48125,
+            "properties": {
+                "balloonContent": "Кострома, ул. Галичская, д.124в"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.354422,
+                    43.869146
+                ],
+                "type": "Point"
+            },
+            "id": 48130,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Станционная, д.76"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.225438,
+                    44.070647
+                ],
+                "type": "Point"
+            },
+            "id": 48131,
+            "properties": {
+                "balloonContent": "Федяково с, ул. Любимая, cтр.1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    56.262962,
+                    43.922524
+                ],
+                "type": "Point"
+            },
+            "id": 48132,
+            "properties": {
+                "balloonContent": "Нижний Новгород, ул. Новикова-Прибоя, д.6"
+            },
+            "type": "Feature"
         }
-    ]
+    ],
+    "type": "FeatureCollection"
 }
