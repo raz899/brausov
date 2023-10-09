@@ -835,38 +835,8 @@
             },
             loadMapMarkers: () => {
                 mapShm.objectManager.removeAll();
-                let listData = {};
-                // const w = document.querySelector('input[name="width"]').value;
-                // const p = document.querySelector('input[name="height"]').value;
-                // const d = document.querySelector('input[name="diameter"]').value;
-                // if (!w && !p && !d) {
-                //     listData = {
-                //         'latitude': '55.7522',
-                //         'longitude': '37.6156',
-                //         'stoRadios': 500000,
-                //     };
-                // } else if (!w || !p || !d) {
-                //     return false;
-                // } else {
-                //     // ToDo: прикрутить геопозиционирование
-                //     listData = {
-                //         'sh': w,
-                //         'prof': p,
-                //         'd': d,
-                //         'runflat': 0,
-                //         'indexC': 0,
-                //         'latitude': '55.7522',
-                //         'longitude': '37.6156',
-                //         'stoRadios': 500000,
-                //     };
-                // }
-                listData = {
-                    'latitude': '55.7522',
-                    'longitude': '37.6156',
-                    'stoRadios': 500000,
-                };
 
-                fetch('./data.json')
+                fetch('https://b2b.4tochki.ru/export_data/sto/jfp.json')
                     .then(response => response.json())
                     .then((data) => {
                         // data = data.json();
