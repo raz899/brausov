@@ -1,7 +1,18 @@
+html {
+  height: 100%;
+}
+
 body * {
   font-family: 'Montserrat', sans-serif !important;
 }
 
+.content {
+  min-height: calc(100vh - 358px);
+}
+
+footer {
+  height: 50px;
+}
 
 
 
@@ -26,7 +37,7 @@ body * {
 
 /* vacancy */
 .form {
-  width: 80%;
+  width: 100%;
 }
 
 .ml-40 {
