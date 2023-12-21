@@ -48865,7 +48865,7 @@ const TweenMaxBase = TweenMax;
 /* 324 */
 /***/ (function(module, exports) {
 
-module.exports = {"src":["audio.ogg","audio.mp3"],"sprite":{"barkDucks":[0,1195.827664399093],"gunSound":[3000,2600.6349206349205],"laugh":[7000,2414.875283446712],"loserSound":[11000,2530.9750566893426],"thud":[15000,1149.3877551020405]}}
+module.exports = {"src":["audio.ogg","audio.mp3"],"sprite":{"barkDucks":[0,1195.827664399093],"champ":[3000,180010.86167800456],"gunSound":[185000,2600.634920634917],"laugh":[189000,2414.8752834467186],"loserSound":[193000,2530.9750566893285],"thud":[197000,1149.3877551020546]}}
 
 /***/ }),
 /* 325 */
