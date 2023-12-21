@@ -48871,7 +48871,7 @@ module.exports = {"src":["audio.ogg","audio.mp3"],"sprite":{"barkDucks":[0,1195.
 /* 325 */
 /***/ (function(module, exports) {
 
-module.exports = {"normal":[{"id":1,"title":"Уровень 1","waves":3,"ducks":2,"pointsPerDuck":100,"speed":5,"bullets":2,"radius":60,"time":13},{"id":2,"title":"Уровень 2","waves":5,"ducks":3,"pointsPerDuck":100,"speed":6,"bullets":3,"radius":60,"time":10},{"id":3,"title":"Уровень 3","waves":6,"ducks":3,"pointsPerDuck":100,"speed":7,"bullets":3,"radius":60,"time":10},{"id":4,"title":"Уровень 4","waves":3,"ducks":10,"pointsPerDuck":100,"speed":7,"bullets":8,"radius":60,"time":18},{"id":5,"title":"Уровень 5","waves":5,"ducks":2,"pointsPerDuck":100,"speed":8,"bullets":2,"radius":60,"time":13},{"id":6,"title":"Уровень 6","waves":1,"ducks":15,"pointsPerDuck":100,"speed":8,"bullets":10,"radius":60,"time":25}]}
+module.exports = {"normal":[{"id":1,"title":"Уровень 1","waves":3,"ducks":2,"pointsPerDuck":100,"speed":5,"bullets":2,"radius":60,"time":13},{"id":2,"title":"Уровень 2","waves":5,"ducks":3,"pointsPerDuck":100,"speed":6,"bullets":3,"radius":60,"time":10},{"id":3,"title":"Уровень 3","waves":6,"ducks":3,"pointsPerDuck":100,"speed":7,"bullets":3,"radius":60,"time":10},{"id":4,"title":"Уровень 4","waves":3,"ducks":10,"pointsPerDuck":100,"speed":7,"bullets":8,"radius":60,"time":18},{"id":5,"title":"Уровень 5","waves":5,"ducks":2,"pointsPerDuck":100,"speed":8,"bullets":2,"radius":60,"time":13},{"id":6,"title":"Уровень 6","waves":1,"ducks":15,"pointsPerDuck":100,"speed":8,"bullets":12,"radius":60,"time":25}]}
 
 /***/ }),
 /* 326 */
