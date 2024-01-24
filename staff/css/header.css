@@ -1,0 +1,141 @@
+/* header */
+.header {
+    width: 100%;
+    height       : 80px;
+    padding      : 21px 0;
+    border-bottom: 1px solid #F1F5F9;
+    box-shadow   : 0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+    position     : fixed;
+    left         : 0;
+    top          : 0;
+    z-index: 100;
+    background-color: #fff;
+}
+
+/* nav */
+.nav-list {
+    flex-wrap      : nowrap;
+    text-wrap      : nowrap;
+    margin-bottom  : 0;
+    list-style     : none;
+    align-items    : center;
+    justify-content: center;
+   
+}
+
+.nav-link {
+    color      : #64748B;
+    font-size  : 15px;
+    font-style : normal;
+    font-weight: 400;
+    line-height: 14px;
+    padding    : 0;
+}
+
+.nav-list .nav-item+.nav-item {
+    margin-left: 32px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.nav-link:focus,
+.nav-link:hover {
+    color           : #ef7a1c;
+    background-color: #fff;
+}
+
+/* /header */
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* // `xl` applies to medium devices (tablets, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+    /* burger */
+    body.lock {
+        overflow: hidden;
+    }
+
+    .burger__icon {
+        display : block;
+        width   : 30px;
+        height  : 18px;
+        position: relative;
+        z-index : 5;
+        cursor  : pointer;
+    }
+
+    .burger__icon span:first-child {
+        top: 0;
+    }
+
+    .burger__icon span {
+        position          : absolute;
+        top               : calc(50% - 1px);
+        left              : 0;
+        width             : 100%;
+        height            : 2px;
+        -webkit-transition: all 0.2s;
+        transition        : all 0.2s;
+        background-color  : #64748B;
+    }
+
+    .burger__icon span:last-child {
+        top   : auto;
+        bottom: 0;
+    }
+
+    .burger__icon.active span:first-child {
+        -webkit-transform: rotate(-45deg);
+        transform        : rotate(-45deg);
+        top              : calc(50% - 1px);
+    }
+
+    .burger__icon.active span {
+        transform: scale(0);
+    }
+
+    .burger__icon.active span:last-child {
+        transform: rotate(45deg);
+        bottom   : calc(50% - 1px);
+    }
+
+    .burger__body {
+        position        : absolute;
+        top             : 0;
+        left            : -100%;
+        height          : 100vh;
+        width           : 100%;
+        background-color: #2d2d2de5;
+        transition      : all 0.2s;
+    }
+
+    .burger__body.active {
+        left: 0;
+    }
+
+    .burger__list {
+        flex-direction    : column;
+        padding           : 21px;
+        gap               : 0;
+        height            : 100%;
+        width             : 80%;
+        background-color  : #fff;
+        overflow          : auto;
+    }
+    .burger__list .nav-link {
+        font-size: 18px;
+    }
+
+    /*/ burger */
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/card.css">
+    <title>Staff</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <div class="wrapper">
+       <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <span class="text-info me-2">im_evsikov</span>
+                            <a href="#"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img width="32px" height="32px" src="img/staff-img/person-circle 1.png">
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1  ">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="#">Личный кабинет</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info">
+                                        <svg width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-info me-2">im_evsikov</span>
+                                            <img width="32px" height="32px" src="img/staff-img/person-circle 1.png">
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link py-2">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Help desk</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="phones.html" class="nav-link py-2">Телефонный справочник</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Личный кабинет</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Уведомления</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Админка</a>
+                                        </li>
+                                        <li class="nav-item border-top-info mt-2 w-100">
+                                            <a href="#" class="nav-link text-danger py-2">Выход</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Основные разделы -->
+            <section class="container mt-5">
+                <h3 class="title">Основные разделы</h3>
+                <div class="card-items">
+                    <a href="news.html" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#news"></use>
+                        </svg>
+                        <sapn class="card__item-title">Новости</sapn>
+                        <sapn class="card__item-text">Последние новости из мира шин. <br>
+                            Новости из канала “Шинный эксперт”</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#extended-warranty"></use>
+                        </svg>
+                        <sapn class="card__item-title">Расширенная гарантия</sapn>
+                        <sapn class="card__item-text">Активация, поиск и отчет <br>
+                            по расширенной гарантии</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#education"></use>
+                        </svg>
+                        <sapn class="card__item-title">Обучение</sapn>
+                        <sapn class="card__item-text">Обучающие материалы по: 1С, маркировке, транспортной документации
+                            и т.п.</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#service"></use>
+                        </svg>
+                        <sapn class="card__item-title">Сервис</sapn>
+                        <sapn class="card__item-text">Сервис “Партнерка” придумать описание</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#stock"></use>
+                        </svg>
+                        <sapn class="card__item-title">Акции</sapn>
+                        <sapn class="card__item-text">Добавление \ редактирование акций
+                            на сайт 4tochki.ru</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#guest-passwords"></use>
+                        </svg>
+                        <sapn class="card__item-title">Гостевые пароли</sapn>
+                        <sapn class="card__item-text">Временные пароли для гостей корпоративного портала</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#documentation"></use>
+                        </svg>
+                        <sapn class="card__item-title">Документы</sapn>
+                        <sapn class="card__item-text">Обучающие материалы по: 1С, маркировке, транспортной документации
+                            и т.п.</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#fssp"></use>
+                        </svg>
+                        <sapn class="card__item-title">ФССП</sapn>
+                        <sapn class="card__item-text">Проверка кандидатов через федеральную службу судебных приставов.
+                        </sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#reporting"></use>
+                        </svg>
+                        <sapn class="card__item-title">Отчетность</sapn>
+                        <sapn class="card__item-text">Отчеты по обособленным подразделениям.
+                            Акты сверок. Кассовая дисциплина.</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#self-employed-tariffs"></use>
+                        </svg>
+                        <sapn class="card__item-title">Самозанятые - тарифы</sapn>
+                        <sapn class="card__item-text">Тарифы самозанятых сотрудников</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#key-indicators"></use>
+                        </svg>
+                        <sapn class="card__item-title">Ключевые показатели</sapn>
+                        <sapn class="card__item-text">Показетели обособленных подразделений
+                            и менеджеров</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#yandex"></use>
+                        </svg>
+                        <sapn class="card__item-title">ОРД Яндекса</sapn>
+                        <sapn class="card__item-text">Хранение и передача информации о рекламных кампаниях в ЕРИР</sapn>
+                    </a>
+                </div>
+                <!-- Офис -->
+                <h3 class="title">Офис</h3>
+                <div class="card-items">
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#negotiations"></use>
+                        </svg>
+                        <sapn class="card__item-title">Переговорки</sapn>
+                        <sapn class="card__item-text">Забронировать переговорку в офисе</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#pc-errors"></use>
+                        </svg>
+                        <sapn class="card__item-title">Ошибки в работе ПК</sapn>
+                        <sapn class="card__item-text">Ошибки в работе ПК и ПО. Добавление пользователей. Юр. вопросы
+                        </sapn>
+                    </a>
+                </div>
+                <!-- Логистика и товар -->
+                <h3 class="title">Логистика и товар</h3>
+                <div class="card-items">
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#warehouse-monitoring"></use>
+                        </svg>
+                        <sapn class="card__item-title">Мониторинг склада</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#receipts"></use>
+                        </svg>
+                        <sapn class="card__item-title">Экспедиторские расписки</sapn>
+                        <sapn class="card__item-text">Активация, поиск и отчет <br>
+                            по расширенной гарантии
+                        </sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#certificates"></use>
+                        </svg>
+                        <sapn class="card__item-title">Сертификаты товаров</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки
+                        </sapn>
+                    </a>
+                </div>
+                <!-- Документы -->
+                <h3 class="title">Документы</h3>
+                <div class="card-items">
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#personnel"></use>
+                        </svg>
+                        <sapn class="card__item-title">Кадры</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#treaties"></use>
+                        </svg>
+                        <sapn class="card__item-title">Договоры</sapn>
+                        <sapn class="card__item-text">Активация, поиск и отчет <br>
+                            по расширенной гарантии
+                        </sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#due-diligence"></use>
+                        </svg>
+                        <sapn class="card__item-title">Должная осмотрительность</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки
+                        </sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#self-employed"></use>
+                        </svg>
+                        <sapn class="card__item-title">Самозанятые</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#company-regulations"></use>
+                        </svg>
+                        <sapn class="card__item-title">Внутренние регламенты компании</sapn>
+                        <sapn class="card__item-text">Активация, поиск и отчет <br>
+                            по расширенной гарантии
+                        </sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#orders-instructions"></use>
+                        </svg>
+                        <sapn class="card__item-title">Приказы и распоряжения</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки
+                        </sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#agreements"></use>
+                        </svg>
+                        <sapn class="card__item-title">Доп. соглашения</sapn>
+                        <sapn class="card__item-text">Изменить пароль и фото, Проверить <br>
+                            данные организации и свои подписки</sapn>
+                    </a>
+                    <a href="#" class="card__item">
+                        <svg width="32" height="33">
+                            <use href="/svg/common.bundle.svg#business-trip"></use>
+                        </svg>
+                        <sapn class="card__item-title">Командировка</sapn>
+                        <sapn class="card__item-text">Активация, поиск и отчет <br>
+                            по расширенной гарантии
+                        </sapn>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+        <!-- footer -->
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-body-secondary ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="#" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>

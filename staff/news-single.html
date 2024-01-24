@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/news.css">
+    <title>Michelin опередил Bridgestone в рейтинге Brand</title>
+</head>
+
+<body>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- /script -->
+    <div class="wrapper">
+      <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <span class="text-info me-2">im_evsikov</span>
+                            <a href="#"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img width="32px" height="32px" src="img/staff-img/person-circle 1.png">
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1  ">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="#">Личный кабинет</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info">
+                                        <svg width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-info me-2">im_evsikov</span>
+                                            <img width="32px" height="32px" src="img/staff-img/person-circle 1.png">
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link py-2">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Help desk</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="phones.html" class="nav-link py-2">Телефонный справочник</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Личный кабинет</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Уведомления</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Админка</a>
+                                        </li>
+                                        <li class="nav-item border-top-info mt-2 w-100">
+                                            <a href="#" class="nav-link text-danger py-2">Выход</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- breadcrumb -->
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="news.html">Новости</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Michelin опередил Bridgestone в рейтинге
+                            Brand</li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- /breadcrumb -->
+            <section class="container mt-5">
+                <h1 class="pb-2">Michelin опередил Bridgestone в рейтинге Brand</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="newsBlock__date bg-secondary text-white p-1">21.03.2023</div>
+                        <img class="img-fluid" src="/img/news/1502.jpg"
+                            alt="Michelin опередил Bridgestone в рейтинге Brand">
+                    </div>
+                    <div class="col-md-8">
+                        <p>Michelin опередил Bridgestone в рейтинге Brand
+                            Finance
+                            Global 500
+                            Полные данные не опубликованы, но предварительный просмотр Brand Finance
+                            Global
+                            500
+                            дает четкое представление о том, что
+                            мы можем извлечь из рейтинга шин исследовательской компании, когда он будет
+                            опубликован в ближайшие недели.Главная
+                            новость заключается в том, что Michelin значительно расширил свое лидерство
+                            в
+                            рейтинге брендов</p>
+                        <p>Michelin опередил Bridgestone в рейтинге Brand
+                            Finance
+                            Global 500
+                            Полные данные не опубликованы, но предварительный просмотр Brand Finance
+                            Global
+                            500
+                            дает четкое представление о том, что
+                            мы можем извлечь из рейтинга шин исследовательской компании, когда он будет
+                            опубликован в ближайшие недели.Главная
+                            новость заключается в том, что Michelin значительно расширил свое лидерство
+                            в
+                            рейтинге брендов</p>
+                        <p>Michelin опередил Bridgestone в рейтинге Brand
+                            Finance
+                            Global 500
+                            Полные данные не опубликованы, но предварительный просмотр Brand Finance
+                            Global
+                            500
+                            дает четкое представление о том, что
+                            мы можем извлечь из рейтинга шин исследовательской компании, когда он будет
+                            опубликован в ближайшие недели.Главная
+                            новость заключается в том, что Michelin значительно расширил свое лидерство
+                            в
+                            рейтинге брендов</p>
+                        <p>Michelin опередил Bridgestone в рейтинге Brand
+                            Finance
+                            Global 500
+                            Полные данные не опубликованы, но предварительный просмотр Brand Finance
+                            Global
+                            500
+                            дает четкое представление о том, что
+                            мы можем извлечь из рейтинга шин исследовательской компании, когда он будет
+                            опубликован в ближайшие недели.Главная
+                            новость заключается в том, что Michelin значительно расширил свое лидерство
+                            в
+                            рейтинге брендов</p>
+                        <p>Michelin опередил Bridgestone в рейтинге Brand
+                            Finance
+                            Global 500
+                            Полные данные не опубликованы, но предварительный просмотр Brand Finance
+                            Global
+                            500
+                            дает четкое представление о том, что
+                            мы можем извлечь из рейтинга шин исследовательской компании, когда он будет
+                            опубликован в ближайшие недели.Главная
+                            новость заключается в том, что Michelin значительно расширил свое лидерство
+                            в
+                            рейтинге брендов</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-body-secondary ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="#" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>
