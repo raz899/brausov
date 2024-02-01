@@ -1,0 +1,42 @@
+// bootstrap settings
+
+@import "~bootstrap/scss/functions";
+
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 550px,
+    md: 1010px,
+    lg: 1310px,
+    xl: 1450px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 1000px,
+    lg: 1300px,
+    xl: 1630px
+);
+
+$theme-colors: (
+    "primary": #0d6efd,
+    "secondary": #6c757d,
+    "success": #198754,
+    "info": #0dcaf0,
+    "warning": #ffc107,
+    "danger": #dc3545,
+    "light": #f8f9fa,
+    "dark": #212529
+);
+
+$tooltip-bg: #f47218;
+$tooltip-arrow-color: #f47218;
+
+// import bootstrap common functions
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables-dark";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
