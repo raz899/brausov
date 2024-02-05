@@ -230,7 +230,12 @@ const bird = {
       } else if (pipe.moved) {
         UI.score.curr++;
         if (UI.score.curr === 30) {
-          alert('УРА! ТЫ СМОГ!')
+          const dialog = document.querySelector("dialog");
+          const closeButton = document.querySelector("dialog button");
+          dialog.showModal();
+          closeButton.addEventListener("click", () => {
+            dialog.close();
+          });
         }
         SFX.score.play();
         pipe.moved = false;
