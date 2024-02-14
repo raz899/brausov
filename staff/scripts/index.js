@@ -41,7 +41,7 @@ wordLinks.forEach(link => {
 
 otherLinks.forEach(link => {
     link.insertAdjacentHTML('afterbegin', `<svg width="16" height="16">
-        <use href="./staff/svg/common.bundle.svg#other-links"></use></svg>`);
+        <use href="/staff/svg/common.bundle.svg#other-links"></use></svg>`);
 });
 
 
