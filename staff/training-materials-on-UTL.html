@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/section-files.css">
+    <title>Обучающие материалы по УТЛ</title>
+</head>
+
+<body>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- /script -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="help-desk.html" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <a href="#"
+                            class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-info me-2">im_evsikov</span>
+                                <svg width="32" height="33" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#foto"></use>
+                                </svg>
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="cabinet.html">Личный кабинет</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info">
+                                        <svg width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-info me-2">im_evsikov</span>
+                                            <svg width="32" height="33" class="ms-1">
+                                                <use href="/svg/common.bundle.svg#foto"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link py-2">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="help-desk.html" class="nav-link py-2">Help desk</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="phones.html" class="nav-link py-2">Телефонный справочник</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="cabinet.html" class="nav-link py-2">Личный кабинет</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Уведомления</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Админка</a>
+                                        </li>
+                                        <li class="nav-item border-top-info mt-2 w-100">
+                                            <a href="#" class="nav-link text-danger py-2">Выход</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="education.html">Обучение</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Обучающие материалы по УТЛ</li>
+                    </ol>
+                </nav>
+            </div>
+            <section class="container mt-5">
+                <h2>Обучающие материалы по УТЛ</h2>
+                <div class="section-files">
+                    <h4>Видео инструкции</h4>
+                    <div class="row">
+                        <!--  -->
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/E34rc1GcA4g"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Рабочее место логиста</h6>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/ikwwLbo8hJo"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Создание ТС</h6>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/KrcGzz0jRW0"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Создать водителя</h6>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/ca806uY7yKw"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Активировать водителя</h6>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/fvfPtz92_BA"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Создание планового рейса</h6>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/XOXBMUOAF08"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Негеокодированные заказы</h6>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                            <div class="section-files__video">
+                                <svg width="88" height="68">
+                                    <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                </svg>
+                                <!-- <iframe src="https://www.youtube.com/embed/WedjC2UAMoE"></iframe> -->
+                            </div>
+                            <h6 class="mt-1 ms-1">Интервал доставки</h6>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+                <div class="section-files">
+                    <h4>Создание заявок в ТК</h4>
+                    <form class="" action="#">
+                        <div class="row">
+                            <div class="col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Задать вопрос</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <button class="btn btn-primary mt-2" type="submit">Отправить</button>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <div class="captchaBlock">
+                                    <div class="d-flex flex-column">
+                                        <div>
+                                            <img src="#" alt="#">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">введите текст с картинки</label>
+                                                <input type="text" class="form-control w-50">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary mt-2" type="submit">Отправить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="section-files">
+                    <h4>Рабочее место логиста</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank"
+                            href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%9E%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%20%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B5%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%BB%D0%BE%D0%B3%D0%B8%D1%81%D1%82%D0%B0%20(new).docx">Объединенное
+                            рабочее место логиста (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Транзитные рейсы</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="/staff_img/userFiles/308/sources/%D0%A2%D1%80%D0%B0%D0%BD%D0%B7%D0%B8%D1%82%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B5%D0%B9%D1%81%D1%8B.docx">Транзитные
+                            рейсы</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Групповое редактирование заказов на доставку</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2%20%D0%BD%D0%B0%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D1%83%20(new).docx">Групповое редактирование
+                            заказов на доставку</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Привязка счетов к рейсу</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%97%D0%B0%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D1%87%D0%B5%D1%82%D0%BE%D0%B2%20%D0%B2%20%D0%A3%D0%A2%D0%9B%20(new).docx">Заведение счетов в УТЛ (new)</a>
+                    </p>
+                </div>
+
+                <div class="section-files">
+                    <h4>Сборные грузы</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%9E%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D1%8B%D1%85%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%20(new).docx">Оформление сборных грузов
+                            (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Клиентские заказы в транзитном рейсе</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%8B%20%D0%B2%20%D1%82%D1%80%D0%B0%D0%BD%D0%B7%D0%B8%D1%82%D0%BD%D0%BE%D0%BC%20%D1%80%D0%B5%D0%B9%D1%81%D0%B5%20(new).docx">Клиентские заказы в
+                            транзитном рейсе (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Инструкция по автоматическому заполнению времени прибытия/убытия</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%92%D1%80%D0%B5%D0%BC%D1%8F%20%D0%BF%D1%80%D0%B8%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20%D1%83%D0%B1%D1%8B%D1%82%D0%B8%D1%8F.doc">Время прибытия убытия</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Инструкция по расчету стоимости доставки сборным грузом в УТЛ</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank"
+                            href="/staff_img/userFiles/308/sources/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%D1%83%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8%20%D1%81%D0%B1%D0%BE%D1%80%D0%BD%D1%8B%D0%BC%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%BC%20%D0%B2%20%D0%A3%D0%A2%D0%9B.docx">Инструкция по
+                            расчету стоимости доставки сборным грузом в УТЛ</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Экспедиторские расписки по рейсам ПИШ</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank"
+                            href="/staff_img/userFiles/308/sources/%D0%AD%D0%BA%D1%81%D0%BF%D0%B5%D0%B4%D0%B8%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B5%20%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B8%20%D0%BF%D0%BE%20%D1%80%D0%B5%D0%B9%D1%81%D0%B0%D0%BC%20%D0%9F%D0%98%D0%A8.docx">Экспедиторские расписки по рейсам
+                            ПИШ</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Инструкция по привязке своего подразделения к водителям и транспортным средствам</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank"
+                            href="/staff_img/userFiles/308/sources/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%B8%D0%B2%D1%8F%D0%B7%D0%BA%D0%B5%20%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%BF%D0%BE%D0%B4%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BA%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC%20%D0%B8%20%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D1%8B%D0%BC%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B0%D0%BC.docx">Инструкция по привязке своего подразделения к водителям и транспортным средствам</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Мобильное приложение</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="/staff_img/userFiles/750/sources/PISH.Mobile.App-arm.apk">PISH.Mobile.App-arm</a>
+                    </p>
+                    <p>Файл необходимо перетащить в корневую папку мобильного телефона. Найти его в телефоне через
+                        файловый менеджер. Установить.</p>
+                    <p>При установке дать приложению. все разрешения - контакты, местоположение, фотографии и т.п. После
+                        установки удалить КЭШ приложения. Подробная инструкция в файле</p>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="/api/files/Установка и работа с мобильным приложением (new).pdf">Установка и работа с мобильным приложением (new)</a>
+                    </p>
+                    <p>Для заведения пользователя мобильного приложения в УТЛ воспользуйтесь следующей инструкцией:</p>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="/staff_img/userFiles/750/sources/%D0%97%D0%B0%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F%20%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F.pdf">Заведение пользователя мобильного приложения</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Инструкция по разделению стоимости направлений местной и региональной доставки</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%20%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9%20%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D0%BE%D0%B9%20%D0%B8%20%D1%80%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8%20(new).docx">Инструкция по разделению стоимости направлений местной и региональной доставки (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Добавление заказов в транзитный рейс. Инструкция с изменениями.</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2%20%D0%B2%20%D1%82%D1%80%D0%B0%D0%BD%D0%B7%D0%B8%D1%82%D0%BD%D1%8B%D0%B9%20%D1%80%D0%B5%D0%B9%D1%81.%20%D0%A1%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%D0%BC%D0%B8.docx">Добавление заказов в транзитный рейс. С изменениями</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Загрузка водителей и транспортных средств в заявку</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%20%D0%B8%20%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D1%8B%D1%85%20%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%20%D0%B2%20%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%20(new).docx">Загрузка водителей и транспортных средств в заявки (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Инструкция по работе с Самозанятыми</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank"
+                            href="/staff_img/userFiles/750/sources/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%A1%D0%97(new).pdf">Инструкция СЗ(new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Работа в Атраксе через УТЛ</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B2%20%D0%90%D1%82%D1%80%D0%B0%D0%BA%D1%81%D0%B5%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20%D0%A3%D0%A2%D0%9B%20(new).docx">Работа в Атраксе через УТЛ (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Разные Email обмена заявками у одной ТК в зависимости от подразделения</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="/staff_img/userFiles/750/sources/%D0%A0%D0%B0%D0%B7%D0%BD%D1%8B%D0%B5%20e-mail%20%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%D0%B0.docx">Разные e-mail обмена</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Настройка автосборки</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B0%D0%B2%D1%82%D0%BE%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B8.docx">Настройка автосборки</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Удаление заказов из рейса</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2%20%D0%B8%D0%B7%20%D1%80%D0%B5%D0%B9%D1%81%D0%B0%20(new).docx">Удаление заказов из рейса (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Настройка панели открытых вкладок</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D0%B8%20%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D1%85%20%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%BE%D0%BA%20(new).docx">Настройка панели открытых вкладок (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Разные ТК у одного и того же водителя и ТС</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank"
+                            href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%A0%D0%B0%D0%B7%D0%BD%D1%8B%D0%B5%20%D0%A2%D0%9A%20%D1%83%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%20%D0%B8%20%D0%A2%D0%A1%20(new).docx">Разные ТК у одного водителя и ТС (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Ошибки по сборным грузам</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%9E%D1%88%D0%B8%D0%B1%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B8%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5%20%D1%81%D0%BE%20%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%BE%D0%B9%20(new).docx">Ошибки при работе со сборкой (new)</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Проблемы с переводом рейса в "Готов к отправке"</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%A0%D0%B5%D0%B9%D1%81%20%D0%BD%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D1%81%D1%8F%20%D0%B2%20%D0%93%D0%BE%D1%82%D0%BE%D0%B2%20%D0%BA%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B5.docx">Рейс не переводится в Готов к отправке</a>
+                    </p>
+                </div>
+                <div class="section-files">
+                    <h4>Редактирование планового времени и даты рейса</h4>
+                    <p>
+                        <a class="section-files__link" target="_blank" href="http://staff.4tochki.ru/staff_img/userFiles/750/sources/%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8%20%D1%80%D0%B5%D0%B9%D1%81%D0%B0.docx">Редактирование планового времени рейса</a>
+                    </p>
+                </div>
+
+            </section>
+        </main>
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-body-secondary ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="/" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="help-desk.html" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="phones.html" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>

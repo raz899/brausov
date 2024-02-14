@@ -1,0 +1,82 @@
+.profile-form .form-control:disabled {
+    background-color: #fff !important;
+    border          : none !important;
+    box-shadow      : none !important;
+    border-radius   : 0;
+}
+
+.profile-form .form-group label {
+    border-bottom: 2px solid #E2E8F0 !important;
+    padding: 6px 12px;
+    margin       : 0px;
+}
+
+.profile-form .form-group .form-control:disabled {
+    margin       : 0px;
+    border-bottom: 2px solid #E2E8F0 !important;
+}
+
+/* ---------------------------- */
+.profile-user-img {
+    width        : 150px;
+    height       : 150px;
+    border-radius: 50%;
+    overflow     : hidden;
+}
+
+.avatar-edit {
+    position: absolute;
+    right   : 0px;
+    bottom  : 0px;
+    z-index : 3;
+}
+
+.avatar-upload {
+    position: relative;
+}
+
+.avatar-upload input {
+    display: none;
+}
+
+.avatar-upload label {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 34px;
+    height         : 34px;
+    margin-bottom  : 0;
+    border-radius  : 100%;
+    background     : #FFFFFF;
+    border         : 1px solid #E2E8F0;
+    box-shadow     : 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor         : pointer;
+    transition     : all .2s ease-in-out;
+}
+
+.avatar-upload label:hover,
+.avatar-upload label:focus {
+    background-color: #818282;
+}
+
+/* media */
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* // `xl` applies to medium devices (tablets, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .profile-form .form-control {
+        padding-left : 0;
+        padding-right: 0;
+
+    }
+}

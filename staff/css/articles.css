@@ -1,0 +1,27 @@
+.articles-years {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 7px 8px;
+    font-size      : 12px;
+    line-height    : 96.023%;
+    color          : #64748B;
+    border-radius  : 4px;
+    text-decoration: none;
+}
+
+.articles-years:hover,
+.articles-years:focus {
+    color: #ef7a1c;
+}
+
+.articles-years.active {
+    border: 1px solid #64748B;
+}
+
+.articles-years.active:hover,
+.articles-years.active:focus {
+    color: #64748B;
+}
+
+/*  */

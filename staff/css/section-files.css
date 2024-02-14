@@ -1,0 +1,53 @@
+/* section-files */
+.section-files:first-child {
+    border-top: 1px solid #64748B;
+}
+
+.section-files {
+    padding      : 25px 0;
+    border-bottom: 1px solid #64748B;
+}
+
+.section-files:last-child {
+    border-bottom: none;
+}
+
+.section-files p {
+    margin-bottom: 4px;
+}
+
+.section-files__link {
+    position   : relative;
+    margin-left: 24px;
+}
+
+.section-files__link svg {
+    position: absolute;
+    top     : 4px;
+    left    : -24px;
+}
+
+
+
+.section-files__video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; 
+}
+.section-files__video svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+}
+.section-files__video iframe{
+    position   : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: #64748B;
+}

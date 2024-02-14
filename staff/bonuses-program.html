@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+
+    <title>Бонусная программа 4Точки</title>
+</head>
+
+<body>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- /script -->
+    <div class="wrapper">
+         <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="help-desk.html" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <a href="#"
+                            class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-info me-2">im_evsikov</span>
+                                <svg width="32" height="33" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#foto"></use>
+                                </svg>
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="cabinet.html">Личный кабинет</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info">
+                                        <svg width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-info me-2">im_evsikov</span>
+                                            <svg width="32" height="33" class="ms-1">
+                                                <use href="/svg/common.bundle.svg#foto"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link py-2">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="help-desk.html" class="nav-link py-2">Help desk</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="phones.html" class="nav-link py-2">Телефонный справочник</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="cabinet.html" class="nav-link py-2">Личный кабинет</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Уведомления</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Админка</a>
+                                        </li>
+                                        <li class="nav-item border-top-info mt-2 w-100">
+                                            <a href="#" class="nav-link text-danger py-2">Выход</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- breadcrumb -->
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="help-desk.html">Help desk</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Бонусная программа 4Точки</li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- /breadcrumb -->
+            <section class="container mt-5">
+                <h2 class="mb-4">Бонусная программа 4Точки</h2>
+                <h5>Одним из способов привлечения клиентов в наш интернет-магазин является Бонусная программа 4Точки.</h5>
+                <p>Данная программа «поощрения» выгодна как для представительств 4Точки, так и для покупателей, ведь бонусы, полученные
+                клиентом, это отложенная скидка, мотивация для клиента обратиться к нам снова. <br> <br>
+                
+                Бонусная программа 4Точки подразумевает начисление клиенту бонусов за совершение покупок и иные действия. Бонусами
+                клиент может оплачивать будущие покупки в нашем интернет-магазине. <br> <br>
+                
+                Правила Бонусной программы: <br> <br>
+                
+                1. Получение бонусов клиентами <br> <br>
+                
+                Получить бонусы можно за различные действия: <br> <br>
+                
+                1.1 Начисление бонусов за регистрацию на 4tochki.ru <br> <br>
+                
+                При первичной регистрации на сайте клиенту автоматически зачисляются 500 бонусов. <br> <br>
+                
+                1.2 Начисление бонусов за приобретенный товар. <br> <br>
+                
+                На сайте 4tochki.ru может отображаться информация о том, что за покупку конкретного товара начисляются бонусы. Для
+                начисления бонусов необходимо залогиниться на сайте, положить товар в корзину и оформить заказ. После оплаты и получения
+                заказа в течение 14 дней бонусы будут начислены на бонусный счет покупателя (доступен в Личном кабинете). <br> <br>
+                
+                1.3 Начисление бонусов за написание отзыва о товаре. <br> <br>
+                
+                После отгрузки и оплаты товара в Личном кабинете появится возможность написать отзыв о купленном товаре. После того как
+                отзыв пройдет модерацию и будет опубликован, клиент получит 200 бонусов на бонусный счет. <br> <br>
+                
+                1.4 Начисление бонусов за отзывы на Яндекс.Маркете. <br> <br>
+                
+                При написании отзыва об интернет-магазине 4Точки клиент должен указать номер своего заказа. После публикации отзыва
+                клиенту будет зачислено 500 бонусов.(В данный момент этот пункт не работает. За отзыв на Я.Маркете мы даем
+                вознаграждение в размере 500 рублей на мобильный телефон). <br> <br>
+                
+                1.5 Также бонусы могут начисляться за участие в различных акциях магазина. <br> <br>
+                
+                2. Использование бонусов при оформлении заказа. <br> <br>
+                
+                2.1 1 бонус = 1 рубль <br> <br>
+                
+                2.2 Количество доступных бонусов отображается для зарегистрированных пользователей в правом верхнем углу на сайте.
+                Историю начисления/списания можно посмотреть в Личном кабинете. <br> <br>
+                
+                2.3 Бонусами можно оплатить до 100% покупки. <br> <br>
+                
+                2.4 Потратить бонусы можно только на на ограниченный ассортимент товаров. Бонусы сработают при покупке любых колесных 
+                дисков и некоторых марок автомобильных шин. Для того, чтобы отсортировать товары, на которые можно использовать бонусы,
+                используйте дополнительный параметр подбора "Оплата бонусными баллами". Если в Корзине находится товар, который можно
+                оплатить бонусами, то появляется кнопка «Использовать бонусы для оплаты». При нажатии на кнопку сумма заказа
+                пересчитывается. <br> <br>
+                
+                3. Обработка заказов, оформленного с использованием бонусов. <br> <br>
+                
+                3.1 При поступлении нового заказа на Форточки (b2b.pwrs.ru) в комментариях будет указано, что клиентом израсходовано ХХХ
+                бонусов, и пересчитана окончательная сумма заказа. Это и есть сумма к оплате. <br> <br>
+                
+                3.2 Если покупатель отказывается от покупки, на которую были использованы бонусы, до ее получения, то бонусы
+                возвращаются на счет покупателя. <br> <br>
+                
+                3.3 При возврате товара надлежащего качества бонусы использованные для оплаты заказа сгорают и на бонусный счет не
+                возвращаются. <br> <br>
+                
+                3.4 Неиспользованные бонусы сгорают через год после начисления. <br> <br>
+                
+                4. Компенсация скидки по бонусам для партнера. <br> <br>
+                
+                4.1 Скидка для конечного клиента компенсируется партнеру (представительству 4Точки) бонусами на Форточки в 20-ти дневный
+                срок. <br> <br>
+                
+                <span class="text-danger"> 5.1 Бонусы 4Точки предназначены только для конечных клиенов. Настоящими правилами бонусной системы партнерам (в том
+                числе работающим по франшизе), а также их сотрудникам запрещается использование заказов покупателей для получения
+                бонусов в личных целях.</span> <br> <br>
+                
+                Администрация интернет-магазина 4Точки оставляет за собой право в любой момент времени изменить правила бонусной
+                программы или отменить ее совсем без предварительного уведомления.</p>
+            </section>
+        </main>
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-body-secondary ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="/" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="help-desk.html" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="phones.html" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>

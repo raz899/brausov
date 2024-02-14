@@ -28,6 +28,15 @@ h6 {
     background-color: #fff;
 }
 
+a {
+    color: #64748B;
+}
+
+a:hover,
+a:focus {
+    color: #ef7a1c;
+}
+
 /* --------------------------------------------- */
 /* colors */
 .text-black {
@@ -65,7 +74,8 @@ main {
     margin-top: 80px;
 }
 
-.footer {
+footer {
+    margin-top: 100px;
     flex: 0 0 auto;
 }
 
@@ -90,12 +100,21 @@ body {
     border-bottom: 1px solid #bababa !important;
 }
 
+.border-right-info {
+    border-right: 1px solid #bababa !important;
+}
+
 .border-top-info {
     border-top: 1px solid #bababa !important;
 }
 
-/* /border */
+.container-youTube iframe {
+    border-radius: 12px;
+}
 
+.nav-tabs .nav-link.active {
+    color: #ef7a1c;
+}
 
 /* media */
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
@@ -112,7 +131,17 @@ body {
 @media (max-width: 991.98px) {}
 
 /* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    .nav-tabs {
+        border: none !important;
+    }
+
+    .nav-tabs .nav-link.active {
+        color        : #ef7a1c;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 6px;
+    }
+}
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/section-files.css">
+    <title>Техническая информация</title>
+</head>
+
+<body>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- /script -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="help-desk.html" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <a href="#"
+                            class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-info me-2">im_evsikov</span>
+                                <svg width="32" height="33" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#foto"></use>
+                                </svg>
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="cabinet.html">Личный кабинет</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info">
+                                        <svg width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-info me-2">im_evsikov</span>
+                                            <svg width="32" height="33" class="ms-1">
+                                                <use href="/svg/common.bundle.svg#foto"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link py-2">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="help-desk.html" class="nav-link py-2">Help desk</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="phones.html" class="nav-link py-2">Телефонный справочник</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="cabinet.html" class="nav-link py-2">Личный кабинет</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Уведомления</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Админка</a>
+                                        </li>
+                                        <li class="nav-item border-top-info mt-2 w-100">
+                                            <a href="#" class="nav-link text-danger py-2">Выход</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="education.html">Обучение</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Техническая информация</li>
+                    </ol>
+                </nav>
+            </div>
+            <section class="container mt-5">
+                <h2 class="mb-4">Техническая информация</h2>
+                <div class="mt-5">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link p-3 active" id="truck-tab" data-bs-toggle="tab"
+                                data-bs-target="#truck" type="button" role="tab" aria-controls="truck"
+                                aria-selected="true">Грузовые шины</button>
+                            <button class="nav-link p-3" id="special-tab" data-bs-toggle="tab" data-bs-target="#special"
+                                type="button" role="tab" aria-controls="special" aria-selected="false">Специальные
+                                шины</button>
+                            <button class="nav-link p-3" id="passenger-tab" data-bs-toggle="tab"
+                                data-bs-target="#passenger" type="button" role="tab" aria-controls="passenger"
+                                aria-selected="false">Легковые шины</button>
+                            <button class="nav-link p-3" id="presentations-tab" data-bs-toggle="tab"
+                                data-bs-target="#presentations" type="button" role="tab" aria-controls="presentations"
+                                aria-selected="false">Презентации</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <!--  -->
+                        <div class="tab-pane fade show active" id="truck" role="tabpanel" aria-labelledby="truck-tab">
+                            <h2 class="my-4">Грузовые шины</h2>
+                            <div class="section-files">
+                                <h4>Обучения</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5%20%D1%88%D0%B8%D0%BD%D1%8B.%20%D0%92%D0%B2%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F%20%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.pdf">Грузовые
+                                        шины. Вводная презентация</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Blackhawk - Sailun</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/Blackhawk%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Blackhawk
+                                        каталог</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/SAILUN%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">SAILUN
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Goodride - Westlake</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/Goodride%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%202023%201.pdf">Goodride
+                                        каталог 2023 1</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/Goodride%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Goodride
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Hifly - Sunfull - Mirage - Ovation - Onyx</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/ONYX%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">ONYX
+                                        каталог</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/OVATION%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">OVATION
+                                        каталог</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/HIFLY%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">HIFLY
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>LingLong - Crosswind</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/CrossWind%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">CrossWind
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Triangle</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Triangle%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0%202023.pdf">Triangle
+                                        каталог обложка 2023</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Triangle%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%202023.pdf">Triangle
+                                        каталог 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Continental</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Continental%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B1%D1%80%D0%BE%D1%88%D1%8E%D1%80%D0%B0.pdf">Continental
+                                        Российское производство брошюра</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Doublestar</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/DOUBLESTAR%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">DOUBLESTAR
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Giti</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Giti%20%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Giti
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Goodtrip</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Goodtrip%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Goodtrip
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Goodyear - Sava - Kelly</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="https://goodyear.showpad.com/share/r8y51dJx7kBTdWWgQZgH3/0">Goodyear
+                                        product presentation
+                                        REGIONAL RU.pptx</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="https://goodyear.showpad.com/share/YZjKrcPwFbLb920uoMKt5/0">Goodyear NEW
+                                        KMAX S
+                                        GEN-2_HL_RUS</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="https://goodyear.showpad.com/share/m3wczwwGNGf6w4FKYejm2/0">Goodyear KMAX
+                                        & FUELMAX Gen-2
+                                        2021</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="https://goodyear.showpad.com/share/FEDx9wBJfaSCTbxUTX0Fu/0">Goodyear
+                                        OMNITRAC & OFFROAD
+                                        2021</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="https://goodyear.showpad.com/share/LClfYcZPhg7zEX8QeUgS9/0">SAVA_Range_Brochure_RUS_A5_NEW</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="https://goodyear.showpad.com/share/lRModZVHbwukKBCKSSONT/0">RUS_KELLY
+                                        Truck Product
+                                        Presentation 2020 new</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Hankook</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Hankook%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Hankook
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Landspider</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/LANDSPIDER%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">LANDSPIDER
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Kama</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9A%D0%90%D0%9C%D0%90%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">КАМА
+                                        каталог</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/3055/sources/catalog2023.pdf">КАМА
+                                        2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Aeolus - Windpower</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/2020-2021%20AEOLUS%20-%20Product%20Catalogue%20-%20Off%20The%20Road%20Tyres.pdf">2020-2021
+                                        AEOLUS - Product Catalogue - Off The Road Tyres</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/Aeolus%20presentation%20PWRS.pdf">Aeolus
+                                        presentation PWRS</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/Aeolus%20%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20TBR%202022%20RU.pdf">Aeolus
+                                        Технический каталог TBR 2022 RU</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/Windpower%20%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20TBR%202023%20RU.pdf">Windpower
+                                        Технический каталог TBR 2023 RU</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Fortune</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/Fortune%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Fortune
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Greforce</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/Greforce%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3.pdf">Greforce
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>TopTrust</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/2022%20DOUBLE%20COIN%20TBR%20CATALOG%20ENG_1.pdf">TopTrust
+                                        каталог</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>MAXAM</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/2022%20MAXAM%20Databook%20v22%20-%20Original.pdf">2022
+                                        MAXAM Databook v22 - Original</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="tab-pane fade" id="special" role="tabpanel" aria-labelledby="special-tab">
+                            <h2 class="my-4">Специальные шины</h2>
+                            <div class="section-files">
+                                <h4>ADVANCE</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D1%85%20%D0%B8%20%D0%BA%D0%B3%D1%88%20ADVANCE%202018.pdf">каталог
+                                        вилочных и кгш ADVANCE 2018</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20ADVANCE%202015.pdf">каталог
+                                        вилочных шин ADVANCE 2015</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20%D0%B8%20%D0%BB%D0%B5%D1%81%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20ADVANCE%202017.pdf">каталог
+                                        сельхоз и лесных шин ADVANCE 2017</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%80%D0%B0%D0%B4%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20ADVANCE%202019.pdf">каталог
+                                        радиальных строительных шин ADVANCE 2019</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Alliance - GALAXY - Primex</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%B3%D1%88%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%BF%D0%BE%D1%80%D1%82%20%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20GALAXY%202023%20ENG.pdf">Каталог
+                                        продуктового предложения кгш склад порт стройка GALAXY 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20YOKOHAMA%20OHT%202023%20RU.pdf">Презентация
+                                        YOKOHAMA OHT 2023 RU</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20YOKOHAMA%20OHT%20ENG.pdf">Презентация
+                                        YOKOHAMA OHT ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20%D0%BA%D0%B3%D1%88%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D0%B5%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20GALAXY%20%D0%AF%D0%BD%D0%B2%202023%20ENG.pdf">Презентация
+                                        продукт кгш вилочные сельхоз GALAXY Янв 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B4%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%B3%D1%88%20GALAXY%202022%20RU.pdf">Презентация
+                                        радиальные кгш GALAXY 2022 RU</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/GALAXY%20PRIMEX%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BC%D0%B0%D1%80%D1%82%202023%20ENG.pdf">GALAXY
+                                        PRIMEX технический каталог март 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Alliance - GALAXY - Primex</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BA%D0%B3%D1%88%20%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%BF%D0%BE%D1%80%D1%82%20%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20GALAXY%202023%20ENG.pdf">Каталог
+                                        продуктового предложения кгш склад порт стройка GALAXY 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20YOKOHAMA%20OHT%202023%20RU.pdf">Презентация
+                                        YOKOHAMA OHT 2023 RU</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20YOKOHAMA%20OHT%20ENG.pdf">Презентация
+                                        YOKOHAMA OHT ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20%D0%BA%D0%B3%D1%88%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D0%B5%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20GALAXY%20%D0%AF%D0%BD%D0%B2%202023%20ENG.pdf">Презентация
+                                        продукт кгш вилочные сельхоз GALAXY Янв 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D1%80%D0%B0%D0%B4%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%B3%D1%88%20GALAXY%202022%20RU.pdf">Презентация
+                                        радиальные кгш GALAXY 2022 RU</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/GALAXY%20PRIMEX%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BC%D0%B0%D1%80%D1%82%202023%20ENG.pdf">GALAXY
+                                        PRIMEX технический каталог март 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Armour - LANDE</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20Armour%20-%20Lande%202022.pdf">Технический
+                                        каталог Armour - Lande 2022</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Ceat</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%B8%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20CEAT%202021.pdf">Каталог
+                                        сельскохозяйственных и строительных шин CEAT 2021</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Composit</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%B3%D1%83%D1%81%D0%B5%D0%BD%D0%B8%D1%86%D0%B0%D0%BC%20Composit%202022.pdf">Продуктовое
+                                        предложение по гусеницам Composit 2022</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>DoubleCoin</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/2022%20DOUBLE%20COIN%20TBR%20CATALOG%20ENG.pdf">2022
+                                        DOUBLE COIN TBR CATALOG ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D0%BE%20%D0%BA%D0%B3%D1%88%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D0%BC%20%D0%B8%20%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%B2%D1%8B%D0%BC%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC%20DOUBLE%20COIN%202022%20ENG.pdf">Технический
+                                        каталог по кгш строительным вилочным и портовым шинам DOUBLE COIN 2022 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D0%BE%20%D0%BA%D0%B3%D1%88%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D0%BC%20%D0%B8%20%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%B2%D1%8B%D0%BC%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC%20DOUBLE%20COIN%202023%20ENG.pdf">Технический
+                                        каталог по кгш строительным вилочным и портовым шинам DOUBLE COIN 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Forerunner - Astroay</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%80%D0%B0%D0%B4%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Radial%20AG%20tyre%20catalogue-2023.9.pdf">Каталог
+                                        радиальных шин Radial AG tyre catalogue-2023.9</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Astroay%202023%20ENG.pdf">Каталог
+                                        сельскохозяйственных шин Astroay 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D1%85%D0%BE%D0%B7%D1%8F%D0%B9%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Forerunner%202023%20ENG.pdf">Каталог
+                                        сельскохозяйственных шин Forerunner 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%B8%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Astroay%202023%20ENG.pdf">Каталог
+                                        строительных и вилочных шин Astroay 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%B8%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Forerunner%202023%20ENG.pdf">Каталог
+                                        строительных и вилочных шин Forerunner 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>GRI</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/GRI%20-%20MH%20TECH%20BOOK.pdf">GRI - MH
+                                        TECH BOOK</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B8%D0%BC%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0%20GRI%20ENG.pdf">Технические
+                                        преимущества продукта GRI ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20GRI%20%D0%BF%D0%BE%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B5%20%D0%BA%D0%B3%D1%88%20%D0%B8%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D0%BC%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC%202023.pdf">Технический
+                                        каталог GRI по сельхоз стройке кгш и вилочным шинам 2023</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20GRI%202023%20ENG.pdf">Презентация
+                                        компании GRI 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Gripstar</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20%D0%B8%20%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20Gripstar%202023.pdf">Продуктовое
+                                        предложение сельхоз и стройка Gripstar 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Hosoon</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B9%20%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B8%20%D1%88%D0%B8%D0%BD%20Hooson%202023.pdf">Технический
+                                        каталог полной линейки шин Hooson 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>LingLong</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20LingLong%202023%20RUS.pdf">Презентация
+                                        компании LingLong 2023 RUS</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20LINGLONG%202023%20ENG.pdf">Технический
+                                        каталог специальных шин LINGLONG 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>MRL</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/MRL-Range-Catalog-2020_HIGH.pdf">MRL-Range-Catalog-2020_HIGH</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B9%20%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B8%20%D1%88%D0%B8%D0%BD%20MRL%202023%20ENG.pdf">Технический
+                                        каталог полной линейки шин MRL 2023 ENG</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Noble</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B3%D1%88%20%D1%88%D0%B8%D0%BD%20MINEKING.pdf">Продуктовое
+                                        предложение кгш шин MINEKING</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20NOBLE.pdf">Продуктовое
+                                        предложение индустриальных шин NOBLE</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>RoadHiker</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%88%D0%B8%D0%BD%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B8%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B8%20Roadhiker%202023.pdf">Каталог
+                                        шин для грузовой и специальной техники Roadhiker 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>SEHA</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20SEHA%202019.PDF">Полный
+                                        технический каталог SEHA 2019</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Speedway</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Speedways%202023.PDF">Технический
+                                        каталог специальных шин Speedways 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>TAIHAO</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20TAIHAO%202022.pdf">Технический
+                                        каталог специальных шин TAIHAO 2022</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Tercelo - Transmate</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20TERCELO%202023(1).pdf">Технический
+                                        каталог специальных шин TERCELO 2023</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20TRANSMATE%202022.pdf">Технический
+                                        каталог специальных шин TRANSMATE 2022</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Trelleborg - Mitas</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%86%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20%D0%B8%20%D0%B3%D1%83%D1%81%D0%B5%D0%BD%D0%B8%D1%86%20TRELLEBORG%202022%20ENG.pdf">Технический
+                                        каталог цельнолитых шин и гусениц TRELLEBORG 2022 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20%D1%88%D0%B8%D0%BD%20MITAS%202023%20ENG.pdf">Технический
+                                        каталог сельхоз шин MITAS 2023 ENG</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%B2%D0%B8%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D1%85%20%D0%B8%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20MITAS%202019%20RUS.pdf">Технический
+                                        каталог вилочных и строительных шин MITAS 2019 RUS</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Tianli</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9F%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8%20ZC%20Rubber%202022.pdf">Презентация
+                                        компании ZC Rubber 2022</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Tianli%202023.pdf">Технический
+                                        каталог диагональных специальных шин Tianli 2023</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BB%D0%B5%D1%81%D0%BD%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Tianli%202022.pdf">Технический
+                                        каталог лесных шин Tianli 2022</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%B2%D1%8B%D1%85%20%D1%88%D0%B8%D0%BD%20Tianli%202023.pdf">Технический
+                                        каталог портовых шин Tianli 2023</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%80%D0%B0%D0%B4%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85%20%D0%BA%D0%B3%D1%88%20%D1%88%D0%B8%D0%BD%20Tianli%202023.pdf">Технический
+                                        каталог радиальных кгш шин Tianli 2023</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D1%81%D0%B5%D0%BB%D1%8C%D1%85%D0%BE%D0%B7%20%D1%88%D0%B8%D0%BD%20Tianli%202022.pdf">Технический
+                                        каталог сельхоз шин Tianli 2022</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Michelin - Camso - Solideal</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/CAMSO%20%D0%A8%D0%B8%D0%BD%D1%8B%20%D0%B8%20%D0%B3%D1%83%D1%81%D0%B5%D0%BD%D0%B8%D1%86%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%202020.pdf">CAMSO
+                                        Шины и гусеницы для стройки 2020</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/CAMSO%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%202019.pdf">CAMSO
+                                        технический каталог 2019</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/MICHELIN%20%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D0%BE%20%D1%8D%D0%BA%D1%81%D0%BF%D0%BB%D1%83%D0%B0%D1%82%D0%B0%D1%86%D0%B8%D0%B8%20%D0%9A%D0%93%D0%A8%202017.pdf">MICHELIN
+                                        Руководство по эксплуатации КГШ 2017</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/MICHELIN%20%D1%81%D0%BE%D0%BF%D1%83%D1%82%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B8%D0%B5%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%8B%202019.pdf">MICHELIN
+                                        сопутствующие товары 2019</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/MICHELIN%20%D0%BF%D0%BE%D1%80%D1%82%20%D0%B8%20%D0%B2%D0%B8%D0%BB%D0%BA%D0%B0%202016.pdf">MICHELIN
+                                        порт и вилка 2016</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/MICHELIN%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%9A%D0%93%D0%A8%202020.pdf">MICHELIN
+                                        технический каталог КГШ 2020</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/MICHELIN%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%B0%D0%B3%D1%80%D0%BE%20%D0%B8%20%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%202020.pdf">MICHELIN
+                                        технический каталог агро и стройка 2020</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%9A%D0%93%D0%A8%20%D0%9C%D0%B8%D1%88%D0%BB%D0%B5%D0%BD%202023.pdf">Технический
+                                        каталог КГШ Мишлен 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>AEOLUS</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Aeolus%20presentation%20PWRS.pdf">Aeolus
+                                        presentation PWRS</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/Aeolus%20%D0%A0%D0%B0%D0%B4%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D1%88%D0%B8%D0%BD%D1%8B%20ROTR%202021%20RU.pdf">Aeolus
+                                        Радиальные шины ROTR 2021 RU</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Общее обучение ДСТ 2023</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%9E%D0%B1%D1%89%D0%B5%D0%B5%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC%20%D0%94%D0%A1%D0%A2%20%D0%9F%D0%98%D0%A8%202023_1.pdf">Общее
+                                        обучение по шинам ДСТ ПИШ 2023_1</a>
+                                </p>
+                                <h5 class="mt-3">Видео</h5>
+                                <div class="row">
+                                    <!--  -->
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                                        <div class="section-files__video">
+                                            <svg width="88" height="68">
+                                                <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                            </svg>
+                                            <iframe src="" frameborder="0"></iframe>
+                                        </div>
+                                        <h6 class="mt-1 ms-1">Общее обучение по шинам ДСТ ПИШ 2023</h6>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                                        <div class="section-files__video">
+                                            <svg width="88" height="68">
+                                                <use href="/svg/common.bundle.svg#youtube-play"></use>
+                                            </svg>
+                                            <iframe src="" frameborder="0"></iframe>
+                                        </div>
+                                        <h6 class="mt-1 ms-1">Общее обучение по шинам ДСТ ПИШ 2023</h6>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                            </div>
+                            <div class="section-files">
+                                <h4>Everprosper - Loadmax</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/EverProsper%20radial%20OTR%20catalogue%202023.pdf">EverProsper
+                                        radial OTR catalogue 2023</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>CAMSO</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%BA%D0%B0%D0%BC%D1%81%D0%BE%202110_MH_DataSheet_RES_A4_Metric_RU_V14.pdf">каталог
+                                        камсо 2110_MH_DataSheet_RES_A4_Metric_RU_V14</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>JK TYRE</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/JK%20OHT%20Range%20Brochure%20for%20Global%20Market_Double%20Page.pdf">Технический
+                                        каталог специальных шин JK TYRE</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>MAXAM INDASTRIAL</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20MAXAM%20INDASTRIAL%20(MH)%20tyres_2.pdf">Каталог
+                                        MAXAM INDASTRIAL (MH) tyres_2</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>KAMA</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/3055/sources/catalog2023_2.pdf">Каталог
+                                        2023</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="passenger" role="tabpanel" aria-labelledby="passenger-tab">
+                            <h2 class="my-4">Легковые шины</h2>
+                            <div class="section-files">
+                                <h4>Бренды Китай</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/2990/sources/%D0%91%D1%80%D0%B5%D0%BD%D0%B4%D1%8B%20%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%20%D0%B7%D0%B8%D0%BC%D0%B0%202023%20-%202024.pdf">Бренды
+                                        Китай зима 2023 - 2024</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="presentations" role="tabpanel"
+                            aria-labelledby="presentations-tab">
+                            <h2 class="my-4">Презентации</h2>
+                            <div class="section-files">
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="/staff_img/userFiles/3055/sources/%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%90%D0%93%D0%A0%D0%9E%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC.pdf">презентация по АГРО шинам</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank" href="/staff_img/userFiles/3055/sources/%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D1%8B%D0%BC%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC_1.pdf">презентация по грузовым шинам</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank" href="/staff_img/userFiles/3055/sources/%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%BE-%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC_1.pdf">презентация по дорожно-строительным шинам</a>
+                                </p>
+                                <p>
+                                    <a class="section-files__link" target="_blank" href="/staff_img/userFiles/3055/sources/%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D1%88%D0%B8%D0%BD%D0%B0%D0%BC_1.pdf">презентация по специальным шинам</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Обучение ПиШ ДСТ</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/3055/sources/%D0%9E%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%9F%D0%B8%D0%A8%20%D0%94%D0%A1%D0%A2_2.pdf">Обучение ПиШ ДСТ_2</a>
+                                </p>
+                            </div>
+                            <div class="section-files">
+                                <h4>Обучение ПиШ Складская техника</h4>
+                                <p>
+                                    <a class="section-files__link" target="_blank"
+                                        href="http://staff.4tochki.ru/staff_img/userFiles/3055/sources/%D0%A1%D0%BA%D0%BB%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0%20191223.pdf">Складская техника 191223</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </section>
+        </main>
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-body-secondary ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="/" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="help-desk.html" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="phones.html" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>
