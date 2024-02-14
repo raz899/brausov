@@ -31,17 +31,17 @@ const otherLinks = document.querySelectorAll('.section-files a:not([href$=".pdf"
 
 pdfLinks.forEach(link => {
     link.insertAdjacentHTML('afterbegin', `<svg width="16" height="16">
-        <use href = "/svg/common.bundle.svg#pdf"></use></svg >`);
+        <use href = "/staff/svg/common.bundle.svg#pdf"></use></svg >`);
 });
 
 wordLinks.forEach(link => {
     link.insertAdjacentHTML('afterbegin', `<svg width="16" height="16">
-        <use href = "/svg/common.bundle.svg#word"></use></svg >`);
+        <use href = "/staff/svg/common.bundle.svg#word"></use></svg >`);
 });
 
 otherLinks.forEach(link => {
     link.insertAdjacentHTML('afterbegin', `<svg width="16" height="16">
-        <use href="./svg/common.bundle.svg#other-links"></use></svg>`);
+        <use href="./staff/svg/common.bundle.svg#other-links"></use></svg>`);
 });
 
 
