@@ -15,6 +15,7 @@
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/card";
+@import "~bootstrap/scss/spinners";
 
 // Helpers
 @import "~bootstrap/scss/helpers";
@@ -43,10 +44,14 @@
     color: #fff;
     border-radius: 4px;
     border: 0;
-    cursor: pointer;
+    cursor: pointer;    
 
-    &.btn-primary {
+    &.btn-primary, &.btn-primary:active {
         background-color: var(--color-primary);
+    }
+    &:disabled {
+        background-color:#2D2D2D;
+        opacity: .5;
     }
     &.btn-secondary {
         border: 1px solid rgba(45, 45, 45, 0.30);
@@ -67,36 +72,36 @@ h5 {
 }
 
 body {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #F4F4F5;
     color: var(--color-base);
     font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
     font-size: 14px;
 }
 
+.container {
+    max-width: 780px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .main-modal {
-    position: absolute;
+    position: relative;
     background-color: #fff;
     border-radius: 8px;
     padding: 32px;
-    // max-width: 750px;
-    min-width: 750px;
     z-index: 10;
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    max-height: 100vh;
-    overflow  : auto;
 
     h2 {
         text-align: center;
-        font-size  : 28px;
+        font-size  : 27px;
         font-style : normal;
         font-weight: 600;
         line-height: normal;
@@ -108,10 +113,6 @@ body {
         font-size: 12px;
         margin-bottom: 5px;
     }
-}
-
-#cameraModal {
-
 }
 
 .head-desc {
@@ -148,20 +149,64 @@ body {
         align-items: center;
         justify-content: center;
         width: 100px;
+        color: #D4D4D8;
 
         &__num {
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 32px;
             height: 32px;
             overflow: hidden;
             border-radius: 50%;
-            border: 2px solid #28508A;
+            border: 1px solid #D4D4D8;
             line-height: 27px;
             font-size : 16px;
             font-style: normal;
             font-weight: 600;
             background-color: #fff;
             z-index: 2;
+        }
+        &__done {
+            position: relative;
+            z-index: 2;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin-top: 8px;
+            line-height: 13px;
+            span {
+                display: block;
+            }
+        }
+        .step__num {
+            display: none;
+        }
+        .step__done {
+            display: block;
+        }
+    }
+
+    .step.active {
+        color: #28508A; 
+        .step__num {
+            display: block;
+            border: 2px solid #28508A !important;
+        }
+        .step__done {
+            display: none;
+        }
+    }
+
+    .step.active ~ .step {
+        .step__num {
+            display: block;
+        }
+
+        .step__done {
+            display: none;
         }
     }
 }
@@ -172,8 +217,8 @@ body {
 }
 
 .main-modal__content {
-    max-width: 580px;
-
+    // max-width: 580px;
+    width: 100%;
     p {
         color      : #A1A1AA;
         font-size  : 12px;
@@ -184,17 +229,19 @@ body {
 
     .swiper-slide {
         padding: 15px;
-
-        input, select, textarea {
+        .input-container {
             margin-bottom: 15px;
         }
+        .manually {
+            text-align: center;
+            font-size: 14px;
+            span {
+                display: inline-block;
+                border-bottom: 1px dashed #A1A1AA;
+                cursor: pointer;
+            }
+        }
     }
-    // input {
-    //     border-radius: 4px;
-    //     border: 1px solid #CED4DA;
-    //     background: #FFF;
-    //     padding: 10px 16px;
-    // }
 }
 .main-modal__footer {
     display: flex;
@@ -214,17 +261,17 @@ body {
                 display: block;
             }
 
-            width: 100%;
-            display: flex;
+            display        : flex;
             justify-content: space-between;
+            align-items    : center;
+            width          : 100%;
         }
     }
     &.final {
         .main-modal__footer-buttons {
-            // justify-content: center;
-
             .btn-primary {
                 display: none;
+            
             }
             .btn-final {
                 display: block;
@@ -319,5 +366,155 @@ body {
         border-radius: 50%;
         background-color: var(--color-primary);
         filter: blur(5px);
+    }
+}
+.modal {
+    overflow: hidden;
+
+    .modal-content {
+        background-color: #27272a00;
+        border: none;  
+        .btn-close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            padding: 0;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            border-radius: 45px;
+            opacity : 1;
+            z-index : 10;
+        }
+    }
+
+    .modal-body {
+        position: relative;
+        overflow: hidden !important;
+
+        .spinner-border {
+            position: absolute;
+            left: calc(50% - 16px);
+            top: calc(50% - 16px);
+        }
+      
+        .qr-scan {
+            border: 5px solid #fff;
+            padding: 0;
+            border-radius: 12px;
+            background-color: #fff;
+        }
+        .btn-flash {
+            position: absolute;
+            bottom: 30px;
+            right: 25px;
+            border: 1px solid #27272A;
+            border-radius: 50px;
+            padding: 10px;
+            color: #fff;
+            background-color: #27272A;
+            z-index: 10;
+
+            svg:last-child {
+                display: none;
+            }
+
+            &.active svg:first-child { display: none; }
+            &.active svg:last-child { display: block; }
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .modal {
+        overflow: hidden;
+
+        .modal-content {
+            background-color: #27272a00;
+            border          : none;
+
+            .btn-close {
+                position        : absolute;
+                top: 30px;
+                right : 25px;
+                padding         : 0;
+                width           : 47px;
+                height          : 47px;
+                background-color: #fff;
+                border-radius   : 45px;
+                opacity         : 1;
+                z-index         : 10;
+            }
+        }
+
+        .modal-body {
+            height: 100vh;
+            position: relative;
+            overflow: hidden !important;
+
+            .qr-scan {
+                border       : none;
+                padding      : 0;
+                border-radius: 0;
+            }
+        }
+    }
+}
+@media (max-width: 425.98px) {
+    .main-modal {
+        padding: 18px;
+    }
+    .main-modal h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .main-modal__content .swiper-slide {
+        padding: 0;
+    }
+
+    .head-desc {
+        margin-bottom: 20px;
+    }
+    
+    .steps {
+        flex-direction: column;
+        gap: 12px;
+
+        .step {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+        }
+    
+        .step__text {
+            font-size: 14px;
+            margin: 0;
+            position: relative;
+            width: 80%;
+            span {
+                display: inline-block;
+            }
+        } 
+    }
+
+    
+    .steps::before {
+       display: none;
+    }
+
+    .main-modal__footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-modal__footer-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8px;
     }
 }

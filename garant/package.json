@@ -15,7 +15,7 @@
     "bootstrap": "^5.3.2",
     "core-js": "^3.8.2",
     "heic2any": "0.0.4",
-    "imask": "^6.0.5",
+    "imask": "^6.6.3",
     "qr-scanner": "^1.4.2",
     "swiper": "^10.2.0"
   },
