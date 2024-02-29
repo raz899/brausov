@@ -84,8 +84,8 @@ body {
 
 .container {
     max-width: 780px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .main-modal {
@@ -116,11 +116,15 @@ body {
 }
 
 .head-desc {
-    font-size : 14px;
+    font-size : 12px;
     font-style: normal;
     font-weight: 400;
     color: #A1A1AA;
     margin-bottom: 40px;
+
+    p {
+        margin-bottom: 8px;
+    }
 }
 
 .steps {
@@ -517,4 +521,25 @@ body {
         width: 100%;
         margin-top: 8px;
     }
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0;
+    border-radius: 16px;
+    padding: 20px;
+
+    .content {
+        margin-bottom: 15px;
+    }
+
+    button.btn {
+        padding: 5px 8px;
+    }
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(8px);
 }

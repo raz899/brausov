@@ -16747,6 +16747,13 @@ document.querySelector('.js-btn-next').addEventListener('click', function () {
 document.querySelector('.js-btn-prev').addEventListener('click', function () {
   swiper.slidePrev();
 });
+document.querySelector('.js-clear-form').addEventListener('click', function () {
+  document.querySelectorAll('.js-block-manually input').forEach(function (el) {
+    el.value = '';
+    el.classList = 'form-control';
+  });
+  swiper.updateAutoHeight(100);
+});
 document.querySelector('.js-manually').addEventListener('click', openCheckForm);
 
 /**
@@ -16779,7 +16786,10 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.swiper', {
     crossFade: true
   }
 });
-swiper.on('beforeSlideChangeStart', function (e) {});
+swiper.on('slideChangeTransitionEnd', function (e) {
+  var $firstInput = swiper.slides[swiper.activeIndex].querySelector('input:not([hidden])');
+  $firstInput.focus();
+});
 swiper.on('slideChange', function (e) {
   var $$steps = document.querySelectorAll(".steps .step");
   var $step = document.querySelector(".steps .step[data-step=\"".concat(swiper.activeIndex, "\"]"));
@@ -16819,9 +16829,17 @@ var mask = (0,imask__WEBPACK_IMPORTED_MODULE_7__["default"])(document.querySelec
   mask: '+{7} (000) 000-00-00'
 });
 mask.on('complete', function (e) {
-  e.target.hidden = true;
+  console.log(e.target.value);
+  var $slide = e.target.closest('.swiper-slide');
+  document.querySelector('.js-btn-next').disabled = false;
+  $slide.querySelector('div.js-phone-wrp').hidden = true;
+  $slide.querySelector('div.js-phone-code-wrp').hidden = false;
+  $slide.querySelector('.js-phone-code').textContent = e.target.value;
+  startTimer(30, $slide.querySelector('div.js-phone-code-wrp button>span'));
   setTimeout(function () {
-    alert('Тестовый код из sms - 1234');
+    document.querySelector('#infoDialog .content').textContent = 'Тестовый код из sms - 1234';
+    document.querySelector('#infoDialog').showModal();
+    // alert('Тестовый код из sms - 1234');
   }, 700);
 });
 
@@ -16922,9 +16940,11 @@ function fillCheck(scanString) {
 }
 function openCheckForm() {
   var $blockManually = document.querySelector('.js-block-manually');
+  var $firstInput = swiper.slides[swiper.activeIndex].querySelector('#qrManually input:not([hidden])');
   document.querySelector('.manually').hidden = true;
   bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_2___default().getOrCreateInstance($blockManually).show();
   swiper.updateAutoHeight(100);
+  $firstInput.focus();
 }
 function validateForm() {
   var $form = document.querySelector('form.garant-form');
@@ -16933,8 +16953,12 @@ function validateForm() {
   $$activeInputs.forEach(function (el) {
     switch (el.type) {
       case 'text':
-        setFieldValid(true, el);
-        saveFormData($form);
+        if (el.name === 'code') {
+          setFieldValid(el.value === '1234', el);
+        } else {
+          setFieldValid(true, el);
+          saveFormData($form);
+        }
         break;
       case 'email':
         setFieldValid(el.value.includes('@'), el);
@@ -16955,7 +16979,9 @@ function validateForm() {
   });
   if (stepIsValid) {
     if (swiper.slides.length - 1 === swiper.activeIndex) {
-      alert('Гарантия активирована!');
+      document.querySelector('#infoDialog .content').innerHTML = "\n                \u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0432\u0430\u0441 \u0437\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044E \u0432 \u0430\u043A\u0446\u0438\u0438 \u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u043D\u0430\u044F \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u044F. \n                <br>\n                \u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u0435 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043F\u0440\u0438\u0434\u0435\u0442 \u043D\u0430 e-mail (\u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u044B\u0439 \u0432 \u0444\u043E\u0440\u043C\u0435 e-mail) \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 3-\u0445 \u0440\u0430\u0431\u043E\u0447\u0438\u0445 \u0434\u043D\u0435\u0439. \n            ";
+      document.querySelector('#infoDialog').showModal();
+      // alert('Гарантия активирована!');
     } else {
       setTimeout(function () {
         swiper.slideNext();
@@ -17000,6 +17026,20 @@ function saveFile(blob, filename) {
       document.body.removeChild(a);
     }, 0);
   }
+}
+function startTimer(duration, display) {
+  var timer = duration,
+    seconds;
+  var interval = setInterval(function () {
+    seconds = parseInt(timer % 60, 10);
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = seconds;
+    if (--timer < 0) {
+      clearInterval(interval);
+      display.closest('button').disabled = false;
+      display.closest('button').textContent = 'Отправить повторно';
+    }
+  }, 1000);
 }
 })();
 

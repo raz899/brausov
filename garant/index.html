@@ -7,18 +7,25 @@
     <title>Расширенная гарантия</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/public/bundles/common.bundle.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/public/bundles/common.bundle.css" media="screen">
 </head>
 
 <body>
     <div class="container">
         <div class="main-modal">
             <div class="main-modal__head">
-                <h2>Расширенная гарантия <br> “Акция №1”</h2>
-                <p class="head-desc">Какой-то текст, нужно будет придумать</p>
+                <h2>Расширенная гарантия на шины брендов: <br><small>Leao, Landspider, Tracmax, Antares, Fortune</small></h2>
+                <div class="head-desc text-start text-small">
+                    <p>ООО «Пауэр Интернэшнл-шины» предлагает условия Расширенной гарантии в знак уверенности в качестве реализуемой продукции.
+                    Присоединяясь к программе, в случае непреднамеренного повреждения шины в течение 1 года с даты покупки вы получаете
+                    возможность бесплатного ремонта или замены в случае, если ремонт невозможен.</p>
+                    
+                    <p>Для участия в акции «Расширенная гарантия» пройдите регистрацию и внесите информацию о приобретенных шинах в течение 14
+                    дней с даты покупки.</p>
+
+                    <p>По всем вопросам просим вас обращаться на горячую линию: <a href="tel:+78001001741"><b>8 800 1001-741</b></a></p>
+                </div>
                 <div class="steps">
                     <div class="step active" data-step="0">
                         <div class="step__container">
@@ -106,29 +113,38 @@
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
-                                <p>Здесь будет текст, ссылки и контактный телефон</p>
-                                <input class="form-control" type="tel" name="tel" placeholder="+7" autofocus required>
-                                <div class="invalid-feedback">
-                                    Пожалуйста, введите номер телефона +7 (999) 999-99-99.
+                                <div class="js-phone-wrp">
+                                    <p>В дальнейшем ваш номер телефона будет использоваться для проверки активации Расширенной гарантии</p>
+                                    <input class="form-control" type="tel" name="tel" placeholder="+7" autofocus required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите номер телефона +7 (999) 999-99-99.
+                                    </div>
                                 </div>
-                                <!-- <input class="form-control" type="code" name="code" placeholder=""> -->
+                                <div class="js-phone-code-wrp" hidden>
+                                    <p>Укажите проверочный код из СМС сообщения. Мы отправили его на номер: <span class="js-phone-code"></span></p>
+                                    <div class="d-flex gap-3">
+                                        <input class="form-control" type="code" name="code" placeholder="Проверочный код из СМС" required>
+                                        <button class="btn btn-secondary text-nowrap" disabled>Отправить повторно: <span>30</span></button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <p>Здесь будет текст, ссылки и контактный телефон</p>
+                                <p>Регистрация</p>
                                 <div class="input-container">
-                                    <input class="form-control" type="text" name="firstName" placeholder="Имя" required>
-                                    <div class="invalid-feedback">Укажите ваше имя</div>
+                                    <input class="form-control" type="text" name="firstName" placeholder="Ваше Имя" required>
+                                    <div class="invalid-feedback">Укажите Ваше Имя</div>
                                 </div>
                                 <div class="input-container">
-                                    <input class="form-control" type="text" name="lastName" placeholder="Фамилия" required>
-                                    <div class="invalid-feedback">Укажите вашу фамилия</div>
+                                    <input class="form-control" type="text" name="lastName" placeholder="Ваша Фамилия" required>
+                                    <div class="invalid-feedback">Укажите Вашу Фамилию</div>
                                 </div>
                                 <div class="input-container">
-                                    <input class="form-control" type="email" name="email" placeholder="E-mail" required>
+                                    <input class="form-control" type="email" name="email" placeholder="Ваш E-mail" required>
                                     <div class="invalid-feedback">Адрес почты должен содержать символ @</div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
+                                <p>Внесите данные из чека, который содержит информацию о покупке шин брендов Leao, Landspider, Tracmax, Antares, Fortune.</p>
                                 <div class="row g-3">
                                     <div class="col-sm-6 col-12">
                                         <div class="card c-pointer" data-bs-toggle="modal"
@@ -153,7 +169,7 @@
                                                     </svg>
                                                 </div>
                                                 <span>Сканировать QR код</span>
-                                                <p class="m-0">Поднесите к камере смартфона или компьютера кассовый чек с qr-кодом</p>
+                                                <p class="m-0">Поднесите к камере смартфона или компьютера кассовый чек с QR кодом</p>
                                             </div>
                                         </div>
                                     </div>
@@ -166,9 +182,9 @@
                                                         <path d="M8.19373 11.2073C7.53068 11.2073 6.8948 10.9439 6.42596 10.475C5.95712 10.0062 5.69373 9.37032 5.69373 8.70728C5.69373 8.04423 5.95712 7.40835 6.42596 6.93951C6.8948 6.47067 7.53068 6.20728 8.19373 6.20728C8.85677 6.20728 9.49265 6.47067 9.96149 6.93951C10.4303 7.40835 10.6937 8.04423 10.6937 8.70728C10.6937 9.37032 10.4303 10.0062 9.96149 10.475C9.49265 10.9439 8.85677 11.2073 8.19373 11.2073ZM8.19373 12.2073C9.12198 12.2073 10.0122 11.8385 10.6686 11.1821C11.325 10.5258 11.6937 9.63553 11.6937 8.70728C11.6937 7.77902 11.325 6.88878 10.6686 6.2324C10.0122 5.57602 9.12198 5.20728 8.19373 5.20728C7.26547 5.20728 6.37523 5.57602 5.71885 6.2324C5.06247 6.88878 4.69373 7.77902 4.69373 8.70728C4.69373 9.63553 5.06247 10.5258 5.71885 11.1821C6.37523 11.8385 7.26547 12.2073 8.19373 12.2073ZM3.19373 6.70728C3.19373 6.83988 3.14105 6.96706 3.04728 7.06083C2.95351 7.1546 2.82633 7.20728 2.69373 7.20728C2.56112 7.20728 2.43394 7.1546 2.34017 7.06083C2.2464 6.96706 2.19373 6.83988 2.19373 6.70728C2.19373 6.57467 2.2464 6.44749 2.34017 6.35372C2.43394 6.25995 2.56112 6.20728 2.69373 6.20728C2.82633 6.20728 2.95351 6.25995 3.04728 6.35372C3.14105 6.44749 3.19373 6.57467 3.19373 6.70728Z" fill="black" />
                                                     </svg>
                                                 </div>
-                                                <span>Загрузить фото чека</span>
+                                                <span>Загрузить фото чека (.jpg, .png)</span>
                                                 <p class="m-0">Фотография чека должна содержать качественное изображение
-                                                    qr-кода</p>
+                                                    QR кода</p>
                                                 <input type="file" name="qr-file" class="qr-file" id="qr-file" hidden>
                                                 <label for="qr-file">Загрузить файл</label>
                                             </div>
@@ -218,6 +234,9 @@
                                                         <div class="invalid-feedback">Укажите фискальный признак документа.</div>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-12">
+                                                    <button type="button" class="btn btn-sm btn-secondary js-clear-form">Очистить форму</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -245,7 +264,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h5 class="text-center">Приобритенные шины</h5>
+                                        <h5 class="text-center">Приобретенные шины</h5>
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="input-container">
@@ -363,13 +382,19 @@
                                                 <div class="form-check d-inline-block">
                                                     <input class="form-check-input" type="checkbox" value="1" id="checkGaranty" required>
                                                     <label class="form-check-label" for="checkGaranty">
-                                                        Я соглашаюсь c <a href="#">условиями расширенной гарантии</a>
+                                                        Я соглашаюсь c <a href="#">Условиями акции Расширенная гарантия</a>
                                                     </label>
                                                 </div>
                                                 <div class="form-check d-inline-block">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="checkMailSend" checked>
+                                                    <input class="form-check-input" type="checkbox" value="1" id="checkMailSend" required>
                                                     <label class="form-check-label" for="checkMailSend">
-                                                        Я соглашаюсь c информационной рассылкой
+                                                        Я соглашаюсь на информационную рассылку, связанную с акцией Расширенная гарантия
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-inline-block">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="checkNewsSend">
+                                                    <label class="form-check-label" for="checkNewsSend">
+                                                        Я соглашаюсь на e-mail рассылку новостей о товарах и услугах, акциях, специальных предложениях и рекламных мероприятиях
                                                     </label>
                                                 </div>
                                             </div>
@@ -382,10 +407,13 @@
                 </form>
             </div>
             <div class="main-modal__footer">
-                <a href="#" target="_blank" rel="noopener noreferrer">Подробные условия программы</a>
+                <div>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Полные условия акции</a>
+                    <a href="#" target="_blank" class="ms-2" rel="noopener noreferrer">Список шинных центров, участвующих в акции</a>
+                </div>
                 <div class="main-modal__footer-buttons">
                     <button type="button" class="btn btn-secondary js-btn-prev text-nowrap">Предыдущий шаг</button>
-                    <button type="button" class="btn btn-primary js-btn-next">Продолжить</button>
+                    <button type="button" class="btn btn-primary js-btn-next" disabled>Продолжить</button>
                     <button type="button" class="btn btn-primary btn-final js-btn-final">Активировать гарантию</button>
                 </div>
             </div>
@@ -416,10 +444,15 @@
         </div>
     </div>
 
-    <script defer src="./assets/public/bundles/common.bundle.js"></script>
+    <script defer src="/assets/public/bundles/common.bundle.js"></script>
 
     <div class="bg-circles"></div>
     <div class="bg-circles2"></div>
+
+    <dialog id="infoDialog">
+        <div class="content"></div>
+        <button onclick="this.parentNode.close()" class="btn btn-sm btn-primary" autofocus="">Закрыть</button>
+    </dialog>
 </body>
 
 </html>

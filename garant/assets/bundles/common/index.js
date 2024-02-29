@@ -21,6 +21,13 @@ document.querySelector('.js-btn-next').addEventListener('click', function () {
 document.querySelector('.js-btn-prev').addEventListener('click', function () {
     swiper.slidePrev();
 });
+document.querySelector('.js-clear-form').addEventListener('click', function () {
+    document.querySelectorAll('.js-block-manually input').forEach((el) => {
+        el.value = '';
+        el.classList = 'form-control';
+    });
+    swiper.updateAutoHeight(100);
+});
 
 document.querySelector('.js-manually').addEventListener('click', openCheckForm);
 
@@ -59,8 +66,9 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-swiper.on('beforeSlideChangeStart', function (e) {
-
+swiper.on('slideChangeTransitionEnd', function (e) {
+    const $firstInput = swiper.slides[swiper.activeIndex].querySelector('input:not([hidden])');
+    $firstInput.focus();
 });
 
 swiper.on('slideChange', function (e) {
@@ -106,9 +114,21 @@ const mask = IMask(document.querySelector('input[type="tel"]'), {
 });
 
 mask.on('complete', (e) => {
-    e.target.hidden = true;
+    console.log(e.target.value);
+    const $slide = e.target.closest('.swiper-slide');
+
+    document.querySelector('.js-btn-next').disabled = false;
+
+    $slide.querySelector('div.js-phone-wrp').hidden = true;
+    $slide.querySelector('div.js-phone-code-wrp').hidden = false;
+    $slide.querySelector('.js-phone-code').textContent = e.target.value;
+
+
+    startTimer(30, $slide.querySelector('div.js-phone-code-wrp button>span'));
     setTimeout(function(){
-        alert('Тестовый код из sms - 1234');
+        document.querySelector('#infoDialog .content').textContent = 'Тестовый код из sms - 1234';
+        document.querySelector('#infoDialog').showModal();
+        // alert('Тестовый код из sms - 1234');
     }, 700);
 });
 
@@ -211,9 +231,13 @@ function fillCheck(scanString) {
 
 function openCheckForm() {
     const $blockManually = document.querySelector('.js-block-manually');
+    const $firstInput = swiper.slides[swiper.activeIndex].querySelector('#qrManually input:not([hidden])');
+
     document.querySelector('.manually').hidden = true;
     Collapse.getOrCreateInstance($blockManually).show();
     swiper.updateAutoHeight(100);
+    
+    $firstInput.focus();
 }
 
 function validateForm() {
@@ -223,8 +247,12 @@ function validateForm() {
     $$activeInputs.forEach((el) => {
         switch (el.type) {
             case 'text':
-                setFieldValid(true, el);
-                saveFormData($form);
+                if (el.name === 'code') {
+                    setFieldValid(el.value === '1234', el);
+                } else {
+                    setFieldValid(true, el);
+                    saveFormData($form);
+                }
                 break;
             case 'email':
                 setFieldValid(el.value.includes('@'), el);
@@ -245,7 +273,13 @@ function validateForm() {
     });
     if (stepIsValid) {
         if (swiper.slides.length - 1 === swiper.activeIndex) {
-            alert('Гарантия активирована!');
+            document.querySelector('#infoDialog .content').innerHTML = `
+                Благодарим вас за регистрацию в акции Расширенная гарантия. 
+                <br>
+                Подтверждение активации придет на e-mail (повторить указанный в форме e-mail) в течение 3-х рабочих дней. 
+            `;
+            document.querySelector('#infoDialog').showModal();
+            // alert('Гарантия активирована!');
         } else {
             setTimeout(function () {
                 swiper.slideNext();
@@ -293,4 +327,20 @@ function saveFile(blob, filename) {
             document.body.removeChild(a);
         }, 0);
     }
+}
+
+function startTimer(duration, display) {
+    let timer = duration, seconds;
+    const interval = setInterval(function () {
+        seconds = parseInt(timer % 60, 10);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = seconds;
+
+        if (--timer < 0) {
+            clearInterval(interval);
+            display.closest('button').disabled = false;
+            display.closest('button').textContent = 'Отправить повторно';
+        }
+    }, 1000);
 }
