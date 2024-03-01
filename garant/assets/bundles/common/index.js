@@ -91,15 +91,15 @@ swiper.on('slideChange', function (e) {
     if (swiper.slides.length - 1 === swiper.activeIndex) { // final slide
         $modalFooter.classList.add('final');
         $modalSteps.hidden = true;
-        $modalDescription.hidden = true;
     } else {
         $modalFooter.classList.remove('final');
         $modalSteps.hidden = false;
-        $modalDescription.hidden = false;
     }
     if (swiper.activeIndex > 0) {
+        $modalDescription.hidden = true;
         $modalFooter.classList.add('authed');
     } else {
+        $modalDescription.hidden = false;
         $modalFooter.classList.remove('authed');
     }
 });
@@ -273,10 +273,11 @@ function validateForm() {
     });
     if (stepIsValid) {
         if (swiper.slides.length - 1 === swiper.activeIndex) {
+            const garantData = JSON.parse(localStorage.getItem('garantFormData'));
             document.querySelector('#infoDialog .content').innerHTML = `
                 Благодарим вас за регистрацию в акции Расширенная гарантия. 
                 <br>
-                Подтверждение активации придет на e-mail (повторить указанный в форме e-mail) в течение 3-х рабочих дней. 
+                Подтверждение активации придет на e-mail (${garantData.email}) в течение 3-х рабочих дней. 
             `;
             document.querySelector('#infoDialog').showModal();
             // alert('Гарантия активирована!');
