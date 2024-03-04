@@ -121,6 +121,7 @@ mask.on('complete', (e) => {
 
     $slide.querySelector('div.js-phone-wrp').hidden = true;
     $slide.querySelector('div.js-phone-code-wrp').hidden = false;
+    $slide.querySelector('div.js-phone-code-wrp input').focus();
     $slide.querySelector('.js-phone-code').textContent = e.target.value;
 
 
@@ -242,9 +243,10 @@ function openCheckForm() {
 
 function validateForm() {
     const $form = document.querySelector('form.garant-form');
-    const $$activeInputs = document.querySelectorAll('.swiper-slide-active input[required]');
+    const $$activeInputs = document.querySelectorAll('.swiper-slide-active [required]');
     let stepIsValid = true;
     $$activeInputs.forEach((el) => {
+        console.log(el.type);
         switch (el.type) {
             case 'text':
                 if (el.name === 'code') {
@@ -266,12 +268,37 @@ function validateForm() {
             case 'checkbox':
                 setFieldValid(el.checked, el);
                 break;
+            case 'select-one':
+                setFieldValid(el.value !== '0', el);
+                break;
             default:
                 setFieldValid(false, el);
                 stepIsValid = false;
         }
     });
     if (stepIsValid) {
+        if (swiper.activeIndex === 2) {
+            document.querySelector('#infoDialog .content').innerHTML = `
+                <div class="d-flex flex-column align-items-center">
+                    <div class="text-success spinner-border mb-2" role="status" style="width: 50px; height: 50px;">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    Проверяем данные чека...
+                </div>
+            `;
+            document.querySelector('#infoDialog').showModal();
+            setTimeout(function(){
+                document.querySelector('#infoDialog .content').innerHTML = `
+                    <div class="text-success d-flex flex-column align-items-center">
+                        <svg class="mb-2" width="50" height="50" viewBox="0 0 32 33" fill="none">
+                            <rect width="32" height="32" fill="white"></rect>
+                            <path d="M32 16.1531C32 20.3965 30.3143 24.4662 27.3137 27.4668C24.3131 30.4674 20.2435 32.1531 16 32.1531C11.7565 32.1531 7.68687 30.4674 4.68629 27.4668C1.68571 24.4662 0 20.3965 0 16.1531C0 11.9096 1.68571 7.83995 4.68629 4.83937C7.68687 1.83879 11.7565 0.153076 16 0.153076C20.2435 0.153076 24.3131 1.83879 27.3137 4.83937C30.3143 7.83995 32 11.9096 32 16.1531ZM24.06 10.0931C23.9171 9.95071 23.747 9.83862 23.5599 9.76351C23.3727 9.68839 23.1723 9.65179 22.9706 9.6559C22.769 9.66001 22.5703 9.70474 22.3863 9.78741C22.2023 9.87009 22.0369 9.98901 21.9 10.1371L14.954 18.9871L10.768 14.7991C10.4837 14.5341 10.1076 14.3899 9.71896 14.3967C9.33035 14.4036 8.95958 14.561 8.68476 14.8358C8.40993 15.1107 8.25251 15.4814 8.24565 15.87C8.23879 16.2586 8.38304 16.6347 8.648 16.9191L13.94 22.2131C14.0826 22.3554 14.2523 22.4675 14.4392 22.5428C14.626 22.6181 14.8261 22.6549 15.0275 22.6512C15.2289 22.6475 15.4275 22.6032 15.6114 22.5211C15.7953 22.4389 15.9608 22.3206 16.098 22.1731L24.082 12.1931C24.3542 11.9101 24.5046 11.5316 24.5008 11.139C24.4971 10.7464 24.3395 10.3708 24.062 10.0931H24.06Z" fill="currentColor"></path>
+                        </svg>
+                        Данные проверены!
+                    </div>
+                `;
+            }, 1000)
+        }
         if (swiper.slides.length - 1 === swiper.activeIndex) {
             const garantData = JSON.parse(localStorage.getItem('garantFormData'));
             document.querySelector('#infoDialog .content').innerHTML = `

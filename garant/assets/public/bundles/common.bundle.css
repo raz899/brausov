@@ -6459,7 +6459,7 @@ body {
     margin-bottom: 5px; }
 
 .head-desc {
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   color: #A1A1AA;
@@ -6471,27 +6471,22 @@ body {
   position: relative;
   width: 100%;
   display: flex;
-  gap: 32px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px; }
-  .steps:before {
-    content: '';
-    position: absolute;
-    top: 16px;
-    left: 0;
-    right: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #D4D4D8; }
+  gap: 1px;
+  justify-content: space-between;
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000; }
   .steps .step {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 10px 15px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    color: #D4D4D8; }
+    width: 100%;
+    color: #D4D4D8;
+    background-color: #198754; }
     .steps .step__num {
       position: relative;
       display: flex;
@@ -6501,7 +6496,6 @@ body {
       height: 32px;
       overflow: hidden;
       border-radius: 50%;
-      border: 1px solid #D4D4D8;
       line-height: 27px;
       font-size: 16px;
       font-style: normal;
@@ -6510,11 +6504,11 @@ body {
       z-index: 2; }
     .steps .step__done {
       position: relative;
-      z-index: 2; }
+      z-index: 2;
+      color: #fff; }
     .steps .step__text {
-      font-size: 12px;
-      margin-top: 8px;
-      line-height: 13px; }
+      font-size: 14px;
+      color: #fff; }
       .steps .step__text span {
         display: block; }
     .steps .step .step__num {
@@ -6522,16 +6516,21 @@ body {
     .steps .step .step__done {
       display: block; }
   .steps .step.active {
-    color: #28508A; }
+    color: #28508A;
+    background: #28508a; }
     .steps .step.active .step__num {
-      display: block;
-      border: 2px solid #28508A !important; }
+      display: flex;
+      background: #f47117;
+      color: #fff; }
     .steps .step.active .step__done {
       display: none; }
-  .steps .step.active ~ .step .step__num {
-    display: block; }
-  .steps .step.active ~ .step .step__done {
-    display: none; }
+  .steps .step.active ~ .step {
+    color: #28508A;
+    background: #28508a; }
+    .steps .step.active ~ .step .step__num {
+      display: flex; }
+    .steps .step.active ~ .step .step__done {
+      display: none; }
 
 .main-modal__head {
   text-align: center;

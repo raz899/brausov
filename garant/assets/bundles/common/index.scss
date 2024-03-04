@@ -116,7 +116,7 @@ body {
 }
 
 .head-desc {
-    font-size : 12px;
+    font-size : 14px;
     font-style: normal;
     font-weight: 400;
     color: #A1A1AA;
@@ -131,30 +131,35 @@ body {
     position: relative;
     width: 100%;
     display: flex;
-    gap: 32px;
-    align-items: center;
-    justify-content: center;
+    gap: 1px;
+    justify-content: space-between;
     margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 16px;
-        left: 0;
-        right: 0;
-        display: block;
-        width: 100%;
-        height: 1px;
-        background-color: #D4D4D8;
-    }
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 16px;
+    //     left: 0;
+    //     right: 0;
+    //     display: block;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: #D4D4D8;
+    // }
 
     .step {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        padding: 10px 15px;
+        gap: 10px;
         align-items: center;
         justify-content: center;
-        width: 100px;
+        width: 100%;
         color: #D4D4D8;
+        background-color: #198754;
 
         &__num {
             position: relative;
@@ -165,7 +170,7 @@ body {
             height: 32px;
             overflow: hidden;
             border-radius: 50%;
-            border: 1px solid #D4D4D8;
+            // border: 1px solid #D4D4D8;
             line-height: 27px;
             font-size : 16px;
             font-style: normal;
@@ -176,12 +181,14 @@ body {
         &__done {
             position: relative;
             z-index: 2;
+            color: #fff;
         }
 
         &__text {
-            font-size: 12px;
-            margin-top: 8px;
-            line-height: 13px;
+            font-size: 14px;
+            // margin-top: 8px;
+            // line-height: 13px;
+            color: #fff;
             span {
                 display: block;
             }
@@ -195,10 +202,13 @@ body {
     }
 
     .step.active {
-        color: #28508A; 
+        color: #28508A;
+        background: #28508a;
+
         .step__num {
-            display: block;
-            border: 2px solid #28508A !important;
+            display: flex;
+            background: #f47117;
+            color: #fff;
         }
         .step__done {
             display: none;
@@ -206,8 +216,11 @@ body {
     }
 
     .step.active ~ .step {
+        color: #28508A;
+        background: #28508a;
+
         .step__num {
-            display: block;
+            display: flex;
         }
 
         .step__done {
