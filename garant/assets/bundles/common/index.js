@@ -28,28 +28,16 @@ document.querySelector('.js-clear-form').addEventListener('click', function () {
     });
     swiper.updateAutoHeight(100);
 });
+document.querySelector('.js-link-change-phone').addEventListener('click', function () {
+    const $slide = document.querySelector('.swiper-slide-active');
+    $slide.querySelector('div.js-phone-wrp').hidden = false;
+    $slide.querySelector('div.js-phone-code-wrp').hidden = true;
+    $slide.querySelector('div.js-phone-wrp input').value = '';
+    $slide.querySelector('div.js-phone-wrp input').focus();
+    swiper.updateAutoHeight(100);
+});
 
 document.querySelector('.js-manually').addEventListener('click', openCheckForm);
-
-
-/**
- * Fill form from localStorage
- */
-
-const garantData = JSON.parse(localStorage.getItem('garantFormData'));
-const $form = document.querySelector('form.garant-form');
-
-if (!!garantData) {
-    [...$form.elements].forEach((el) => {
-        if (el.name in garantData) {
-            el.value = garantData[el.name];
-        }
-    
-        el.addEventListener('blur', function(){
-            saveFormData($form);
-        });
-    });
-}
 
 
 /**
@@ -132,6 +120,34 @@ mask.on('complete', (e) => {
         // alert('Тестовый код из sms - 1234');
     }, 700);
 });
+
+
+/**
+ * Fill form from localStorage
+ */
+
+const garantData = JSON.parse(localStorage.getItem('garantFormData'));
+const $form = document.querySelector('form.garant-form');
+
+if (!!garantData) {
+    [...$form.elements].forEach((el) => {
+        if (el.name in garantData) {
+            el.value = garantData[el.name];
+            if (el.type === 'tel' && el.value.length >= 18) {
+                const $slide = document.querySelector('.swiper-slide-active');
+                $slide.querySelector('div.js-phone-wrp').hidden = true;
+                $slide.querySelector('div.js-phone-code-wrp').hidden = false;
+                $slide.querySelector('div.js-phone-code-wrp input').focus();
+                $slide.querySelector('.js-phone-code').textContent = garantData[el.name];
+                document.querySelector('.js-btn-next').disabled = false;
+            }
+        }
+
+        el.addEventListener('blur', function () {
+            saveFormData($form);
+        });
+    });
+}
 
 
 /**

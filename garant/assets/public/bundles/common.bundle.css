@@ -6544,6 +6544,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal; }
+    .main-modal__content p b {
+      color: #000; }
   .main-modal__content .swiper-slide {
     padding: 15px; }
     .main-modal__content .swiper-slide .input-container {
