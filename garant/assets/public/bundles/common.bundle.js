@@ -16742,6 +16742,7 @@ document.querySelector('.js-btn-final').addEventListener('click', function (e) {
   validateForm();
 });
 document.querySelector('.js-btn-next').addEventListener('click', function () {
+  this.disabled = true;
   validateForm();
 });
 document.querySelector('.js-btn-prev').addEventListener('click', function () {
@@ -16788,6 +16789,7 @@ swiper.on('slideChange', function (e) {
   var $modalFooter = document.querySelector('.main-modal__footer');
   var $modalSteps = document.querySelector('.steps');
   var $modalDescription = document.querySelector('.head-desc');
+  document.querySelector('.js-btn-next').disabled = false;
   $formStep.value = swiper.activeIndex;
   $$steps.forEach(function (el) {
     el.classList.remove('active');
@@ -17008,7 +17010,7 @@ function validateForm() {
     }
     if (swiper.slides.length - 1 === swiper.activeIndex) {
       var _garantData = JSON.parse(localStorage.getItem('garantFormData'));
-      document.querySelector('#infoDialog .content').innerHTML = "\n                \u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0432\u0430\u0441 \u0437\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044E \u0432 \u0430\u043A\u0446\u0438\u0438 \u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u043D\u0430\u044F \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u044F. \n                <br>\n                \u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u0435 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043F\u0440\u0438\u0434\u0435\u0442 \u043D\u0430 e-mail (".concat(_garantData.email, ") \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 3-\u0445 \u0440\u0430\u0431\u043E\u0447\u0438\u0445 \u0434\u043D\u0435\u0439. \n            ");
+      document.querySelector('#infoDialog .content').innerHTML = "\n                \u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0432\u0430\u0441 \u0437\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044E \u0432 \u0430\u043A\u0446\u0438\u0438 \u0420\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u043D\u0430\u044F \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u044F. \n                <br>\n                \u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u0435 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u043F\u0440\u0438\u0434\u0435\u0442 \u043D\u0430 ".concat(_garantData.email, " \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 3-\u0445 \u0440\u0430\u0431\u043E\u0447\u0438\u0445 \u0434\u043D\u0435\u0439. \n            ");
       document.querySelector('#infoDialog').showModal();
       // alert('Гарантия активирована!');
     } else {

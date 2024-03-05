@@ -6550,6 +6550,8 @@ body {
     padding: 15px; }
     .main-modal__content .swiper-slide .input-container {
       margin-bottom: 15px; }
+    .main-modal__content .swiper-slide input {
+      font-weight: 400; }
     .main-modal__content .swiper-slide .manually {
       text-align: center;
       font-size: 14px; }

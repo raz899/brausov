@@ -16,6 +16,7 @@ document.querySelector('.js-btn-final').addEventListener('click', function (e) {
     validateForm();
 });
 document.querySelector('.js-btn-next').addEventListener('click', function () {
+    this.disabled = true;
     validateForm();
 });
 document.querySelector('.js-btn-prev').addEventListener('click', function () {
@@ -66,6 +67,7 @@ swiper.on('slideChange', function (e) {
     const $modalFooter = document.querySelector('.main-modal__footer');
     const $modalSteps = document.querySelector('.steps');
     const $modalDescription = document.querySelector('.head-desc');
+    document.querySelector('.js-btn-next').disabled = false;
 
     $formStep.value = swiper.activeIndex;
 
@@ -320,7 +322,7 @@ function validateForm() {
             document.querySelector('#infoDialog .content').innerHTML = `
                 Благодарим вас за регистрацию в акции Расширенная гарантия. 
                 <br>
-                Подтверждение активации придет на e-mail (${garantData.email}) в течение 3-х рабочих дней. 
+                Подтверждение активации придет на ${garantData.email} в течение 3-х рабочих дней. 
             `;
             document.querySelector('#infoDialog').showModal();
             // alert('Гарантия активирована!');
