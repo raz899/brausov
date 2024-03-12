@@ -6618,15 +6618,15 @@ body {
   .bg-circles div {
     width: var(--tyre-height);
     height: var(--tyre-height);
-    background-image: url("/assets/src/img/circle-tyre.png");
+    background-image: url("../../../assets/src/img/circle-tyre.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     animation: spin 35s linear infinite; }
   .bg-circles div:nth-child(2) {
-    background-image: url("/assets/src/img/circle-tyre3.png"); }
+    background-image: url("../../../assets/src/img/circle-tyre3.webp"); }
   .bg-circles div:nth-child(3) {
-    background-image: url("/assets/src/img/circle-tyre2.png"); }
+    background-image: url("../../../assets/src/img/circle-tyre2.webp"); }
 
 .bg-circles2 {
   position: fixed;
@@ -6640,15 +6640,15 @@ body {
   .bg-circles2 div {
     width: var(--tyre-height);
     height: var(--tyre-height);
-    background-image: url("/assets/src/img/circle-tyre4.png");
+    background-image: url("../../../assets/src/img/circle-tyre4.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     animation: spin 35s linear infinite; }
   .bg-circles2 div:nth-child(2) {
-    background-image: url("/assets/src/img/circle-tyre6.png"); }
+    background-image: url("../../../assets/src/img/circle-tyre6.webp"); }
   .bg-circles2 div:nth-child(3) {
-    background-image: url("/assets/src/img/circle-tyre5.png"); }
+    background-image: url("../../../assets/src/img/circle-tyre5.webp"); }
 
 @keyframes spin {
   100% {

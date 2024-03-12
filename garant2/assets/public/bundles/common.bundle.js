@@ -16822,19 +16822,20 @@ var mask = (0,imask__WEBPACK_IMPORTED_MODULE_7__["default"])(document.querySelec
   mask: '+{7} (000) 000-00-00'
 });
 mask.on('complete', function (e) {
-  console.log(e.target.value);
-  var $slide = e.target.closest('.swiper-slide');
-  document.querySelector('.js-btn-next').disabled = false;
-  $slide.querySelector('div.js-phone-wrp').hidden = true;
-  $slide.querySelector('div.js-phone-code-wrp').hidden = false;
-  $slide.querySelector('div.js-phone-code-wrp input').focus();
-  $slide.querySelector('.js-phone-code').textContent = e.target.value;
-  startTimer(30, $slide.querySelector('div.js-phone-code-wrp button>span'));
-  setTimeout(function () {
-    document.querySelector('#infoDialog .content').textContent = 'Тестовый код из sms - 1234';
-    document.querySelector('#infoDialog').showModal();
-    // alert('Тестовый код из sms - 1234');
-  }, 700);
+  if (e) {
+    var $slide = e.target.closest('.swiper-slide');
+    document.querySelector('.js-btn-next').disabled = false;
+    $slide.querySelector('div.js-phone-wrp').hidden = true;
+    $slide.querySelector('div.js-phone-code-wrp').hidden = false;
+    $slide.querySelector('div.js-phone-code-wrp input').focus();
+    $slide.querySelector('.js-phone-code').textContent = e.target.value;
+    startTimer(30, $slide.querySelector('div.js-phone-code-wrp button>span'));
+    setTimeout(function () {
+      document.querySelector('#infoDialog .content').textContent = 'Тестовый код из sms - 1234';
+      document.querySelector('#infoDialog').showModal();
+      // alert('Тестовый код из sms - 1234');
+    }, 700);
+  }
 });
 
 /**
