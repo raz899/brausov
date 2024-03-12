@@ -6441,11 +6441,11 @@ body {
   position: relative;
   background-color: #fff;
   border-radius: 8px;
-  padding: 32px;
+  padding: 26px;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   align-items: center; }
   .main-modal h2, .main-modal .h2 {
     text-align: center;
@@ -6453,7 +6453,11 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-top: 0; }
+    margin-top: 0;
+    background: #f47117;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10px; }
   .main-modal label:not(.form-check-label) {
     color: #757C83;
     font-size: 12px;
@@ -6464,9 +6468,11 @@ body {
   font-style: normal;
   font-weight: 400;
   color: #A1A1AA;
-  margin-bottom: 40px; }
+  margin-bottom: 30px;
+  margin-top: 15px; }
   .head-desc p {
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    text-align: justify; }
 
 .steps {
   position: relative;
@@ -6474,8 +6480,8 @@ body {
   display: flex;
   gap: 1px;
   justify-content: space-between;
-  margin-top: 40px;
   border-radius: 10px;
+  margin-top: 30px;
   overflow: hidden; }
   .steps .step {
     display: flex;
@@ -6562,7 +6568,7 @@ body {
   .main-modal__footer .btn-final,
   .main-modal__footer .btn-secondary {
     display: none; }
-  .main-modal__footer.authed a {
+  .main-modal__footer.authed .first-info {
     display: none; }
   .main-modal__footer.authed .main-modal__footer-buttons {
     display: flex;
@@ -6612,15 +6618,15 @@ body {
   .bg-circles div {
     width: var(--tyre-height);
     height: var(--tyre-height);
-    background-image: url("../../../assets/src/img/circle-tyre.png");
+    background-image: url("/assets/src/img/circle-tyre.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     animation: spin 35s linear infinite; }
   .bg-circles div:nth-child(2) {
-    background-image: url("../../../assets/src/img/circle-tyre3.png"); }
+    background-image: url("/assets/src/img/circle-tyre3.png"); }
   .bg-circles div:nth-child(3) {
-    background-image: url("../../../assets/src/img/circle-tyre2.png"); }
+    background-image: url("/assets/src/img/circle-tyre2.png"); }
 
 .bg-circles2 {
   position: fixed;
@@ -6634,15 +6640,15 @@ body {
   .bg-circles2 div {
     width: var(--tyre-height);
     height: var(--tyre-height);
-    background-image: url("../../../assets/src/img/circle-tyre4.png");
+    background-image: url("/assets/src/img/circle-tyre4.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     animation: spin 35s linear infinite; }
   .bg-circles2 div:nth-child(2) {
-    background-image: url("../../../assets/src/img/circle-tyre6.png"); }
+    background-image: url("/assets/src/img/circle-tyre6.png"); }
   .bg-circles2 div:nth-child(3) {
-    background-image: url("../../../assets/src/img/circle-tyre5.png"); }
+    background-image: url("/assets/src/img/circle-tyre5.png"); }
 
 @keyframes spin {
   100% {

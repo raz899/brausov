@@ -17041,6 +17041,9 @@ function saveFormData(form) {
   });
   var json = JSON.stringify(object);
   localStorage.setItem('garantFormData', json);
+  if (swiper.activeIndex > 0) {
+    document.querySelector('.js-btn-next').disabled = false;
+  }
 }
 function saveFile(blob, filename) {
   if (window.navigator.msSaveOrOpenBlob) {

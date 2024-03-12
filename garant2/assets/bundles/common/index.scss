@@ -93,11 +93,11 @@ body {
     position: relative;
     background-color: #fff;
     border-radius: 8px;
-    padding: 32px;
+    padding: 26px;
     z-index: 10;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 
     h2 {
@@ -107,6 +107,10 @@ body {
         font-weight: 600;
         line-height: normal;
         margin-top: 0;
+        background: #f47117;
+        color: #fff;
+        padding: 10px 0;
+        border-radius: 10px;
     }
 
     label:not(.form-check-label) {
@@ -121,10 +125,12 @@ body {
     font-style: normal;
     font-weight: 400;
     color: #A1A1AA;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-top: 15px;
 
     p {
         margin-bottom: 8px;
+        text-align: justify;
     }
 }
 
@@ -134,8 +140,8 @@ body {
     display: flex;
     gap: 1px;
     justify-content: space-between;
-    margin-top: 40px;
     border-radius: 10px;
+    margin-top: 30px;
     overflow: hidden;
     // background: #000;
 
@@ -286,7 +292,7 @@ body {
     }
 
     &.authed {
-        a {display: none;}
+        .first-info {display: none;}
         .main-modal__footer-buttons {
             .btn-secondary {
                 display: block;
