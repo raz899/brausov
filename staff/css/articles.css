@@ -25,3 +25,8 @@
 }
 
 /*  */
+@media (max-width: 575.98px) {
+    .articles-years {
+        padding: 5px;
+    }
+}

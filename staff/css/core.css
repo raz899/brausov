@@ -40,7 +40,16 @@ a:focus {
 /* --------------------------------------------- */
 /* colors */
 .text-black {
-    color: #2d2d2d;
+    color: #2d2d2d !important;
+}
+
+.text-link {
+    color: #64748B !important;
+}
+
+.text-link:hover,
+.text-link:focus {
+    color: #ef7a1c !important;
 }
 
 .text-info {
@@ -76,7 +85,7 @@ main {
 
 footer {
     margin-top: 100px;
-    flex: 0 0 auto;
+    flex      : 0 0 auto;
 }
 
 /* /прижать footer к низу */
@@ -115,6 +124,20 @@ body {
 .nav-tabs .nav-link.active {
     color: #ef7a1c;
 }
+
+.c-pointer {
+    cursor: pointer
+}
+.popover {
+    z-index: 1040;
+    max-width: 500px !important;
+    margin: 20px;
+}
+.generate-report {
+    max-height: 300px;
+    overflow: auto;
+}
+
 
 /* media */
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */

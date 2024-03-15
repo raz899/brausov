@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/shares.css">
+    <title>Расширенная гарантия</title>
+</head>
+
+<body>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- /script -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="help-desk.html" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <a href="#"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="text-info me-2">im_evsikov</span>
+                                <svg width="32" height="33" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#foto"></use>
+                                </svg>
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li>
+                                    <a class="dropdown-item" href="cabinet.html">Личный кабинет</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info">
+                                        <svg width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-info me-2">im_evsikov</span>
+                                            <svg width="32" height="33" class="ms-1">
+                                                <use href="/svg/common.bundle.svg#foto"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link py-2">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="help-desk.html" class="nav-link py-2">Help desk</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="phones.html" class="nav-link py-2">Телефонный справочник</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="cabinet.html" class="nav-link py-2">Личный кабинет</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Уведомления</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link py-2">Админка</a>
+                                        </li>
+                                        <li class="nav-item border-top-info mt-2 w-100">
+                                            <a href="#" class="nav-link text-danger py-2">Выход</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- breadcrumb -->
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Расширенная гарантия</li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- /breadcrumb -->
+            <section class="container mt-5">
+                <div class="pop-up">
+                    <span class="btn-close"></span>
+                    <img src="img/чек1.jpg" alt="">
+                </div>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active p-3" id="guarantee-tab" data-id="1" data-bs-toggle="tab"
+                            data-bs-target="#guarantee" type="button" role="tab" aria-controls="guarantee"
+                            aria-selected="true">Заказы</button>
+                        <button class="nav-link p-3" id="guarantee-report-tab" data-id="2" data-bs-toggle="tab"
+                            data-bs-target="#guarantee-report" type="button" role="tab" aria-controls="guarantee-report"
+                            aria-selected="false">Активация</button>
+                        <button class="nav-link p-3" id="guarantee-activate-tab" data-id="3" data-bs-toggle="tab"
+                            data-bs-target="#reports" type="button" role="tab" aria-controls="reports"
+                            aria-selected="false">Отчёт</button>
+                    </div>
+                </nav>
+                <!-- <div class="row my-4">
+                    <div class="col-xl-10 col-12">
+                        <input type="text" class="form-control table-search col-2" placeholder="Найти">
+                    </div>
+                    <div class="col-xl-2 col-12 mt-2 mt-xl-0 p-0">
+                        <div class="row">
+                            <div class="col px-4">
+                                <div class="d-flex">
+                                    <button class="btn btn-primary text-nowrap w-50">Найти</button>
+                                    <button class="btn btn-primary text-nowrap w-50 ms-2"
+                                        onClick="window.print()">Печать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade" id="guarantee" role="tabpanel" aria-labelledby="guarantee-tab">
+                        <div class="row my-4">
+                            <div class="col-xl-10 col-12">
+                                <input type="text" class="form-control table-search col-2" placeholder="Поиск">
+                            </div>
+                            <div class="col-xl-2 col-12 mt-2 mt-xl-0 p-0">
+                                <div class="row">
+                                    <div class="col px-4">
+                                        <div class="d-flex">
+                                            <button class="btn btn-primary text-nowrap w-50">Найти</button>
+                                            <button class="btn btn-primary text-nowrap w-50 ms-2"
+                                                onClick="window.print()">Печать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Расширенная гарантия</h5>
+                        <div class="table-container p-0">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="min-width: 50px;">
+                                            <div class="table-content">
+                                                Номер заказа
+                                                <div type="button" class="p-0 ms-2" data-bs-trigger="hover focus"
+                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                    data-bs-placement="right" data-bs-html="true"
+                                                    data-bs-content="Номер заказа" data-bs-original-title="" title="">
+                                                    <svg width="14" height="14">
+                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th style="min-width: 50px;">
+                                            <div class="table-content">
+                                                Сумма заказа
+                                                <div type="button" class="p-0 ms-2" data-bs-trigger="hover focus"
+                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                    data-bs-placement="right" data-bs-html="true"
+                                                    data-bs-content="Сумма заказа" data-bs-original-title="" title="">
+                                                    <svg width="14" height="14">
+                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th style="min-width: 50px;">
+                                            <div class="table-content">
+                                                Дата заказа
+                                                <div type="button" class="p-0 ms-2" data-bs-trigger="hover focus"
+                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                    data-bs-placement="right" data-bs-html="true"
+                                                    data-bs-content="Дата заказа" data-bs-original-title="" title="">
+                                                    <svg width="14" height="14">
+                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th style="min-width: 50px;">
+                                            <div class="table-content">
+                                                Дата активации гарантии
+                                                <div type="button" class="p-0 ms-2" data-bs-trigger="hover focus"
+                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                    data-bs-placement="right" data-bs-html="true"
+                                                    data-bs-content="Дата активации гарантии" data-bs-original-title=""
+                                                    title="">
+                                                    <svg width="14" height="14">
+                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th style="min-width: 50px;">
+                                            <div class="table-content">
+                                                Завершении акции
+                                                <div type="button" class="p-0 ms-2" data-bs-trigger="hover focus"
+                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                    data-bs-placement="right" data-bs-html="true"
+                                                    data-bs-content="Завершении акции" data-bs-original-title=""
+                                                    title="">
+                                                    <svg width="14" height="14">
+                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th style="min-width: 150px;">
+                                            <div class="table-content">
+                                                Ф.И.О.
+                                                <div type="button" class="p-0 ms-2" data-bs-trigger="hover focus"
+                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                    data-bs-placement="right" data-bs-html="true"
+                                                    data-bs-content="Фамилия, Имя, Отчество" data-bs-original-title=""
+                                                    title="">
+                                                    <svg width="14" height="14">
+                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="table-content">
+                                                <div>12345</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-content">
+                                                <div>54321<span class="ms-1">руб.</span></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-content">
+                                                <div>2016.09.13</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-content">
+                                                <div>2016.09.14</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-content">
+                                                <div>2016.09.15 00:00:00</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-content">
+                                                <div>Химич Алла Владимировна</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-0 border-1" colspan="7">
+                                            <table class="table table-striped mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="min-width: 50px;">
+                                                            <div class="table-content">
+                                                                №
+                                                            </div>
+                                                        </th>
+                                                        <th style="min-width: 50px;">
+                                                            <div class="table-content">
+                                                                Код
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Код товара"
+                                                                    data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th style="min-width: 50px;">
+                                                            <div class="table-content">
+                                                                Товар
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Марка шин, <br> Модель шин, <br> Типоразмер"
+                                                                    data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th style="min-width: 50px;">
+                                                            <div class="table-content">
+                                                                Ремонт / Замена
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Ремонт или замена"
+                                                                    data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th style="min-width: 50px;">
+                                                            <div class="table-content">
+                                                                Дата
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="узнать" data-bs-original-title=""
+                                                                    title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="table-content">
+                                                                Документы
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Документ, Фото"
+                                                                    data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="table-content">
+                                                                Цена шины
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Цена шины (розница)"
+                                                                    data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="table-content">
+                                                                Информация по заказу
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Шинный центр, <br> 
+                                                                    Город, <br>
+                                                                    Сотрудник" data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="table-content">
+                                                                Примечание
+                                                                <div type="button" class="p-0 ms-2"
+                                                                    data-bs-trigger="hover focus"
+                                                                    data-bs-container="body" data-bs-toggle="popover"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    data-bs-content="Примечание"
+                                                                    data-bs-original-title="" title="">
+                                                                    <svg width="14" height="14">
+                                                                        <use href="/svg/common.bundle.svg#info"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="table-content"></div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-striped">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>1</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>121121121121</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Марка: Yokohama <br>
+                                                                    Модель: 103V <br>
+                                                                    Типоразмер: 205/55R16 <br>"
+                                                                    data-bs-original-title="Товар">
+                                                                    <span class="text-nowrap me-2">Марка:</span>
+                                                                    <span class="text-nowrap">Yokohama</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <select class="form-select form-select-sm">
+                                                                    <option selected=""></option>
+                                                                    <option value="1">Ремонт</option>
+                                                                    <option value="2">Замена</option>
+                                                                    <option value="3">Замена без работы</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="date">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#order-documents">
+                                                                    <div class="text-nowrap">Документы:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Город: Москва <br>
+                                                                    Шинный центр: ООО 'Пауэр Интернэшнл-шины', <br>
+                                                                    Сотрудник: Химич Алла Владимировна"
+                                                                    data-bs-original-title="Информация по заказу">
+                                                                    <span class="text-nowrap me-2">Город:</span>
+                                                                    <span class="text-nowrap">Москва</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#note-documents">
+                                                                    <div class="text-nowrap">Примечание:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="dropdown c-pointer">
+                                                                    <div class="dropdown-toggle" id="settings-table"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <svg width="19" height="19">
+                                                                            <use href="/svg/common.bundle.svg#dots">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="settings-table">
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-dark me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#save">
+                                                                                    </use>
+                                                                                </svg>Сохранить
+                                                                            </button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-danger me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#del">
+                                                                                    </use>
+                                                                                </svg>Удалить
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>2</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>121121121121</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Марка: Yokohama <br>
+                                                                    Модель: 103V <br>
+                                                                    Типоразмер: 205/55R16 <br>"
+                                                                    data-bs-original-title="Товар">
+                                                                    <span class="text-nowrap me-2">Марка:</span>
+                                                                    <span class="text-nowrap">Yokohama</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <select class="form-select form-select-sm">
+                                                                    <option selected=""></option>
+                                                                    <option value="1">Ремонт</option>
+                                                                    <option value="2">Замена</option>
+                                                                    <option value="3">Замена без работы</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="date">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#order-documents">
+                                                                    <div class="text-nowrap">Документы:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Город: Москва <br>
+                                                                    Шинный центр: ООО 'Пауэр Интернэшнл-шины', <br>
+                                                                    Сотрудник: Химич Алла Владимировна"
+                                                                    data-bs-original-title="Информация по заказу">
+                                                                    <span class="text-nowrap me-2">Город:</span>
+                                                                    <span class="text-nowrap">Москва</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#note-documents">
+                                                                    <div class="text-nowrap">Примечание:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="dropdown c-pointer">
+                                                                    <div class="dropdown-toggle" id="settings-table"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <svg width="19" height="19">
+                                                                            <use href="/svg/common.bundle.svg#dots">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="settings-table">
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-dark me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#save">
+                                                                                    </use>
+                                                                                </svg>Сохранить
+                                                                            </button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-danger me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#del">
+                                                                                    </use>
+                                                                                </svg>Удалить
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>3</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>121121121121</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Марка: Yokohama <br>
+                                                                    Модель: 103V <br>
+                                                                    Типоразмер: 205/55R16 <br>"
+                                                                    data-bs-original-title="Товар">
+                                                                    <span class="text-nowrap me-2">Марка:</span>
+                                                                    <span class="text-nowrap">Yokohama</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <select class="form-select form-select-sm">
+                                                                    <option selected=""></option>
+                                                                    <option value="1">Ремонт</option>
+                                                                    <option value="2">Замена</option>
+                                                                    <option value="3">Замена без работы</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="date">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#order-documents">
+                                                                    <div class="text-nowrap">Документы:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Город: Москва <br>
+                                                                    Шинный центр: ООО 'Пауэр Интернэшнл-шины', <br>
+                                                                    Сотрудник: Химич Алла Владимировна"
+                                                                    data-bs-original-title="Информация по заказу">
+                                                                    <span class="text-nowrap me-2">Город:</span>
+                                                                    <span class="text-nowrap">Москва</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#note-documents">
+                                                                    <div class="text-nowrap">Примечание:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="dropdown c-pointer">
+                                                                    <div class="dropdown-toggle" id="settings-table"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <svg width="19" height="19">
+                                                                            <use href="/svg/common.bundle.svg#dots">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="settings-table">
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-dark me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#save">
+                                                                                    </use>
+                                                                                </svg>Сохранить
+                                                                            </button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-danger me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#del">
+                                                                                    </use>
+                                                                                </svg>Удалить
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>4</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div>121121121121</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Марка: Yokohama <br>
+                                                                    Модель: 103V <br>
+                                                                    Типоразмер: 205/55R16 <br>"
+                                                                    data-bs-original-title="Товар">
+                                                                    <span class="text-nowrap me-2">Марка:</span>
+                                                                    <span class="text-nowrap">Yokohama</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <select class="form-select form-select-sm">
+                                                                    <option selected=""></option>
+                                                                    <option value="1">Ремонт</option>
+                                                                    <option value="2">Замена</option>
+                                                                    <option value="3">Замена без работы</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="date">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#order-documents">
+                                                                    <div class="text-nowrap">Документы:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <input class="form-control form-control-sm" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer d-flex align-items-center"
+                                                                    data-bs-toggle="popover" data-bs-placement="bottom"
+                                                                    data-bs-html="true" title="" data-bs-content="Город: Москва <br>
+                                                                    Шинный центр: ООО 'Пауэр Интернэшнл-шины', <br>
+                                                                    Сотрудник: Химич Алла Владимировна"
+                                                                    data-bs-original-title="Информация по заказу">
+                                                                    <span class="text-nowrap me-2">Город:</span>
+                                                                    <span class="text-nowrap">Москва</span>
+                                                                    <svg class="ms-2 text-info" width="10" height="10">
+                                                                        <use
+                                                                            href="/svg/common.bundle.svg#dropdown-arrow">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="c-pointer" data-bs-toggle="modal"
+                                                                    data-bs-target="#note-documents">
+                                                                    <div class="text-nowrap">Примечание:</div>
+                                                                    <div class="d-flex align-items-center">
+                                                                        <svg class="ms-2 text-info" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#treaties">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-content">
+                                                                <div class="dropdown c-pointer">
+                                                                    <div class="dropdown-toggle" id="settings-table"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <svg width="19" height="19">
+                                                                            <use href="/svg/common.bundle.svg#dots">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="settings-table">
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-dark me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#save">
+                                                                                    </use>
+                                                                                </svg>Сохранить
+                                                                            </button>
+                                                                        </li>
+                                                                        <li>
+                                                                            <button type="button"
+                                                                                class="btn d-flex align-items-center dropdown-item">
+                                                                                <svg class="text-danger me-2" width="16"
+                                                                                    height="16">
+                                                                                    <use
+                                                                                        href="/svg/common.bundle.svg#del">
+                                                                                    </use>
+                                                                                </svg>Удалить
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="guarantee-report" role="tabpanel"
+                        aria-labelledby="guarantee-report-tab">
+                        <div class="my-4 d-sm-flex align-items-center justify-content-between">
+                            <h5 class="m-0">Активация расширенной гарантии</h5>
+                            <button class="btn btn-primary text-nowrap mt-sm-0 mt-2"
+                                onClick="window.print()">Печать</button>
+                        </div>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-xl-3 col-12">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Номер заказа
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <input class="form-control form-control-sm" type="text">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Стоимость комплекта (розница)
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <input class="form-control form-control-sm" type="text">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Дата продажи (по чеку)
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <input class="form-control form-control-sm" type="date">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Дата активации
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <input class="form-control form-control-sm" type="date">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Завершение акции
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <input class="form-control form-control-sm" type="date">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Организация
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <select class="form-select form-select-sm" aria-label="">
+                                                            <option selected></option>
+                                                            <option value="1">Автоопт ООО</option>
+                                                            <option value="2">Автопроект ООО (Саратов)</option>
+                                                            <option value="3">Автоцентр ООО</option>
+                                                        </select>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="ps-0" style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Скан ТН
+                                                    </div>
+                                                    <div class="table-content">
+                                                        <input class="form-control form-control-sm" type="file">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="col-xl-9 col-12">
+                                    <div class="table-container p-0">
+                                        <table class="table js-table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="min-width: 50px;">
+                                                        <div class="table-content">
+                                                            Типоразмер
+                                                        </div>
+                                                    </th>
+                                                    <th style="min-width: 250px;">
+                                                        <div class="table-content">
+                                                            Марка
+                                                        </div>
+                                                    </th>
+                                                    <th style="min-width: 250px;">
+                                                        <div class="table-content">
+                                                            Модель
+                                                        </div>
+                                                    </th>
+                                                    <th style="min-width: 50px;">
+                                                        <div class="table-content">
+                                                            Дот-коды
+                                                        </div>
+                                                    </th>
+                                                    <th style="min-width: 50px;"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Accelera</option>
+                                                                <option value="2">Accelus</option>
+                                                                <option value="3">Advance</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Badak X-Treme</option>
+                                                                <option value="2">PHI</option>
+                                                                <option value="3">PHI 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Accelera</option>
+                                                                <option value="2">Accelus</option>
+                                                                <option value="3">Advance</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Badak X-Treme</option>
+                                                                <option value="2">PHI</option>
+                                                                <option value="3">PHI 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Accelera</option>
+                                                                <option value="2">Accelus</option>
+                                                                <option value="3">Advance</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Badak X-Treme</option>
+                                                                <option value="2">PHI</option>
+                                                                <option value="3">PHI 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Accelera</option>
+                                                                <option value="2">Accelus</option>
+                                                                <option value="3">Advance</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <select class="form-select form-select-sm" aria-label="">
+                                                                <option selected></option>
+                                                                <option value="1">Badak X-Treme</option>
+                                                                <option value="2">PHI</option>
+                                                                <option value="3">PHI 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <input class="form-control form-control-sm" type="text">
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="btn js-add-table-tr m-1" type="button">
+                                            <svg class="text-success" width="24" height="24">
+                                                <use href="/svg/common.bundle.svg#plus">
+                                                </use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Сохранить</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade show active" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+                        <div class="my-4 d-sm-flex align-items-center justify-content-between">
+                            <h5 class="m-0">Сформировать отчет по гарантийным случаям</h5>
+                            <button class="btn btn-primary text-nowrap mt-sm-0 mt-2" onClick="window.print()">Печать</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-12">
+                                <form action="#">
+                                    <label class="form-label">Организация</label>
+                                    <button type="button" class="form-control js-button c-pointer">Выберите организацию</button>
+                                    <div class="generate-report form-control mb-3 d-none js-generate-report">
+                                        <input type="text" class="ms-search form-control form-control-sm" name="" id="">
+                                        <ul class="p-0">
+                                            <li class="ms-select-all form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="selectAll">
+                                                <label class="form-check-label" for="selectAll"
+                                                    class="form-label">[Выбрать все]</label>
+                                            </li>
+                                            <li class="ms-select form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="1">
+                                                <label class="form-check-label" for="1" class="form-label">Автоопт
+                                                    ООО</label>
+                                            </li>
+                                            <li class="ms-select form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="2">
+                                                <label class="form-check-label" for="2" class="form-label">Автопроект
+                                                    ООО (Саратов)</label>
+                                            </li>
+                                            <li class="ms-select form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="3">
+                                                <label class="form-check-label" for="3" class="form-label">Автоцентр
+                                                    ООО</label>
+                                            </li>
+                                            <li class="ms-select form-check my-2">
+                                                <input class="form-check-input" type="checkbox" id="4">
+                                                <label class="form-check-label" for="4" class="form-label">ИП Платонов
+                                                    А.Ю - продажа, ИП Гришин К.Ю. - услуги</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-6">
+                                            <label class="form-label">Период</label>
+                                            <div class="d-flex align-items-center">
+                                                <span class="me-2">c:</span>
+                                                <input type="date" class="form-control form-control-sm"
+                                                    placeholder="Дата">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 ps-0">
+                                            <label class="form-label"></label>
+                                            <div class="d-flex align-items-center">
+                                                <span class="me-2">по:</span>
+                                                <input type="date" class="form-control form-control-sm"
+                                                    placeholder="Дата">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-1">
+                                            <button type="button" class="btn btn-primary w-100 me-1">Сформировать</button>
+                                            <button type="button" class="btn btn-success w-100 ms-1">Excel</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-xl-9 col-12">
+                                <div class="table-container p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        №
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Организация
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Город
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Дата
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Товар
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Вид работ
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Цена шины (розница)
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+                                                        Примечание
+                                                    </div>
+                                                </th>
+                                                <th style="min-width: 50px;">
+                                                    <div class="table-content">
+
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content">
+                                                        1
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <a href="#"> ООО "Шинный сервис"</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        Йошка-Ола
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        21.02.2024
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <div class="c-pointer d-flex align-items-center"
+                                                            data-bs-toggle="popover" data-bs-placement="bottom"
+                                                            data-bs-html="true" title=""
+                                                            data-bs-content="Марка шин: Goodride <br> Модель шин: H188 <br> Типоразмер: 195/75 R16"
+                                                            data-bs-original-title="Товар">
+                                                            <span class="text-nowrap me-2">Марка шин:</span>
+                                                            <span class="text-nowrap">Goodride</span>
+                                                            <svg class="ms-2 text-info" width="10" height="10">
+                                                                <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        Замена
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        6699
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <div class="c-pointer" data-bs-toggle="modal"
+                                                            data-bs-target="#note-documents">
+                                                            <div class="text-nowrap">Примечание:</div>
+                                                            <div class="d-flex align-items-center">
+                                                                <svg class="ms-2 text-info" width="16" height="16">
+                                                                    <use href="/svg/common.bundle.svg#treaties">
+                                                                    </use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <div class="dropdown c-pointer">
+                                                            <div class="dropdown-toggle" id="settings-table"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg width="19" height="19">
+                                                                    <use href="/svg/common.bundle.svg#dots"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <ul class="dropdown-menu" aria-labelledby="settings-table">
+                                                                <li>
+                                                                    <button type="button"
+                                                                        class="btn d-flex align-items-center dropdown-item">
+                                                                        <svg class="text-dark me-2" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#save">
+                                                                            </use>
+                                                                        </svg>Сохранить
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table-content">
+                                                        2
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <a href="#">ООО "ЗЕЛЕНАЯ ШИНА" (ИП Михасев А.М.)</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        Санкт-Петербург
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        29.02.2024
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <div class="c-pointer d-flex align-items-center"
+                                                            data-bs-toggle="popover" data-bs-placement="bottom"
+                                                            data-bs-html="true" title=""
+                                                            data-bs-content="Марка шин: Pirelli Formula <br> Модель шин: Formula Ice Friction <br> Типоразмер: 205/55R16"
+                                                            data-bs-original-title="Товар">
+                                                            <span class="text-nowrap me-2">Марка шин:</span>
+                                                            <span class="text-nowrap">Pirelli Formula</span>
+                                                            <svg class="ms-2 text-info" width="10" height="10">
+                                                                <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        Замена
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        5390
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <div class="c-pointer" data-bs-toggle="modal"
+                                                            data-bs-target="#note-documents">
+                                                            <div class="text-nowrap">Примечание:</div>
+                                                            <div class="d-flex align-items-center">
+                                                                <svg class="ms-2 text-info" width="16" height="16">
+                                                                    <use href="/svg/common.bundle.svg#treaties">
+                                                                    </use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-content">
+                                                        <div class="dropdown c-pointer">
+                                                            <div class="dropdown-toggle" id="settings-table"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg width="19" height="19">
+                                                                    <use href="/svg/common.bundle.svg#dots"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <ul class="dropdown-menu" aria-labelledby="settings-table">
+                                                                <li>
+                                                                    <button type="button"
+                                                                        class="btn d-flex align-items-center dropdown-item">
+                                                                        <svg class="text-dark me-2" width="16"
+                                                                            height="16">
+                                                                            <use href="/svg/common.bundle.svg#save">
+                                                                            </use>
+                                                                        </svg>Сохранить
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-body-secondary ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="/" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="help-desk.html" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="phones.html" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Документы -->
+    <div class="modal fade" id="order-documents" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Документы:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active p-3" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                aria-selected="true">Копии документов</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link p-3" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">Фото</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="documents-items js-images-gallery my-4">
+                                <!--  -->
+                                <div class="documents-item">
+                                    <img class="w-100 c-pointer" src="img/Акт Власов А.Н1.jpg" alt="документ">
+                                    <div class="items-fill">
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-danger" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#printer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="documents-item">
+                                    <img class="w-100 c-pointer" src="img/image-26-04-16-12-16.jpeg" alt="документ">
+                                    <div class="items-fill">
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-danger" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#printer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="documents-item">
+                                    <a href="/staff_img/sharesFiles/185894/doc1/Бусыгин_чек.pdf"
+                                        target="_blank">Бусыгин_чек.pdf</a>
+                                    <div class="items-fill">
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-danger" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#printer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end mt-3">
+                                    <div class="item-fill">
+                                        <input class="d-none" type="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                                        <label class="c-pointer d-flex align-items-center justify-content-end"
+                                            for="imageUpload">Добавить документ
+                                            <svg class="ms-2 text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#agreements"></use>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="documents-items js-images-gallery my-4">
+                                <!--  -->
+                                <div class="documents-item">
+                                    <img class="w-100" src="img/Акт Власов А.Н1.jpg" alt="документ">
+                                    <div class="items-fill">
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-danger" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#printer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="documents-item">
+                                    <img class="w-100" src="img/image-26-04-16-12-16.jpeg" alt="документ">
+                                    <div class="items-fill">
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-danger" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#printer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="documents-item">
+                                    <a href="/staff_img/sharesFiles/185894/doc1/Бусыгин_чек.pdf"
+                                        target="_blank">Бусыгин_чек.pdf</a>
+                                    <div class="items-fill">
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-danger" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#delete"></use>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="item-fill btn">
+                                            <svg class="c-pointer text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#printer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end mt-3">
+                                    <div class="item-fill">
+                                        <input class="d-none" type="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                                        <label class="c-pointer d-flex align-items-center justify-content-end"
+                                            for="imageUpload">Добавить документ
+                                            <svg class="ms-2 text-primary" width="20" height="24">
+                                                <use href="/svg/common.bundle.svg#agreements"></use>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Примечание -->
+    <div class="modal fade" id="note-documents" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Примечание:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Придумать текст</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/table.js"></script>
+    <script src="/scripts/documens.js"></script>
+</body>
+
+</html>

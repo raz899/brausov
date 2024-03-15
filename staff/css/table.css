@@ -1,15 +1,42 @@
 .table-container {
-    height       : 500px;
-    margin-bottom: 40px;
-    overflow-y   : scroll;
+    max-height    : 500px;
+    padding-bottom: 100px;
+    overflow    : auto;
+}
 
+.table th {
+    padding  : 10px;
+    min-width: 100%;
+    font-size: 14px;
+}
+
+.table td {
+    padding: 10px;
+}
+
+.table td div {
+    display  : flex;
+    flex-wrap: nowrap;
+    font-size: 14px;
+}
+.table-min tbody tr td+td {
+    border-left: 1px solid #64748B;
+}
+
+.table-content {
+    display    : flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.table td .table-content {
+    height         : 35px;
 }
 
 table {
     border-collapse: separate;
     border-spacing : 0;
     width          : 100%;
-    font-size      : 14px;
 }
 
 th {
@@ -21,7 +48,11 @@ th {
 }
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {}
+@media (max-width: 1399.98px) {
+    .table-container {
+        overflow-y: scroll;
+    }
+}
 
 /* // `xl` applies to medium devices (tablets, less than 1200px) */
 @media (max-width: 1199.98px) {}
@@ -34,9 +65,7 @@ th {
 }
 
 /* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-
-}
+@media (max-width: 767.98px) {}
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {}

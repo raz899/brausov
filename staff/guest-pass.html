@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифты -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- common.css -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/table.css">
+    <title>Гостевые пароли</title>
+</head>
+
+<body>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <!-- /script -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <a class="col" href="/">
+                        <svg width="190" height="39">
+                            <use href="/svg/common.bundle.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <ul class="col p-0 d-lg-flex d-none nav-list justify-lg-content-center">
+                        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Главная</a>
+                        </li>
+                        <li class="nav-item"><a href="help-desk.html" class="nav-link">Help desk</a></li>
+                        <li class="nav-item"><a href="phones.html" class="nav-link">Телефонный справочник</a></li>
+                    </ul>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-lg-flex d-none ps-3 dropdown text-end d-flex align-items-center">
+                            <a href="#"
+                                class="d-block link-body-emphasis text-decoration-none dropdown-toggle text-info me-2 me-lg-0"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="text-info me-2">im_evsikov</span>
+                                <svg width="32" height="33" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#foto"></use>
+                                </svg>
+                                <!-- событие по клику повернуть стрелку, добавить класс rotate -->
+                                <svg width="14" height="6" class="ms-1">
+                                    <use href="/svg/common.bundle.svg#dropdown-arrow"></use>
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li><a class="dropdown-item" href="cabinet.html">Личный кабинет</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Уведомления</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Админка</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- бургер меню-->
+                        <div class="burger__menu">
+                            <div class="js-burger__icon burger__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="burger__body d-lg-none d-flex">
+                                <div class="burger__list align-items-start">
+                                    <div class="d-flex justify-content-between w-100 mb-2 pb-2 border-bottom-info"> <svg
+                                            width="40" height="41">
+                                            <use href="/svg/common.bundle.svg#logo-mini"></use>
+                                        </svg>
+                                        <div class="d-flex align-items-center"> <span
+                                                class="text-info me-2">im_evsikov</span> <svg width="32" height="33"
+                                                class="ms-1">
+                                                <use href="/svg/common.bundle.svg#foto"></use>
+                                            </svg> </div>
+                                    </div>
+                                    <ul class="nav nav-pills d-flex flex-column">
+                                        <li class="nav-item"> <a href="/" class="nav-link py-2">Главная</a> </li>
+                                        <li class="nav-item"> <a href="help-desk.html" class="nav-link py-2">Help
+                                                desk</a> </li>
+                                        <li class="nav-item"> <a href="phones.html" class="nav-link py-2">Телефонный
+                                                справочник</a> </li>
+                                        <li class="nav-item"> <a href="cabinet.html" class="nav-link py-2">Личный
+                                                кабинет</a> </li>
+                                        <li class="nav-item"> <a href="#" class="nav-link py-2">Уведомления</a> </li>
+                                        <li class="nav-item"> <a href="#" class="nav-link py-2">Админка</a> </li>
+                                        <li class="nav-item border-top-info mt-2 w-100"> <a href="#"
+                                                class="nav-link text-danger py-2">Выход</a> </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Гостевые пароли</li>
+                    </ol>
+                </nav>
+            </div>
+            <section class="container mt-5">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active p-3" id="all-pass-tab" data-id="1" data-bs-toggle="tab"
+                            data-bs-target="#all-pass" type="button" role="tab" aria-controls="all-pass"
+                            aria-selected="true">Все пароли</button>
+                        <button class="nav-link p-3" id="add-pass-tab" data-id="2" data-bs-toggle="tab"
+                            data-bs-target="#add-pass" type="button" role="tab" aria-controls="add-pass"
+                            aria-selected="false">Добавить пароли</button>
+
+                    </div>
+                </nav>
+                <div class="my-4 d-flex flex-md-row flex-column">
+                    <input type="text"  class="form-control table-search" placeholder="Найти">
+                    <div class="d-flex flex-md-row flex-column ">
+                        <button type="button" class="btn btn-primary text-nowrap ms-md-4 ms-sm-0 mt-2 mt-md-0" data-bs-toggle="modal"
+                            data-bs-target="#issue-password">Выдать пароль</button>
+                        <button type="button" class="btn btn-primary text-nowrap ms-md-4 ms-sm-0 mt-2 mt-md-0" data-bs-toggle="modal"
+                            data-bs-target="#add-password">Добавить пароль</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="all-pass" role="tabpanel" aria-labelledby="all-pass-tab">
+
+                        <div class="table-container p-0">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="min-width:180px;">Пароль</th>
+                                        <th style="min-width:120px;">Использован</th>
+                                        <th style="min-width:160px;">Дата добавления</th>
+                                        <th style="min-width:160px;">Дата выдачи</th>
+                                        <th style="min-width:320px;">Кому выдан</th>
+                                        <th style="min-width:300px;">Кем выдан</th>
+                                        <th style="min-width:200px;">Обоснование</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-striped">
+                                    <tr class="text-success">
+                                        <td>7kJHh2UZ22S </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>28.11.2017 15:51:00 </td>
+                                        <td>Сиренко </td>
+                                        <td>Сиренко Виктор Викторович </td>
+                                        <td>Тест</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>iMEsUbiSDma3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>28.11.2017 15:51:43 </td>
+                                        <td>Сиренко </td>
+                                        <td>Сиренко Виктор Викторович </td>
+                                        <td>Тест </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>rQLCUwFNqJi3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>29.11.2017 10:51:41 </td>
+                                        <td>Головенкин </td>
+                                        <td>Сиренко Виктор Викторович </td>
+                                        <td>для совещания</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>dBPCUVUns2e </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>15.12.2017 07:37:53 </td>
+                                        <td>Ходорич Альберт </td>
+                                        <td>Кусков Максим Сергеевич </td>
+                                        <td>наш рп </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>MnyFrazANHT </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>15.12.2017 08:16:14 </td>
+                                        <td>Ефимов Денис </td>
+                                        <td>Кусков Максим Сергеевич </td>
+                                        <td>наш рп </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>KQpndqwb4Qj </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>15.12.2017 08:57:24 </td>
+                                        <td>Тарабашкин Сергей </td>
+                                        <td>Кусков Максим Сергеевич </td>
+                                        <td>наш рп </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>nAaAWMrcDKr </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>20.12.2017 12:09:53 </td>
+                                        <td>Лейзин </td>
+                                        <td>Кусков Максим Сергеевич </td>
+                                        <td>ОП Питер</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>T8zAPBNpiBK </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>20.12.2017 12:15:48 </td>
+                                        <td>Питерский ОП </td>
+                                        <td>Сиренко Виктор Викторович </td>
+                                        <td>по просьбе Головенкина</td>
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>GTTyJKZvbpB </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>21.12.2017 13:30:32 </td>
+                                        <td>представителю транспортной компании </td>
+                                        <td>Богатырёв Михаил Юрьевич </td>
+                                        <td>Рожко попросил</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>d3kEZaeXwXS </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>05.02.2018 12:42:01 </td>
+                                        <td>Кузьминой Анастасии </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для рабоч. целей на мак
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>nejpFDw5Dkr </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>06.02.2018 09:54:34 </td>
+                                        <td>кузьминой а. </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для рабоч.ей цел</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>p8mAMSkYFC4 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>07.02.2018 09:38:11 </td>
+                                        <td>кузьминой </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для раб. целей</td>
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>cMnZyQRimSy </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>08.02.2018 09:22:52 </td>
+                                        <td>кузьминой </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для раб.целей</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>5xUSsK72cBb </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>08.02.2018 15:58:53 </td>
+                                        <td>харченко </td>
+                                        <td>Сиренко Виктор Викторович </td>
+                                        <td>Тест кассы </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>n4MSe8N4BuW </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>12.02.2018 16:03:20 </td>
+                                        <td>кузьмина </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для раб.цел </td>
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>tWBbqGhhF4u </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>14.02.2018 16:37:32 </td>
+                                        <td>кузьминой </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для работы </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>PCMhcQ2wnah3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>19.02.2018 12:15:27 </td>
+                                        <td>Головенкин Андрей </td>
+                                        <td>Богатырёв Михаил Юрьевич </td>
+                                        <td>По требованию</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>jXcBSNTd5J3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>27.02.2018 15:51:40 </td>
+                                        <td>repmvbyf </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>hf, wtkb </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>qnvJxx5BjFf3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>28.02.2018 12:55:48 </td>
+                                        <td>repmvbyjq </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkz hf,jns </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>fbZR2cCVMCm </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>01.03.2018 08:35:48 </td>
+                                        <td>repmvbyf </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>yf hf, wtkb </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>qaApiyANUyp </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>02.03.2018 12:04:10 </td>
+                                        <td>repmvbyfd </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkz hf, wtktq</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>s78vmexJhUr </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>05.03.2018 15:50:33 </td>
+                                        <td>repmvbyf </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkz hf, wtktq</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>QHJBMEjG2K53 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>06.03.2018 09:31:03 </td>
+                                        <td>repmvbyjq </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkzhf, wtktq </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>2zeWKYJ6EcL </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>07.03.2018 13:21:07 </td>
+                                        <td>repmvbyf </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkz hf, wtktq</td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>cwPPuJGScwE </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>12.03.2018 12:21:36 </td>
+                                        <td>Максим </td>
+                                        <td>Кусков Максим Сергеевич </td>
+                                        <td>Надо </td>
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>fBY3t8pnDW3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>21.03.2018 19:39:42 </td>
+                                        <td>кузьминой </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>для раб </td>
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>czSEUaGBXmU </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>27.03.2018 16:38:42 </td>
+                                        <td>repmvbyjq </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkz hf,jns </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>shBuS7fuwT3 </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>04.04.2018 13:03:09 </td>
+                                        <td>кузьмина </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>работа </td>
+
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>akzyXrmPaKA </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>05.04.2018 13:11:13 </td>
+                                        <td>repmvbyf </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>lkz hf,jns </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>QPJD7duQiQv </td>
+                                        <td>Да </td>
+                                        <td>28.11.2017 12:41:17 </td>
+                                        <td>06.04.2018 11:05:32 </td>
+                                        <td>repmvbyf </td>
+                                        <td>Кузьмина Анастасия Дмитриевна </td>
+                                        <td>hf,jnf </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>PtpB24E5EZf3 </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>xQZDbhMmEzr </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>rsiGwHphDm8 </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>LBXcyn7BGJ3 </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>fcSUJGNhGQx </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>XhWhMA7syWj </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>b8DRTmkkEzW </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>qem5V4vYBWe </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>SRfZURVppUK </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>PHXftZcmWuj </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>vSUMZFSi7wd </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>XdWybrV5Khs </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>WRxKmzXyxLJ </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>W2qFsEX523X </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>GDT53pnESSc3 </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>GDx62JfmeVA </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>N6twWYAntwy </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>W3Yq2w6fxsh </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>kiNwNGJ8WKx </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>FxcvPsAZnAA </td>
+                                        <td>Нет </td>
+                                        <td>27.05.2022 14:28:15 </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="add-pass" role="tabpanel" aria-labelledby="add-pass-tab">
+                        <div class="table-container">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="min-width:200px;">Название</th>
+                                        <th style="min-width:200px;">Использован</th>
+                                        <th style="min-width:700px;">Дата добавления</th>
+                                        <th style="max-width:60px;">
+                                            <svg width="14" height="14">
+                                                <use href="/svg/common.bundle.svg#gear"></use>
+                                            </svg>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr class="text-danger">
+                                        <td>
+                                            PtpB24E5EZf3 </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            xQZDbhMmEzr </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            rsiGwHphDm8 </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            LBXcyn7BGJ3 </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            fcSUJGNhGQx </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            XhWhMA7syWj </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            b8DRTmkkEzW </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            qem5V4vYBWe </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            SRfZURVppUK </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            PHXftZcmWuj </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            vSUMZFSi7wd </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            XdWybrV5Khs </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            WRxKmzXyxLJ </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            W2qFsEX523X </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            GDT53pnESSc3 </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            GDx62JfmeVA </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            N6twWYAntwy </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            W3Yq2w6fxsh </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            kiNwNGJ8WKx </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-danger">
+                                        <td>
+                                            FxcvPsAZnAA </td>
+                                        <td>
+                                            Нет </td>
+                                        <td>
+                                            27.05.2022 14:28:15 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm p-0">
+                                                <svg class="text-dark me-2" width="14" height="14">
+                                                    <use href="/svg/common.bundle.svg#del"></use>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            v6Vyhu8BB6K </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            X5tSr8EWHcK </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            NN7C2GXajzE </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            XbdhUaFfHM43 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            7NvPWbYA75R </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            Pb5FktbMXp6 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            BLYSKmeCu3G </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            Vd4QPiTXeMU </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            jUwLHNLQKJ23 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            31.08.2018 15:56:37 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            7kJHh2UZ22S </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            iMEsUbiSDma3 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            rQLCUwFNqJi3 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            dBPCUVUns2e </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            MnyFrazANHT </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            KQpndqwb4Qj </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            nAaAWMrcDKr </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            T8zAPBNpiBK </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            GTTyJKZvbpB </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            d3kEZaeXwXS </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            nejpFDw5Dkr </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            p8mAMSkYFC4 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            cMnZyQRimSy </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            5xUSsK72cBb </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            n4MSe8N4BuW </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            tWBbqGhhF4u </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            PCMhcQ2wnah3 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            jXcBSNTd5J3 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            qnvJxx5BjFf3 </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            fbZR2cCVMCm </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="text-success">
+                                        <td>
+                                            qaApiyANUyp </td>
+                                        <td>
+                                            Да </td>
+                                        <td>
+                                            28.11.2017 12:41:17 </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-3 border-top-info">
+                <a href="/" class="">
+                    <svg width="32" height="33">
+                        <use href="/svg/common.bundle.svg#logo-mini"></use>
+                    </svg>
+                </a>
+                <p class=" mb-0 text-success ms-2">© 2015-2024 staff.4tochki.ru.</p>
+                <ul class="nav col justify-content-end d-md-flex d-none">
+                    <li class="nav-item"><a href="/" class="nav-link px-2">Главная</a></li>
+                    <li class="nav-item"><a href="help-desk.html" class="nav-link px-2">Help desk</a></li>
+                    <li class="nav-item"><a href="phones.html" class="nav-link px-2">Телефонный справочник</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- script -->
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/table.js"></script>
+    <!-- Выдать пароль -->
+    <div class="modal fade" id="issue-password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Выдать пароль</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="mb-3">
+                            <label for="issued-pass" class="form-label">Кому выдаётся</label>
+                            <input type="text" class="form-control" id="issued-pass">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Обоснование</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button type="button" class="btn btn-primary">Выдать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Добавить гостевой пароль -->
+    <div class="modal fade" id="add-password" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Гостевой пароль</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="mb-3">
+                            <label for="issued-pass" class="form-label">Добавить гостевой пропуск</label>
+                            <input type="text" class="form-control" id="issued-pass">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button type="button" class="btn btn-primary">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
