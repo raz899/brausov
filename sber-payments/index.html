@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: "SBSansDisplay";
+            src: url("./fonts/SBSansDisplay-Regular.ttf");
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: "SBSansDisplay";
+            src: url("./fonts/SBSansDisplay-SemiBold.ttf");
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: "SBSansUI";
+            src: url("./fonts/SBSansUI-Regular.ttf");
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: "SBSansUI";
+            src: url("./fonts/SBSansUI-Semibold.ttf");
+            font-weight: 500;
+        }
+        body {
+            font-family: "SBSansUI", sans-serif;
+        }
+        form {
+            display: flex;
+            font-family: "SBSansUI", sans-serif;
+            flex-direction: column;
+            max-width: 300px;
+        }
+        label input {
+            display: none;
+        }
+        label > span {
+            position: relative;
+            display: inline-flex;
+            width: 100%;
+            gap: 20px;
+            justify-content: space-between;
+            /* flex-direction: column; */
+            padding: 12px;
+            padding-left: 54px;
+            padding-right: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            box-shadow: inset 0px 0px 0px 1px #F0F0F5;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        label > span svg {
+            flex-shrink: 0;
+        }
+        label > span > span {
+            display: inline-flex;
+            flex-direction: column;
+        }
+        label > span small {
+            font-size: 12px;
+            color: #7D838A;
+        }
+        label > span a {
+            font-size: 12px;
+            color: #1358BF;
+            text-decoration: none;
+        }
+        label > span b {
+            font-weight: 500;
+            line-height: 20px;
+        }
+        label > span::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 20px;
+            margin-top: -10px;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 0px 1px #3200BF;
+            /* transition: box-shadow, 0.3s ease; */
+        }
+        label>input:checked+span {
+            box-shadow: inset 0px 0px 0px 1px #3200BF;
+        }
+        label>input:checked+span:before {
+            box-shadow: inset 0px 0px 0px 6px #3200BF;
+        }
+        button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #107F8C;
+            font-family: "SBSansUI", sans-serif;
+            border-radius: 20px;
+            border: 0;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 9px 24px;
+            width: fit-content;
+            cursor: pointer;
+            min-height: 40px;
+        }
+        button:hover {
+            background-color: #21A19A;
+        }
+        button:active {
+            background-color: #005E7F;
+        }
+    </style>
+</head>
+<body>
+    <h4>Способ оплаты</h4>
+    <form action="#">
+        <label>
+            <input type="radio" name="options" id="option1" checked>
+            <span>
+                <span>
+                    <b>Безналичный расчет</b>
+                    <small><a href="#">Печать счета</a> <br>Предоплата</small>
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z" />
+                </svg>
+            </span>
+        </label>
+        <label>
+            <input type="radio" name="options" id="sber">
+            <span>
+                <span>
+                    <b>В рассрочку, 30 дней под 0%</b>
+                    <b>2,45% в месяц с 31-го дня, до 10 млн</b>
+                    <small>От ПАО Сбербанк</small>
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_6_7080)">
+                        <path
+                            d="M2.30958 10.0001C2.30958 9.87108 2.31289 9.74336 2.3195 9.61564L0.0125738 9.50049C0.00463255 9.66593 0 9.8327 0 10.0001C0 12.7617 1.11905 15.2619 2.92899 17.0711L4.56489 15.4352C3.17186 14.0429 2.30958 12.1204 2.30958 10.0001Z"
+                            fill="url(#paint0_linear_6_7080)" />
+                        <path
+                            d="M9.99923 2.31024C10.1283 2.31024 10.256 2.31487 10.3837 2.32083L10.4989 0.0125738C10.3334 0.00463255 10.1667 0 9.99923 0C7.23767 0 4.7375 1.11905 2.92822 2.92899L4.56412 4.56488C5.95648 3.17252 7.87958 2.31024 9.99923 2.31024Z"
+                            fill="url(#paint1_linear_6_7080)" />
+                        <path
+                            d="M9.99915 17.6904C9.87011 17.6904 9.74238 17.6871 9.61466 17.6804L9.49951 19.9874C9.66495 19.9953 9.83172 19.9999 9.99915 19.9999C12.7607 19.9999 15.2609 18.8809 17.0702 17.071L15.4343 15.4351C14.0419 16.8274 12.1195 17.6904 9.99915 17.6904Z"
+                            fill="url(#paint2_linear_6_7080)" />
+                        <path
+                            d="M14.3348 3.65231L16.2797 2.21891C14.5631 0.831844 12.3786 0 9.99951 0V2.31024C11.6069 2.31024 13.0999 2.8059 14.3348 3.65231Z"
+                            fill="url(#paint3_linear_6_7080)" />
+                        <path
+                            d="M19.9993 9.99991C19.9993 9.38843 19.9443 8.78953 19.8391 8.2085L17.6864 9.79476C17.6884 9.86292 17.689 9.93108 17.689 9.99991C17.689 12.2579 16.7109 14.2915 15.1558 15.6997L16.7076 17.415C18.7293 15.5859 19.9993 12.9415 19.9993 9.99991Z"
+                            fill="#21A038" />
+                        <path
+                            d="M9.99911 17.6905C7.74116 17.6905 5.70754 16.7124 4.29929 15.1572L2.58398 16.7091C4.41378 18.7301 7.05821 20.0001 9.99911 20.0001V17.6905Z"
+                            fill="url(#paint4_linear_6_7080)" />
+                        <path
+                            d="M4.84283 4.30027L3.29098 2.58496C1.26994 4.41475 0 7.05919 0 10.0001H2.31024C2.30958 7.74213 3.28767 5.70851 4.84283 4.30027Z"
+                            fill="url(#paint5_linear_6_7080)" />
+                        <path
+                            d="M17.9128 3.88672C18.3853 4.49687 18.789 5.16327 19.1113 5.87467L9.99937 12.5897L6.19287 10.2033V7.33255L9.99937 9.7189L17.9128 3.88672Z"
+                            fill="#21A038" />
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_6_7080" x1="3.3959" y1="16.7823" x2="0.871749" y2="9.48607"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.1444" stop-color="#F2E913" />
+                            <stop offset="0.3037" stop-color="#E7E518" />
+                            <stop offset="0.5823" stop-color="#CADB26" />
+                            <stop offset="0.891" stop-color="#A3CD39" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_6_7080" x1="3.58813" y1="3.33813" x2="10.0893" y2="0.860675"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0592" stop-color="#0FA8E0" />
+                            <stop offset="0.5385" stop-color="#0099F9" />
+                            <stop offset="0.9234" stop-color="#0291EB" />
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_6_7080" x1="9.34732" y1="18.6065" x2="16.699" y2="16.9449"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.1226" stop-color="#A3CD39" />
+                            <stop offset="0.2846" stop-color="#86C339" />
+                            <stop offset="0.8693" stop-color="#21A038" />
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_6_7080" x1="9.51625" y1="0.774456" x2="15.8018" y2="2.71382"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0566" stop-color="#0291EB" />
+                            <stop offset="0.79" stop-color="#0C8ACB" />
+                        </linearGradient>
+                        <linearGradient id="paint4_linear_6_7080" x1="3.16328" y1="16.4283" x2="10.0051" y2="18.9846"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.1324" stop-color="#F2E913" />
+                            <stop offset="0.2977" stop-color="#EBE716" />
+                            <stop offset="0.5306" stop-color="#D9E01F" />
+                            <stop offset="0.8023" stop-color="#BBD62D" />
+                            <stop offset="0.9829" stop-color="#A3CD39" />
+                        </linearGradient>
+                        <linearGradient id="paint5_linear_6_7080" x1="0.859917" y1="10.2803" x2="3.60627" y2="3.13601"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0698" stop-color="#A3CD39" />
+                            <stop offset="0.2599" stop-color="#81C55F" />
+                            <stop offset="0.9216" stop-color="#0FA8E0" />
+                        </linearGradient>
+                        <clipPath id="clip0_6_7080">
+                            <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </span>
+        </label>
+        <label>
+            <input type="radio" name="options" id="sber2">
+            <span>
+                <span>
+                    <b>В рассрочку, 30 дней под 0%</b>
+                    <small><a href="#">Войдите по СберБизнес ID</a>, чтобы увидеть условия и оплатить покупку</small>
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_6_7080)">
+                        <path
+                            d="M2.30958 10.0001C2.30958 9.87108 2.31289 9.74336 2.3195 9.61564L0.0125738 9.50049C0.00463255 9.66593 0 9.8327 0 10.0001C0 12.7617 1.11905 15.2619 2.92899 17.0711L4.56489 15.4352C3.17186 14.0429 2.30958 12.1204 2.30958 10.0001Z"
+                            fill="url(#paint0_linear_6_7080)" />
+                        <path
+                            d="M9.99923 2.31024C10.1283 2.31024 10.256 2.31487 10.3837 2.32083L10.4989 0.0125738C10.3334 0.00463255 10.1667 0 9.99923 0C7.23767 0 4.7375 1.11905 2.92822 2.92899L4.56412 4.56488C5.95648 3.17252 7.87958 2.31024 9.99923 2.31024Z"
+                            fill="url(#paint1_linear_6_7080)" />
+                        <path
+                            d="M9.99915 17.6904C9.87011 17.6904 9.74238 17.6871 9.61466 17.6804L9.49951 19.9874C9.66495 19.9953 9.83172 19.9999 9.99915 19.9999C12.7607 19.9999 15.2609 18.8809 17.0702 17.071L15.4343 15.4351C14.0419 16.8274 12.1195 17.6904 9.99915 17.6904Z"
+                            fill="url(#paint2_linear_6_7080)" />
+                        <path
+                            d="M14.3348 3.65231L16.2797 2.21891C14.5631 0.831844 12.3786 0 9.99951 0V2.31024C11.6069 2.31024 13.0999 2.8059 14.3348 3.65231Z"
+                            fill="url(#paint3_linear_6_7080)" />
+                        <path
+                            d="M19.9993 9.99991C19.9993 9.38843 19.9443 8.78953 19.8391 8.2085L17.6864 9.79476C17.6884 9.86292 17.689 9.93108 17.689 9.99991C17.689 12.2579 16.7109 14.2915 15.1558 15.6997L16.7076 17.415C18.7293 15.5859 19.9993 12.9415 19.9993 9.99991Z"
+                            fill="#21A038" />
+                        <path
+                            d="M9.99911 17.6905C7.74116 17.6905 5.70754 16.7124 4.29929 15.1572L2.58398 16.7091C4.41378 18.7301 7.05821 20.0001 9.99911 20.0001V17.6905Z"
+                            fill="url(#paint4_linear_6_7080)" />
+                        <path
+                            d="M4.84283 4.30027L3.29098 2.58496C1.26994 4.41475 0 7.05919 0 10.0001H2.31024C2.30958 7.74213 3.28767 5.70851 4.84283 4.30027Z"
+                            fill="url(#paint5_linear_6_7080)" />
+                        <path
+                            d="M17.9128 3.88672C18.3853 4.49687 18.789 5.16327 19.1113 5.87467L9.99937 12.5897L6.19287 10.2033V7.33255L9.99937 9.7189L17.9128 3.88672Z"
+                            fill="#21A038" />
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_6_7080" x1="3.3959" y1="16.7823" x2="0.871749" y2="9.48607"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.1444" stop-color="#F2E913" />
+                            <stop offset="0.3037" stop-color="#E7E518" />
+                            <stop offset="0.5823" stop-color="#CADB26" />
+                            <stop offset="0.891" stop-color="#A3CD39" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_6_7080" x1="3.58813" y1="3.33813" x2="10.0893" y2="0.860675"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0592" stop-color="#0FA8E0" />
+                            <stop offset="0.5385" stop-color="#0099F9" />
+                            <stop offset="0.9234" stop-color="#0291EB" />
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_6_7080" x1="9.34732" y1="18.6065" x2="16.699" y2="16.9449"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.1226" stop-color="#A3CD39" />
+                            <stop offset="0.2846" stop-color="#86C339" />
+                            <stop offset="0.8693" stop-color="#21A038" />
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_6_7080" x1="9.51625" y1="0.774456" x2="15.8018" y2="2.71382"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0566" stop-color="#0291EB" />
+                            <stop offset="0.79" stop-color="#0C8ACB" />
+                        </linearGradient>
+                        <linearGradient id="paint4_linear_6_7080" x1="3.16328" y1="16.4283" x2="10.0051" y2="18.9846"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.1324" stop-color="#F2E913" />
+                            <stop offset="0.2977" stop-color="#EBE716" />
+                            <stop offset="0.5306" stop-color="#D9E01F" />
+                            <stop offset="0.8023" stop-color="#BBD62D" />
+                            <stop offset="0.9829" stop-color="#A3CD39" />
+                        </linearGradient>
+                        <linearGradient id="paint5_linear_6_7080" x1="0.859917" y1="10.2803" x2="3.60627" y2="3.13601"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0698" stop-color="#A3CD39" />
+                            <stop offset="0.2599" stop-color="#81C55F" />
+                            <stop offset="0.9216" stop-color="#0FA8E0" />
+                        </linearGradient>
+                        <clipPath id="clip0_6_7080">
+                            <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </span>
+        </label>
+        <label>
+            <input type="radio" name="options" id="option3" onchange="console.log(this.checked)">
+            <span>
+                <span>
+                    <b>On-line оплата</b>
+                    <small>Предоплата</small>
+                </span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.9165 4.35327L4.3385 8.68244V11.3231L1.91934 15.6438L1.9165 4.35327Z" fill="#5B57A2" />
+                    <path d="M11.2158 7.10725L13.4853 5.71625L18.13 5.71191L11.2158 9.94758V7.10725Z" fill="#D90751" />
+                    <path d="M11.2029 4.32783L11.2158 10.0595L8.78809 8.56783V0L11.2029 4.32783Z" fill="#FAB718" />
+                    <path d="M18.1299 5.71183L13.4851 5.71617L11.2029 4.32783L8.78809 0L18.1299 5.71183Z" fill="#ED6F26" />
+                    <path d="M11.2158 15.6678V12.8869L8.78809 11.4236L8.78942 19.9999L11.2158 15.6678Z" fill="#63B22F" />
+                    <path d="M13.4798 14.2894L4.33834 8.68244L1.9165 4.35327L18.1203 14.2838L13.4798 14.2894Z" fill="#1487C9" />
+                    <path d="M8.79004 20.0001L11.216 15.6679L13.4799 14.2896L18.1204 14.2839L8.79004 20.0001Z" fill="#017F36" />
+                    <path d="M1.91943 15.6439L8.80827 11.4239L6.49227 10.0029L4.3386 11.3233L1.91943 15.6439Z" fill="#984995" />
+                </svg>
+            </span>
+        </label>
+        <label>
+            <input type="radio" name="options" id="option4">
+            <span>
+                <span>
+                    <b>По QR-коду</b>
+                    <small>При получении</small>
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+                    <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z"/>
+                    <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z"/>
+                    <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z"/>
+                    <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z"/>
+                    <path d="M12 9h2V8h-2z"/>
+                </svg>
+            </span>
+        </label>
+        <button>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" class="icon-sber" style="display: none;">
+                <path d="M10.9999 10.6906L6.81274 8.06562V11.2235L10.9999 13.8484L21.023 6.46196C20.6685 5.68014 20.2244 4.9471 19.7047 4.27521L10.9999 10.6906Z" fill="white"/>
+                <path d="M22 11C22 10.3274 21.9396 9.66859 21.8238 9.02945L19.4558 10.7743C19.458 10.8493 19.4587 10.9243 19.4587 11C19.4587 15.664 15.664 19.4587 11 19.4587C6.33605 19.4587 2.54126 15.664 2.54126 11C2.54126 6.33605 6.33605 2.54126 11 2.54126C12.7675 2.54126 14.4104 3.08649 15.7688 4.01754L17.9082 2.4408C16.0199 0.915029 13.617 0 11 0C4.92456 0 0 4.92456 0 11C0 17.0754 4.92456 22 11 22C17.0754 22 22 17.0754 22 11Z" fill="white"/>
+            </svg>
+            Оплатить покупку
+        </button>
+    </form>
+    <script>
+        const $iconSber = document.querySelector('.icon-sber');
+        const $$inputs = document.querySelectorAll('form input');
+        $$inputs.forEach((el) => {
+            el.addEventListener('change', function(){
+                $iconSber.style.display = el.id.includes('sber') ? 'block' : 'none';
+            });
+        })
+    </script>
+</body>
+</html>
