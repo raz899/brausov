@@ -140,14 +140,14 @@
             <p></p>
             <p>Нажми пробел, чтобы начать заново</p>
         </div>
-        <div class="game-win">
-            <h2>МОЛОДЕЦ!</h2>
-            <p>Вот тебе подарок!</p>
-            <p>Нажми пробел, чтобы начать заново</p>
-        </div>
         <div class="game-ready">
             <div id="start-button">СТАРТ</div>
             <div></div>
+        </div>
+        <div class="game-win">
+            <h2>МОЛОДЕЦ!</h2>
+            <p>Вот тебе <a href="/" target="_blank">подарок</a>!</p>
+            <p>Нажми пробел, чтобы начать заново</p>
         </div>
     </div>
     <script>
@@ -351,7 +351,9 @@
                             _this.onAction();
                     });
                     document.addEventListener('click', function (e) {
-                        _this.onAction();
+                        if (_this.state != 'win') {
+                            _this.onAction();
+                        }
                     });
                     document.addEventListener('touchstart', function (e) {
                         e.preventDefault();
@@ -444,11 +446,10 @@
                     if (lastBlock && lastBlock.state == lastBlock.STATES.MISSED) {
                         return this.endGame();
                     }
-                    console.log(this.blocks.length - 1);
+                    this.scoreContainer.innerHTML = String(this.blocks.length - 1);
                     if (this.blocks.length - 1 === 50) {
                         this.updateState(this.STATES.WIN);
                     } else {
-                        this.scoreContainer.innerHTML = String(this.blocks.length - 1);
                         var newKidOnTheBlock = new Block(lastBlock);
                         this.newBlocks.add(newKidOnTheBlock.mesh);
                         this.blocks.push(newKidOnTheBlock);
