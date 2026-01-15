@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="width: 1440px; background: linear-gradient(90deg, rgba(0, 0, 0, 1) 27%, rgba(23, 60, 79, 1) 100%);">
+    <style>
+        .formats-section {
+    color: #fff;
+}
+
+.tariff-card {
+    background: linear-gradient(-45deg, rgba(0,0,0,1) 27%, rgba(23,60,79,1) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 20px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+.tariff-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.tariff-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
+}
+
+.tariff-tag {
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.tariff-img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Внутренние колонки карточки */
+.tariff-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 16px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.tariff-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.85;
+    margin-bottom: 6px;
+}
+
+.tariff-col p {
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+/* Комиссия и обеспечение */
+.tariff-meta {
+    margin-top: auto;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.16);
+    padding-top: 10px;
+}
+
+.tariff-meta p {
+    margin: 0;
+}
+
+/* Сноска */
+.tariff-footnote {
+    font-size: 12px;
+    opacity: 0.75;
+}
+    </style>
+    <section class="formats-section py-5">
+        <div class="container">
+            <h2 class="mb-4 text-white">Выберите формат сотрудничества</h2>
+    
+            <div class="row g-4">
+    
+                <!-- ФЛАГМАН -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="tariff-card">
+                        <div class="tariff-header">
+                            <div>
+                                <h3 class="tariff-title">Флагман</h3>
+                                <p class="tariff-tag">Максимальный формат для тех, кто готов к объёму</p>
+                            </div>
+                            <img src="img/format-flagman.png" alt="Флагман" class="tariff-img">
+                        </div>
+    
+                        <div class="tariff-columns">
+                            <!-- Доход -->
+                            <div class="tariff-col">
+                                <h4>Доход</h4>
+                                <p><strong>от выдачи товара:</strong><br>от 2 до 7% ¹</p>
+                                <p><strong>от оказания услуг:</strong><br>по вашему тарифу</p>
+                            </div>
+    
+                            <!-- Требования -->
+                            <div class="tariff-col">
+                                <h4>Требования</h4>
+                                <p><strong>Свободная площадь хранения:</strong><br>от 100 м²</p>
+                                <p><strong>Шины:</strong><br>легковые, грузовые, специальные</p>
+                                <p><strong>Диски:</strong> да</p>
+                                <p><strong>Шиномонтаж:</strong> да</p>
+                                <p><strong>Шинный отель:</strong> опционально</p>
+                                <p><strong>Услуга ответ хранения:</strong> да</p>
+                                <p>Приветствуем наличие собственного транспорта для доставки в регионе присутствия.</p>
+                            </div>
+    
+                            <!-- Поддержка -->
+                            <div class="tariff-col">
+                                <h4>Поддержка</h4>
+                                <p><strong>Оформление:</strong><br>панель-кронштейн, плакат, наклейка на дверь</p>
+                                <p><strong>Платформа K1Pro:</strong><br>бесплатно</p>
+                                <p><strong>Хранение шин ваших клиентов у нас:</strong><br>возможно</p>
+                            </div>
+                        </div>
+    
+                        <div class="tariff-meta">
+                            <p><strong>Комиссия:</strong> 2% от стоимости услуг в заказе</p>
+                            <p><strong>Обеспечительный платёж:</strong> 25&nbsp;000&nbsp;₽</p>
+                        </div>
+    
+                        <button type="button" class="btn btn-primary w-100 mt-2">
+                            Оставить заявку
+                        </button>
+                    </article>
+                </div>
+    
+                <!-- БАЗИС -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="tariff-card">
+                        <div class="tariff-header">
+                            <div>
+                                <h3 class="tariff-title">Базис</h3>
+                                <p class="tariff-tag">Стартовый формат для действующего шиномонтажа</p>
+                            </div>
+                            <img src="img/format-basis.png" alt="Базис" class="tariff-img">
+                        </div>
+    
+                        <div class="tariff-columns">
+                            <!-- Доход -->
+                            <div class="tariff-col">
+                                <h4>Доход</h4>
+                                <p><strong>от оказания услуг:</strong><br>по вашему тарифу</p>
+                            </div>
+    
+                            <!-- Требования -->
+                            <div class="tariff-col">
+                                <h4>Требования</h4>
+                                <p><strong>Свободная площадь хранения:</strong><br>-</p>
+                                <p><strong>Шины:</strong><br>легковые</p>
+                                <p><strong>Диски:</strong> -</p>
+                                <p><strong>Шиномонтаж:</strong> да</p>
+                                <p><strong>Шинный отель:</strong> -</p>
+                            </div>
+    
+                            <!-- Поддержка -->
+                            <div class="tariff-col">
+                                <h4>Поддержка</h4>
+                                <p><strong>Платформа K1Pro:</strong><br>бесплатно</p>
+                                <p><strong>Комиссия платформы:</strong><br>2% от стоимости услуг в заказе</p>
+                            </div>
+                        </div>
+    
+                        <div class="tariff-meta">
+                            <p><strong>Обеспечительный платёж:</strong> не нужен</p>
+                        </div>
+    
+                        <button type="button" class="btn btn-primary w-100 mt-2">
+                            Оставить заявку
+                        </button>
+                    </article>
+                </div>
+    
+                <!-- ЭКСПЕРТ -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="tariff-card">
+                        <div class="tariff-header">
+                            <div>
+                                <h3 class="tariff-title">Эксперт</h3>
+                                <p class="tariff-tag">Формат для тех, кто хочет расти в объёме и сервисе</p>
+                            </div>
+                            <img src="img/format-expert.png" alt="Эксперт" class="tariff-img">
+                        </div>
+    
+                        <div class="tariff-columns">
+                            <!-- Доход -->
+                            <div class="tariff-col">
+                                <h4>Доход</h4>
+                                <p><strong>от выдачи товара:</strong><br>от 2 до 5% ¹</p>
+                                <p><strong>от оказания услуг:</strong><br>по вашему тарифу</p>
+                            </div>
+    
+                            <!-- Требования -->
+                            <div class="tariff-col">
+                                <h4>Требования</h4>
+                                <p><strong>Свободная площадь хранения:</strong><br>от 18 м²</p>
+                                <p><strong>Шины:</strong><br>легковые</p>
+                                <p><strong>Диски:</strong> да</p>
+                                <p><strong>Шиномонтаж:</strong> да</p>
+                                <p><strong>Шинный отель:</strong> опционально</p>
+                            </div>
+    
+                            <!-- Поддержка -->
+                            <div class="tariff-col">
+                                <h4>Поддержка</h4>
+                                <p><strong>Оформление:</strong><br>панель-кронштейн, плакат, наклейка на дверь</p>
+                                <p><strong>Платформа K1Pro:</strong><br>бесплатно</p>
+                                <p><strong>Хранение шин ваших клиентов у нас:</strong><br>возможно</p>
+                            </div>
+                        </div>
+    
+                        <div class="tariff-meta">
+                            <p><strong>Комиссия:</strong> 2% от стоимости услуг в заказе</p>
+                            <p><strong>Обеспечительный платёж:</strong> 25&nbsp;000&nbsp;₽</p>
+                        </div>
+    
+                        <button type="button" class="btn btn-primary w-100 mt-2">
+                            Оставить заявку
+                        </button>
+                    </article>
+                </div>
+    
+            </div>
+    
+            <!-- Сноска -->
+            <p class="tariff-footnote mt-4">
+                ¹ % от стоимости каждого товара в заказе, но не более _____ руб/шт.
+                Зависит от категории товара и местоположения шинного центра.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
