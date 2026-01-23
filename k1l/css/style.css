@@ -404,7 +404,7 @@ transition: 0.2s ease;
 .evolution__img-position {
     position: absolute;
     top     : -160px;
-    left    : -75px;
+    left    : -190px;
     z-index : -1;
 }
 
@@ -480,34 +480,28 @@ transition: 0.2s ease;
 }
 .cart-item-svg .distribution {
     top  : -80px;
-    right: -6px;
-    transform: translate(24%, 0);
+    right: -104px;
 }
 .cart-item-svg .services {
     top      : -74px;
-    right    : -30px;
-    transform: translate(24%, 0);
+    right    : -129px;
 }
 .cart-item-svg .about {
     top      : -80px;
-    right    : -64px;
-    transform: translate(24%, 0);
+    right    : -158px;
 }
 .cart-item-svg .customers {
     top      : -90px;
-    right    : 52px;
-    transform: translate(24%, 0);
+    right    : -28px;
 }
  .cart-item-svg .forecast {
     top      : -99px;
-    right    : -46px;
-    transform: translate(24%, 0);
+    right    : -148px;
 }
 
 .cart-item-svg .management {
     top      : -82px;
-    right    : -68px;
-    transform: translate(24%, 0);
+    right    : -176px;
 }
 
 .card-item .card-item-img {
@@ -935,60 +929,60 @@ transition: 0.2s ease;
     }
     .cart-item-svg .distribution {
         top  : -75px;
-        right: 30px;
+        right: -80px;
     }
 
     .cart-item-svg .services {
         top  : -75px;
-        right: 32px;
+        right: -80px;
     }
 
     .cart-item-svg .about {
         top  : -75px;
-        right: -32px;
+        right: -105px;
     }
 
     .cart-item-svg .customers {
         top  : -80px;
-        right: 32px;
+        right: -45px;
     }
 
     .cart-item-svg .forecast {
         top  : -75px;
-        right: -32px;
+        right: -120px;
     }
 
     .cart-item-svg .management {
         top  : -75px;
-        right: 50px;
+        right: -140px;
     }
+}
 }
 
 /* lg */
 @media (max-width: 991.98px) {
     .cart-item-svg .distribution {
-       right: 0;
+       right: -100px;
     }
 
     .cart-item-svg .services {
-       right: -15px;
+       right: -110px;
     }
 
     .cart-item-svg .about {
-       right: -40px;
+       right: -135px;
     }
 
     .cart-item-svg .customers {
-       right: 40px;
+       right: -40px;
     }
 
     .cart-item-svg .forecast {
-        top : -80px;
-        right : -80px;
+        right : -170px;
     }
 
     .cart-item-svg .management {
-        right: -80px;
+        right: -185px;
     }
 }
 
@@ -1042,31 +1036,31 @@ transition: 0.2s ease;
     }
     .cart-item-svg .distribution {
         top      : -70px;
-        right    : -50px;
+        right    : -120px;
     }
 
     .cart-item-svg .services {
-        top      : -74px;
-        right    : -46px;
+        top      : -70px;
+        right    : -113px;
     }
 
     .cart-item-svg .about {
-        top      : -80px;
-        right    : -64px;
+        top      : -70px;
+        right    : -145px;
     }
 
     .cart-item-svg .customers {
         top      : -80px;
-        right    : 57px;
+        right    : -50px;
     }
 
     .cart-item-svg .forecast {
         top      : -74px;
-        right    : -70px;
+        right    : -170px;
     }
 
     .cart-item-svg .management {
         top      : -75px;
-        right    : -80px;
+        right    : -170px;
     }
 }
