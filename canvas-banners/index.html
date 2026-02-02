@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas banners</title>
+</head>
+<style>
+    body {
+        background-color: #050622;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 24px;
+    }
+    .banner {
+        width: 825px;
+        height: 140px;
+        background-color: var(--banner-bg, #2a0707);
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+    .banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: var(--banner-image, none);
+        background-size: cover;
+        background-position: var(--banner-position, center);
+        opacity: 0;
+        animation: bannerFadeIn 1.8s ease-out forwards;
+    }
+    .banner::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(3, 3, 6, 0.65) 0%, rgba(3, 3, 6, 0) 42%,
+                    rgba(3, 3, 6, 0) 58%, rgba(3, 3, 6, 0.65) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    .banner .logo {
+        position: absolute;
+        left: 24px;
+        top: 50%;
+        width: 230px;
+        height: auto;
+        transform: translateY(-50%) translateX(-6px);
+        opacity: 0;
+        animation: logoFadeIn 1.4s ease-out 0.4s forwards;
+        z-index: 2;
+        filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.85));
+    }
+    .banner .text-block {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%) translateX(6px);
+        opacity: 0;
+        animation: titleFadeIn 1.4s ease-out 0.5s forwards;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+    }
+    .banner .title {
+        font-family: "TT Interphases", "Inter", "Helvetica Neue", Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        color: #f7e7d7;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.65);
+        white-space: nowrap;
+    }
+    .banner .subtitle {
+        font-family: "TT Interphases", "Inter", "Helvetica Neue", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #c9d7d6;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
+        white-space: nowrap;
+    }
+    .banner .cta {
+        font-family: "TT Interphases", "Inter", "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: var(--cta-bg, #564fff);
+        box-shadow: 0 6px 16px var(--cta-shadow, rgba(86, 79, 255, 0.35)),
+                    inset 0 0 8px var(--cta-glow, rgba(200, 200, 255, 0.25));
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        margin-top: 10px;
+    }
+    .banner .cta .old-price {
+        opacity: 0.7;
+        text-decoration: line-through;
+        margin-right: 6px;
+        font-weight: 500;
+    }
+    .banner .cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px var(--cta-shadow-hover, rgba(86, 79, 255, 0.5)),
+                    inset 0 0 10px var(--cta-glow-hover, rgba(210, 210, 255, 0.35));
+    }
+    .banner canvas {
+        position: relative;
+        z-index: 1;
+    }
+    .coins-layer {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+    .coins-layer canvas {
+        filter: drop-shadow(0 0 6px rgba(255, 214, 140, 0.85))
+                drop-shadow(0 0 12px rgba(255, 185, 90, 0.65));
+        animation: coinShimmer 2.2s ease-in-out infinite;
+    }
+
+    @keyframes bannerFadeIn {
+        to { opacity: 1; }
+    }
+    @keyframes logoFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+    }
+    @keyframes titleFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+    }
+    @keyframes coinShimmer {
+        0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 214, 140, 0.7)) drop-shadow(0 0 12px rgba(255, 185, 90, 0.5)); }
+        50% { filter: drop-shadow(0 0 10px rgba(255, 230, 170, 0.95)) drop-shadow(0 0 18px rgba(255, 200, 120, 0.75)); }
+    }
+</style>
+<body>
+    <div
+        id="particles-js"
+        class="banner"
+        style="--banner-image: url('./diablo.jpeg'); --banner-bg: #2a0707; --cta-bg: #b01414; --cta-shadow: rgba(176, 20, 20, 0.4); --cta-shadow-hover: rgba(176, 20, 20, 0.55); --cta-glow: rgba(255, 120, 120, 0.25); --cta-glow-hover: rgba(255, 160, 140, 0.35);"
+        aria-label="Fire spark particles canvas"
+    >
+        <img class="logo" src="./logo.svg" alt="Logo">
+        <div class="text-block">
+            <div class="title">Diablo IV</div>
+            <div class="subtitle">Power Leveling</div>
+            <a class="cta" href="https://overgear.com/games/diablo-4">Buy now · <span class="old-price">$17.99</span>$14.99</a>
+        </div>
+    </div>
+    <div
+        id="particles-arc"
+        class="banner"
+        style="--banner-image: url('./arc.jpg'); --banner-bg: #0b141f; --banner-position: center -60px; --cta-bg: #249657; --cta-shadow: rgba(36, 150, 87, 0.4); --cta-shadow-hover: rgba(36, 150, 87, 0.55); --cta-glow: rgba(140, 255, 190, 0.25); --cta-glow-hover: rgba(180, 255, 210, 0.35);"
+        aria-label="Fire spark particles canvas"
+    >
+        <img class="logo" src="./logo.svg" alt="Logo">
+        <div class="text-block">
+            <div class="title">Arc Raiders</div>
+            <div class="subtitle">Weapon Blueprint</div>
+            <a class="cta" href="https://overgear.com/games/arc-raiders">Buy now · <span class="old-price">$5.99</span>$4.99</a>
+        </div>
+    </div>
+    <div
+        id="banner-wow"
+        class="banner"
+        style="--banner-image: url('./wow.jpg'); --banner-bg: #0c0f14; --banner-position: center -50px;"
+        aria-label="Fire spark particles canvas"
+    >
+        <div id="particles-wow-large" class="coins-layer"></div>
+        <div id="particles-wow-small" class="coins-layer"></div>
+        <img class="logo" src="./logo.svg" alt="Logo">
+        <div class="text-block">
+            <div class="title">World of warcraft</div>
+            <div class="subtitle">Gold</div>
+            <a class="cta" href="https://overgear.com/games/world-of-warcraft">Buy now · <span class="old-price">$0.55</span>$0.50</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        const particlesConfig = {
+            particles: {
+                number: { value: 120, density: { enable: true, value_area: 500 } },
+                color: { value: ["#fff8f0", "#ffe6cc", "#ffb066", "#ff6a00"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.7,
+                    random: false,
+                    anim: { enable: true, speed: 1.2, opacity_min: 0.1, sync: false }
+                },
+                size: {
+                    value: 2.6,
+                    random: true,
+                    anim: { enable: true, speed: 4, size_min: 0.6, sync: false }
+                },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 2.4,
+                    direction: "top",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: false },
+                    onclick: { enable: false },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        };
+        const arcParticlesConfig = {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 520 } },
+                color: { value: ["#549b97", "#25d073", "#f0060d"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.7,
+                    random: true,
+                    anim: { enable: true, speed: 1.1, opacity_min: 0.15, sync: false }
+                },
+                size: {
+                    value: 8.8,
+                    random: true,
+                    anim: { enable: true, speed: 3.2, size_min: 2.4, sync: false }
+                },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 2.1,
+                    direction: "right",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: false },
+                    onclick: { enable: false },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        };
+        const wowParticlesLargeConfig = {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 520 } },
+                color: { value: ["#ffe9a8", "#ffd16a", "#f2b74d"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 1,
+                    random: false,
+                    anim: { enable: false, speed: 0, opacity_min: 1, sync: false }
+                },
+                size: {
+                    value: 12,
+                    random: true,
+                    anim: { enable: false, speed: 0, size_min: 9, sync: false }
+                },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 6.2,
+                    direction: "bottom",
+                    random: false,
+                    straight: true,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: false },
+                    onclick: { enable: false },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        };
+        const wowParticlesSmallConfig = {
+            particles: {
+                number: { value: 55, density: { enable: true, value_area: 520 } },
+                color: { value: ["#ffe9a8", "#ffd16a", "#f2b74d"] },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 1,
+                    random: false,
+                    anim: { enable: false, speed: 0, opacity_min: 1, sync: false }
+                },
+                size: {
+                    value: 7.2,
+                    random: true,
+                    anim: { enable: false, speed: 0, size_min: 4.2, sync: false }
+                },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 8,
+                    direction: "bottom",
+                    random: false,
+                    straight: true,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: false },
+                    onclick: { enable: false },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        };
+
+        particlesJS("particles-js", particlesConfig);
+        particlesJS("particles-arc", arcParticlesConfig);
+        particlesJS("particles-wow-large", wowParticlesLargeConfig);
+        particlesJS("particles-wow-small", wowParticlesSmallConfig);
+    </script>
+</body>
+</html>
