@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Banner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./ads-banner.css">
+</head>
+<body>
+    <label class="particles-toggle">
+        <input type="checkbox" id="particlesToggle" checked>
+        <span>Particles</span>
+    </label>
+    <div class="banner">
+        <img class="banner__bg" src="./assets/bg.png" alt="">
+        <div id="particles-js" aria-hidden="true"></div>
+
+        <div class="ui">
+            <div class="headline">TBC POWER<br>LEVELING</div>
+            <div class="subline">Hand-made leveling&#10;24/7 Human Support</div>
+
+            <a class="cta" href="https://overgear.com/games/wow/the-war-within-leveling?quantity=1&platform=eu&boost-method=piloted&Leveling%20range%5Bstart%5D=70&Leveling%20range%5Bend%5D=80" target="_blank" rel="noopener">
+                <svg class="cta__icon cta__icon--left" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <g style="mix-blend-mode:soft-light" opacity="1">
+                        <path d="M5.62387 1.74419C5.42469 1.94343 5.31279 2.21364 5.31279 2.49537C5.31279 2.77711 5.42469 3.04731 5.62387 3.24656L10.8832 8.50593L5.62387 13.7653C5.43033 13.9657 5.32324 14.2341 5.32566 14.5127C5.32808 14.7912 5.43982 15.0577 5.63682 15.2547C5.83381 15.4517 6.1003 15.5635 6.37888 15.5659C6.65747 15.5683 6.92586 15.4612 7.12625 15.2677L13.1368 9.25712C13.336 9.05787 13.4479 8.78767 13.4479 8.50593C13.4479 8.22419 13.336 7.95399 13.1368 7.75474L7.12625 1.74419C6.927 1.545 6.6568 1.4331 6.37506 1.4331C6.09332 1.4331 5.82312 1.545 5.62387 1.74419Z" fill="currentColor"/>
+                    </g>
+                </svg>
+                <span class="cta__text">Start in 50 mins</span>
+                <svg class="cta__icon cta__icon--right" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <g style="mix-blend-mode:soft-light" opacity="1">
+                        <path d="M11.3752 1.74419C11.5744 1.94343 11.6863 2.21364 11.6863 2.49537C11.6863 2.77711 11.5744 3.04731 11.3752 3.24656L6.11588 8.50593L11.3752 13.7653C11.5688 13.9657 11.6759 14.2341 11.6735 14.5127C11.671 14.7912 11.5593 15.0577 11.3623 15.2547C11.1653 15.4517 10.8988 15.5635 10.6202 15.5659C10.3417 15.5683 10.0733 15.4612 9.87288 15.2677L3.86232 9.25712C3.66313 9.05787 3.55123 8.78767 3.55123 8.50593C3.55123 8.22419 3.66313 7.95399 3.86232 7.75474L9.87288 1.74419C10.0721 1.545 10.3423 1.4331 10.6241 1.4331C10.9058 1.4331 11.176 1.545 11.3752 1.74419Z" fill="currentColor"/>
+                    </g>
+                </svg>
+            </a>
+
+            <div class="glow"></div>
+            <a class="logo-link" href="https://overgear.com/" target="_blank" rel="noopener">
+                <img class="logo" src="./assets/overgear-logo.svg" alt="Overgear">
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        const particlesConfig = {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 600 } },
+                color: { value: "#ffd564" },
+                shape: { type: "circle" },
+                opacity: { value: 0.9, random: false, anim: { enable: true, speed: 1.2, opacity_min: 0, sync: false } },
+                line_linked: { enable: false },
+                size: { value: 3.7, random: true, anim: { enable: true, speed: 1.2, size_min: 1.2, sync: false } },
+                move: { enable: true, speed: 2.8, direction: "top", random: true, straight: false, out_mode: "out" }
+            },
+            interactivity: { events: { onhover: { enable: false }, onclick: { enable: false } } },
+            retina_detect: true
+        };
+
+        const initParticles = () => {
+            particlesJS("particles-js", particlesConfig);
+        };
+
+        const toggle = document.getElementById("particlesToggle");
+        const particlesEl = document.getElementById("particles-js");
+        toggle.addEventListener("change", () => {
+            if (particlesEl) {
+                particlesEl.style.opacity = toggle.checked ? "1" : "0";
+            }
+        });
+
+        initParticles();
+    </script>
+</body>
+</html>

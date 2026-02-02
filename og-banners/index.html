@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Banner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Inter:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #120E0F;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0b0b;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            font-family: Inter, Arial, sans-serif;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 65px 0 40px;
+            width: 100%;
+        }
+
+        .banners-horizontal,
+        .banners-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .banners-vertical {
+            flex-direction: row;
+        }
+
+        .particles-toggle {
+            position: fixed;
+            left: 16px;
+            top: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            font-size: 14px;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 6px;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .particles-toggle input {
+            accent-color: #ffd564;
+        }
+
+        .banner {
+            position: relative;
+            width: 300px;
+            height: 600px;
+            background: var(--bg);
+            overflow: hidden;
+        }
+
+        .banner--wide {
+            width: 970px;
+            height: 250px;
+        }
+
+        .banner--leaderboard {
+            width: 728px;
+            height: 90px;
+        }
+
+        .banner--skyscraper {
+            width: 160px;
+            height: 600px;
+        }
+
+        .banner__bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
+        }
+
+        .particles-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes bg-zoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bg-fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .ui {
+            position: absolute;
+            left: 0;
+            top: 67px;
+            width: 300px;
+            height: 504.91px;
+            z-index: 2;
+        }
+
+        .ui--wide {
+            left: 71px;
+            top: 37px;
+            width: 499.79px;
+            height: 181px;
+        }
+
+        .ui--leaderboard {
+            left: 35px;
+            top: 10px;
+            width: 657px;
+            height: 85px;
+        }
+
+        .ui--skyscraper {
+            left: 0;
+            top: 34px;
+            width: 160px;
+            height: 521px;
+        }
+
+        .headline {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            font-family: "Unbounded", Arial, sans-serif;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 0.94;
+            letter-spacing: 0.01em;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(109deg, #ffffff 38%, #ffd564 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 13.8248px rgba(221, 125, 66, 0.34);
+            opacity: 0;
+            animation: title-in 1.4s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        .headline--wide {
+            width: 499.79px;
+            font-size: 44px;
+            line-height: 0.91;
+            text-shadow: 0 0 24.8087px rgba(128, 124, 24, 0.63);
+        }
+
+        .headline--leaderboard {
+            left: 99px;
+            top: 11px;
+            width: 336px;
+            font-size: 23px;
+            line-height: 1.087;
+            text-align: left;
+            -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.55);
+        }
+
+        .headline--skyscraper {
+            top: 0;
+            width: 160px;
+            font-size: 23px;
+            line-height: 1.04;
+            text-align: center;
+            text-shadow: 0 0 7.3732px rgba(212, 160, 56, 0.63);
+        }
+
+        .subline {
+            position: absolute;
+            left: 0;
+            top: 91px;
+            width: 300px;
+            font-family: "Unbounded", Arial, sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(69deg, #ffedbd 19%, #e2b337 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 6.9856px rgba(141, 94, 0, 0.89);
+            white-space: pre-line;
+            opacity: 0;
+            animation: title-in 1.4s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        .subline--wide {
+            top: 92px;
+            width: 491px;
+            line-height: 1.36;
+            text-shadow: 0 0 24.1132px rgba(255, 200, 51, 0.53);
+        }
+
+        .subline--leaderboard {
+            display: none;
+        }
+
+        .subline--skyscraper {
+            top: 90px;
+            width: 160px;
+            font-size: 11px;
+            line-height: 1.18;
+            text-shadow: 0 0 3.7257px rgba(141, 94, 0, 0.89);
+        }
+
+        .cta {
+            position: absolute;
+            left: 29px;
+            top: 387px;
+            width: 242px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5.71px;
+            padding: 5.71px 11.41px;
+            background: linear-gradient(90deg, #bdf159 0%, #64dc0d 25%, #c0f449 100%);
+            border: 1.43px solid #ccff63;
+            border-radius: 5.71px;
+            box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+            z-index: 2;
+            text-decoration: none;
+            animation: cta-pulse 2.2s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .cta--wide {
+            left: 238px;
+            top: 137px;
+        }
+
+        .cta--leaderboard {
+            left: 483px;
+            top: 19px;
+            width: 174px;
+            height: 33px;
+            gap: 4.1px;
+            padding: 4.1px 8.2px;
+            border-width: 1.03px;
+            border-radius: 4.1px;
+            box-shadow: 0 0 16.413px rgba(45, 142, 21, 0.72), 0 0 5.642px rgba(127, 216, 55, 0.9);
+        }
+
+        .cta__icon {
+            width: 16.85px;
+            height: 16.85px;
+            opacity: 0.55;
+            color: transparent;
+            flex: 0 0 auto;
+        }
+
+        .cta__icon--small {
+            width: 12.12px;
+            height: 12.12px;
+        }
+        .cta__icon--left {
+            animation: cta-icon-left 1.8s ease-in-out infinite;
+        }
+
+        .cta__icon--right {
+            animation: cta-icon-right 1.8s ease-in-out infinite;
+        }
+
+        .cta__text {
+            font-family: Inter, Arial, sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 1.07;
+            letter-spacing: 0.0456em;
+            text-transform: uppercase;
+            color: #050622;
+            margin: 0 2px 0 2px;
+        }
+
+        .cta__text--small {
+            font-size: 11px;
+            line-height: 1.12;
+            letter-spacing: 0.0477em;
+        }
+
+        .glow {
+            position: absolute;
+            left: 45.47px;
+            top: 452.43px;
+            width: 209.07px;
+            height: 52.48px;
+            background: rgba(23, 12, 2, 0.49);
+            filter: blur(58.36px);
+            z-index: 0;
+        }
+
+        .glow--hidden {
+            display: none;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .logo-link {
+            position: absolute;
+            left: 73.8px;
+            top: 461.71px;
+            width: 152.9px;
+            height: 33.84px;
+            z-index: 2;
+            text-decoration: none;
+        }
+
+        .logo-link--wide {
+            left: 19px;
+            top: 137px;
+            width: 196.09px;
+            height: 44px;
+        }
+
+        .logo-link--square {
+            left: 0;
+            top: 0;
+            width: 65px;
+            height: 65px;
+        }
+
+        .logo-link--skyscraper {
+            left: 40px;
+            top: 441px;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 11.3095px rgba(45, 39, 14, 1), 0 1px 26.9px rgba(0, 0, 0, 0.37);
+        }
+
+        @keyframes cta-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 30px rgba(45, 142, 21, 0.9), 0 0 12px rgba(127, 216, 55, 1);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+            }
+        }
+
+        @keyframes cta-icon-left {
+            0% {
+                transform: translateX(0);
+                color: transparent;
+            }
+            50% {
+                transform: translateX(4px);
+                color: #d9771c;
+            }
+            100% {
+                transform: translateX(0);
+                color: transparent;
+            }
+        }
+
+        @keyframes cta-icon-right {
+            0% {
+                transform: translateX(0);
+                color: transparent;
+            }
+            50% {
+                transform: translateX(-4px);
+                color: #d9771c;
+            }
+            100% {
+                transform: translateX(0);
+                color: transparent;
+            }
+        }
+
+        @keyframes title-in {
+            0% {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <label class="particles-toggle">
+        <input type="checkbox" id="particlesToggle" checked>
+        <span>Particles</span>
+    </label>
+    <div class="page">
+        <div class="banners-horizontal">
+            <div class="banner banner--wide">
+                <img class="banner__bg" src="./assets/bg-970-250.png" alt="">
+                <div id="particles-js-2" class="particles-layer" aria-hidden="true"></div>
+
+                <div class="ui ui--wide">
+                    <div class="headline headline--wide">TBC POWER LEVELING</div>
+                    <div class="subline subline--wide">Hand-made leveling • 24/7 Human Support</div>
+
+                    <a class="cta cta--wide"
+                        href="https://overgear.com/games/wow/the-war-within-leveling?quantity=1&platform=eu&boost-method=piloted&Leveling%20range%5Bstart%5D=70&Leveling%20range%5Bend%5D=80"
+                        target="_blank" rel="noopener">
+                        <svg class="cta__icon cta__icon--left" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <g style="mix-blend-mode:soft-light" opacity="1">
+                                <path
+                                    d="M5.62387 1.74419C5.42469 1.94343 5.31279 2.21364 5.31279 2.49537C5.31279 2.77711 5.42469 3.04731 5.62387 3.24656L10.8832 8.50593L5.62387 13.7653C5.43033 13.9657 5.32324 14.2341 5.32566 14.5127C5.32808 14.7912 5.43982 15.0577 5.63682 15.2547C5.83381 15.4517 6.1003 15.5635 6.37888 15.5659C6.65747 15.5683 6.92586 15.4612 7.12625 15.2677L13.1368 9.25712C13.336 9.05787 13.4479 8.78767 13.4479 8.50593C13.4479 8.22419 13.336 7.95399 13.1368 7.75474L7.12625 1.74419C6.927 1.545 6.6568 1.4331 6.37506 1.4331C6.09332 1.4331 5.82312 1.545 5.62387 1.74419Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                        <span class="cta__text">Start in 50 mins</span>
+                        <svg class="cta__icon cta__icon--right" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <g style="mix-blend-mode:soft-light" opacity="1">
+                                <path
+                                    d="M11.3752 1.74419C11.5744 1.94343 11.6863 2.21364 11.6863 2.49537C11.6863 2.77711 11.5744 3.04731 11.3752 3.24656L6.11588 8.50593L11.3752 13.7653C11.5688 13.9657 11.6759 14.2341 11.6735 14.5127C11.671 14.7912 11.5593 15.0577 11.3623 15.2547C11.1653 15.4517 10.8988 15.5635 10.6202 15.5659C10.3417 15.5683 10.0733 15.4612 9.87288 15.2677L3.86232 9.25712C3.66313 9.05787 3.55123 8.78767 3.55123 8.50593C3.55123 8.22419 3.66313 7.95399 3.86232 7.75474L9.87288 1.74419C10.0721 1.545 10.3423 1.4331 10.6241 1.4331C10.9058 1.4331 11.176 1.545 11.3752 1.74419Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                    </a>
+
+                    <div class="glow glow--hidden"></div>
+                    <a class="logo-link logo-link--wide" href="https://overgear.com/" target="_blank" rel="noopener">
+                        <img class="logo" src="./assets/overgear-logo-wide.svg" alt="Overgear">
+                    </a>
+                </div>
+            </div>
+
+            <div class="banner banner--leaderboard">
+                <img class="banner__bg" src="./assets/bg-728-90.png" alt="">
+                <div id="particles-js-3" class="particles-layer" aria-hidden="true"></div>
+
+                <div class="ui ui--leaderboard">
+                    <a class="logo-link logo-link--square" href="https://overgear.com/" target="_blank" rel="noopener">
+                        <img class="logo" src="./assets/overgear-logo-square.png" alt="Overgear">
+                    </a>
+
+                    <div class="headline headline--leaderboard">TBC POWER<br>LEVELING</div>
+                    <div class="subline subline--leaderboard">Hand-made leveling • 24/7 Human Support</div>
+
+                    <a class="cta cta--leaderboard"
+                        href="https://overgear.com/games/wow/the-war-within-leveling?quantity=1&platform=eu&boost-method=piloted&Leveling%20range%5Bstart%5D=70&Leveling%20range%5Bend%5D=80"
+                        target="_blank" rel="noopener">
+                        <svg class="cta__icon cta__icon--small cta__icon--left" width="12.12" height="12.12" viewBox="0 0 17 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <g style="mix-blend-mode:soft-light" opacity="1">
+                                <path
+                                    d="M5.62387 1.74419C5.42469 1.94343 5.31279 2.21364 5.31279 2.49537C5.31279 2.77711 5.42469 3.04731 5.62387 3.24656L10.8832 8.50593L5.62387 13.7653C5.43033 13.9657 5.32324 14.2341 5.32566 14.5127C5.32808 14.7912 5.43982 15.0577 5.63682 15.2547C5.83381 15.4517 6.1003 15.5635 6.37888 15.5659C6.65747 15.5683 6.92586 15.4612 7.12625 15.2677L13.1368 9.25712C13.336 9.05787 13.4479 8.78767 13.4479 8.50593C13.4479 8.22419 13.336 7.95399 13.1368 7.75474L7.12625 1.74419C6.927 1.545 6.6568 1.4331 6.37506 1.4331C6.09332 1.4331 5.82312 1.545 5.62387 1.74419Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                        <span class="cta__text cta__text--small">Start in 50 mins</span>
+                        <svg class="cta__icon cta__icon--small cta__icon--right" width="12.12" height="12.12" viewBox="0 0 17 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <g style="mix-blend-mode:soft-light" opacity="1">
+                                <path
+                                    d="M11.3752 1.74419C11.5744 1.94343 11.6863 2.21364 11.6863 2.49537C11.6863 2.77711 11.5744 3.04731 11.3752 3.24656L6.11588 8.50593L11.3752 13.7653C11.5688 13.9657 11.6759 14.2341 11.6735 14.5127C11.671 14.7912 11.5593 15.0577 11.3623 15.2547C11.1653 15.4517 10.8988 15.5635 10.6202 15.5659C10.3417 15.5683 10.0733 15.4612 9.87288 15.2677L3.86232 9.25712C3.66313 9.05787 3.55123 8.78767 3.55123 8.50593C3.55123 8.22419 3.66313 7.95399 3.86232 7.75474L9.87288 1.74419C10.0721 1.545 10.3423 1.4331 10.6241 1.4331C10.9058 1.4331 11.176 1.545 11.3752 1.74419Z"
+                                    fill="currentColor" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="banners-vertical">
+            <div class="banner">
+                <img class="banner__bg" src="./assets/bg.png" alt="">
+                <div id="particles-js-1" class="particles-layer" aria-hidden="true"></div>
+    
+                <div class="ui">
+                    <div class="headline">TBC POWER<br>LEVELING</div>
+                    <div class="subline">Hand-made leveling&#10;24/7 Human Support</div>
+    
+                    <a class="cta" href="https://overgear.com/games/wow/the-war-within-leveling?quantity=1&platform=eu&boost-method=piloted&Leveling%20range%5Bstart%5D=70&Leveling%20range%5Bend%5D=80" target="_blank" rel="noopener">
+                        <svg class="cta__icon cta__icon--left" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <g style="mix-blend-mode:soft-light" opacity="1">
+                                <path d="M5.62387 1.74419C5.42469 1.94343 5.31279 2.21364 5.31279 2.49537C5.31279 2.77711 5.42469 3.04731 5.62387 3.24656L10.8832 8.50593L5.62387 13.7653C5.43033 13.9657 5.32324 14.2341 5.32566 14.5127C5.32808 14.7912 5.43982 15.0577 5.63682 15.2547C5.83381 15.4517 6.1003 15.5635 6.37888 15.5659C6.65747 15.5683 6.92586 15.4612 7.12625 15.2677L13.1368 9.25712C13.336 9.05787 13.4479 8.78767 13.4479 8.50593C13.4479 8.22419 13.336 7.95399 13.1368 7.75474L7.12625 1.74419C6.927 1.545 6.6568 1.4331 6.37506 1.4331C6.09332 1.4331 5.82312 1.545 5.62387 1.74419Z" fill="currentColor"/>
+                            </g>
+                        </svg>
+                        <span class="cta__text">Start in 50 mins</span>
+                        <svg class="cta__icon cta__icon--right" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <g style="mix-blend-mode:soft-light" opacity="1">
+                                <path d="M11.3752 1.74419C11.5744 1.94343 11.6863 2.21364 11.6863 2.49537C11.6863 2.77711 11.5744 3.04731 11.3752 3.24656L6.11588 8.50593L11.3752 13.7653C11.5688 13.9657 11.6759 14.2341 11.6735 14.5127C11.671 14.7912 11.5593 15.0577 11.3623 15.2547C11.1653 15.4517 10.8988 15.5635 10.6202 15.5659C10.3417 15.5683 10.0733 15.4612 9.87288 15.2677L3.86232 9.25712C3.66313 9.05787 3.55123 8.78767 3.55123 8.50593C3.55123 8.22419 3.66313 7.95399 3.86232 7.75474L9.87288 1.74419C10.0721 1.545 10.3423 1.4331 10.6241 1.4331C10.9058 1.4331 11.176 1.545 11.3752 1.74419Z" fill="currentColor"/>
+                            </g>
+                        </svg>
+                    </a>
+    
+                    <div class="glow"></div>
+                    <a class="logo-link" href="https://overgear.com/" target="_blank" rel="noopener">
+                        <img class="logo" src="./assets/overgear-logo.svg" alt="Overgear">
+                    </a>
+                </div>
+            </div>
+
+            <div class="banner banner--skyscraper">
+                <img class="banner__bg" src="./assets/bg-160-600.png" alt="">
+                <div id="particles-js-4" class="particles-layer" aria-hidden="true"></div>
+
+                <div class="ui ui--skyscraper">
+                    <div class="headline headline--skyscraper">TBC<br>POWER<br>LEVELING</div>
+                    <div class="subline subline--skyscraper">hand-made leveling&#10;&#10;24/7 Support</div>
+
+                    <a class="logo-link logo-link--skyscraper" href="https://overgear.com/" target="_blank" rel="noopener">
+                        <img class="logo" src="./assets/overgear-logo-square.png" alt="Overgear">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        const particlesConfig = {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 600 } },
+                color: { value: "#ffd564" },
+                shape: { type: "circle" },
+                opacity: { value: 0.9, random: false, anim: { enable: true, speed: 1.2, opacity_min: 0, sync: false } },
+                line_linked: { enable: false },
+                size: { value: 3.7, random: true, anim: { enable: true, speed: 1.2, size_min: 1.2, sync: false } },
+                move: { enable: true, speed: 2.8, direction: "top", random: true, straight: false, out_mode: "out" }
+            },
+            interactivity: { events: { onhover: { enable: false }, onclick: { enable: false } } },
+            retina_detect: true
+        };
+
+        const initParticles = (id) => {
+            particlesJS(id, particlesConfig);
+        };
+
+        const toggle = document.getElementById("particlesToggle");
+        const particlesEls = document.querySelectorAll(".particles-layer");
+        toggle.addEventListener("change", () => {
+            particlesEls.forEach((el) => {
+                el.style.opacity = toggle.checked ? "1" : "0";
+            });
+        });
+
+        initParticles("particles-js-1");
+        initParticles("particles-js-2");
+        initParticles("particles-js-3");
+        initParticles("particles-js-4");
+    </script>
+</body>
+</html>
