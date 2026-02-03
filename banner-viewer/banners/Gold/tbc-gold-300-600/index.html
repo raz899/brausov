@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy TBC Gold - 300×600</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .banner {
+      display: block;
+      width: 300px;
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .banner__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
+    }
+    .banner__text-img {
+      position: absolute;
+      left: 0;
+      top: 70px;
+      object-fit: contain;
+      display: block;
+    }
+    .banner__btn {
+      position: absolute;
+      left: 29px;
+      bottom: 102px;
+      border-radius: 5.71px;
+      overflow: hidden;
+      box-shadow: 0 0 22.83px rgba(45, 142, 21, 0.72), 0 0 7.85px rgba(127, 216, 55, 0.9);
+      animation: cta-pulse 2.2s ease-in-out infinite;
+    }
+    .banner__logo {
+      position: absolute;
+      left: 74px;
+      bottom: 38px;
+      object-fit: contain;
+    }
+    @keyframes bg-zoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bg-fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes cta-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+        }
+        50% {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(45, 142, 21, 0.9), 0 0 12px rgba(127, 216, 55, 1);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+        }
+    }
+  </style>
+</head>
+<body>
+  <a href="https://overgear.com/games/wow-20th-anniversary/gold" target="_blank" rel="noopener" class="banner">
+    <img src="bg.png" srcset="bg.png 1x, bg@2x.png 2x" alt="" class="banner__bg" width="300" height="600">
+    <img src="text.png" srcset="text.png 1x, text@2x.png 2x" alt="Buy TBC Gold. Hand-farmed. Fast delivery." class="banner__text-img" width="300" height="118">
+    <img src="button.png" srcset="button.png 1x, button@2x.png 2x" alt="GET GOLD" class="banner__btn" width="242" height="44">
+    <img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Overgear" class="banner__logo" width="153" height="34">
+  </a>
+</body>
+</html>

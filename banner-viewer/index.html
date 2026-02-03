@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Viewer</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script>
+      window.__BASE_PATH__ = "/banner-viewer";
+    </script>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Banner Viewer</h1>
+    </header>
+
+    <main class="content">
+      <div id="categories" class="categories"></div>
+    </main>
+
+    <template id="category-template">
+      <section class="category">
+        <div class="category-header">
+          <h2 class="category-title"></h2>
+          <button class="zip-button" type="button">Скачать Zip</button>
+        </div>
+        <div class="banner-grid"></div>
+      </section>
+    </template>
+
+    <template id="banner-template">
+      <article class="banner-card">
+        <div class="banner-preview">
+          <iframe class="banner-frame" loading="lazy"></iframe>
+          <div class="banner-overlay">
+            <button class="zip-button" type="button">Скачать Zip</button>
+          </div>
+        </div>
+        <div class="banner-caption"></div>
+      </article>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

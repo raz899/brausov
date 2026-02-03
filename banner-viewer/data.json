@@ -1,0 +1,214 @@
+{
+  "categories": [
+    {
+      "name": "General",
+      "zipUrl": "/zips/General.zip",
+      "banners": [
+        {
+          "name": "tbc-general-160-600",
+          "path": "General/tbc-general-160-600",
+          "indexUrl": "/banners/General/tbc-general-160-600/index.html",
+          "width": 160,
+          "height": 600,
+          "zipUrl": "/zips/General/tbc-general-160-600.zip"
+        },
+        {
+          "name": "tbc-general-300-100",
+          "path": "General/tbc-general-300-100",
+          "indexUrl": "/banners/General/tbc-general-300-100/index.html",
+          "width": 300,
+          "height": 100,
+          "zipUrl": "/zips/General/tbc-general-300-100.zip"
+        },
+        {
+          "name": "tbc-general-300-250",
+          "path": "General/tbc-general-300-250",
+          "indexUrl": "/banners/General/tbc-general-300-250/index.html",
+          "width": 300,
+          "height": 250,
+          "zipUrl": "/zips/General/tbc-general-300-250.zip"
+        },
+        {
+          "name": "tbc-general-300-600",
+          "path": "General/tbc-general-300-600",
+          "indexUrl": "/banners/General/tbc-general-300-600/index.html",
+          "width": 300,
+          "height": 600,
+          "zipUrl": "/zips/General/tbc-general-300-600.zip"
+        },
+        {
+          "name": "tbc-general-320-50",
+          "path": "General/tbc-general-320-50",
+          "indexUrl": "/banners/General/tbc-general-320-50/index.html",
+          "width": 320,
+          "height": 50,
+          "zipUrl": "/zips/General/tbc-general-320-50.zip"
+        },
+        {
+          "name": "tbc-general-336-280",
+          "path": "General/tbc-general-336-280",
+          "indexUrl": "/banners/General/tbc-general-336-280/index.html",
+          "width": 336,
+          "height": 280,
+          "zipUrl": "/zips/General/tbc-general-336-280.zip"
+        },
+        {
+          "name": "tbc-general-728-90",
+          "path": "General/tbc-general-728-90",
+          "indexUrl": "/banners/General/tbc-general-728-90/index.html",
+          "width": 728,
+          "height": 90,
+          "zipUrl": "/zips/General/tbc-general-728-90.zip"
+        },
+        {
+          "name": "tbc-general-970-250",
+          "path": "General/tbc-general-970-250",
+          "indexUrl": "/banners/General/tbc-general-970-250/index.html",
+          "width": 970,
+          "height": 250,
+          "zipUrl": "/zips/General/tbc-general-970-250.zip"
+        }
+      ]
+    },
+    {
+      "name": "Gold",
+      "zipUrl": "/zips/Gold.zip",
+      "banners": [
+        {
+          "name": "tbc-gold-160-600",
+          "path": "Gold/tbc-gold-160-600",
+          "indexUrl": "/banners/Gold/tbc-gold-160-600/index.html",
+          "width": 160,
+          "height": 600,
+          "zipUrl": "/zips/Gold/tbc-gold-160-600.zip"
+        },
+        {
+          "name": "tbc-gold-300-100",
+          "path": "Gold/tbc-gold-300-100",
+          "indexUrl": "/banners/Gold/tbc-gold-300-100/index.html",
+          "width": 300,
+          "height": 100,
+          "zipUrl": "/zips/Gold/tbc-gold-300-100.zip"
+        },
+        {
+          "name": "tbc-gold-300-250",
+          "path": "Gold/tbc-gold-300-250",
+          "indexUrl": "/banners/Gold/tbc-gold-300-250/index.html",
+          "width": 300,
+          "height": 250,
+          "zipUrl": "/zips/Gold/tbc-gold-300-250.zip"
+        },
+        {
+          "name": "tbc-gold-300-600",
+          "path": "Gold/tbc-gold-300-600",
+          "indexUrl": "/banners/Gold/tbc-gold-300-600/index.html",
+          "width": 300,
+          "height": 600,
+          "zipUrl": "/zips/Gold/tbc-gold-300-600.zip"
+        },
+        {
+          "name": "tbc-gold-320-50",
+          "path": "Gold/tbc-gold-320-50",
+          "indexUrl": "/banners/Gold/tbc-gold-320-50/index.html",
+          "width": 320,
+          "height": 50,
+          "zipUrl": "/zips/Gold/tbc-gold-320-50.zip"
+        },
+        {
+          "name": "tbc-gold-336-280",
+          "path": "Gold/tbc-gold-336-280",
+          "indexUrl": "/banners/Gold/tbc-gold-336-280/index.html",
+          "width": 336,
+          "height": 280,
+          "zipUrl": "/zips/Gold/tbc-gold-336-280.zip"
+        },
+        {
+          "name": "tbc-gold-728-90",
+          "path": "Gold/tbc-gold-728-90",
+          "indexUrl": "/banners/Gold/tbc-gold-728-90/index.html",
+          "width": 728,
+          "height": 90,
+          "zipUrl": "/zips/Gold/tbc-gold-728-90.zip"
+        },
+        {
+          "name": "tbc-gold-970-250",
+          "path": "Gold/tbc-gold-970-250",
+          "indexUrl": "/banners/Gold/tbc-gold-970-250/index.html",
+          "width": 970,
+          "height": 250,
+          "zipUrl": "/zips/Gold/tbc-gold-970-250.zip"
+        }
+      ]
+    },
+    {
+      "name": "Leveling",
+      "zipUrl": "/zips/Leveling.zip",
+      "banners": [
+        {
+          "name": "tbc-leveling-160-600",
+          "path": "Leveling/tbc-leveling-160-600",
+          "indexUrl": "/banners/Leveling/tbc-leveling-160-600/index.html",
+          "width": 160,
+          "height": 600,
+          "zipUrl": "/zips/Leveling/tbc-leveling-160-600.zip"
+        },
+        {
+          "name": "tbc-leveling-300-100",
+          "path": "Leveling/tbc-leveling-300-100",
+          "indexUrl": "/banners/Leveling/tbc-leveling-300-100/index.html",
+          "width": 300,
+          "height": 100,
+          "zipUrl": "/zips/Leveling/tbc-leveling-300-100.zip"
+        },
+        {
+          "name": "tbc-leveling-300-250",
+          "path": "Leveling/tbc-leveling-300-250",
+          "indexUrl": "/banners/Leveling/tbc-leveling-300-250/index.html",
+          "width": 300,
+          "height": 250,
+          "zipUrl": "/zips/Leveling/tbc-leveling-300-250.zip"
+        },
+        {
+          "name": "tbc-leveling-300-600",
+          "path": "Leveling/tbc-leveling-300-600",
+          "indexUrl": "/banners/Leveling/tbc-leveling-300-600/index.html",
+          "width": 300,
+          "height": 600,
+          "zipUrl": "/zips/Leveling/tbc-leveling-300-600.zip"
+        },
+        {
+          "name": "tbc-leveling-320-50",
+          "path": "Leveling/tbc-leveling-320-50",
+          "indexUrl": "/banners/Leveling/tbc-leveling-320-50/index.html",
+          "width": 320,
+          "height": 50,
+          "zipUrl": "/zips/Leveling/tbc-leveling-320-50.zip"
+        },
+        {
+          "name": "tbc-leveling-336-280",
+          "path": "Leveling/tbc-leveling-336-280",
+          "indexUrl": "/banners/Leveling/tbc-leveling-336-280/index.html",
+          "width": 336,
+          "height": 280,
+          "zipUrl": "/zips/Leveling/tbc-leveling-336-280.zip"
+        },
+        {
+          "name": "tbc-leveling-728-90",
+          "path": "Leveling/tbc-leveling-728-90",
+          "indexUrl": "/banners/Leveling/tbc-leveling-728-90/index.html",
+          "width": 728,
+          "height": 90,
+          "zipUrl": "/zips/Leveling/tbc-leveling-728-90.zip"
+        },
+        {
+          "name": "tbc-leveling-970-250",
+          "path": "Leveling/tbc-leveling-970-250",
+          "indexUrl": "/banners/Leveling/tbc-leveling-970-250/index.html",
+          "width": 970,
+          "height": 250,
+          "zipUrl": "/zips/Leveling/tbc-leveling-970-250.zip"
+        }
+      ]
+    }
+  ]
+}
