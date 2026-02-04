@@ -209,6 +209,76 @@
           "zipUrl": "/zips/Leveling/tbc-leveling-970-250.zip"
         }
       ]
+    },
+    {
+      "name": "Professions",
+      "zipUrl": "/zips/Professions.zip",
+      "banners": [
+        {
+          "name": "tbc-professions-160-600",
+          "path": "Professions/tbc-professions-160-600",
+          "indexUrl": "/banners/Professions/tbc-professions-160-600/index.html",
+          "width": 160,
+          "height": 600,
+          "zipUrl": "/zips/Professions/tbc-professions-160-600.zip"
+        },
+        {
+          "name": "tbc-professions-300-100",
+          "path": "Professions/tbc-professions-300-100",
+          "indexUrl": "/banners/Professions/tbc-professions-300-100/index.html",
+          "width": 300,
+          "height": 100,
+          "zipUrl": "/zips/Professions/tbc-professions-300-100.zip"
+        },
+        {
+          "name": "tbc-professions-300-250",
+          "path": "Professions/tbc-professions-300-250",
+          "indexUrl": "/banners/Professions/tbc-professions-300-250/index.html",
+          "width": 300,
+          "height": 250,
+          "zipUrl": "/zips/Professions/tbc-professions-300-250.zip"
+        },
+        {
+          "name": "tbc-professions-300-600",
+          "path": "Professions/tbc-professions-300-600",
+          "indexUrl": "/banners/Professions/tbc-professions-300-600/index.html",
+          "width": 300,
+          "height": 600,
+          "zipUrl": "/zips/Professions/tbc-professions-300-600.zip"
+        },
+        {
+          "name": "tbc-professions-320-50",
+          "path": "Professions/tbc-professions-320-50",
+          "indexUrl": "/banners/Professions/tbc-professions-320-50/index.html",
+          "width": 320,
+          "height": 50,
+          "zipUrl": "/zips/Professions/tbc-professions-320-50.zip"
+        },
+        {
+          "name": "tbc-professions-336-280",
+          "path": "Professions/tbc-professions-336-280",
+          "indexUrl": "/banners/Professions/tbc-professions-336-280/index.html",
+          "width": 336,
+          "height": 280,
+          "zipUrl": "/zips/Professions/tbc-professions-336-280.zip"
+        },
+        {
+          "name": "tbc-professions-728-90",
+          "path": "Professions/tbc-professions-728-90",
+          "indexUrl": "/banners/Professions/tbc-professions-728-90/index.html",
+          "width": 728,
+          "height": 90,
+          "zipUrl": "/zips/Professions/tbc-professions-728-90.zip"
+        },
+        {
+          "name": "tbc-professions-970-250",
+          "path": "Professions/tbc-professions-970-250",
+          "indexUrl": "/banners/Professions/tbc-professions-970-250/index.html",
+          "width": 970,
+          "height": 250,
+          "zipUrl": "/zips/Professions/tbc-professions-970-250.zip"
+        }
+      ]
     }
   ]
 }

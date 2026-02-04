@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TBC Professions - 300×250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .banner {
+      display: block;
+      width: 300px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .banner__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
+    }
+    .banner__text-group {
+      position: absolute;
+      left: 0;
+      top: 19.1px;
+      width: 300px;
+      height: 35.71px;
+      z-index: 1;
+      /* pointer-events: none; */
+    }
+    .banner__text-line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 35.71px;
+      font-family: "Unbounded", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.1607142448425294;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      text-align: center;
+      background: linear-gradient(121deg, rgba(255, 255, 255, 1) 38%, rgba(255, 213, 100, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 14.375px 0px rgba(0, 0, 0, 1), 0px 0px 12.34358024597168px 0px rgba(250, 119, 6, 0.4);
+    }
+    .banner__logo {
+      position: absolute;
+      left: 58.04px;
+      top: 202.68px;
+      width: 187.5px;
+      height: 35.71px;
+      object-fit: contain;
+      display: block;
+    }
+    @keyframes bg-zoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bg-fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="https://overgear.com/games/wow-20th-anniversary/professions-kits" target="_blank" rel="noopener" class="banner">
+    <div class="banner__text-group">
+      <div class="banner__text-line">TBC Professions</div>
+    </div>
+    <img src="bg.jpg" srcset="bg.jpg 1x, bg@2x.jpg 2x" alt="" class="banner__bg" width="300" height="250">
+    <img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Overgear" class="banner__logo" width="188" height="36">
+  </a>
+</body>
+</html>

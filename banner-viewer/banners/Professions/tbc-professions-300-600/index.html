@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TBC Professions - 300×600</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .banner {
+      display: block;
+      width: 300px;
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .banner__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
+    }
+    .banner__text-group {
+      position: absolute;
+      left: 0;
+      top: 43px;
+      width: 300px;
+      height: 135px;
+      z-index: 1;
+      /* pointer-events: none; */
+    }
+    .banner__text-line {
+      position: absolute;
+      font-family: "Unbounded", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: normal;
+    }
+    .banner__text-line--kicker {
+      left: 23px;
+      top: 0;
+      width: 259.22px;
+      height: 13.87px;
+      font-size: 13.719097137451172px;
+      line-height: 0.8375307496790522;
+      color: #8BC000;
+      text-shadow: 0px 0px 5.944941997528076px 0px rgba(144, 245, 37, 0.3);
+    }
+    .banner__text-line--title {
+      left: 0;
+      top: 30px;
+      width: 300px;
+      height: 66px;
+      font-size: 30px;
+      line-height: 0.9666666666666667;
+      letter-spacing: 0.01em;
+      background: linear-gradient(109deg, rgba(255, 255, 255, 1) 38%, rgba(255, 213, 100, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 13.824810028076172px 0px rgba(221, 125, 66, 0.34);
+    }
+    .banner__text-line--sub {
+      left: 0;
+      top: 105px;
+      width: 300px;
+      height: 30px;
+      font-size: 14px;
+      line-height: 1.0714285714285714;
+      background: linear-gradient(69deg, rgba(255, 237, 189, 1) 19%, rgba(226, 179, 55, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 6.985650539398193px 0px rgba(141, 94, 0, 0.89);
+    }
+    .banner__btn {
+      position: absolute;
+      left: 29px;
+      bottom: 102px;
+      border-radius: 5.71px;
+      overflow: hidden;
+      box-shadow: 0 0 22.83px rgba(45, 142, 21, 0.72), 0 0 7.85px rgba(127, 216, 55, 0.9);
+      animation: cta-pulse 2.2s ease-in-out infinite;
+    }
+    .banner__logo {
+      position: absolute;
+      left: 0;
+      top: 498px;
+      width: 300px;
+      height: 102px;
+      object-fit: contain;
+      display: block;
+    }
+    @keyframes bg-zoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bg-fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes cta-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+        }
+        50% {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(45, 142, 21, 0.9), 0 0 12px rgba(127, 216, 55, 1);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 22.8273px rgba(45, 142, 21, 0.72), 0 0 7.8469px rgba(127, 216, 55, 0.9);
+        }
+    }
+  </style>
+</head>
+<body>
+  <a href="https://overgear.com/games/wow-20th-anniversary/professions-kits" target="_blank" rel="noopener" class="banner">
+    <div class="banner__text-group">
+      <div class="banner__text-line banner__text-line--kicker">Profession to 375</div>
+      <div class="banner__text-line banner__text-line--title">Get Instant TBC Profs</div>
+      <div class="banner__text-line banner__text-line--sub">Full materials kit AND Step-by-step guide</div>
+    </div>
+    <img src="bg.jpg" srcset="bg.jpg 1x, bg@2x.jpg 2x" alt="" class="banner__bg" width="300" height="600">
+    <img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Overgear" class="banner__logo" width="300" height="102">
+    <img src="button.png" srcset="button.png 1x, button@2x.png 2x" alt="Skip the TBC Grind" class="banner__btn" width="242" height="44">
+  </a>
+</body>
+</html>
