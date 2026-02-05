@@ -27,47 +27,12 @@
       opacity: 0;
       animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
     }
-    .banner__text-group {
+    .banner__text {
       position: absolute;
-      left: 112px;
-      top: 14px;
-      width: 336px;
-      height: 86px;
-      z-index: 1;
-      /* pointer-events: none; */
-    }
-    .banner__text-line {
-      position: absolute;
-      font-family: "Unbounded", sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-align: left;
-      white-space: normal;
-    }
-    .banner__text-line--sub {
       left: 0;
       top: 0;
-      width: 103.01px;
-      height: 7.22px;
-      font-size: 8px;
-      line-height: 0.8444941639900208;
-      color: #8BC000;
-      text-shadow: 0px 0px 3.4954888820648193px 0px rgba(144, 245, 37, 0.15);
-    }
-    .banner__text-line--title {
-      left: 0;
-      top: 12px;
-      width: 336px;
-      height: 74px;
-      font-size: 23px;
-      line-height: 1.0869565217391304;
-      letter-spacing: 0.01em;
-      background: linear-gradient(116deg, rgba(255, 255, 255, 1) 27%, rgba(255, 213, 100, 1) 51%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 1), 0px 0px 13.824810028076172px 0px rgba(158, 121, 18, 0.63);
+      object-fit: contain;
+      display: block;
     }
     .banner__logo {
       position: absolute;
@@ -117,12 +82,8 @@
 </head>
 <body>
   <a href="https://overgear.com/games/wow-20th-anniversary/professions-kits" target="_blank" rel="noopener" class="banner">
-    <div class="banner__text-group">
-      <div class="banner__text-line banner__text-line--sub">Profession to 375</div>
-      <div class="banner__text-line banner__text-line--title">Get Instant TBC<br>Professions</div>
-    </div>
     <img src="bg.jpg" srcset="bg.jpg 1x, bg@2x.jpg 2x" alt="" class="banner__bg" width="728" height="90">
-    <img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Overgear" class="banner__logo" width="65" height="65">
+    <img src="text.png" srcset="text.png 1x, text@2x.png 2x" alt="TBC Professions" class="banner__text" width="448" height="90">
     <img src="button.png" srcset="button.png 1x, button@2x.png 2x" alt="Skip the TBC Grind" class="banner__btn">
   </a>
 </body>

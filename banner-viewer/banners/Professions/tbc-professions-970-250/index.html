@@ -26,61 +26,12 @@
       opacity: 0;
       animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
     }
-    .banner__text-group {
+    .banner__text {
       position: absolute;
       left: 71px;
-      top: 23.94px;
-      width: 499.79px;
-      height: 132.06px;
-      z-index: 1;
-      /* pointer-events: none; */
-    }
-    .banner__text-line {
-      position: absolute;
-      font-family: "Unbounded", sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-align: center;
-      white-space: normal;
-    }
-    .banner__text-line--kicker {
-      left: 167px;
-      top: 0;
-      width: 166.01px;
-      height: 7.36px;
-      font-size: 13px;
-      line-height: 0.5196887163015512;
-      color: #8BC000;
-      text-shadow: 0px 0px 3.4954888820648193px 0px rgba(144, 245, 37, 0.15);
-    }
-    .banner__text-line--title {
-      left: 0;
-      top: 19.06px;
-      width: 499.79px;
-      height: 76px;
-      font-size: 42px;
-      line-height: 0.9047619047619048;
-      letter-spacing: 0.01em;
-      background: linear-gradient(94deg, rgba(255, 255, 255, 1) 38%, rgba(255, 213, 100, 1) 92%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0px 0px 24.808696746826172px 0px rgba(128, 124, 24, 0.63);
-    }
-    .banner__text-line--sub {
-      left: 4px;
-      top: 111.06px;
-      width: 491px;
-      height: 21px;
-      font-size: 15px;
-      line-height: 1.3571507771809896;
-      background: linear-gradient(69deg, rgba(255, 237, 189, 1) 19%, rgba(226, 179, 55, 1) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0px 0px 24.113162994384766px 0px rgba(255, 200, 51, 0.53);
+      top: 9px;
+      object-fit: contain;
+      display: block;
     }
     .banner__logo {
       position: absolute;
@@ -128,12 +79,8 @@
 </head>
 <body>
   <a href="https://overgear.com/games/wow-20th-anniversary/professions-kits" target="_blank" rel="noopener" class="banner">
-    <div class="banner__text-group">
-      <div class="banner__text-line banner__text-line--kicker">Profession to 375</div>
-      <div class="banner__text-line banner__text-line--title">Get Instant TBC<br>Professions</div>
-      <div class="banner__text-line banner__text-line--sub">Full materials kit AND Step-by-step guide</div>
-    </div>
     <img src="bg.jpg" srcset="bg.jpg 1x, bg@2x.jpg 2x" alt="" class="banner__bg" width="970" height="250">
+    <img src="text.png" srcset="text.png 1x, text@2x.png 2x" alt="TBC Professions" class="banner__text" width="500" height="153">
     <img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Overgear" class="banner__logo" width="196" height="44">
     <img src="button.png" srcset="button.png 1x, button@2x.png 2x" alt="Skip the TBC Grind" class="banner__btn">
   </a>

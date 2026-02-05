@@ -28,26 +28,10 @@
     }
     .banner__text {
       position: absolute;
-      left: 26px;
-      top: 12px;
-      width: 180px;
-      height: 39.64px;
-      font-family: "Unbounded", sans-serif;
-      font-weight: 700;
-      font-size: 12.321429252624512px;
-      line-height: 1.086956494817513;
-      letter-spacing: 0.01em;
-      text-transform: uppercase;
-      text-align: left;
-      white-space: normal;
-      background: linear-gradient(148deg, rgba(255, 255, 255, 1) 0%, rgba(255, 213, 100, 1) 54%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0px 0px 9.642857551574707px 0px rgba(0, 0, 0, 1), 0px 0px 7.406148433685303px 0px rgba(246, 192, 43, 0.63);
-      /* pointer-events: none; */
-      z-index: 1;
+      left: 0;
+      top: 0;
+      object-fit: contain;
+      display: block;
     }
     .banner__logo {
       position: absolute;
@@ -71,9 +55,8 @@
 </head>
 <body>
   <a href="https://overgear.com/games/wow-20th-anniversary/professions-kits" target="_blank" rel="noopener" class="banner">
-    <div class="banner__text">Instant TBC<br>Professions</div>
     <img src="bg.jpg" srcset="bg.jpg 1x, bg@2x.jpg 2x" alt="" class="banner__bg" width="320" height="50">
-    <img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x" alt="Overgear" class="banner__logo" width="38" height="38">
+    <img src="text.png" srcset="text.png 1x, text@2x.png 2x" alt="TBC Professions" class="banner__text" width="320" height="50">
   </a>
 </body>
 </html>
