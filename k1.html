@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <title>Шинный спа</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/tech/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/tech/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/tech/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./images/tech/favicons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="./images/tech/favicons/favicon-64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/tech/favicons/favicon-180.png">
+    <meta name="yandex-verification" content="b826d14726fcc9cf" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #fff;
+            font-family: "Golos Text", sans-serif;
+            font-style: normal;
+            overflow-x: hidden;
+        }
+
+        .wrp {
+            flex: 1;
+            display: flex;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        footer {
+            z-index: 3;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding:0 20px;
+        }
+        footer .text {
+            color: #fff;
+        }
+        .copyright {
+            padding-bottom: 40px;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer a {
+            text-decoration: none;
+            font-size: 32px;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+          footer a:focus,
+          footer a:hover {
+            color: #FE7F1C;
+            transform: translateY(-3px);
+        }
+        .img-logo {
+            margin: 50px 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 100%;
+            color: #1F1F1F;
+            max-width: 315px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        h1 span {
+            color: #FE7F1C;
+            font-weight: 500;
+        }
+        .text {
+            font-size: 24px;
+            color: #1F1F1F;
+        }
+        .opacity-25 {
+            opacity: 25%;
+        }
+        .opacity-50 {
+            opacity: 50%;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-start {
+            text-align: start; 
+        }
+        .mb-4 {
+            margin-bottom: 40px;
+        }
+        .mb-10 {
+            margin-bottom: 100px;
+        }
+        .mt-5 {
+            margin-top: 50px;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .flex-column {
+            flex-direction: column;
+        }
+        .gap-2 {
+            gap: 10px;
+        }
+        .gap-10 {
+            gap: 100px;
+        }
+        .align-items-start {
+            align-items: flex-start;
+        }
+        .link img {
+            display: block;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border-radius: 10px;
+        }
+        .link:hover img {
+            transform: translate(-6px, -6px); 
+            box-shadow: 6px 6px 12px #FE7F1C;
+        }
+        .mockups-container {
+            position: relative;
+            margin-bottom: -152px;
+        }
+        .img-Mockups {
+            max-width: 100%;
+        }
+        .img-3D {
+            position: absolute;
+            top: 20%;
+            left: -80px;
+        }
+        .cursor {
+            animation: blink 2s steps(2, start) infinite;
+        }
+        .k1-btn {
+            background-color: #222222;
+            min-width: 210px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 55px;
+            border-radius: 10px;
+            font-size: 25px;
+            gap: 5px;
+            opacity: 0;
+            animation: k1-fade-in 0.5s ease 0.5s forwards;
+        }
+        .k1-btn:hover {
+            background-color: #FE7F1C;
+        }
+
+        .k1-btn small {
+            position: relative;
+            font-size: 14px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 1px;
+            animation: k1-type 3s steps(30, end) 2s forwards;
+        }
+
+        .k1-btn small .print-pointer{
+            position: absolute;
+            right: 0;
+            top: 0;
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            margin-left: 3px;
+            background-color: #fff;
+            vertical-align: bottom;
+            opacity: 0;
+            animation: blink-and-vanish 1.5s steps(1, start) 0.5s forwards;
+        }
+
+        @keyframes blink {
+            to {
+                visibility: hidden;
+            }
+        }
+        @keyframes k1-fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes k1-type {
+            0% {
+                width: 0;
+                opacity: 0;
+            }
+            1% {
+                opacity: 1;
+            }
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+        @keyframes k1-caret {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes blink-and-vanish {
+            0% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .container {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left:  calc(var(--bs-gutter-x) * 0.5);
+            max-width: 100%;
+        }
+        /* ≥1200 (1200–max) */
+        @media (min-width: 1200px){
+            .container{ max-width: 1200px; padding: 0 20px; }
+        }
+        /* 960–1199 */
+        @media (max-width: 1199.98px){
+            .container{ max-width: 960px;}
+            .img-logo {
+                height: 80px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .img-3D {
+                width: 150px;
+                height: 150px;
+                left: -40px;
+            }
+            .text {
+               font-size: 20px; 
+            }
+            footer a {
+                font-size: 28px;
+            }
+        }
+        /* 640–959 */
+        @media (max-width: 959.98px){
+            .container{ max-width: 640px;}
+            .img-logo {
+                height: 60px;
+            }
+            .img-3D {
+                width: 100px;
+                height: 100px;
+                left: -20px;
+            }
+            .flex-md-column {
+                flex-direction: column;
+            }
+            .gap-10 {
+                gap: 0px;
+            }
+            .copyright {
+                margin-top: 80px;
+            }
+            .k1-btn {
+                font-size: 18px;
+            }
+            
+        }
+        /* 480–639 */
+        @media (max-width: 639.98px){
+            .container{ max-width: 480px; }
+            h1 {
+                font-size: 32px;
+            }
+            .img-download {
+                height: 40px;
+                width: auto;
+            }
+            .mockups-container {
+                margin-bottom: -115px;
+            }
+            .text {
+               font-size: 16px; 
+            }
+            footer a {
+                font-size: 24px;
+            }
+            .copyright {
+                margin-top: 36px;
+            }
+        }
+        /* 320–479 */
+        @media (max-width: 479.98px){
+            .container{ max-width: 320px; }
+            .flex-wrap-sm-wrap {
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrp">
+        <div class="content container">
+            <div class="d-flex align-start" style="width: 100%;">
+                <img class="img-logo" srcset="./images/tech/logo.png 1x, ./images/tech/logo@2x.png 2x">
+            </div>
+            <h1>Шиномонтаж<span class="cursor">|</span> <br> в один клик</h1>
+            <span class="text text-center opacity-50 mb-4">К1 — платформа для автовладельцев и шинных центров. <br>
+            Заботимся как о себе!</span>
+            <a class="k1-btn" href="https://pro.k1.ru/">
+                Узнать больше
+                <small>
+                    К1 Про - решение для бизнеса
+                    <span class="print-pointer"></span>
+                </small>
+            </a>
+            <div class="d-flex gap-2 flex-wrap-sm-wrap mb-10">
+                <a class="link" href="#" hidden><img class="img-download" srcset="./images/tech/AppStore.png 1x, ./images/tech/AppStore@2x.png 2x"></a>
+                <a class="link" href="#" hidden><img class="img-download" srcset="./images/tech/GooglePlay.png 1x, ./images/tech/GooglePlay@2x.png 2x"></a>
+                <a class="link" href="#" hidden><img class="img-download" srcset="./images/tech/RuStore.png 1x, ./images/tech/RuStore@2x.png 2x"></a>
+            </div>
+            <div class="mockups-container">
+                <img class="img-Mockups" srcset="./images/tech/Mockups.png 1x, ./images/tech/Mockups@2x.png 2x">
+                <img class="img-3D" srcset="./images/tech/3D.png 1x, ./images/tech/3D@2x.png 2x">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <span class="text copyright d-flex opacity-25" style="padding: 70px 0;">© 2025 K1. Все права защищены.</span>
+        </div>
+    </footer>
+</body>
+
+</html>
