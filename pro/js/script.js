@@ -84,26 +84,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // через 2 секунды после загрузки начинаем удаление
     setTimeout(deleteFirst, delayAfterType);
 });
-// анимация
-if (window.innerWidth > 767.98) {
-    const elements = document.querySelectorAll('.animation');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.classList.contains('animation-left')) {
-                    entry.target.classList.add('animate-slide-left');
-                }
-                if (entry.target.classList.contains('animation-right')) {
-                    entry.target.classList.add('animate-slide-right');
-                }
-                if (entry.target.classList.contains('animation-up')) {
-                    entry.target.classList.add('animate-slide-up');
-                }
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    elements.forEach(el => observer.observe(el));
-}
