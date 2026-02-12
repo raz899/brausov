@@ -1,6 +1,76 @@
 {
   "categories": [
     {
+      "name": "Gearing",
+      "zipUrl": "/zips/Gearing.zip",
+      "banners": [
+        {
+          "name": "tbc-gearing-160-600",
+          "path": "Gearing/tbc-gearing-160-600",
+          "indexUrl": "/banners/Gearing/tbc-gearing-160-600/index.html",
+          "width": 160,
+          "height": 600,
+          "zipUrl": "/zips/Gearing/tbc-gearing-160-600.zip"
+        },
+        {
+          "name": "tbc-gearing-300-100",
+          "path": "Gearing/tbc-gearing-300-100",
+          "indexUrl": "/banners/Gearing/tbc-gearing-300-100/index.html",
+          "width": 300,
+          "height": 100,
+          "zipUrl": "/zips/Gearing/tbc-gearing-300-100.zip"
+        },
+        {
+          "name": "tbc-gearing-300-250",
+          "path": "Gearing/tbc-gearing-300-250",
+          "indexUrl": "/banners/Gearing/tbc-gearing-300-250/index.html",
+          "width": 300,
+          "height": 250,
+          "zipUrl": "/zips/Gearing/tbc-gearing-300-250.zip"
+        },
+        {
+          "name": "tbc-gearing-300-600",
+          "path": "Gearing/tbc-gearing-300-600",
+          "indexUrl": "/banners/Gearing/tbc-gearing-300-600/index.html",
+          "width": 300,
+          "height": 600,
+          "zipUrl": "/zips/Gearing/tbc-gearing-300-600.zip"
+        },
+        {
+          "name": "tbc-gearing-320-50",
+          "path": "Gearing/tbc-gearing-320-50",
+          "indexUrl": "/banners/Gearing/tbc-gearing-320-50/index.html",
+          "width": 320,
+          "height": 50,
+          "zipUrl": "/zips/Gearing/tbc-gearing-320-50.zip"
+        },
+        {
+          "name": "tbc-gearing-336-280",
+          "path": "Gearing/tbc-gearing-336-280",
+          "indexUrl": "/banners/Gearing/tbc-gearing-336-280/index.html",
+          "width": 336,
+          "height": 280,
+          "zipUrl": "/zips/Gearing/tbc-gearing-336-280.zip"
+        },
+        {
+          "name": "tbc-gearing-728-90",
+          "path": "Gearing/tbc-gearing-728-90",
+          "indexUrl": "/banners/Gearing/tbc-gearing-728-90/index.html",
+          "width": 728,
+          "height": 90,
+          "zipUrl": "/zips/Gearing/tbc-gearing-728-90.zip"
+        },
+        {
+          "name": "tbc-gearing-970-250",
+          "path": "Gearing/tbc-gearing-970-250",
+          "indexUrl": "/banners/Gearing/tbc-gearing-970-250/index.html",
+          "width": 970,
+          "height": 250,
+          "zipUrl": "/zips/Gearing/tbc-gearing-970-250.zip"
+        }
+      ]
+    },
+    {
       "name": "General",
       "zipUrl": "/zips/General.zip",
       "banners": [
@@ -277,6 +347,76 @@
           "width": 970,
           "height": 250,
           "zipUrl": "/zips/Professions/tbc-professions-970-250.zip"
+        }
+      ]
+    },
+    {
+      "name": "Raids",
+      "zipUrl": "/zips/Raids.zip",
+      "banners": [
+        {
+          "name": "tbc-raids-160-600",
+          "path": "Raids/tbc-raids-160-600",
+          "indexUrl": "/banners/Raids/tbc-raids-160-600/index.html",
+          "width": 160,
+          "height": 600,
+          "zipUrl": "/zips/Raids/tbc-raids-160-600.zip"
+        },
+        {
+          "name": "tbc-raids-300-100",
+          "path": "Raids/tbc-raids-300-100",
+          "indexUrl": "/banners/Raids/tbc-raids-300-100/index.html",
+          "width": 300,
+          "height": 100,
+          "zipUrl": "/zips/Raids/tbc-raids-300-100.zip"
+        },
+        {
+          "name": "tbc-raids-300-250",
+          "path": "Raids/tbc-raids-300-250",
+          "indexUrl": "/banners/Raids/tbc-raids-300-250/index.html",
+          "width": 300,
+          "height": 250,
+          "zipUrl": "/zips/Raids/tbc-raids-300-250.zip"
+        },
+        {
+          "name": "tbc-raids-300-600",
+          "path": "Raids/tbc-raids-300-600",
+          "indexUrl": "/banners/Raids/tbc-raids-300-600/index.html",
+          "width": 300,
+          "height": 600,
+          "zipUrl": "/zips/Raids/tbc-raids-300-600.zip"
+        },
+        {
+          "name": "tbc-raids-320-50",
+          "path": "Raids/tbc-raids-320-50",
+          "indexUrl": "/banners/Raids/tbc-raids-320-50/index.html",
+          "width": 320,
+          "height": 50,
+          "zipUrl": "/zips/Raids/tbc-raids-320-50.zip"
+        },
+        {
+          "name": "tbc-raids-336-280",
+          "path": "Raids/tbc-raids-336-280",
+          "indexUrl": "/banners/Raids/tbc-raids-336-280/index.html",
+          "width": 336,
+          "height": 280,
+          "zipUrl": "/zips/Raids/tbc-raids-336-280.zip"
+        },
+        {
+          "name": "tbc-raids-728-90",
+          "path": "Raids/tbc-raids-728-90",
+          "indexUrl": "/banners/Raids/tbc-raids-728-90/index.html",
+          "width": 728,
+          "height": 90,
+          "zipUrl": "/zips/Raids/tbc-raids-728-90.zip"
+        },
+        {
+          "name": "tbc-raids-970-250",
+          "path": "Raids/tbc-raids-970-250",
+          "indexUrl": "/banners/Raids/tbc-raids-970-250/index.html",
+          "width": 970,
+          "height": 250,
+          "zipUrl": "/zips/Raids/tbc-raids-970-250.zip"
         }
       ]
     }

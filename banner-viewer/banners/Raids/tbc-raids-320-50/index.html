@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TBC Raids - 320×50</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .banner {
+      display: block;
+      width: 320px;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .banner__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: bg-fade 1.2s ease-out forwards, bg-zoom 2.67s ease-in-out infinite;
+    }
+    .banner__text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: contain;
+      display: block;
+    }
+    .banner__logo {
+      position: absolute;
+      left: 267px;
+      top: 6px;
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      display: block;
+    }
+    @keyframes bg-zoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bg-fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="https://overgear.com/games/wow-20th-anniversary/raids" target="_blank" rel="noopener" class="banner">
+    <img src="bg.jpg" srcset="bg.jpg 1x, bg@2x.jpg 2x" alt="" class="banner__bg" width="320" height="50">
+    <img src="text.png" srcset="text.png 1x, text@2x.png 2x" alt="TBC Raids" class="banner__text" width="320" height="50">
+  </a>
+</body>
+</html>
