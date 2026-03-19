@@ -1,0 +1,425 @@
+*,
+*::before,
+*::after {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-breakpoint-md: 1010px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family        : "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight        : 400;
+    font-style         : normal;
+    background         : linear-gradient(90deg, rgba(0, 0, 0, 1) 27%, rgba(23, 60, 79, 1) 100%);
+    color              : #fff;
+    font-family        : system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    padding-top        : 105px;
+    overflow-x         : hidden;
+}
+
+button {
+    border    : none;
+    background: none;
+}
+
+.container {
+    max-width: 1164px;
+}
+
+h1,
+h2 {
+    font-size    : 50px;
+    font-weight  : 500;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.btn-К1-main {
+    background-color: #FF8300;
+    border-radius   : 7px;
+    padding         : 7.5px 40px;
+    color           : #fff;
+    border          : 1px solid #FF8300;
+    font-size       : 14px;
+    font-weight     : bold;
+    text-wrap       : nowrap;
+}
+
+.btn-К1-main:hover,
+.btn-К1-main:focus {
+    background-color: #070707;
+    color           : #fff;
+    box-shadow      : none;
+    border          : 1px solid #FF8300;
+}
+
+.btn-К1-header {
+    background-color: #070707;
+    border-radius   : 7px;
+    padding         : 7.5px 40px;
+    color           : #fff;
+    box-shadow      : 0px 13px 50px -5px rgba(0, 0, 0, 0.35);
+    border          : 1px solid #070707;
+    font-size       : 14px;
+}
+
+.btn-К1-header:hover,
+.btn-К1-header:focus {
+    background-color   : #FF8300;
+    box-shadow         : 0px 13px 50px -5px rgba(255, 131, 0, 0.35);
+    border             : 1px solid #FF8300;
+}
+
+.pt-section {
+    padding-top: 150px;
+}
+
+.pb-section {
+    padding-bottom: 75px;
+}
+
+.pb-215 {
+    padding-bottom: 215px;
+}
+
+.text-k1 {
+    color: #FF8300;
+}
+
+.text-min {
+    font-size: 17px;
+    color    : #A2AAB4;
+}
+
+.main-header {
+    position   : absolute;
+    left       : 0;
+    right      : 0;
+    top        : 15px;
+    height     : 85px;
+    padding    : 15px 0;
+    display    : flex;
+    align-items: center;
+    z-index    : 1000;
+    transition : top 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.main-header-inner {
+    height     : 100%;
+    display    : flex;
+    align-items: center;
+}
+
+.main-header.header-scrolled {
+    position       : fixed;
+    top            : 0;
+    background     : rgba(0, 0, 0, 0.6);
+    box-shadow     : 0 8px 20px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    width          : 100%;
+}
+
+.main-header.header-scrolled .btn {
+    box-shadow: none !important;
+}
+
+.header-nav {
+    flex           : 1;
+    display        : flex;
+    justify-content: center;
+    gap            : 40px;
+}
+
+
+.pay {
+    position      : relative;
+    overflow      : hidden;
+}
+
+.pay__img-position {
+    position: absolute;
+    top     : -160px;
+    left    : -190px;
+    z-index : -1;
+}
+
+.pay__text {
+    display    : block;
+    font-size  : 25px;
+    line-height: 29px;
+    color      : #A2AAB4;
+}
+
+.pay__small {
+    display  : block;
+    color    : #4B5B68;
+    font-size: 13px;
+}
+
+.pay .points-img-position {
+    position  : absolute;
+    top       : 100px;
+    right     : 0;
+    z-index   : -1;
+    width     : 75%;
+    opacity   : 0.049;
+    height    : 710px;
+    object-fit: cover;
+}
+
+.payment .card-item {
+    min-height: 205px;
+}
+
+.payment .bg-tel::before {
+    background-image : url('../img/g53.png');
+    transform: rotate(30deg);
+    top: 60px;
+    right: -140px;
+}
+
+.payment__title {
+    font-size     : 27px;
+    letter-spacing: -0.5px;
+    line-height   : 27px;
+    font-weight   : 500;
+}
+
+.payment__text {
+    font-size     : 16px;
+    letter-spacing: -0.5px;
+    line-height   : 22px;
+    margin-bottom : 6px;
+    opacity       : .7;
+}
+
+.profitable-container {
+    border-radius   : 30px;
+    padding         : 50px;
+    background-color: #01010166;
+}
+
+.profitable-subtitle {
+    font-size     : 27px !important;
+    line-height   : 27px;
+    letter-spacing: -0.5px;
+    font-weight   : 500;
+}
+
+.profitable-title {
+    position   : relative;
+    font-size  : 20px;
+    line-height: 22px;
+}
+
+.profitable-text {
+    font-size: 19px;
+}
+
+.profitable-title::before {
+    content         : '';
+    position        : absolute;
+    top             : -5px;
+    left            : -11px;
+    width           : 2px;
+    height          : 30px;
+    background-color: #F2994B;
+}
+
+.profitable .card-item {
+    height: 100%;
+}
+
+.profitable-badge {
+    position        : absolute;
+    top             : 5px;
+    right           : 5px;
+    padding         : 2px 9px;
+    background-color: #F2994B;
+    border-radius   : 7px;
+    color           : #000;
+    font-size       : 15px;
+}
+
+.profitable .points-img-position {
+    top: 35% !important;
+}
+
+.profitable .bg-tel::before {
+    top      : 1px;
+    left     : -260px !important;
+    transform: rotate(51deg);
+}
+
+.payments-badge {
+    height          : 40px;
+    width           : 40px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    border-radius   : 50%;
+    background-color: #E69D5A;
+    color           : #fff;
+    margin-bottom   : 20px;
+}
+
+.payments__title {
+    font-size  : 16px;
+    font-weight: 500;
+    color      : #fff;
+    text-align : center;
+}
+
+
+/* ============================= */
+.pay .points-img-position {
+    position  : absolute;
+    top       : 0px;
+    right     : 0;
+    z-index   : -1;
+    width     : 75%;
+    opacity   : 0.049;
+    height    : 710px;
+    object-fit: cover;
+}
+
+.card-item {
+    overflow        : hidden;
+    position        : relative;
+    padding         : 28px;
+    border-radius   : 10px;
+    background      : linear-gradient(-45deg, rgba(0, 0, 0, 1) 27%, rgba(23, 60, 79, 1) 100%);
+}
+
+.bg-tel {
+    padding: 100px 0;
+}
+
+.bg-tel img {
+    filter: drop-shadow(11px 9px 4px rgba(0, 0, 0, 0.8));
+}
+
+.bg-tel::before {
+    position           : absolute;
+    top                : 30px;
+    right              : -130px;
+    content            : '';
+    display            : flex;
+    padding            : 100px;
+    background-image   : url('../img/g52.png');
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    width              : 1000px;
+    height             : 100%;
+    z-index            : -1;
+    transform          : rotate(355deg);
+    opacity            : .15;
+}
+
+/* xxl */
+@media (max-width: 1399.98px) {}
+
+/* xl */
+@media (max-width: 1199.98px) {
+    .logo img {
+        width: 75% !important;
+    }
+
+    .bg-tel {
+        padding: 70px 0;
+    }
+
+    .bg-tel::before {
+        width: 800px;
+    }
+}
+
+/* lg */
+@media (max-width: 991.98px) {
+    .bg-tel {
+        padding: 50px 0;
+    }
+
+    .bg-tel::before {
+        width: 600px;
+    }
+}
+
+/* md */
+@media (max-width: 768.98px) {
+    .payment .card-item {
+        min-height: auto;
+    }
+
+    .pb-215 {
+        padding-bottom: 50px;
+    }
+}
+
+/* sm */
+@media (max-width: 575.98px) {
+    .logo img {
+        width: 50% !important;
+    }
+
+    .bg-tel::before {
+        width: 400px;
+    }
+
+    h1,
+    h2 {
+        font-size: 19px;
+    }
+
+    .pay__text {
+        font-size  : 16px;
+        line-height: 18px;
+    }
+
+    .payment__title {
+        font-size: 19px;
+    }
+
+    .profitable-container {
+        padding: 20px;
+    }
+
+    .profitable-title,
+    .profitable-subtitle {
+        font-size: 19px !important;
+    }
+    .text-min,
+    .profitable-text,
+    .payment__text {
+        font-size: 14px;
+    }
+
+    .payment .bg-tel::before {
+        width    : 600px;
+        transform: rotate(0deg);
+    }
+
+    .profitable .bg-tel::before {
+        width    : 600px;
+        left     : 0 !important;
+        transform: rotate(0deg);
+    }
+
+    .pt-section {
+        padding-top: 75px;
+    }
+}
