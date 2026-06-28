@@ -1,0 +1,177 @@
+[
+  {
+    "theme": "Места Абхазии",
+    "questions": [
+      {
+        "cost": 200,
+        "text": "Что это за место?",
+        "image": "./images/round-2/Abhazia/rica.webp",
+        "answer": "Озеро Рица"
+      },
+      {
+        "cost": 400,
+        "text": "Что это за место?",
+        "image": "./images/round-2/Abhazia/krepost.webp",
+        "answer": "Анакопийская крепость"
+      },
+      {
+        "cost": 600,
+        "text": "Что это за место?",
+        "image": "./images/round-2/Abhazia/stalin.webp",
+        "answer": "Дача Сталина"
+      },
+      {
+        "cost": 800,
+        "text": "Что это за место?",
+        "image": "./images/round-2/Abhazia/velikan.webp",
+        "answer": "Водопад Великан"
+      },
+      {
+        "cost": 1000,
+        "text": "Что это за место?",
+        "image": "./images/round-2/Abhazia/canyon.webp",
+        "answer": "Каньон Юпшарский"
+      }
+    ]
+  },
+  {
+    "theme": "Отсосу",
+    "questions": [
+      {
+        "cost": 200,
+        "text": "Кто это?",
+        "image": "./images/round-2/ostosu/luxury.webp",
+        "answer": "Luxury Girl"
+      },
+      {
+        "cost": 400,
+        "text": "Кто это?",
+        "image": "./images/round-2/ostosu/gray.png",
+        "answer": "Саша Грей"
+      },
+      {
+        "cost": 600,
+        "text": "Кто это?",
+        "image": "./images/round-2/ostosu/elfie.jpg",
+        "answer": "Eva Elfie"
+      },
+      {
+        "cost": 800,
+        "text": "Кто это?",
+        "image": "./images/round-2/ostosu/railey.jpg",
+        "answer": "Riley Reid"
+      },
+      {
+        "cost": 1000,
+        "text": "Кто это?",
+        "image": "/images/round-2/ostosu/fox.webp",
+        "answer": "Sweetie Fox"
+      }
+    ]
+  },
+  {
+    "theme": "Животные",
+    "questions": [
+      {
+        "cost": 200,
+        "text": "Самое быстрое наземное животное?",
+        "image": "",
+        "answer": "Гепард"
+      },
+      {
+        "cost": 400,
+        "text": "Единственное млекопитающее, способное к полёту?",
+        "image": "",
+        "answer": "Летучая мышь"
+      },
+      {
+        "cost": 600,
+        "text": "Сколько сердец у осьминога?",
+        "image": "",
+        "answer": "3"
+      },
+      {
+        "cost": 800,
+        "text": "Самая большая рыба в мире?",
+        "image": "",
+        "answer": "Китовая акула"
+      },
+      {
+        "cost": 1000,
+        "text": "Животное — символ Австралии?",
+        "image": "",
+        "answer": "Кенгуру"
+      }
+    ]
+  },
+  {
+    "theme": "Технологии",
+    "questions": [
+      {
+        "cost": 200,
+        "text": "Основатель компании Apple?",
+        "image": "",
+        "answer": "Стив Jobs"
+      },
+      {
+        "cost": 400,
+        "text": "Язык программирования, созданный Guido van Rossum?",
+        "image": "",
+        "answer": "Python"
+      },
+      {
+        "cost": 600,
+        "text": "Год основания Google?",
+        "image": "",
+        "answer": "1998"
+      },
+      {
+        "cost": 800,
+        "text": "Что означает аббревиатура HTML?",
+        "image": "",
+        "answer": "HyperText Markup Language"
+      },
+      {
+        "cost": 1000,
+        "text": "Первый искусственный спутник Земли?",
+        "image": "",
+        "answer": "Спутник-1"
+      }
+    ]
+  },
+  {
+    "theme": "Еда и напитки",
+    "questions": [
+      {
+        "cost": 200,
+        "text": "Из какого зерна делают пасту?",
+        "image": "",
+        "answer": "Пшеница (мука)"
+      },
+      {
+        "cost": 400,
+        "text": "Страна происхождения суши?",
+        "image": "",
+        "answer": "Япония"
+      },
+      {
+        "cost": 600,
+        "text": "Основной ингредиент guacamole?",
+        "image": "",
+        "answer": "Авокадо"
+      },
+      {
+        "cost": 800,
+        "text": "Напиток, получаемый из винограда?",
+        "image": "",
+        "answer": "Вино"
+      },
+      {
+        "cost": 1000,
+        "text": "Сыр с голубой плесенью из Франции?",
+        "image": "",
+        "answer": "Roquefort"
+      }
+    ]
+  }
+]

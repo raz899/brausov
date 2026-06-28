@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Своя игра</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="header">
+      <h1 class="logo">Своя игра</h1>
+      <div class="scores">
+        <div class="score-card score-pasha">
+          <span class="score-name">Паша</span>
+          <span class="score-value" id="score-pasha">0</span>
+        </div>
+        <div class="round-badge" id="round-badge">Раунд 1</div>
+        <div class="score-card score-tanya">
+          <span class="score-name">Таня</span>
+          <span class="score-value" id="score-tanya">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Загрузка вопросов…</p>
+      </div>
+
+      <div class="error-panel hidden" id="error-panel">
+        <p class="error-text" id="error-text"></p>
+        <button class="btn btn-retry" id="btn-retry">Повторить загрузку</button>
+      </div>
+
+      <div class="board-wrapper hidden" id="board-wrapper">
+        <table class="board" id="board">
+          <thead id="board-head"></thead>
+          <tbody id="board-body"></tbody>
+        </table>
+      </div>
+
+      <div class="final-board hidden" id="final-board">
+        <div class="final-theme" id="final-theme"></div>
+        <button class="final-question-btn" id="final-question-btn"></button>
+      </div>
+
+      <div class="game-over hidden" id="game-over">
+        <h2>Игра окончена!</h2>
+        <p class="winner-text" id="winner-text"></p>
+        <button class="btn btn-restart" id="btn-restart">Начать заново</button>
+      </div>
+
+      <div class="theme-presentation hidden" id="theme-presentation">
+        <div class="presentation-inner" id="presentation-inner">
+          <h2 class="presentation-round" id="presentation-round"></h2>
+          <p class="presentation-theme" id="presentation-theme"></p>
+          <p class="presentation-hint">Нажмите, чтобы продолжить</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <span class="modal-cost" id="modal-cost"></span>
+        <span class="modal-theme" id="modal-theme"></span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-question" id="modal-question"></p>
+        <img class="modal-image hidden" id="modal-image" alt="">
+        <p class="modal-answer-host hidden" id="modal-answer-host">
+          <span class="answer-label">Ответ:</span>
+          <span id="modal-answer-text"></span>
+        </p>
+        <button class="btn btn-show-answer" id="btn-show-answer" type="button">Показать ответ</button>
+      </div>
+      <div class="modal-actions" id="modal-actions">
+        <div class="modal-actions-row">
+          <button class="btn btn-player btn-pasha" data-player="pasha">Паша</button>
+          <button class="btn btn-player btn-tanya" data-player="tanya">Таня</button>
+        </div>
+        <div class="modal-actions-row modal-actions-secondary">
+          <button class="btn btn-secondary btn-both" id="btn-both-correct" type="button">Оба правы</button>
+          <button class="btn btn-secondary btn-no-answer" id="btn-no-answer" type="button">Нет ответа</button>
+        </div>
+      </div>
+      <div class="modal-actions hidden" id="modal-actions-final">
+        <button class="btn btn-correct" id="btn-correct">Верно</button>
+        <button class="btn btn-wrong" id="btn-wrong">Неверно</button>
+      </div>
+      <button class="btn btn-close" id="btn-close-modal" title="Закрыть без начисления">✕</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
