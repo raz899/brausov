@@ -338,6 +338,25 @@ function renderFinalBoard() {
   };
 }
 
+function hasTextAnswer(question) {
+  return Boolean(question.answer && question.answer.trim());
+}
+
+function hasAnswerToReveal(question) {
+  return hasTextAnswer(question) || Boolean(question.answerImage && question.answerImage.trim());
+}
+
+function setModalImage(src) {
+  if (src && src.trim()) {
+    els.modalImage.src = src;
+    els.modalImage.classList.remove('hidden');
+    els.modalImage.onerror = () => els.modalImage.classList.add('hidden');
+  } else {
+    els.modalImage.classList.add('hidden');
+    els.modalImage.removeAttribute('src');
+  }
+}
+
 function openQuestion(themeIndex, questionIndex, isFinal = false) {
   const theme = state.roundData[themeIndex];
   const question = theme.questions[questionIndex];
@@ -348,19 +367,12 @@ function openQuestion(themeIndex, questionIndex, isFinal = false) {
   els.modalTheme.textContent = theme.theme;
   els.modalQuestion.innerHTML = question.text;
 
-  if (question.image && question.image.trim()) {
-    els.modalImage.src = question.image;
-    els.modalImage.classList.remove('hidden');
-    els.modalImage.onerror = () => els.modalImage.classList.add('hidden');
-  } else {
-    els.modalImage.classList.add('hidden');
-    els.modalImage.removeAttribute('src');
-  }
+  setModalImage(question.image);
 
-  els.modalAnswerText.textContent = question.answer || '—';
+  els.modalAnswerText.textContent = hasTextAnswer(question) ? question.answer.trim() : '';
   els.modalAnswerHost.classList.remove('visible');
   els.modalAnswerHost.classList.add('hidden');
-  els.btnShowAnswer.classList.remove('hidden');
+  els.btnShowAnswer.classList.toggle('invisible', !hasAnswerToReveal(question));
 
   if (isFinal || state.isFinal) {
     els.modalActions.classList.add('hidden');
@@ -374,6 +386,25 @@ function openQuestion(themeIndex, questionIndex, isFinal = false) {
   els.modal.style.animation = 'none';
   void els.modal.offsetWidth;
   els.modal.style.animation = '';
+}
+
+function showHostAnswer() {
+  if (!state.activeQuestion) return;
+
+  const { themeIndex, questionIndex } = state.activeQuestion;
+  const question = state.roundData[themeIndex].questions[questionIndex];
+
+  if (hasTextAnswer(question)) {
+    els.modalAnswerText.textContent = question.answer.trim();
+    els.modalAnswerHost.classList.remove('hidden');
+    els.modalAnswerHost.classList.add('visible');
+  }
+
+  els.btnShowAnswer.classList.add('invisible');
+
+  if (question.answerImage && question.answerImage.trim()) {
+    setModalImage(question.answerImage);
+  }
 }
 
 function closeModal() {
@@ -662,11 +693,7 @@ function bindEvents() {
   els.btnRetry.addEventListener('click', initGame);
   els.btnRestart.addEventListener('click', initGame);
 
-  els.btnShowAnswer.addEventListener('click', () => {
-    els.modalAnswerHost.classList.remove('hidden');
-    els.modalAnswerHost.classList.add('visible');
-    els.btnShowAnswer.classList.add('hidden');
-  });
+  els.btnShowAnswer.addEventListener('click', showHostAnswer);
 
   els.themePresentation.addEventListener('click', advanceThemePresentation);
 }

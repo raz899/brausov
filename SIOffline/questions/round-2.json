@@ -6,31 +6,36 @@
         "cost": 200,
         "text": "Что это за место?",
         "image": "./images/round-2/Abhazia/rica.webp",
-        "answer": "Озеро Рица"
+        "answer": "Озеро Рица",
+        "answerImage": ""
       },
       {
         "cost": 400,
         "text": "Что это за место?",
         "image": "./images/round-2/Abhazia/krepost.webp",
-        "answer": "Анакопийская крепость"
+        "answer": "Анакопийская крепость",
+        "answerImage": ""
       },
       {
         "cost": 600,
         "text": "Что это за место?",
         "image": "./images/round-2/Abhazia/stalin.webp",
-        "answer": "Дача Сталина"
+        "answer": "Дача Сталина",
+        "answerImage": ""
       },
       {
         "cost": 800,
         "text": "Что это за место?",
         "image": "./images/round-2/Abhazia/velikan.webp",
-        "answer": "Водопад Великан"
+        "answer": "Водопад Великан",
+        "answerImage": ""
       },
       {
         "cost": 1000,
         "text": "Что это за место?",
         "image": "./images/round-2/Abhazia/canyon.webp",
-        "answer": "Каньон Юпшарский"
+        "answer": "Каньон Юпшарский",
+        "answerImage": ""
       }
     ]
   },
@@ -41,136 +46,156 @@
         "cost": 200,
         "text": "Кто это?",
         "image": "./images/round-2/ostosu/luxury.webp",
-        "answer": "Luxury Girl"
+        "answer": "Luxury Girl",
+        "answerImage": ""
       },
       {
         "cost": 400,
         "text": "Кто это?",
         "image": "./images/round-2/ostosu/gray.png",
-        "answer": "Саша Грей"
+        "answer": "Саша Грей",
+        "answerImage": ""
       },
       {
         "cost": 600,
         "text": "Кто это?",
         "image": "./images/round-2/ostosu/elfie.jpg",
-        "answer": "Eva Elfie"
+        "answer": "Eva Elfie",
+        "answerImage": ""
       },
       {
         "cost": 800,
         "text": "Кто это?",
         "image": "./images/round-2/ostosu/railey.jpg",
-        "answer": "Riley Reid"
+        "answer": "Riley Reid",
+        "answerImage": ""
       },
       {
         "cost": 1000,
         "text": "Кто это?",
         "image": "/images/round-2/ostosu/fox.webp",
-        "answer": "Sweetie Fox"
+        "answer": "Sweetie Fox",
+        "answerImage": ""
       }
     ]
   },
   {
-    "theme": "Животные",
-    "questions": [
-      {
-        "cost": 200,
-        "text": "Самое быстрое наземное животное?",
-        "image": "",
-        "answer": "Гепард"
-      },
-      {
-        "cost": 400,
-        "text": "Единственное млекопитающее, способное к полёту?",
-        "image": "",
-        "answer": "Летучая мышь"
-      },
-      {
-        "cost": 600,
-        "text": "Сколько сердец у осьминога?",
-        "image": "",
-        "answer": "3"
-      },
-      {
-        "cost": 800,
-        "text": "Самая большая рыба в мире?",
-        "image": "",
-        "answer": "Китовая акула"
-      },
-      {
-        "cost": 1000,
-        "text": "Животное — символ Австралии?",
-        "image": "",
-        "answer": "Кенгуру"
-      }
-    ]
-  },
-  {
-    "theme": "Технологии",
+    "theme": "Отлижу",
     "questions": [
       {
         "cost": 200,
         "text": "Основатель компании Apple?",
         "image": "",
-        "answer": "Стив Jobs"
+        "answer": "Стив Jobs",
+        "answerImage": ""
       },
       {
         "cost": 400,
         "text": "Язык программирования, созданный Guido van Rossum?",
         "image": "",
-        "answer": "Python"
+        "answer": "Python",
+        "answerImage": ""
       },
       {
         "cost": 600,
         "text": "Год основания Google?",
         "image": "",
-        "answer": "1998"
+        "answer": "1998",
+        "answerImage": ""
       },
       {
         "cost": 800,
         "text": "Что означает аббревиатура HTML?",
         "image": "",
-        "answer": "HyperText Markup Language"
+        "answer": "HyperText Markup Language",
+        "answerImage": ""
       },
       {
         "cost": 1000,
         "text": "Первый искусственный спутник Земли?",
         "image": "",
-        "answer": "Спутник-1"
+        "answer": "Спутник-1",
+        "answerImage": ""
       }
     ]
   },
   {
-    "theme": "Еда и напитки",
+    "theme": "Нельзяграм",
     "questions": [
       {
         "cost": 200,
-        "text": "Из какого зерна делают пасту?",
-        "image": "",
-        "answer": "Пшеница (мука)"
+        "text": "Что изображено на полной фотке?",
+        "image": "/images/round-2/iknow/200.jpg",
+        "answer": "",
+        "answerImage": "/images/round-2/iknow/200-a.jpg"
       },
       {
         "cost": 400,
-        "text": "Страна происхождения суши?",
-        "image": "",
-        "answer": "Япония"
+        "text": "Что изображено на полной фотке?",
+        "image": "/images/round-2/iknow/400.jpg",
+        "answer": "",
+        "answerImage": "/images/round-2/iknow/400-a.jpg"
       },
       {
         "cost": 600,
-        "text": "Основной ингредиент guacamole?",
-        "image": "",
-        "answer": "Авокадо"
+        "text": "Что изображено на полной фотке?",
+        "image": "/images/round-2/iknow/600.jpg",
+        "answer": "",
+        "answerImage": "/images/round-2/iknow/600-a.jpg"
       },
       {
         "cost": 800,
-        "text": "Напиток, получаемый из винограда?",
-        "image": "",
-        "answer": "Вино"
+        "text": "Что изображено на полной фотке?",
+        "image": "/images/round-2/iknow/800.jpg",
+        "answer": "",
+        "answerImage": "/images/round-2/iknow/800-a.jpg"
       },
       {
         "cost": 1000,
-        "text": "Сыр с голубой плесенью из Франции?",
+        "text": "Что изображено на полной фотке?",
+        "image": "/images/round-2/iknow/1000.jpg",
+        "answer": "",
+        "answerImage": "/images/round-2/iknow/1000-a.jpg"
+      }
+    ]
+  },
+  {
+    "theme": "Пашины прозвища",
+    "questions": [
+      {
+        "cost": 200,
+        "text": "ОН стал героем, после того как противостоял <br> расхищению социалистической собственности <br> и кулачеству в лице своего отца.",
         "image": "",
-        "answer": "Roquefort"
+        "answer": "Павлик Морозов",
+        "answerImage": ""
+      },
+      {
+        "cost": 400,
+        "text": "В основном ЕГО делают из мяса <br> птицы, печени, а также свинины и говядины. <br> Реже из грибов и овощей.",
+        "image": "",
+        "answer": "Паштет",
+        "answerImage": ""
+      },
+      {
+        "cost": 600,
+        "text": "ЭТО СЛОВО, вошеднее в тюремный слэнг в 1960-х годах, <br> имеет много значений: <br> отец, главарь преступной группировки, опытный авторитетный вор <br> и даже начальник уголовного розыска.",
+        "image": "",
+        "answer": "Пахан",
+        "answerImage": ""
+      },
+      {
+        "cost": 800,
+        "text": "Он был настолько богат, <br> что ежемесечно тратил около $2500 <br> только на резинки для денег.",
+        "image": "",
+        "answer": "Пабло Эскобар",
+        "answerImage": ""
+      },
+      {
+        "cost": 1000,
+        "text": "Эта птица является национальным символом Индии, <br> так как в индуизме почитается как священная.",
+        "image": "",
+        "answer": "Павлин",
+        "answerImage": ""
       }
     ]
   }
