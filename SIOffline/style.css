@@ -62,6 +62,7 @@ body {
   color: var(--accent-gold);
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
   margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 .scores {
@@ -351,50 +352,6 @@ body {
   50% { opacity: 0.85; }
 }
 
-/* Final round */
-.final-board {
-  text-align: center;
-  width: 100%;
-  max-width: 700px;
-}
-
-.final-theme {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  margin-bottom: 32px;
-  padding: 20px;
-  background: linear-gradient(135deg, #1a3a6e, #0d2040);
-  border-radius: 12px;
-  border: 2px solid var(--accent-blue);
-}
-
-.final-question-btn {
-  background: linear-gradient(135deg, var(--cell-bg), var(--cell-hover));
-  border: 3px solid var(--accent-gold);
-  color: var(--accent-gold);
-  font-size: 2.5rem;
-  font-weight: 800;
-  padding: 40px 64px;
-  border-radius: 16px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
-}
-
-.final-question-btn:hover:not(:disabled) {
-  transform: scale(1.05);
-  box-shadow: 0 0 32px rgba(255, 215, 0, 0.4);
-}
-
-.final-question-btn:disabled,
-.final-question-btn.used {
-  opacity: 0.35;
-  cursor: default;
-  transform: none;
-}
-
 /* Game over */
 .game-over {
   text-align: center;
@@ -404,13 +361,54 @@ body {
 .game-over h2 {
   font-size: 2.5rem;
   color: var(--accent-gold);
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.game-over-scores {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.game-over-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 40px;
+  border-radius: 12px;
+  min-width: 140px;
+}
+
+.game-over-score .score-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.game-over-score .score-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.game-over-score.score-pasha {
+  background: linear-gradient(135deg, #1a3a6e, #0d2040);
+  border: 2px solid var(--accent-blue);
+  color: var(--accent-cyan);
+}
+
+.game-over-score.score-tanya {
+  background: linear-gradient(135deg, #3a1a4e, #200d30);
+  border: 2px solid #a855f7;
+  color: #d8b4fe;
 }
 
 .winner-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 32px;
-  color: var(--text-light);
+  color: var(--accent-gold);
 }
 
 /* Buttons */

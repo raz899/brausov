@@ -4,35 +4,35 @@
     "questions": [
       {
         "cost": 300,
-        "text": "Сила тока прямо пропорциональна напряжению и обратно пропорциональна сопротивлению. Что это?",
+        "text": "Сила тока прямо пропорциональна напряжению <br> и обратно пропорциональна сопротивлению. Что это?",
         "image": "",
         "answer": "Закон Ома",
         "answerImage": ""
       },
       {
         "cost": 600,
-        "text": "Длина Транссибирской магистрали — 9298 километров, она проходит через 87 городов, пересекает 16 крупных рек и 8 их. Назовите «их»",
+        "text": "Длина Транссибирской магистрали — 9298 километров, <br> она проходит через 87 городов, <br> пересекает 16 крупных рек и 8 их. <br> Назовите «их»",
         "image": "",
         "answer": "Часовые пояса",
         "answerImage": ""
       },
       {
         "cost": 900,
-        "text": "Однажды Виктор Гюго заметил, что человечество владеет тремя ключами, позволяющими знать, думать и мечтать. Два ключа — цифра и буква. Третий — именно она.",
+        "text": "Однажды Виктор Гюго заметил, <br>что человечество владеет тремя ключами, <br>позволяющими знать, думать и мечтать. <br>Два ключа — цифра и буква. Третий — именно она.",
         "image": "",
         "answer": "Нота",
         "answerImage": ""
       },
       {
         "cost": 1200,
-        "text": "Закончите японскую поговорку: «Хороший муж всегда здоров, и его...»",
+        "text": "Закончите японскую поговорку: <br> «Хороший муж всегда здоров, и его...»",
         "image": "",
         "answer": "Нет дома",
         "answerImage": ""
       },
       {
         "cost": 1500,
-        "text": "Его составляют 4 зверя, 1 ракообразное, 1 паукообразное, 1 прибор, 1 женщина, 4 мужчины и несколько рыб.",
+        "text": "Его составляют 4 зверя, 1 ракообразное, <br> 1 паукообразное, 1 прибор, 1 женщина, <br> 4 мужчины и несколько рыб.",
         "image": "",
         "answer": "Зодиак",
         "answerImage": ""
@@ -44,37 +44,37 @@
     "questions": [
       {
         "cost": 300,
-        "text": "Автор картины «Мона Лиза»?",
-        "image": "",
-        "answer": "Leonardo da Vinci",
+        "text": "Что это за блюдо?",
+        "image": "./images/round-3/kulinar/k1.jpg",
+        "answer": "Паста болоньезе",
         "answerImage": ""
       },
       {
         "cost": 600,
-        "text": "Художник «Звёздной ночи»?",
-        "image": "",
-        "answer": "Vincent van Gogh",
+        "text": "Что это за блюдо?",
+        "image": "./images/round-3/kulinar/k2.jpg",
+        "answer": "Пастуший пирог",
         "answerImage": ""
       },
       {
         "cost": 900,
-        "text": "Скульптор статуи «Давид»?",
-        "image": "",
-        "answer": "Michelangelo",
+        "text": "Что это за блюдо?",
+        "image": "./images/round-3/kulinar/k3.jpg",
+        "answer": "Рататуй",
         "answerImage": ""
       },
       {
         "cost": 1200,
-        "text": "Направление в искусстве, основанное Пабло Пикассо?",
-        "image": "",
-        "answer": "Кубизм",
+        "text": "Что это за блюдо?",
+        "image": "./images/round-3/kulinar/k4.jpg",
+        "answer": "Жульен",
         "answerImage": ""
       },
       {
         "cost": 1500,
-        "text": "Музей в Париже, где хранится «Мона Лиза»?",
-        "image": "",
-        "answer": "Лувр",
+        "text": "Что это за блюдо?",
+        "image": "./images/round-3/kulinar/k5.jpg",
+        "answer": "Манты",
         "answerImage": ""
       }
     ]
@@ -84,38 +84,38 @@
     "questions": [
       {
         "cost": 300,
-        "text": "Ближайшая к Солнцу планета?",
-        "image": "",
-        "answer": "Меркурий",
-        "answerImage": ""
+        "text": "Сколько это стоит?",
+        "image": "./images/round-3/ceny/с1.jpg",
+        "answer": "",
+        "answerImage": "./images/round-3/ceny/с1-a.jpg"
       },
       {
         "cost": 600,
-        "text": "Красная планета?",
-        "image": "",
-        "answer": "Марс",
-        "answerImage": ""
+        "text": "Сколько это стоит?",
+        "image": "./images/round-3/ceny/с2.jpg",
+        "answer": "",
+        "answerImage": "../images/round-3/ceny/с2-a.jpg"
       },
       {
         "cost": 900,
-        "text": "Галактика, в которой находится Солнечная система?",
-        "image": "",
-        "answer": "Млечный Путь",
-        "answerImage": ""
+        "text": "Сколько это стоит?",
+        "image": "./images/round-3/ceny/с3.jpg",
+        "answer": "",
+        "answerImage": "./images/round-3/ceny/с3-a.jpg"
       },
       {
         "cost": 1200,
-        "text": "Первый человек на Луне?",
-        "image": "",
-        "answer": "Neil Armstrong",
-        "answerImage": ""
+        "text": "Сколько это стоит?",
+        "image": "./images/round-3/ceny/с4.jpg",
+        "answer": "",
+        "answerImage": "./images/round-3/ceny/с4-a.jpg"
       },
       {
         "cost": 1500,
-        "text": "Самая большая планета Солнечной системы?",
-        "image": "",
-        "answer": "Юпитер",
-        "answerImage": ""
+        "text": "Сколько это стоит?",
+        "image": "./images/round-3/ceny/с5.jpg",
+        "answer": "",
+        "answerImage": "./images/round-3/ceny/с5-a.jpg"
       }
     ]
   },
@@ -124,37 +124,37 @@
     "questions": [
       {
         "cost": 300,
-        "text": "«Спасибо» по-немецки?",
-        "image": "",
-        "answer": "Danke",
+        "text": "Как называется этот предмет одежды?",
+        "image": "./images/round-3/nogi/n1.jpg",
+        "answer": "Носки",
         "answerImage": ""
       },
       {
         "cost": 600,
-        "text": "«Привет» по-японски?",
-        "image": "",
-        "answer": "Konnichiwa",
+        "text": "Как называется этот предмет одежды?",
+        "image": "./images/round-3/nogi/n2.jpg",
+        "answer": "Чулки",
         "answerImage": ""
       },
       {
         "cost": 900,
-        "text": "Самый распространённый язык в мире по числу носителей?",
-        "image": "",
-        "answer": "Китайский (мандарин)",
+        "text": "Как называется этот предмет одежды?",
+        "image": "./images/round-3/nogi/n3.jpg",
+        "answer": "Гольфы",
         "answerImage": ""
       },
       {
         "cost": 1200,
-        "text": "«Доброе утро» по-французски?",
-        "image": "",
-        "answer": "Bonjour",
+        "text": "Как называется этот предмет одежды?",
+        "image": "./images/round-3/nogi/n4.jpg",
+        "answer": "Капри",
         "answerImage": ""
       },
       {
         "cost": 1500,
-        "text": "Алфавит с 33 буквами?",
-        "image": "",
-        "answer": "Русский",
+        "text": "Как называется этот предмет одежды?",
+        "image": "./images/round-3/nogi/n5.jpg",
+        "answer": "Гетры",
         "answerImage": ""
       }
     ]

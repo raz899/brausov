@@ -41,13 +41,18 @@
         </table>
       </div>
 
-      <div class="final-board hidden" id="final-board">
-        <div class="final-theme" id="final-theme"></div>
-        <button class="final-question-btn" id="final-question-btn"></button>
-      </div>
-
       <div class="game-over hidden" id="game-over">
         <h2>Игра окончена!</h2>
+        <div class="game-over-scores">
+          <div class="game-over-score score-pasha">
+            <span class="score-name">Паша</span>
+            <span class="score-value" id="game-over-pasha">0</span>
+          </div>
+          <div class="game-over-score score-tanya">
+            <span class="score-name">Таня</span>
+            <span class="score-value" id="game-over-tanya">0</span>
+          </div>
+        </div>
         <p class="winner-text" id="winner-text"></p>
         <button class="btn btn-restart" id="btn-restart">Начать заново</button>
       </div>
@@ -88,10 +93,6 @@
           <button class="btn btn-secondary btn-both" id="btn-both-correct" type="button">Оба правы</button>
           <button class="btn btn-secondary btn-no-answer" id="btn-no-answer" type="button">Нет ответа</button>
         </div>
-      </div>
-      <div class="modal-actions hidden" id="modal-actions-final">
-        <button class="btn btn-correct" id="btn-correct">Верно</button>
-        <button class="btn btn-wrong" id="btn-wrong">Неверно</button>
       </div>
       <button class="btn btn-close" id="btn-close-modal" title="Закрыть без начисления">✕</button>
     </div>

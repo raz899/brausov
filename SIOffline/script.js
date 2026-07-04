@@ -9,7 +9,6 @@ const ROUND_FILES = {
   1: './questions/round-1.json',
   2: './questions/round-2.json',
   3: './questions/round-3.json',
-  final: './questions/round-final.json',
 };
 
 const STORAGE_KEY = 'svoya-igra-save';
@@ -17,14 +16,11 @@ const STORAGE_KEY = 'svoya-igra-save';
 const state = {
   currentRound: 1,
   scores: { pasha: 0, tanya: 0 },
-  tanyaFinalScore: 0,
   roundData: null,
   answered: new Set(),
-  finalAnswered: false,
   gameFinished: false,
   presentationDone: false,
   activeQuestion: null,
-  isFinal: false,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -38,10 +34,9 @@ const els = {
   boardWrapper: $('board-wrapper'),
   boardHead: $('board-head'),
   boardBody: $('board-body'),
-  finalBoard: $('final-board'),
-  finalTheme: $('final-theme'),
-  finalQuestionBtn: $('final-question-btn'),
   gameOver: $('game-over'),
+  gameOverPasha: $('game-over-pasha'),
+  gameOverTanya: $('game-over-tanya'),
   winnerText: $('winner-text'),
   btnRestart: $('btn-restart'),
   roundBadge: $('round-badge'),
@@ -56,13 +51,10 @@ const els = {
   modalAnswerHost: $('modal-answer-host'),
   modalAnswerText: $('modal-answer-text'),
   modalActions: $('modal-actions'),
-  modalActionsFinal: $('modal-actions-final'),
   btnShowAnswer: $('btn-show-answer'),
   btnCloseModal: $('btn-close-modal'),
   btnBothCorrect: $('btn-both-correct'),
   btnNoAnswer: $('btn-no-answer'),
-  btnCorrect: $('btn-correct'),
-  btnWrong: $('btn-wrong'),
   themePresentation: $('theme-presentation'),
   presentationInner: $('presentation-inner'),
   presentationRound: $('presentation-round'),
@@ -118,11 +110,8 @@ function saveGameState() {
     const payload = {
       currentRound: state.currentRound,
       scores: { ...state.scores },
-      tanyaFinalScore: state.tanyaFinalScore,
       answered: [...state.answered],
-      finalAnswered: state.finalAnswered,
       gameFinished: state.gameFinished,
-      isFinal: state.isFinal,
       presentationDone: state.presentationDone,
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -160,19 +149,14 @@ function clearGameState() {
 function applySavedState(saved) {
   state.currentRound = saved.currentRound ?? 1;
   state.scores = { pasha: saved.scores.pasha, tanya: saved.scores.tanya };
-  state.tanyaFinalScore = saved.tanyaFinalScore ?? 0;
   state.answered = new Set(saved.answered);
-  state.finalAnswered = Boolean(saved.finalAnswered);
-  state.gameFinished = Boolean(saved.gameFinished);
-  state.isFinal = Boolean(saved.isFinal);
+  state.gameFinished = Boolean(saved.gameFinished) || Boolean(saved.isFinal && saved.finalAnswered);
   state.presentationDone = Boolean(saved.presentationDone) || saved.answered.length > 0;
   state.activeQuestion = null;
   state.roundData = null;
 }
 
 function isRoundComplete() {
-  if (state.isFinal) return state.finalAnswered;
-
   let total = 0;
   state.roundData.forEach((theme) => {
     total += theme.questions.length;
@@ -194,11 +178,7 @@ function updateScores(animate = false) {
 }
 
 function updateRoundBadge() {
-  if (state.isFinal) {
-    els.roundBadge.textContent = 'Финал';
-  } else {
-    els.roundBadge.textContent = `Раунд ${state.currentRound}`;
-  }
+  els.roundBadge.textContent = `Раунд ${state.currentRound}`;
 }
 
 function hideThemePresentation() {
@@ -208,7 +188,6 @@ function hideThemePresentation() {
 
 function hideGameViews() {
   els.boardWrapper.classList.add('hidden');
-  els.finalBoard.classList.add('hidden');
   els.gameOver.classList.add('hidden');
   hideThemePresentation();
 }
@@ -267,7 +246,6 @@ function beginRoundAfterPresentation(roundLabel, onComplete) {
 function renderBoard() {
   hideThemePresentation();
   els.boardWrapper.classList.remove('hidden');
-  els.finalBoard.classList.add('hidden');
   els.gameOver.classList.add('hidden');
 
   const themes = state.roundData;
@@ -317,27 +295,6 @@ function renderBoard() {
   });
 }
 
-function renderFinalBoard() {
-  hideThemePresentation();
-  els.boardWrapper.classList.add('hidden');
-  els.finalBoard.classList.remove('hidden');
-  els.gameOver.classList.add('hidden');
-
-  const theme = state.roundData[0];
-  const question = theme.questions[0];
-
-  els.finalTheme.textContent = theme.theme;
-  els.finalQuestionBtn.textContent = question.cost;
-  els.finalQuestionBtn.disabled = state.finalAnswered;
-  els.finalQuestionBtn.classList.toggle('used', state.finalAnswered);
-
-  els.finalQuestionBtn.onclick = () => {
-    if (!state.finalAnswered) {
-      openQuestion(0, 0, true);
-    }
-  };
-}
-
 function hasTextAnswer(question) {
   return Boolean(question.answer && question.answer.trim());
 }
@@ -357,11 +314,11 @@ function setModalImage(src) {
   }
 }
 
-function openQuestion(themeIndex, questionIndex, isFinal = false) {
+function openQuestion(themeIndex, questionIndex) {
   const theme = state.roundData[themeIndex];
   const question = theme.questions[questionIndex];
 
-  state.activeQuestion = { themeIndex, questionIndex, isFinal };
+  state.activeQuestion = { themeIndex, questionIndex };
 
   els.modalCost.textContent = question.cost;
   els.modalTheme.textContent = theme.theme;
@@ -374,13 +331,7 @@ function openQuestion(themeIndex, questionIndex, isFinal = false) {
   els.modalAnswerHost.classList.add('hidden');
   els.btnShowAnswer.classList.toggle('invisible', !hasAnswerToReveal(question));
 
-  if (isFinal || state.isFinal) {
-    els.modalActions.classList.add('hidden');
-    els.modalActionsFinal.classList.remove('hidden');
-  } else {
-    els.modalActions.classList.remove('hidden');
-    els.modalActionsFinal.classList.add('hidden');
-  }
+  els.modalActions.classList.remove('hidden');
 
   els.modalOverlay.classList.remove('hidden');
   els.modal.style.animation = 'none';
@@ -435,7 +386,7 @@ function finishRegularQuestion() {
 }
 
 function handlePlayerAnswer(player) {
-  if (!state.activeQuestion || state.isFinal) return;
+  if (!state.activeQuestion) return;
 
   const { themeIndex, questionIndex } = state.activeQuestion;
   const question = state.roundData[themeIndex].questions[questionIndex];
@@ -445,7 +396,7 @@ function handlePlayerAnswer(player) {
 }
 
 function handleBothCorrect() {
-  if (!state.activeQuestion || state.isFinal) return;
+  if (!state.activeQuestion) return;
 
   const { themeIndex, questionIndex } = state.activeQuestion;
   const question = state.roundData[themeIndex].questions[questionIndex];
@@ -455,23 +406,9 @@ function handleBothCorrect() {
 }
 
 function handleNoAnswer() {
-  if (!state.activeQuestion || state.isFinal) return;
+  if (!state.activeQuestion) return;
 
   finishRegularQuestion();
-}
-
-function handleFinalAnswer(correct) {
-  if (!state.activeQuestion || !state.isFinal) return;
-
-  const question = state.roundData[0].questions[0];
-  const delta = correct ? question.cost : -question.cost;
-
-  awardPoints('pasha', delta);
-  state.finalAnswered = true;
-  saveGameState();
-  closeModal();
-  renderFinalBoard();
-  setTimeout(showGameOver, 600);
 }
 
 function checkRoundComplete() {
@@ -480,15 +417,14 @@ function checkRoundComplete() {
   setTimeout(async () => {
     if (state.currentRound < 3) {
       await startRound(state.currentRound + 1);
-    } else if (!state.isFinal) {
-      await startFinalRound();
+    } else {
+      showGameOver();
     }
   }, 800);
 }
 
 async function startRound(roundNum) {
   state.currentRound = roundNum;
-  state.isFinal = false;
   state.gameFinished = false;
   state.presentationDone = false;
   state.answered.clear();
@@ -513,53 +449,26 @@ async function startRound(roundNum) {
   }
 }
 
-async function startFinalRound() {
-  state.isFinal = true;
-  state.gameFinished = false;
-  state.presentationDone = false;
-  state.finalAnswered = false;
-  state.tanyaFinalScore = state.scores.tanya;
-  state.scores.pasha = 0;
-
-  showLoading(true);
-  hideError();
-  hideGameViews();
-
-  try {
-    state.roundData = await loadRoundData('final');
-    showLoading(false);
-    updateRoundBadge();
-    updateScores();
-    saveGameState();
-
-    beginRoundAfterPresentation('Финал', () => {
-      renderFinalBoard();
-      saveGameState();
-    });
-  } catch (err) {
-    showLoading(false);
-    showError(err.message);
-  }
-}
-
 function showGameOver() {
   state.gameFinished = true;
   saveGameState();
   hideThemePresentation();
-  els.finalBoard.classList.add('hidden');
   els.boardWrapper.classList.add('hidden');
   els.gameOver.classList.remove('hidden');
 
   const pashaScore = state.scores.pasha;
-  const tanyaScore = state.tanyaFinalScore;
+  const tanyaScore = state.scores.tanya;
+
+  els.gameOverPasha.textContent = pashaScore;
+  els.gameOverTanya.textContent = tanyaScore;
 
   let text;
   if (pashaScore > tanyaScore) {
-    text = `Победитель — Паша! (${pashaScore} : ${tanyaScore} в финале)`;
+    text = `Победитель — ${PLAYERS.pasha}!`;
   } else if (tanyaScore > pashaScore) {
-    text = `Победитель — Таня! (финал Паши: ${pashaScore}, очки Тани: ${tanyaScore})`;
+    text = `Победитель — ${PLAYERS.tanya}!`;
   } else {
-    text = `Ничья! (${pashaScore} : ${tanyaScore})`;
+    text = 'Ничья!';
   }
 
   els.winnerText.textContent = text;
@@ -589,13 +498,10 @@ async function initGame() {
   clearGameState();
 
   state.scores = { pasha: 0, tanya: 0 };
-  state.tanyaFinalScore = 0;
   state.currentRound = 1;
-  state.isFinal = false;
   state.gameFinished = false;
   state.presentationDone = false;
   state.answered.clear();
-  state.finalAnswered = false;
 
   els.gameOver.classList.add('hidden');
   updateScores();
@@ -624,25 +530,13 @@ async function restoreGame() {
       return;
     }
 
-    if (state.isFinal) {
-      state.roundData = await loadRoundData('final');
-      showLoading(false);
-
-      if (state.finalAnswered) {
-        showGameOver();
-      } else if (shouldSkipPresentation()) {
-        renderFinalBoard();
-      } else {
-        beginRoundAfterPresentation('Финал', () => {
-          renderFinalBoard();
-          saveGameState();
-        });
-      }
-      return;
-    }
-
     state.roundData = await loadRoundData(state.currentRound);
     showLoading(false);
+
+    if (state.currentRound >= 3 && isRoundComplete()) {
+      showGameOver();
+      return;
+    }
 
     if (shouldSkipPresentation()) {
       renderBoard();
@@ -664,8 +558,6 @@ function bindEvents() {
     btn.addEventListener('click', () => handlePlayerAnswer(btn.dataset.player));
   });
 
-  els.btnCorrect.addEventListener('click', () => handleFinalAnswer(true));
-  els.btnWrong.addEventListener('click', () => handleFinalAnswer(false));
   els.btnBothCorrect.addEventListener('click', handleBothCorrect);
   els.btnNoAnswer.addEventListener('click', handleNoAnswer);
 

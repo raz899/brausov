@@ -84,38 +84,38 @@
     "questions": [
       {
         "cost": 200,
-        "text": "Основатель компании Apple?",
-        "image": "",
-        "answer": "Стив Jobs",
-        "answerImage": ""
+        "text": "Что скрыто?",
+        "image": "./images/round-2/otlizu/l1.jpg",
+        "answer": "",
+        "answerImage": "./images/round-2/otlizu/l1-a.jpg"
       },
       {
         "cost": 400,
-        "text": "Язык программирования, созданный Guido van Rossum?",
-        "image": "",
-        "answer": "Python",
-        "answerImage": ""
+        "text": "Что скрыто?",
+        "image": "./images/round-2/otlizu/l2.jpg",
+        "answer": "",
+        "answerImage": "./images/round-2/otlizu/l2-a.jpg"
       },
       {
         "cost": 600,
-        "text": "Год основания Google?",
-        "image": "",
-        "answer": "1998",
-        "answerImage": ""
+        "text": "Что скрыто?",
+        "image": "./images/round-2/otlizu/l3.jpg",
+        "answer": "",
+        "answerImage": "./images/round-2/otlizu/l3-a.jpg"
       },
       {
         "cost": 800,
-        "text": "Что означает аббревиатура HTML?",
+        "text": "В этом культовом фильме главный герой, <br> угощая своего командира в военном госпитале, <br> предлагает ему мороженое.",
         "image": "",
-        "answer": "HyperText Markup Language",
+        "answer": "Форест Гамп",
         "answerImage": ""
       },
       {
         "cost": 1000,
-        "text": "Первый искусственный спутник Земли?",
+        "text": "В Нидерландах есть мороженое <br> которое может спасти от головной боли. <br> С чем оно?",
         "image": "",
-        "answer": "Спутник-1",
-        "answerImage": ""
+        "answer": "Парацетамол",
+        "answerImage": "./images/round-2/otlizhu/parac.jpg"
       }
     ]
   },
