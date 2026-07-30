@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="#company" data-i18n="nav.company">Компания</a>
+              <a class="nav-link" href="#about" data-i18n="nav.company">Компания</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#retail" data-i18n="nav.retail">Розничным клиентам</a>
@@ -73,7 +73,7 @@
               Более 30 лет мы занимаемся дистрибуцией шин и дисков и соединяем производителей, бизнес и миллионы автомобилистов в единой технологической экосистеме
             </h1>
             <div class="hero__actions">
-              <a href="#company" class="btn btn-accent" data-i18n="hero.about">О компании</a>
+              <a href="#about" class="btn btn-accent" data-i18n="hero.about">О компании</a>
               <a href="#retail" class="btn btn-outline-light" data-i18n="hero.clients">Клиентам</a>
             </div>
           </div>
@@ -263,9 +263,290 @@
         </div>
       </div>
     </section>
-    <section class="section section--placeholder" id="solutions">
+    <section class="section solutions" id="solutions">
       <div class="container">
-        <h2 class="section-header__title" data-i18n="sections.solutions">Отраслевые решения</h2>
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="sections.solutions">Отраслевые решения</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.3pl.title">3PL фулфилмент</h3>
+              <p class="solution-card__text" data-i18n="solutions.3pl.text">Полный цикл: складирование, транспортировка, кросс-докинг</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4H9z"/><path d="M10 7c-3 2-5 5-5 9a7 7 0 0 0 14 0c0-4-2-7-5-9"/><path d="M9 14h6"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.mix.title">Резиновые смеси</h3>
+              <p class="solution-card__text" data-i18n="solutions.mix.text">Контрактное производство резиновых смесей</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19a5 5 0 0 1 0-10h1"/><path d="M17 5a5 5 0 0 1 0 10h-1"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.crumb.title">Резиновая крошка</h3>
+              <p class="solution-card__text" data-i18n="solutions.crumb.text">Для строительства и благоустройства, производства новых РТИ</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 12 11 12"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.retread.title">Восстановленные грузовые шины</h3>
+              <p class="solution-card__text" data-i18n="solutions.retread.text">Восстановленные грузовые шины INROAD</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6" stroke-dasharray="2 3"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.wheels.title">Колёса в сборе</h3>
+              <p class="solution-card__text" data-i18n="solutions.wheels.text">Изготовление и поставка собранных колесных комплектов</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/><path d="M7.05 7.05l2 2M14.95 14.95l2 2M7.05 16.95l2-2M14.95 9.05l2-2"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.stud.title">Шипование шин</h3>
+              <p class="solution-card__text" data-i18n="solutions.stud.text">Заводская ошиповка всех типов шин</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2"/><path d="M12 9h6M12 12h4M12 15h5"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.studmatic.title">Автоматический шиповальный станок Studmatic</h3>
+              <p class="solution-card__text" data-i18n="solutions.studmatic.text">Для серийного шипования шин в заводских условиях</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-3">
+            <article class="solution-card glass">
+              <span class="solution-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 12l5-3"/><path d="M12 7v1M12 16v1M7 12h1M16 12h1"/></svg>
+              </span>
+              <h3 class="solution-card__title" data-i18n="solutions.test.title">Испытания шин</h3>
+              <p class="solution-card__text" data-i18n="solutions.test.text">Тестирование характеристик и подготовка к сертификации</p>
+              <a href="#" class="solution-card__link">
+                <span data-i18n="solutions.more">узнать больше</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="about.title">О компании</h2>
+        </div>
+        <div class="about__content">
+          <h3 class="about__subtitle" data-i18n="about.mission">Наша миссия</h3>
+          <p class="about__text" data-i18n="about.text">
+            Предоставлять премиальный клиентский опыт приобретения, обслуживания, хранения и утилизации шин через заботу о безопасности участников дорожного движения с помощью инновационного сервиса и подтвержденной продуктовой экспертизы
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section history" id="history">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="history.title">История компании</h2>
+        </div>
+
+        <div class="history-eras">
+          <!-- 1993–2000 -->
+          <article class="history-era glass">
+            <header class="history-era__header">
+              <span class="history-era__years">1993 – 2000</span>
+              <h3 class="history-era__title" data-i18n="history.era1.title">№1 по объему экспорта шин из России</h3>
+            </header>
+            <ul class="history-era__list">
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="1993">1993</time>
+                <p class="history-era__text" data-i18n="history.era1.1993">Основание компании</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="1997">1997</time>
+                <p class="history-era__text" data-i18n="history.era1.1997">Начало продаж. Старт экспорта шин из России. Подписание договора о сотрудничестве с MICHELIN.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="1998">1998</time>
+                <p class="history-era__text" data-i18n="history.era1.1998">Успешное преодоление кризисного периода</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="1999">1999</time>
+                <p class="history-era__text" data-i18n="history.era1.1999">№1 по объему экспорта шин из России</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2000">2000</time>
+                <p class="history-era__text" data-i18n="history.era1.2000">Запуск нового направления: продажи автомобильных дисков.</p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2001–2015 -->
+          <article class="history-era glass">
+            <header class="history-era__header">
+              <span class="history-era__years">2001 – 2015</span>
+              <h3 class="history-era__title" data-i18n="history.era2.title">Стратегические партнерства и цифровизация</h3>
+            </header>
+            <ul class="history-era__list">
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2001">2001</time>
+                <p class="history-era__text" data-i18n="history.era2.2001">№1 по продажам шин MICHELIN в России.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2003">2003</time>
+                <p class="history-era__text" data-i18n="history.era2.2003">Старт дистрибуции шин YOKOHAMA в Россию.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2004">2004–2010</time>
+                <p class="history-era__text" data-i18n="history.era2.2004">Подписание соглашений о сотрудничестве с Pirelli, Continental, Bridgestone, Goodyear, Hankook</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2005">2005</time>
+                <p class="history-era__text" data-i18n="history.era2.2005">Запуск интернет-магазина 4Точки.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2006">2006</time>
+                <p class="history-era__text" data-i18n="history.era2.2006">Запуск B2B-платформы Форточки.</p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2016 – present -->
+          <article class="history-era glass">
+            <header class="history-era__header">
+              <span class="history-era__years" data-i18n="history.era3.years">2016 – настоящее время</span>
+              <h3 class="history-era__title" data-i18n="history.era3.title">Развитие федеральной сети и выход на новые рынки</h3>
+            </header>
+            <p class="history-era__lead" data-i18n="history.era3.lead">Открытие филиалов в ключевых регионах сформировало масштабную сеть присутствия по всей России.</p>
+            <ul class="history-era__list">
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2016">2016</time>
+                <p class="history-era__text" data-i18n="history.era3.2016">Открытие первого филиала в Челябинске.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2017">2017</time>
+                <p class="history-era__text" data-i18n="history.era3.2017">Открытие филиалов в Екатеринбурге, Тюмени, Уфе, Краснодаре и Ростове-на-Дону.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2018">2018</time>
+                <p class="history-era__text" data-i18n="history.era3.2018">Открытие филиалов в Санкт-Петербурге, Нижнем Новгороде, Казани, Новороссийске, Новосибирске, Омске, Пятигорске и Ярославле.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2019">2019</time>
+                <p class="history-era__text" data-i18n="history.era3.2019">Открытие филиалов в Великих Луках, Симферополе, Самаре, Тольятти, Воронеже и Московской области.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2021">2021</time>
+                <p class="history-era__text" data-i18n="history.era3.2021">Открытие филиалов в Перми и Красноярске.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2022">2022</time>
+                <p class="history-era__text" data-i18n="history.era3.2022">Подписание соглашений о сотрудничестве с ZC Rubber (Zhongce Rubber Group), Qingdao Landspider, Sailun Group, Shandong Hengfeng Rubber</p>
+              </li>
+            </ul>
+
+            <h4 class="history-era__subtitle" data-i18n="history.era3.subtitle">Развитие отраслевых решений и цифрового шинного сервиса</h4>
+            <ul class="history-era__list">
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2023">2023</time>
+                <p class="history-era__text" data-i18n="history.era3.2023">Открытие филиала в Давыдово Московской области. Запуск шипования легковых шин. Запуск контрактного производства резиновых смесей. Открытие филиалов в Новокузнецке и Томске. Подписание соглашения с Triangle Tyre, Prinx Chengshan</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2024">2024</time>
+                <p class="history-era__text" data-i18n="history.era3.2024">Открытие филиала в городском округе Домодедово. Запуск производства восстановленных грузовых шин торговой марки INROAD. Запуск участка шипования в Тюмени.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" datetime="2025">2025</time>
+                <p class="history-era__text" data-i18n="history.era3.2025">Открытие филиалов в Иркутске и Домодедово.</p>
+              </li>
+              <li class="history-era__item">
+                <time class="history-era__year" data-i18n="history.era3.today.year">Сегодня</time>
+                <p class="history-era__text" data-i18n="history.era3.today">Запуск цифровой платформы К1 для записи на шиномонтаж и покупки шин и дисков. Новый дизайн интерфейса Форточки. Запуск производства резиновой крошки.</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section coverage" id="coverage">
+      <div class="container">
+        <div class="coverage__stage">
+          <img class="coverage__map" src="img/map.svg" alt="" width="1180" height="738" decoding="async">
+
+          <div class="coverage__cards">
+            <article class="coverage-card glass">
+              <span class="coverage-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01M12 10h.01"/></svg>
+              </span>
+              <h3 class="coverage-card__title" data-i18n="coverage.branches.title">28 филиалов</h3>
+              <p class="coverage-card__text" data-i18n="coverage.branches.text">Персональный менеджер, быстрая доставка, техническая поддержка от заказа до эксплуатации</p>
+            </article>
+
+            <article class="coverage-card glass">
+              <span class="coverage-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/></svg>
+              </span>
+              <h3 class="coverage-card__title" data-i18n="coverage.partners.title">1500 партнерских сервисных центров</h3>
+              <p class="coverage-card__text" data-i18n="coverage.partners.text">Пункты самовывоза, склады ответственного хранения, шиномонтажи</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   </main>
