@@ -81,6 +81,7 @@ const translations = {
     'coverage.partners.title': '1500 партнерских сервисных центров',
     'coverage.partners.text': 'Пункты самовывоза, склады ответственного хранения, шиномонтажи',
     'footer.rights': 'Все права защищены.',
+    'theme.toggle': 'Переключить тему',
   },
   en: {
     'nav.company': 'Company',
@@ -161,10 +162,12 @@ const translations = {
     'coverage.partners.title': '1,500 partner service centers',
     'coverage.partners.text': 'Pickup points, bonded warehouses, tire fitting shops',
     'footer.rights': 'All rights reserved.',
+    'theme.toggle': 'Toggle theme',
   },
 };
 
 let currentLang = localStorage.getItem('pwrs-lang') || 'ru';
+let currentTheme = localStorage.getItem('pwrs-theme') || 'light';
 
 function setLanguage(lang) {
   if (!translations[lang]) return;
@@ -182,6 +185,27 @@ function setLanguage(lang) {
   document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+
+  updateThemeLabel();
+}
+
+function setTheme(theme) {
+  currentTheme = theme === 'dark' ? 'dark' : 'light';
+  localStorage.setItem('pwrs-theme', currentTheme);
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateThemeLabel();
+}
+
+function updateThemeLabel() {
+  const btn = document.getElementById('themeSwitch');
+  if (!btn) return;
+  const label = translations[currentLang]?.['theme.toggle'] || 'Toggle theme';
+  btn.setAttribute('aria-label', label);
+  btn.setAttribute('title', label);
+}
+
+function toggleTheme() {
+  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
 }
 
 /* ── Scroll lines ──
@@ -435,7 +459,10 @@ function onScroll() {
 
 /* ── Init ── */
 function init() {
+  setTheme(currentTheme);
   setLanguage(currentLang);
+
+  document.getElementById('themeSwitch')?.addEventListener('click', toggleTheme);
 
   document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
