@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пауэр Интернэшнл — шины</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=32">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu">
+    <span></span>
+    <span></span>
+    <span class="visually-hidden">Меню</span>
+  </button>
+
+  <nav class="menu" id="menu" hidden>
+    <ul>
+      <li><a href="#hero">Главная</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#partners">Партнеры</a></li>
+      <li><a href="#clients">Клиенты</a></li>
+      <li><a href="#solutions">Решения</a></li>
+      <li><a href="#history">История</a></li>
+      <li><a href="#map">На карте</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <nav class="sidenav" aria-label="Разделы страницы">
+    <a class="sidenav__link is-active" href="#hero"><img src="assets/nav-active.svg" alt="" width="16" height="16"><span>Главная</span></a>
+    <a class="sidenav__link" href="#about"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>О нас</span></a>
+    <a class="sidenav__link" href="#partners"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Партнеры</span></a>
+    <a class="sidenav__link" href="#clients"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Клиенты</span></a>
+    <a class="sidenav__link" href="#solutions"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Решения</span></a>
+    <a class="sidenav__link" href="#history"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>История</span></a>
+    <a class="sidenav__link" href="#map"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>На карте</span></a>
+    <a class="sidenav__link" href="#gallery"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Галерея</span></a>
+    <a class="sidenav__link" href="#contacts"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Контакты</span></a>
+  </nav>
+
+  <div class="lang" role="group" aria-label="Язык">
+    <button type="button" class="is-active" data-lang="ru">RU</button>
+    <button type="button" data-lang="en">ENG</button>
+  </div>
+
+  <main>
+    <section class="screen screen--hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img class="glow glow-a" src="assets/ellipse2.svg" alt="" width="1743" height="1480">
+        <img class="glow glow-b" src="assets/ellipse5.svg" alt="" width="1667" height="1324">
+        <img class="glow glow-c" src="assets/ellipse1.svg" alt="" width="2138" height="1265">
+        <img class="glow glow-d" src="assets/ellipse6.svg" alt="" width="1114" height="1281">
+        <img class="glow glow-e" src="assets/ellipse3.svg" alt="" width="1380" height="1054">
+        <img class="glow glow-f" src="assets/ellipse4.svg" alt="" width="774" height="564">
+      </div>
+      <div class="hero-brand">
+        <img class="glow glow-logo" src="assets/ellipse7.svg" alt="" width="667" height="564">
+        <img class="logo" src="assets/logo.svg" alt="Пауэр Интернэшнл шины" width="138" height="47">
+      </div>
+      <div class="hero-copy">
+        <h1>Более 30 лет</h1>
+        <p>мы занимаемся дистрибуцией шин и дисков, соединяя производителей, бизнес<br> и миллионы автомобилистов в единой технологической экосистеме</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn--solid" href="#clients"><span class="btn__inner">На B2B портал</span></a>
+        <a class="btn btn--ghost" href="#about"><span class="btn__inner">О компании</span></a>
+      </div>
+    </section>
+
+    <section class="screen screen--about" id="about">
+      <div class="wrap about-head">
+        <h2>Наша миссия</h2>
+        <p>Предоставлять премиальный клиентский опыт приобретения, обслуживания, хранения и утилизации шин через заботу о безопасности участников дорожного движения с помощью инновационного сервиса и подтвержденной продуктовой экспертизы</p>
+      </div>
+      <ul class="mission">
+        <li class="card">
+          <div class="card__inner">
+            <span class="icon-badge"><img src="assets/icon-years.svg" alt="" width="24" height="24"></span>
+            <div>
+              <h3>Более 30 лет</h3>
+              <p>на рынке шин и дисков</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__inner">
+            <span class="icon-badge"><img src="assets/icon-wheel.svg" alt="" width="24" height="24"></span>
+            <div>
+              <h3>40 000 позиций</h3>
+              <p>шин и дисков всех категорий</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__inner">
+            <span class="icon-badge"><img src="assets/icon-box.svg" alt="" width="24" height="24"></span>
+            <div>
+              <h3>24-48 часов</h3>
+              <p>доставки по всей России</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__inner">
+            <span class="icon-badge"><img src="assets/icon-phone.svg" alt="" width="24" height="24"></span>
+            <div>
+              <h3>Цифровые сервисы</h3>
+              <p>частным владельцам и бизнесу</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="screen screen--partners" id="partners">
+      <div class="wrap partners-head">
+        <h2>Партнеры и бренды</h2>
+        <p>Работаем с ведущими мировыми производителями шин и дисков</p>
+      </div>
+      <div class="marquee" aria-label="Бренды">
+        <div class="marquee__row marquee__row--top">
+          <div class="marquee__track">
+            <div class="marquee__set">
+              <span class="brand" style="--w:266px"><img src="assets/brand-34.png" alt="Hankook"></span>
+              <span class="brand" style="--w:292px"><img src="assets/brand-35.png" alt="Michelin"></span>
+              <span class="brand" style="--w:236px"><img src="assets/brand-36.png" alt="Ikon Tyres"></span>
+              <span class="brand" style="--w:304px"><img src="assets/brand-37.png" alt="Continental"></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+            </div>
+            <div class="marquee__set" aria-hidden="true">
+              <span class="brand" style="--w:266px"><img src="assets/brand-34.png" alt=""></span>
+              <span class="brand" style="--w:292px"><img src="assets/brand-35.png" alt=""></span>
+              <span class="brand" style="--w:236px"><img src="assets/brand-36.png" alt=""></span>
+              <span class="brand" style="--w:304px"><img src="assets/brand-37.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+            </div>
+          </div>
+        </div>
+        <div class="marquee__row marquee__row--mid">
+          <div class="marquee__track">
+            <div class="marquee__set">
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt="Blackhawk"></span>
+              <span class="brand" style="--w:392px"><img src="assets/brand-31.png" alt="CrossWind"></span>
+              <span class="brand" style="--w:388px"><img src="assets/brand-32.png" alt="Forerunner"></span>
+              <span class="brand" style="--w:260px"><img src="assets/brand-33.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+            </div>
+            <div class="marquee__set" aria-hidden="true">
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:392px"><img src="assets/brand-31.png" alt=""></span>
+              <span class="brand" style="--w:388px"><img src="assets/brand-32.png" alt=""></span>
+              <span class="brand" style="--w:260px"><img src="assets/brand-33.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+            </div>
+          </div>
+        </div>
+        <div class="marquee__row marquee__row--bot">
+          <div class="marquee__track">
+            <div class="marquee__set">
+              <span class="brand" style="--w:340px"><img src="assets/brand-38.png" alt="Slaved"></span>
+              <span class="brand" style="--w:340px"><img src="assets/brand-39.png" alt="Matador"></span>
+              <span class="brand" style="--w:348px"><img src="assets/brand-40.png" alt="Yokohama"></span>
+              <span class="brand" style="--w:300px"><img src="assets/brand-41.png" alt="Goodyear"></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+            </div>
+            <div class="marquee__set" aria-hidden="true">
+              <span class="brand" style="--w:340px"><img src="assets/brand-38.png" alt=""></span>
+              <span class="brand" style="--w:340px"><img src="assets/brand-39.png" alt=""></span>
+              <span class="brand" style="--w:348px"><img src="assets/brand-40.png" alt=""></span>
+              <span class="brand" style="--w:300px"><img src="assets/brand-41.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+              <span class="brand" style="--w:280px"><img src="assets/brand-30.png" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--clients" id="clients" data-side="retail">
+      <div class="clients__pane clients__pane--hot">
+        <img class="clients__bg" src="assets/clients-bg.svg" alt="" width="1440" height="1000">
+        <div class="clients__inner">
+          <h2 class="clients__title clients__title--retail">Розничным<br>клиентам</h2>
+          <h2 class="clients__title clients__title--wholesale">Оптовым<br>клиентам</h2>
+          <div class="clients__cards clients__cards--retail">
+            <article class="client-card">
+              <div class="client-card__top">
+                <img src="assets/logo-4t.svg" alt="4точки" width="192" height="56">
+                <span class="pill">28 пунктов выдачи</span>
+              </div>
+              <h3>Интернет-магазин 4Точки</h3>
+              <p>Розничные продажи легковых, грузовых, специальных шин, а также шин для мотоциклов и квадроциклов.<br>Доставка в кратчайшие сроки по всей России</p>
+              <a class="btn btn--line" href="https://www.4tochki.ru/" target="_blank" rel="noopener">Подробнее <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+            </article>
+            <article class="client-card">
+              <div class="client-card__top">
+                <img src="assets/logo-k1.svg" alt="К1" width="60" height="60">
+                <span class="pill pill--orange">Скоро</span>
+              </div>
+              <h3>Приложение К1</h3>
+              <p>Сервис электронной коммерции, созданный, чтобы сделать профессиональный шиномонтаж доступным даже в разгар сезона, поднять стандарты сервиса и завоевать доверие автовладельцев.</p>
+            </article>
+          </div>
+          <div class="clients__cards clients__cards--wholesale">
+            <article class="client-card">
+              <img class="client-card__logo-wide" src="assets/logo-forto.svg" alt="ФОРТО4КИ" width="399" height="60">
+              <h3>ФОРТО4КИ</h3>
+              <p>Автоматизированная система оптовой дистрибуции шин и дисков всех категорий корпоративным клиентам</p>
+              <a class="btn btn--line" href="#contacts">Вход в B2B портал <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+            </article>
+            <article class="client-card">
+              <img src="assets/logo-k1.svg" alt="К1 Про" width="60" height="60">
+              <h3>Приложение К1 Про</h3>
+              <p>Приложение К1 Про — сервис электронной коммерции для шиномонтажных центров различных форматов. Это система управления онлайн записями шиномонтажных услуг, прием и выдача заказов, оказание услуг шиномонтажа и доставки, а скоро – сезонного хранения и утилизации</p>
+              <a class="btn btn--line" href="#contacts">Подробнее <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+            </article>
+          </div>
+        </div>
+      </div>
+      <button class="clients__pane clients__pane--idle" type="button">
+        <span class="clients__idle-label clients__idle-label--wholesale">Оптовым<br>клиентам</span>
+        <span class="clients__idle-label clients__idle-label--retail">Розничным<br>клиентам</span>
+      </button>
+    </section>
+
+    <section class="screen screen--solutions" id="solutions">
+      <div class="wrap">
+        <h2>Отраслевые решения</h2>
+        <div class="solutions" data-step="0">
+          <div class="solutions__row is-active" data-step="0">
+            <article class="solution">
+              <img src="assets/sol-1.png" alt="Склад фулфилмента">
+              <div class="solution__body">
+                <h3>3PL фулфилмент</h3>
+                <p>Хранение, комплектация, товарный учет, документальное сопровождение и возможность заказа транспортных услуг</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-2.png" alt="Производство резиновых смесей">
+              <div class="solution__body">
+                <h3>Резиновые смеси</h3>
+                <p>Контрактное производство резиновых смесей</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-3.png" alt="Резиновая крошка">
+              <div class="solution__body">
+                <h3>Резиновая крошка</h3>
+                <p>Для строительства, благоустройства, производства новых РТИ и шин</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+          </div>
+          <div class="solutions__row" data-step="1">
+            <article class="solution">
+              <img src="assets/sol-4.png" alt="Восстановление грузовой шины">
+              <div class="solution__body">
+                <h3>Восстановленные грузовые шины</h3>
+                <p>Технология премиального заводского восстановления</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-5.png" alt="Склад колёс в сборе">
+              <div class="solution__body">
+                <h3>Колёса в сборе</h3>
+                <p>Изготовление и поставка собранных колёсных комплектов легковых, грузовых и специальных шин</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-6.png" alt="Ошиповка шины">
+              <div class="solution__body">
+                <h3>Шипование шин</h3>
+                <p>Заводская ошиповка легковых, грузовых и специальных шин</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+          </div>
+          <div class="solutions__row" data-step="2">
+            <article class="solution">
+              <img src="assets/sol-7.png" alt="Шиповальный станок Studmatic">
+              <div class="solution__body">
+                <h3>Автоматический шиповальный станок Studmatic</h3>
+                <p>Для серийного шипования шин в заводских условиях</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-8.png" alt="Испытание шины">
+              <div class="solution__body">
+                <h3>Испытания шин</h3>
+                <p>Тестирование характеристик и подготовка к сертификации</p>
+                <a class="btn btn--line" href="#contacts">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution solution--cta">
+              <div class="solution__body">
+                <h3>Хотите узнать подробнее?</h3>
+                <a class="btn btn--line" href="#contacts">Свяжитесь с нами <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--history" id="history">
+      <div class="wrap history">
+        <div class="timeline" data-step="0">
+          <img class="timeline__glow" src="assets/year-glow.svg" alt="" width="1200" height="100">
+          <div class="timeline__line"></div>
+          <button class="timeline__point is-active" type="button" data-step="0">
+            <span class="timeline__label">1993-2000</span>
+            <span class="timeline__marks">
+              <img class="mark--sm" src="assets/marker-sm.svg" alt="" width="20" height="20">
+              <img class="mark--lg" src="assets/marker-lg.svg" alt="" width="40" height="40">
+            </span>
+          </button>
+          <button class="timeline__point" type="button" data-step="1">
+            <span class="timeline__label">2001-2006</span>
+            <span class="timeline__marks">
+              <img class="mark--sm" src="assets/marker-sm.svg" alt="" width="20" height="20">
+              <img class="mark--lg" src="assets/marker-lg.svg" alt="" width="40" height="40">
+            </span>
+          </button>
+          <button class="timeline__point" type="button" data-step="2">
+            <span class="timeline__label">2016-2022</span>
+            <span class="timeline__marks">
+              <img class="mark--sm" src="assets/marker-sm.svg" alt="" width="20" height="20">
+              <img class="mark--lg" src="assets/marker-lg.svg" alt="" width="40" height="40">
+            </span>
+          </button>
+          <button class="timeline__point" type="button" data-step="3">
+            <span class="timeline__label">2023-Н.В.</span>
+            <span class="timeline__marks">
+              <img class="mark--sm" src="assets/marker-sm.svg" alt="" width="20" height="20">
+              <img class="mark--lg" src="assets/marker-lg.svg" alt="" width="40" height="40">
+            </span>
+          </button>
+        </div>
+        <div class="history-stage">
+          <div class="history-pane is-active" data-step="0">
+            <h3>№1 по объему экспорта шин из России</h3>
+            <ol>
+              <li><time>1993</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Основание компании</p></li>
+              <li><time>1997</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Начало продаж. Старт экспорта шин из России. Подписание договора о сотрудничестве с MICHELIN</p></li>
+              <li><time>1998</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Успешное преодоление кризисного периода</p></li>
+              <li><time>1999</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>№1 по объему экспорта шин из России</p></li>
+              <li><time>2000</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Запуск нового направления: продажи автомобильных дисков.</p></li>
+            </ol>
+          </div>
+          <div class="history-pane" data-step="1">
+            <h3>Стратегические партнерства и цифровизация</h3>
+            <ol>
+              <li><time>2001</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>№1 по продажам шин MICHELIN в России</p></li>
+              <li><time>2003</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Старт дистрибуции шин YOKOHAMA в Россию</p></li>
+              <li><time>2004-2010</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Подписание соглашений о сотрудничестве с Pirelli, Continental, Bridgestone, Goodyear, Hankook</p></li>
+              <li><time>2005</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Запуск интернет-магазина 4Точки</p></li>
+              <li><time>2006</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Запуск B2B-платформы Форточки</p></li>
+            </ol>
+          </div>
+          <div class="history-pane" data-step="2">
+            <h3>Развитие федеральной сети и выход на новые рынки</h3>
+            <ol>
+              <li><time>2016</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие первого филиала в Челябинске</p></li>
+              <li><time>2017</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиалов в Екатеринбурге, Тюмени, Уфе, Краснодаре и Ростове-на-Дону</p></li>
+              <li><time>2018</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиалов в Санкт-Петербурге, Нижнем Новгороде, Казани, Новороссийске, Новосибирске, Омске, Пятигорске и Ярославле</p></li>
+              <li><time>2019</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиалов в Великих Луках, Симферополе, Самаре, Тольятти, Воронеже и Московской области</p></li>
+              <li><time>2021</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиалов в Перми и Красноярске</p></li>
+              <li><time>2022</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Подписание соглашений о сотрудничестве с ZC Rubber (Zhongce Rubber Group), Qingdao Landspider, Sailun Group, Shandong Hengfeng Rubber</p></li>
+            </ol>
+          </div>
+          <div class="history-pane" data-step="3">
+            <h3>Развитие отраслевых решений и цифрового шинного сервиса</h3>
+            <ol>
+              <li><time>2023</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Начало разработки цифрового сервиса К1. Открытие филиала в Давыдово Московской области. Запуск шипования легковых шин. Запуск контрактного производства резиновых смесей. Открытие филиалов в Новокузнецке и Томске. Подписание соглашения с Triangle Tyre, Prinx Chengshan</p></li>
+              <li><time>2024</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиала в городском округе Домодедово. Запуск производства восстановленных грузовых шин торговой марки INROAD. Запуск участка шипования в Тюмени</p></li>
+              <li><time>2025</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиалов в Иркутске и Домодедово</p></li>
+              <li><time>Сегодня</time><img src="assets/event-dot.svg" alt="" width="20" height="20"><p>Открытие филиала в Сургуте. Запуск цифровой платформы К1 для записи на шиномонтаж и покупки шин и дисков. Новый дизайн интерфейса Форточки. Запуск производства резиновой крошки</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--map" id="map">
+      <div class="map-stage">
+        <img class="map-stage__bg" src="assets/russia.svg" alt="" width="1200" height="624">
+        <article class="map-card">
+          <span class="icon-badge icon-badge--dark"><img src="assets/icon-city.svg" alt="" width="24" height="24"></span>
+          <h3>28 филиалов</h3>
+          <p>Персональный менеджер, быстрая доставка, техническая поддержка от заказа до эксплуатации</p>
+        </article>
+        <article class="map-card">
+          <span class="icon-badge icon-badge--dark"><img src="assets/icon-wheel-map.svg" alt="" width="24" height="24"></span>
+          <h3>1500 партнерских сервисных центров</h3>
+          <p>Пункты самовывоза, склады ответственного хранения, шиномонтажи</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="screen screen--gallery" id="gallery">
+      <div class="gallery-head">
+        <h2>Галерея</h2>
+        <div class="tabs" role="tablist">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-tab="photo">Фото</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="video">Видео</button>
+        </div>
+      </div>
+      <div class="gallery-frame" data-panel="photo">
+        <div class="gallery swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide gallery__slide gallery__slide--narrow">
+              <img src="assets/gallery-1.png" alt="Офисное здание">
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <img src="assets/gallery-2.png" alt="Скульптура у бизнес-центра">
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <img src="assets/gallery-3.png" alt="Территория бизнес-центра">
+            </div>
+            <div class="swiper-slide gallery__slide gallery__slide--narrow">
+              <img src="assets/gallery-1.png" alt="">
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <img src="assets/gallery-2.png" alt="">
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <img src="assets/gallery-3.png" alt="">
+            </div>
+          </div>
+        </div>
+        <button class="gallery__prev" type="button" aria-label="Предыдущее фото"></button>
+        <button class="gallery__next" type="button" aria-label="Следующее фото"></button>
+      </div>
+      <p class="gallery-empty" data-panel="video" hidden>Видео скоро появятся в этом разделе.</p>
+    </section>
+
+    <section class="screen screen--contacts" id="contacts">
+      <div class="contacts-brand">
+        <img src="assets/logo.svg" alt="Пауэр Интернэшнл шины" width="138" height="47">
+      </div>
+      <div class="wrap contacts">
+        <h2>Наши контакты</h2>
+        <div class="contacts__grid">
+          <div class="contacts__col">
+            <div class="contacts__card">
+              <h3>ООО «Пауэр Интернэшнл – шины»</h3>
+              <dl>
+                <div>
+                  <dt>Адрес</dt>
+                  <dd>г. Москва, БЦ ARCUS 4,<br>Ленинградский проспект, 37а к.5</dd>
+                </div>
+                <div>
+                  <dt>Телефон</dt>
+                  <dd><a href="tel:+74953800077">+7 (495) 38-000-77</a></dd>
+                </div>
+                <div>
+                  <dt>Телефон</dt>
+                  <dd><a href="tel:+74951300077">+7 (495) 13-000-77</a></dd>
+                </div>
+                <div>
+                  <dt>Почта</dt>
+                  <dd><a href="mailto:info@pwrs.ru">info@pwrs.ru</a></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contacts__card">
+              <h3>Мы в соцсетях</h3>
+              <div class="socials">
+                <a href="https://vk.com/" aria-label="ВКонтакте"><img src="assets/social-vk.svg" alt="" width="24" height="24"></a>
+                <a href="https://t.me/" aria-label="Telegram"><img src="assets/social-tg.svg" alt="" width="24" height="24"></a>
+                <a href="https://youtube.com/" aria-label="YouTube"><img src="assets/social-yt.svg" alt="" width="24" height="17"></a>
+                <a href="https://rutube.ru/" aria-label="Rutube"><span class="socials__mark"><img src="assets/social-rt.svg" alt="" width="36" height="36"></span></a>
+              </div>
+            </div>
+          </div>
+          <img class="contacts__map" src="assets/map.png" alt="Офис на карте: БЦ ARCUS, Ленинградский проспект">
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2026 PWRS. Все права защищены.</p>
+        <ul>
+          <li><a href="https://davydovo.ru/" target="_blank" rel="noopener">ДАВЫДОВО <img src="assets/ext-arrow.svg" alt="" width="17" height="17"></a></li>
+          <li><a href="https://www.4tochki.ru/" target="_blank" rel="noopener">4точки <img src="assets/ext-arrow.svg" alt="" width="17" height="17"></a></li>
+          <li><a href="#clients">FORTO4KI <img src="assets/ext-arrow.svg" alt="" width="17" height="17"></a></li>
+          <li><a href="#clients">Приложение К1 <img src="assets/ext-arrow.svg" alt="" width="17" height="17"></a></li>
+          <li><a href="#contacts">Шинный Эксперт <img src="assets/ext-arrow.svg" alt="" width="17" height="17"></a></li>
+        </ul>
+      </footer>
+    </section>
+  </main>
+  <div class="mark" data-step="0" aria-hidden="true">
+    <div class="mark__spin">
+      <div class="mark__facet mark__facet--traffic">
+        <div class="mark__upright"><img src="assets/traffic.png" alt=""></div>
+      </div>
+      <div class="mark__facet mark__facet--trucks">
+        <div class="mark__upright"><img src="assets/trucks.png" alt=""></div>
+      </div>
+      <div class="mark__facet mark__facet--van">
+        <div class="mark__upright"><img src="assets/van.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js?v=22"></script>
+</body>
+</html>
