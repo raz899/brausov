@@ -231,10 +231,12 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
 
 syncMark(location.hash.replace("#", "") || "hero");
 
-document.querySelector(".lang").addEventListener("click", (event) => {
+const lang = document.querySelector(".lang");
+lang.addEventListener("click", (event) => {
   const button = event.target.closest("button");
-  if (!button) return;
-  document.querySelectorAll(".lang button").forEach((item) => {
+  if (!button || button.classList.contains("is-active")) return;
+  lang.dataset.lang = button.dataset.lang;
+  lang.querySelectorAll("button").forEach((item) => {
     item.classList.toggle("is-active", item === button);
   });
   document.documentElement.lang = button.dataset.lang === "en" ? "en" : "ru";

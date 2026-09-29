@@ -174,13 +174,23 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding: 2px;
   border: 1px solid var(--line);
   border-radius: 12px;
+  overflow: hidden;
 }
+.lang__thumb {
+  grid-area: 1 / 1;
+  border-radius: 10px;
+  background: var(--white);
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lang[data-lang="en"] .lang__thumb { transform: translateY(100%); }
 .lang button {
+  position: relative;
+  z-index: 1;
   width: 32px;
   padding: 8px 4px;
   border: 0;
@@ -189,11 +199,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--white);
   font-size: 12px;
   line-height: 1;
+  white-space: nowrap;
   cursor: pointer;
+  transition: color 0.25s ease;
 }
+.lang button[data-lang="ru"] { grid-area: 1 / 1; }
+.lang button[data-lang="en"] { grid-area: 2 / 1; }
 .lang button.is-active {
-  background: var(--white);
   color: var(--orange);
+  transition-delay: 0.12s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang__thumb,
+  .lang button { transition: none; }
 }
 
 .btn {
