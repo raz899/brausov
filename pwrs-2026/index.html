@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=34">
+  <link rel="stylesheet" href="css/styles.css?v=35">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
@@ -187,50 +187,60 @@
     </section>
 
     <section class="screen screen--clients" id="clients" data-side="retail">
-      <div class="clients__pane clients__pane--hot">
-        <img class="clients__bg" src="assets/clients-bg.svg" alt="" width="1440" height="1200">
-        <div class="clients__inner">
-          <h2 class="clients__title clients__title--retail">Розничным<br>клиентам</h2>
-          <h2 class="clients__title clients__title--wholesale">Оптовым<br>клиентам</h2>
-          <div class="clients__cards clients__cards--retail">
-            <article class="client-card">
-              <div class="client-card__top">
-                <img src="assets/logo-4t.svg" alt="4точки" width="192" height="56">
-                <span class="pill">1500 пунктов выдачи</span>
-              </div>
-              <h3>Интернет-магазин 4Точки</h3>
-              <p>Розничные продажи легковых, грузовых, специальных шин, а также шин для мотоциклов и квадроциклов.<br>Доставка в кратчайшие сроки по всей России</p>
-              <a class="btn btn--line" href="https://www.4tochki.ru/" target="_blank" rel="noopener">Подробнее <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
-            </article>
-            <article class="client-card">
-              <div class="client-card__top">
-                <img src="assets/logo-k1.svg" alt="К1" width="60" height="60">
-                <span class="pill pill--orange">Скоро</span>
-              </div>
-              <h3>Приложение К1</h3>
-              <p>Для тех, кто ценит своё время. Профессиональный шиномонтаж без ожидания даже в пик сезона. Мы поднимаем стандарты сервиса, чтобы вы возвращались снова.</p>
-            </article>
-          </div>
-          <div class="clients__cards clients__cards--wholesale">
-            <article class="client-card">
-              <img class="client-card__logo-wide" src="assets/logo-forto.svg" alt="ФОРТОЧКИ" width="399" height="60">
-              <h3>Форточки</h3>
-              <p>Онлайн-платформа оптовых закупок шин и дисков. Полный ассортимент. Живые остатки. Быстрое оформление. Доставка по всей России ​</p>
-              <a class="btn btn--line" href="#contacts">Вход в B2B портал <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
-            </article>
-            <article class="client-card">
-              <img src="assets/logo-k1.svg" alt="К1 Про" width="60" height="60">
-              <h3>Приложение К1 Про</h3>
-              <p>Для шиномонтажных центров любого формата. Получайте дополнительный доход на выдаче заказов, услугах шиномонтажа и доставке. Скоро - сезонное хранение и утилизация. Управляйте расписанием онлайн.​</p>
-              <a class="btn btn--line" href="#contacts">Подробнее <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
-            </article>
+      <img class="clients__bg" src="assets/clients-bg.svg" alt="" width="1440" height="1000">
+      <div class="clients__pane clients__pane--retail" data-pane="retail">
+        <div class="clients__hot">
+          <div class="clients__inner">
+            <h2 class="clients__title">Розничным<br>клиентам</h2>
+            <div class="clients__cards">
+              <article class="client-card">
+                <div class="client-card__top">
+                  <img src="assets/logo-4t.svg" alt="4точки" width="192" height="56">
+                  <span class="pill">1500 пунктов выдачи</span>
+                </div>
+                <h3>Интернет-магазин 4Точки</h3>
+                <p>Розничные продажи легковых, грузовых, специальных шин, а также шин для мотоциклов и квадроциклов.<br>Доставка в кратчайшие сроки по всей России</p>
+                <a class="btn btn--line" href="https://www.4tochki.ru/" target="_blank" rel="noopener">Подробнее <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </article>
+              <article class="client-card">
+                <div class="client-card__top">
+                  <img src="assets/logo-k1.svg" alt="К1" width="60" height="60">
+                  <span class="pill pill--orange">Скоро</span>
+                </div>
+                <h3>Приложение К1</h3>
+                <p>Для тех, кто ценит своё время. Профессиональный шиномонтаж без ожидания даже в пик сезона. Мы поднимаем стандарты сервиса, чтобы вы возвращались снова.</p>
+              </article>
+            </div>
           </div>
         </div>
+        <button class="clients__idle" type="button" tabindex="-1" aria-expanded="true">
+          <span class="clients__idle-label">Розничным<br>клиентам</span>
+        </button>
       </div>
-      <button class="clients__pane clients__pane--idle" type="button">
-        <span class="clients__idle-label clients__idle-label--wholesale">Оптовым<br>клиентам</span>
-        <span class="clients__idle-label clients__idle-label--retail">Розничным<br>клиентам</span>
-      </button>
+      <div class="clients__pane clients__pane--wholesale" data-pane="wholesale">
+        <div class="clients__hot">
+          <div class="clients__inner">
+            <h2 class="clients__title">Оптовым<br>клиентам</h2>
+            <div class="clients__cards">
+              <article class="client-card">
+                <img class="client-card__logo-wide" src="assets/logo-forto.svg" alt="ФОРТОЧКИ" width="399" height="60">
+                <h3>Форточки</h3>
+                <p>Онлайн-платформа оптовых закупок шин и дисков. Полный ассортимент. Живые остатки. Быстрое оформление. Доставка по всей России ​</p>
+                <a class="btn btn--line" href="#contacts">Вход в B2B портал <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </article>
+              <article class="client-card">
+                <img src="assets/logo-k1.svg" alt="К1 Про" width="60" height="60">
+                <h3>Приложение К1 Про</h3>
+                <p>Для шиномонтажных центров любого формата. Получайте дополнительный доход на выдаче заказов, услугах шиномонтажа и доставке. Скоро - сезонное хранение и утилизация. Управляйте расписанием онлайн.​</p>
+                <a class="btn btn--line" href="#contacts">Подробнее <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <button class="clients__idle" type="button" aria-expanded="false">
+          <span class="clients__idle-label">Оптовым<br>клиентам</span>
+        </button>
+      </div>
     </section>
 
     <section class="screen screen--solutions" id="solutions">
@@ -542,6 +552,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js?v=22"></script>
+  <script src="js/main.js?v=23"></script>
 </body>
 </html>

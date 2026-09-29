@@ -36,11 +36,9 @@ body {
     scroll-snap-stop: always;
   }
   .screen--clients,
-  .clients__pane--hot,
-  .clients__inner { min-height: 0; }
-  .clients__pane--hot,
-  .clients__pane--idle,
-  .clients__inner { height: 100%; }
+  .clients__pane,
+  .clients__hot,
+  .clients__inner { min-height: 0; height: 100%; }
 }
 img { display: block; }
 a { color: inherit; text-decoration: none; }
@@ -625,20 +623,103 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Clients */
 .screen--clients {
-  display: flex;
+  --clients-ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --clients-time: 0.85s;
+  position: relative;
+  display: grid;
+  grid-template-columns: 65.3fr 34.7fr;
   min-height: 1000px;
   padding: 0;
-}
-.clients__pane--hot {
-  position: relative;
-  width: 65.3%;
-  min-height: 1000px;
   overflow: hidden;
+  transition: grid-template-columns var(--clients-time) var(--clients-ease);
+}
+.screen--clients[data-side="wholesale"] {
+  grid-template-columns: 34.7fr 65.3fr;
+}
+.screen--clients.is-instant,
+.screen--clients.is-instant .clients__pane,
+.screen--clients.is-instant .clients__hot,
+.screen--clients.is-instant .clients__idle,
+.screen--clients.is-instant .client-card {
+  transition: none;
+  animation: none;
 }
 .clients__bg {
   position: absolute;
-  inset: 0 auto auto 0;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
   max-width: none;
+  object-fit: fill;
+  pointer-events: none;
+}
+.clients__pane {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  min-height: 1000px;
+  overflow: hidden;
+  background-color: transparent;
+  transition: background-color var(--clients-time) ease;
+}
+.screen--clients[data-side="retail"] .clients__pane--wholesale,
+.screen--clients[data-side="wholesale"] .clients__pane--retail {
+  background-color: var(--black);
+}
+.clients__hot,
+.clients__idle {
+  transition:
+    opacity 0.45s ease 0.18s,
+    transform var(--clients-time) var(--clients-ease),
+    visibility 0s linear 0s;
+}
+.clients__hot {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.clients__idle {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 28px;
+  border: 0;
+  background: transparent;
+  color: var(--gray);
+  cursor: pointer;
+}
+.screen--clients[data-side="retail"] .clients__pane--wholesale .clients__hot,
+.screen--clients[data-side="wholesale"] .clients__pane--retail .clients__hot {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.5s ease, visibility 0s linear 0.28s;
+}
+.screen--clients[data-side="retail"] .clients__pane--wholesale .clients__hot { transform: translateX(40px); }
+.screen--clients[data-side="wholesale"] .clients__pane--retail .clients__hot { transform: translateX(-40px); }
+.screen--clients[data-side="retail"] .clients__pane--retail .clients__idle,
+.screen--clients[data-side="wholesale"] .clients__pane--wholesale .clients__idle {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+}
+.screen--clients.is-animated[data-side="wholesale"] .clients__pane--wholesale .client-card,
+.screen--clients.is-animated[data-side="retail"] .clients__pane--retail .client-card {
+  animation: clients-card-in 0.65s var(--clients-ease) both;
+}
+.screen--clients.is-animated[data-side="wholesale"] .clients__pane--wholesale .client-card:nth-child(2),
+.screen--clients.is-animated[data-side="retail"] .clients__pane--retail .client-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+@keyframes clients-card-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
 }
 .clients__inner {
   position: relative;
@@ -659,10 +740,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   text-align: center;
 }
 .clients__cards { display: flex; flex-direction: column; gap: 12px; }
-.screen--clients[data-side="retail"] .clients__title--wholesale,
-.screen--clients[data-side="retail"] .clients__cards--wholesale,
-.screen--clients[data-side="wholesale"] .clients__title--retail,
-.screen--clients[data-side="wholesale"] .clients__cards--retail { display: none; }
 .client-card {
   display: flex;
   flex-direction: column;
@@ -702,17 +779,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   white-space: nowrap;
 }
 .pill--orange { background: var(--orange); color: var(--white); }
-.clients__pane--idle {
-  display: flex;
-  width: 34.7%;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 28px;
-  border: 0;
-  background: var(--black);
-  color: var(--gray);
-  cursor: pointer;
-}
 .clients__idle-label {
   font-family: var(--font-display);
   font-weight: 300;
@@ -720,10 +786,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   line-height: 1;
   text-align: center;
 }
-.screen--clients[data-side="retail"] .clients__idle-label--retail,
-.screen--clients[data-side="wholesale"] .clients__idle-label--wholesale { display: none; }
-.screen--clients[data-side="wholesale"] .clients__pane--hot { order: 2; }
-.screen--clients[data-side="wholesale"] .clients__bg { left: auto; right: 0; }
 
 /* Solutions */
 .screen--solutions {
@@ -1225,10 +1287,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .card { height: auto; min-height: 260px; }
   .card__inner { min-height: 220px; gap: 24px; }
   .solution { height: auto; gap: 24px; }
-  .screen--clients { flex-direction: column; }
-  .clients__pane--hot, .clients__pane--idle { width: 100%; min-height: auto; }
-  .clients__pane--idle { min-height: 160px; }
-  .clients__inner { min-height: auto; padding: 80px 0; }
+  .screen--clients {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+    transition: none;
+  }
+  .clients__pane { width: 100%; height: auto; min-height: 0; }
+  .clients__hot { height: auto; }
+  .screen--clients[data-side="retail"] .clients__pane--wholesale,
+  .screen--clients[data-side="wholesale"] .clients__pane--retail { min-height: 160px; }
+  .screen--clients[data-side="retail"] .clients__pane--wholesale .clients__hot,
+  .screen--clients[data-side="wholesale"] .clients__pane--retail .clients__hot { display: none; }
+  .clients__inner { height: auto; min-height: auto; padding: 80px 0; }
   .map-card, .map-card:first-of-type, .map-card:last-of-type {
     position: static;
     width: auto;

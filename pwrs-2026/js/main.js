@@ -121,9 +121,50 @@ function moveSolutions(direction) {
   return false;
 }
 
+const clientsSection = document.querySelector("#clients");
+const clientsIndex = sections.indexOf(clientsSection);
+let clientsSide = "retail";
+
+function setClientsSide(side, animate = true) {
+  const changed = clientsSection.dataset.side !== side;
+  if (!animate) clientsSection.classList.add("is-instant");
+  else if (changed) clientsSection.classList.add("is-animated");
+  clientsSide = side;
+  clientsSection.dataset.side = side;
+  clientsSection.querySelectorAll(".clients__idle").forEach((button) => {
+    const open = button.closest(".clients__pane").dataset.pane === side;
+    button.tabIndex = open ? -1 : 0;
+    button.setAttribute("aria-expanded", String(open));
+  });
+  if (!animate) {
+    void clientsSection.offsetWidth;
+    clientsSection.classList.remove("is-instant");
+  }
+}
+
+function moveClients(direction) {
+  const index = currentIndex();
+  if (index === clientsIndex) {
+    if (direction > 0 && clientsSide === "retail") {
+      setClientsSide("wholesale");
+      return true;
+    }
+    if (direction < 0 && clientsSide === "wholesale") {
+      setClientsSide("retail");
+      return true;
+    }
+    return false;
+  }
+  if (direction > 0 && index + 1 === clientsIndex) setClientsSide("retail", false);
+  if (direction < 0 && index - 1 === clientsIndex) setClientsSide("wholesale", false);
+  return false;
+}
+
 function moveScreen(direction) {
-  if (moveSolutions(direction)) return true;
-  return moveHistory(direction);
+  if (moveClients(direction)) return 900;
+  if (moveSolutions(direction)) return 700;
+  if (moveHistory(direction)) return 700;
+  return 0;
 }
 
 let wheelLock = false;
@@ -138,8 +179,9 @@ scroller.addEventListener("wheel", (event) => {
   if (wheelLock) return;
   wheelLock = true;
   const direction = event.deltaY > 0 ? 1 : -1;
-  if (!moveScreen(direction)) goTo(currentIndex() + direction);
-  window.setTimeout(() => { wheelLock = false; }, 700);
+  const hold = moveScreen(direction);
+  if (!hold) goTo(currentIndex() + direction);
+  window.setTimeout(() => { wheelLock = false; }, hold || 700);
 }, { passive: false });
 
 let touchStartX = 0;
@@ -180,6 +222,7 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
     if (!section) return;
     if (id === "#history") setHistoryStep(0);
     if (id === "#solutions") setSolutionsStep(0);
+    if (id === "#clients") setClientsSide("retail");
     syncMark(id.slice(1));
     event.preventDefault();
     section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -197,9 +240,10 @@ document.querySelector(".lang").addEventListener("click", (event) => {
   document.documentElement.lang = button.dataset.lang === "en" ? "en" : "ru";
 });
 
-document.querySelector(".clients__pane--idle").addEventListener("click", () => {
-  const screen = document.querySelector(".screen--clients");
-  screen.dataset.side = screen.dataset.side === "retail" ? "wholesale" : "retail";
+document.querySelectorAll(".clients__idle").forEach((button) => {
+  button.addEventListener("click", () => {
+    setClientsSide(button.closest(".clients__pane").dataset.pane);
+  });
 });
 
 historySection.querySelectorAll(".timeline__point").forEach((point) => {
