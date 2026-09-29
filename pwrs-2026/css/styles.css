@@ -442,15 +442,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   pointer-events: none;
   transform: scale(min(calc(100dvh / 1000), calc(100vw / 1440)));
   transform-origin: center bottom;
-  transition: opacity 0.45s ease, visibility 0.45s ease;
+  transition: all 0.45s ease;
 }
-.mark[data-step="1"] { --turn: 1; }
-.mark[data-step="2"] { --turn: 2; }
+.mark[data-step="1"] { 
+  --turn: 1;
+  bottom: -100px;
+}
+.mark[data-step="2"] { 
+  --turn: 2;
+  bottom: -130px;
+}
 .mark.is-hidden { opacity: 0; visibility: hidden; }
 .mark__spin {
   position: absolute;
   left: 0;
-  top: -120px;
+  top: 0px;
   width: 1440px;
   height: 1261px;
   transform: rotate(calc(var(--turn) * 120deg));
@@ -798,6 +804,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--gray);
   font-size: 14px;
   line-height: 1.4;
+  display: inline-flex;
+  height: 60px;
 }
 .solution .btn { grid-row: 6; }
 .solution--cta .solution__body { grid-template-rows: minmax(0, 1fr) auto 40px auto; }
