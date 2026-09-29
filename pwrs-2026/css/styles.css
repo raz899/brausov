@@ -261,6 +261,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   width: 100%;
   transition: background-color 0.25s, color 0.25s, border-color 0.25s;
 }
+.btn--line:hover { background: var(--orange); }
 .btn--line img { transition: filter 0.25s; }
 
 .icon-badge {
