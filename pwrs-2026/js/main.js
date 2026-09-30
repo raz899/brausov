@@ -233,13 +233,16 @@ syncMark(location.hash.replace("#", "") || "hero");
 
 const lang = document.querySelector(".lang");
 lang.addEventListener("click", (event) => {
-  const button = event.target.closest("button");
-  if (!button || button.classList.contains("is-active")) return;
-  lang.dataset.lang = button.dataset.lang;
-  lang.querySelectorAll("button").forEach((item) => {
-    item.classList.toggle("is-active", item === button);
-  });
-  document.documentElement.lang = button.dataset.lang === "en" ? "en" : "ru";
+  const link = event.target.closest("a[data-lang]");
+  if (!link) return;
+  if (link.classList.contains("is-active")) {
+    event.preventDefault();
+    return;
+  }
+  if (!location.hash) return;
+  event.preventDefault();
+  const file = link.dataset.lang === "en" ? "index_en.html" : "index.html";
+  location.href = file + location.hash;
 });
 
 document.querySelectorAll(".clients__idle").forEach((button) => {
@@ -260,8 +263,8 @@ const gallery = new Swiper(galleryEl, {
   grabCursor: true,
   keyboard: { enabled: true, onlyInViewport: true },
   a11y: {
-    prevSlideMessage: "Предыдущее фото",
-    nextSlideMessage: "Следующее фото",
+    prevSlideMessage: document.documentElement.lang === "en" ? "Previous photo" : "Предыдущее фото",
+    nextSlideMessage: document.documentElement.lang === "en" ? "Next photo" : "Следующее фото",
   },
   navigation: {
     nextEl: ".gallery__next",

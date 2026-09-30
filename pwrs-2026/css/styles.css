@@ -188,7 +188,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .lang[data-lang="en"] .lang__thumb { transform: translateY(100%); }
-.lang button {
+.lang a {
   position: relative;
   z-index: 1;
   width: 32px;
@@ -200,18 +200,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: 12px;
   line-height: 1;
   white-space: nowrap;
+  text-align: center;
   cursor: pointer;
   transition: color 0.25s ease;
 }
-.lang button[data-lang="ru"] { grid-area: 1 / 1; }
-.lang button[data-lang="en"] { grid-area: 2 / 1; }
-.lang button.is-active {
+.lang a[data-lang="ru"] { grid-area: 1 / 1; }
+.lang a[data-lang="en"] { grid-area: 2 / 1; }
+.lang a.is-active {
   color: var(--orange);
   transition-delay: 0.12s;
 }
 @media (prefers-reduced-motion: reduce) {
   .lang__thumb,
-  .lang button { transition: none; }
+  .lang a { transition: none; }
 }
 
 .btn {
