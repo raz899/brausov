@@ -92,6 +92,40 @@ function moveHistory(direction) {
   return false;
 }
 
+const mobileHistory = { anchor: null };
+
+function syncHistoryMobile() {
+  if (desktop.matches) return;
+  const rect = historySection.getBoundingClientRect();
+  const vh = window.innerHeight;
+  if (rect.bottom <= 0 || rect.top >= vh) {
+    mobileHistory.anchor = null;
+    return;
+  }
+  const y = window.scrollY;
+  if (mobileHistory.anchor === null) {
+    mobileHistory.anchor = y;
+    if (historyStep !== (rect.top > 0 ? 0 : historyLast)) {
+      setHistoryStep(rect.top > 0 ? 0 : historyLast);
+    }
+    return;
+  }
+  const delta = y - mobileHistory.anchor;
+  const threshold = Math.min(Math.max(vh * 0.5, 120), 400);
+  if (delta > threshold && historyStep < historyLast) {
+    mobileHistory.anchor = y;
+    setHistoryStep(historyStep + 1);
+  } else if (delta < -threshold && historyStep > 0) {
+    mobileHistory.anchor = y;
+    setHistoryStep(historyStep - 1);
+  }
+}
+
+window.addEventListener("scroll", () => {
+  if (desktop.matches) return;
+  syncHistoryMobile();
+}, { passive: true });
+
 const solutionsSection = document.querySelector("#solutions");
 const solutionsIndex = sections.indexOf(solutionsSection);
 const solutionsLast = 2;
