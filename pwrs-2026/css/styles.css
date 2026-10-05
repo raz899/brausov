@@ -1300,6 +1300,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
+    background: var(--dark);
     grid-template-columns: repeat(2, auto);
   }
   .lang[data-lang="en"] .lang__thumb { transform: translateX(100%); }
@@ -1331,12 +1332,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     clip-path: inset(50%);
     white-space: nowrap;
   }
-  .history-pane { padding: 24px 20px; }
+  .history-pane { padding: 24px 20px; align-self: start; }
   .history-pane li {
     grid-template-columns: 56px 20px 1fr;
     gap: 12px;
   }
-  .history-pane li:not(:last-child)::after { left: 68px; }
+  .history-pane li:not(:last-child)::after { left: 78px; top: 10px; }
   .solutions__row {
     position: static;
     display: flex;
