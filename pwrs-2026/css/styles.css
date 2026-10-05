@@ -577,6 +577,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   height: 344px;
   margin: 80px auto 0;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .marquee::before,
 .marquee::after {
@@ -1403,6 +1405,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .map-card p { margin-top: 12px; font-size: 12px; }
   .contacts__col, .contacts__map { width: 100%; }
   .gallery-frame { width: min(1320px, calc(100% - 40px)); }
+  .gallery-head { gap: 20px; }
+  .gallery-head h2 { font-size: 32px; }
+  .tabs button { font-size: 14px; }
   .gallery { height: 320px; }
   .gallery .swiper-slide,
   .gallery .gallery__slide--narrow { width: 78%; height: 320px; }
