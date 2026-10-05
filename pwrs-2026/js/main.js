@@ -288,8 +288,11 @@ document.querySelectorAll(".clients__idle").forEach((button) => {
 historySection.querySelectorAll(".timeline__point").forEach((point) => {
   point.addEventListener("click", () => setHistoryStep(Number(point.dataset.step)));
 });
-const galleryEl = document.querySelector(".gallery");
-const gallery = new Swiper(galleryEl, {
+const photoPanel = document.querySelector('[data-panel="photo"]');
+const videoPanel = document.querySelector('[data-panel="video"]');
+const en = document.documentElement.lang === "en";
+
+const gallery = new Swiper(photoPanel.querySelector(".gallery"), {
   slidesPerView: "auto",
   spaceBetween: 12,
   loop: true,
@@ -297,13 +300,42 @@ const gallery = new Swiper(galleryEl, {
   grabCursor: true,
   keyboard: { enabled: true, onlyInViewport: true },
   a11y: {
-    prevSlideMessage: document.documentElement.lang === "en" ? "Previous photo" : "Предыдущее фото",
-    nextSlideMessage: document.documentElement.lang === "en" ? "Next photo" : "Следующее фото",
+    prevSlideMessage: en ? "Previous photo" : "Предыдущее фото",
+    nextSlideMessage: en ? "Next photo" : "Следующее фото",
   },
   navigation: {
-    nextEl: ".gallery__next",
-    prevEl: ".gallery__prev",
+    nextEl: photoPanel.querySelector(".gallery__next"),
+    prevEl: photoPanel.querySelector(".gallery__prev"),
   },
+});
+
+const videoGallery = new Swiper(videoPanel.querySelector(".gallery"), {
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  loop: false,
+  speed: 700,
+  grabCursor: true,
+  keyboard: { enabled: true, onlyInViewport: true },
+  a11y: {
+    prevSlideMessage: en ? "Previous video" : "Предыдущее видео",
+    nextSlideMessage: en ? "Next video" : "Следующее видео",
+  },
+  navigation: {
+    nextEl: videoPanel.querySelector(".gallery__next"),
+    prevEl: videoPanel.querySelector(".gallery__prev"),
+  },
+});
+
+videoPanel.querySelectorAll(".gallery__slide").forEach((slide) => {
+  const video = slide.querySelector("video");
+  slide.querySelector(".gallery__play").addEventListener("click", () => video.play());
+  video.addEventListener("play", () => slide.classList.add("is-playing"));
+  video.addEventListener("pause", () => slide.classList.remove("is-playing"));
+  video.addEventListener("ended", () => slide.classList.remove("is-playing"));
+  video.addEventListener("click", () => {
+    if (video.paused) video.play();
+    else video.pause();
+  });
 });
 
 document.querySelector(".tabs").addEventListener("click", (event) => {
@@ -315,7 +347,8 @@ document.querySelector(".tabs").addEventListener("click", (event) => {
     item.setAttribute("aria-selected", String(on));
   });
   const photo = tab.dataset.tab === "photo";
-  document.querySelector('[data-panel="photo"]').hidden = !photo;
-  document.querySelector('[data-panel="video"]').hidden = photo;
+  photoPanel.hidden = !photo;
+  videoPanel.hidden = photo;
   if (photo) gallery.update();
+  else videoGallery.update();
 });

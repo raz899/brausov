@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=37">
+  <link rel="stylesheet" href="css/styles.css?v=42">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
@@ -543,10 +543,45 @@
             </div>
           </div>
         </div>
-        <button class="gallery__prev" type="button" aria-label="Предыдущее фото"></button>
-        <button class="gallery__next" type="button" aria-label="Следующее фото"></button>
+        <div class="gallery__nav">
+          <button class="gallery__prev" type="button" aria-label="Предыдущее фото"></button>
+          <button class="gallery__next" type="button" aria-label="Следующее фото"></button>
+        </div>
       </div>
-      <p class="gallery-empty" data-panel="video" hidden>Видео скоро появятся в этом разделе.</p>
+      <div class="gallery-frame" data-panel="video" hidden>
+        <div class="gallery gallery--video swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide gallery__slide">
+              <video preload="none" playsinline poster="assets/video/ru/dmo.jpg">
+                <source src="assets/video/ru/dmo.webm" type="video/webm">
+              </video>
+              <button class="gallery__play" type="button" aria-label="Воспроизвести видео"></button>
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <video preload="none" playsinline poster="assets/video/ru/rostov.jpg">
+                <source src="assets/video/ru/rostov.mp4" type="video/mp4">
+              </video>
+              <button class="gallery__play" type="button" aria-label="Воспроизвести видео"></button>
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <video preload="none" playsinline poster="assets/video/ru/spb.jpg">
+                <source src="assets/video/ru/spb.mp4" type="video/mp4">
+              </video>
+              <button class="gallery__play" type="button" aria-label="Воспроизвести видео"></button>
+            </div>
+            <div class="swiper-slide gallery__slide">
+              <video preload="none" playsinline poster="assets/video/ru/tumen.jpg">
+                <source src="assets/video/ru/tumen.mp4" type="video/mp4">
+              </video>
+              <button class="gallery__play" type="button" aria-label="Воспроизвести видео"></button>
+            </div>
+          </div>
+        </div>
+        <div class="gallery__nav">
+          <button class="gallery__prev" type="button" aria-label="Предыдущее видео"></button>
+          <button class="gallery__next" type="button" aria-label="Следующее видео"></button>
+        </div>
+      </div>
     </section>
 
     <section class="screen screen--contacts" id="contacts">
@@ -617,6 +652,6 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js?v=25"></script>
+  <script src="js/main.js?v=26"></script>
 </body>
 </html>
