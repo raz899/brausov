@@ -328,14 +328,43 @@ const videoGallery = new Swiper(videoPanel.querySelector(".gallery"), {
 
 videoPanel.querySelectorAll(".gallery__slide").forEach((slide) => {
   const video = slide.querySelector("video");
-  slide.querySelector(".gallery__play").addEventListener("click", () => video.play());
-  video.addEventListener("play", () => slide.classList.add("is-playing"));
-  video.addEventListener("pause", () => slide.classList.remove("is-playing"));
-  video.addEventListener("ended", () => slide.classList.remove("is-playing"));
-  video.addEventListener("click", () => {
-    if (video.paused) video.play();
-    else video.pause();
-  });
+  slide.querySelector(".gallery__play").addEventListener("click", () => openVideoModal(video));
+});
+
+const videoModal = document.querySelector('[data-modal="video"]');
+const modalVideo = videoModal.querySelector(".video-modal__video");
+
+function openVideoModal(source) {
+  const src = source.querySelector("source").getAttribute("src");
+  modalVideo.setAttribute("poster", source.getAttribute("poster"));
+  if (!modalVideo.querySelector(`source[src="${src}"]`)) {
+    const type = src.endsWith(".webm") ? "video/webm" : "video/mp4";
+    const node = document.createElement("source");
+    node.setAttribute("src", src);
+    node.setAttribute("type", type);
+    modalVideo.appendChild(node);
+  }
+  modalVideo.load();
+  videoModal.hidden = false;
+  modalVideo.play();
+  videoModal.querySelector(".video-modal__close").focus();
+}
+
+function closeVideoModal() {
+  videoModal.hidden = true;
+  modalVideo.pause();
+  modalVideo.removeAttribute("poster");
+  modalVideo.querySelectorAll("source").forEach((node) => node.remove());
+  modalVideo.removeAttribute("src");
+  modalVideo.load();
+}
+
+videoModal.querySelector(".video-modal__close").addEventListener("click", closeVideoModal);
+videoModal.addEventListener("click", (event) => {
+  if (event.target === videoModal) closeVideoModal();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !videoModal.hidden) closeVideoModal();
 });
 
 document.querySelector(".tabs").addEventListener("click", (event) => {
