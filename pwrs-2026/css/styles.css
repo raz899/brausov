@@ -1288,6 +1288,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 1100px) {
   .sidenav, .mark { display: none; }
   .burger { left: calc(20px - var(--hit)); top: calc(24px - var(--hit)); }
+  .hero-brand { margin-top: 50px; }
   .lang {
     right: auto;
     top: 20px;
@@ -1300,9 +1301,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .lang a[data-lang="en"] { grid-area: 1 / 2; }
   .lang a { width: auto; min-width: 32px; }
   .wrap, .mission, .history, .map-stage, .footer { width: min(1200px, calc(100% - 40px)); }
-  .hero-copy h1 { font-size: 56px; }
-  .hero-copy p { font-size: 18px; }
-  .hero-copy { margin-top: 48px; }
+  .hero-copy h1 { font-size: 40px; }
+  .hero-copy p { font-size: 16px; }
+  .hero-copy { margin-top: 48px; width: 100%; padding: 0 16px; }
   .mission {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
