@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>К1 Про — партнёрская программа для шинных центров и шиномонтажей</title>
+    <meta
+      name="description"
+      content="Подключите шинный центр к экосистеме К1 Про: заказы на шиномонтаж с предоплатой, доход до 10% за выдачу шин и дисков, единый календарь записей, отчёты и K1 Pay. 1 000+ центров уже работают."
+    />
+    <meta name="theme-color" content="#FF7A1A" />
+    <link rel="canonical" href="https://pro.k1.ru/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="К1 Про" />
+    <meta property="og:title" content="К1 Про — партнёрская программа для шинных центров" />
+    <meta
+      property="og:description"
+      content="Больше заказов в ваши посты и доход с каждой выданной шины. Онлайн-запись с предоплатой, вознаграждение до 10% за выдачу, единый календарь и аналитика."
+    />
+    <meta property="og:url" content="https://pro.k1.ru/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="К1 Про — партнёрская программа для шинных центров" />
+    <meta
+      name="twitter:description"
+      content="Заказы на шиномонтаж, доход за выдачу шин и дисков, единый календарь, отчёты и K1 Pay для шинных центров."
+    />
+    <link
+      rel="icon"
+      href="./img/favicon.svg"
+    />
+    <link rel="preload" href="./img/hero.webp" as="image" type="image/webp" />
+    <script type="module">(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))n(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const i of a.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&n(i)}).observe(document,{childList:!0,subtree:!0});function s(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerPolicy&&(a.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?a.credentials="include":t.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function n(t){if(t.ep)return;t.ep=!0;const a=s(t);fetch(t.href,a)}})();const o=(u,e=document)=>e.querySelector(u),f=(u,e=document)=>Array.from(e.querySelectorAll(u)),h=window.matchMedia("(prefers-reduced-motion: reduce)").matches;(function(){const e=o("#hero-video"),s=o("#video-toggle");if(!e||!s||h)return;const n=()=>{const t=e.paused;s.setAttribute("aria-pressed",String(t)),s.setAttribute("aria-label",t?"Продолжить воспроизведение видео":"Поставить видео на паузу")};s.addEventListener("click",async()=>{if(e.paused)try{await e.play()}catch{return}else e.pause();n()}),e.addEventListener("play",n),e.addEventListener("pause",n),n()})();(function(){const e=o("#app-recording"),s=o("#app-recording-toggle"),n=o(".phone-video-controls");if(!e||!s||!n)return;const t=()=>{const a=e.paused;s.setAttribute("aria-pressed",String(a)),s.setAttribute("aria-label",a?"Воспроизвести запись экрана":"Поставить запись на паузу"),n.classList.toggle("is-paused",a)};s.addEventListener("click",async()=>{if(e.paused)try{await e.play()}catch{return}else e.pause();t()}),e.addEventListener("play",t),e.addEventListener("pause",t),h||new IntersectionObserver(([i])=>{i.isIntersecting?e.play().catch(()=>{}):e.pause()},{threshold:.35}).observe(e),t()})();(function(){const e=o("#k1-pay-video"),s=o("#k1-pay-video-toggle");if(!e||!s)return;const n=()=>{const a=e.paused;s.setAttribute("aria-pressed",String(a)),s.setAttribute("aria-label",a?"Воспроизвести видео K1 Пэй":"Приостановить видео K1 Пэй")};if(s.addEventListener("click",()=>{e.paused?e.play().catch(()=>{}):e.pause()}),e.addEventListener("play",n),e.addEventListener("pause",n),h){e.pause(),n();return}new IntersectionObserver(([a])=>{a.isIntersecting?e.play().catch(()=>{}):e.pause()},{threshold:.3}).observe(e),n()})();(function(){const e=o("#network-video"),s=o("#network-video-toggle"),n=o(".network-copy"),t=f("[data-network-stage]");if(!e||!s)return;const a=()=>{const l=e.paused;s.setAttribute("aria-pressed",String(l)),s.setAttribute("aria-label",l?"Воспроизвести федеральное видео":"Приостановить федеральное видео")},i=()=>{const l=e.currentTime<7.5?0:e.currentTime<15?1:2;t.forEach((p,d)=>p.classList.toggle("is-active",d===l)),n==null||n.classList.toggle("is-secondary",l>0)};if(s.addEventListener("click",()=>{e.paused?e.play().catch(()=>{}):e.pause()}),e.addEventListener("play",a),e.addEventListener("pause",a),e.addEventListener("timeupdate",i),h){e.pause(),a();return}new IntersectionObserver(([l])=>{l.isIntersecting?e.play().catch(()=>{}):e.pause()},{threshold:.2}).observe(e),a(),i()})();(function(){const e=o(".t-blocks");if(!e)return;const s="http://www.w3.org/2000/svg";for(let n=0;n<36;n++){const t=document.createElementNS(s,"rect"),a=n%3===0?26:16;t.setAttribute("x",200-a/2),t.setAttribute("y",8),t.setAttribute("width",a),t.setAttribute("height",34),t.setAttribute("rx",3),t.setAttribute("transform",`rotate(${n*10} 200 200)`),e.appendChild(t)}})();(function(){const e=o("#theme-toggle"),s=document.documentElement,n=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";s.setAttribute("data-theme",n);const t=()=>{const a=s.getAttribute("data-theme")==="dark";e.setAttribute("aria-pressed",String(a)),e.setAttribute("aria-label",a?"Включить светлую тему":"Включить тёмную тему")};t(),e.addEventListener("click",()=>{s.setAttribute("data-theme",s.getAttribute("data-theme")==="dark"?"light":"dark"),t()})})();(function(){const e=o("#burger"),s=o("#mobile-menu"),n=()=>{s.hidden=!0,document.body.classList.remove("is-locked"),e.setAttribute("aria-expanded","false"),e.setAttribute("aria-label","Открыть меню")};e.addEventListener("click",()=>{if(e.getAttribute("aria-expanded")==="true")return n();s.hidden=!1,document.body.classList.add("is-locked"),e.setAttribute("aria-expanded","true"),e.setAttribute("aria-label","Закрыть меню")}),f("a",s).forEach(t=>t.addEventListener("click",n)),document.addEventListener("keydown",t=>{t.key==="Escape"&&!s.hidden&&(n(),e.focus())}),window.addEventListener("resize",()=>{window.innerWidth>=900&&!s.hidden&&n()})})();(function(){const e=o("#site-header"),s=()=>e.classList.toggle("is-stuck",window.scrollY>12);s(),window.addEventListener("scroll",s,{passive:!0});const n=f(".nav-desktop a"),t=new Map(n.map(r=>[r.getAttribute("href").slice(1),r])),a=Array.from(t.keys()).map(r=>document.getElementById(r)).filter(Boolean),i=new IntersectionObserver(r=>{r.forEach(l=>{var p;l.isIntersecting&&(n.forEach(d=>d.classList.remove("is-active")),(p=t.get(l.target.id))==null||p.classList.add("is-active"))})},{rootMargin:"-45% 0px -50% 0px"});a.forEach(r=>i.observe(r))})();const w={express:{key:"express",name:"ПУШ Экспресс",kicker:"Старт без склада",image:"./img/express.webp",video:"./video/express.webm",stages:[{label:"Авто подъезжает",time:0},{label:"Машина на посту",time:2.6},{label:"Шиномонтаж",time:5.2}],imageAlt:"Фирменное оформление пункта удобного шиномонтажа формата ПУШ Экспресс",imageCaption:"Как работает ПУШ Экспресс",lead:"Формат для шиномонтажа без склада и выдачи заказов. Вы подключаете онлайн-запись, оказываете услуги по собственному тарифу и управляете загрузкой постов в К1 Про.",badges:["склад не требуется","без обеспечительного платежа","приложение бесплатно"],req:["Склад и свободная площадь хранения не требуются","Категория программы — легковые шины и диски","Шиномонтаж легковых шин — обязательно","Юридическое лицо или ИП"],income:["Доход от оказания услуг по вашему тарифу","Комиссия платформы — 2% от фактически оказанных услуг","Стоимость K1 Пэй входит в комиссию платформы","Вознаграждение за выдачу товара не предусмотрено"],gain:["Новые клиенты с площадок К1","Единый календарь и управление постами","Бесплатное приложение К1 Про и дистанционное обучение"]},profi:{key:"profi",name:"ПУШ Профи",kicker:"Услуги + выдача",image:"./img/profi.webp",video:"./video/profi.webm",stages:[{label:"Авто приезжает",time:0},{label:"Шины из ПУШ",time:2.6},{label:"Услуги на посту",time:5.2}],imageAlt:"Фирменное оформление пункта удобного шиномонтажа формата ПУШ Профи",imageCaption:"Как работает ПУШ Профи",lead:"Формат для центра, который совмещает шиномонтаж с выдачей заказов. Нужна зона хранения от 15 м²; товарные категории и дополнительные услуги зависят от специализации точки.",badges:["хранение от 15 м²","выдача 2–5%","депозит 25 000 ₽"],req:["Склад выдачи заказов — от 15 м²","Легковые, грузовые и специальные шины и диски — по специализации","Шиномонтаж легковых шин — обязательно","Пункт выдачи заказов К1, 4точки и Форточки"],income:["Вознаграждение за выдачу товара — от 2 до 5%","Доход от оказания услуг по вашему тарифу","Комиссия платформы — 2% от фактически оказанных услуг","Стоимость K1 Пэй входит в комиссию платформы"],gain:["Оформление: панель-кронштейн, плакат, наклейка на дверь","Приложение К1 Про бесплатно","Сезонное хранение и утилизация шин — в разработке"]},business:{key:"business",name:"ПУШ Бизнес",kicker:"Максимальная товарная программа",image:"./img/business.webp",video:"./video/business.webm",stages:[{label:"Фура подъезжает",time:0},{label:"Разгрузка шин",time:2.6},{label:"Выдача и монтаж",time:5.2}],imageAlt:"Фирменное оформление пункта удобного шиномонтажа формата ПУШ Бизнес",imageCaption:"Как работает ПУШ Бизнес",lead:"Формат для крупного шинного центра с ответственным хранением от 100 м² и отдельной зоной выдачи от 15 м². Максимальная товарная программа и повышенное вознаграждение.",badges:["хранение от 100 м²","выдача 3–10%","депозит 25 000 ₽"],req:["Склад ответственного хранения — от 100 м²; склад выдачи — от 15 м²","Легковые шины и диски — обязательно; грузовые и специальные — по согласованию","Шиномонтаж легковых шин — обязательно; грузовых и специальных — по специализации","Доставка клиенту — опционально"],income:["Вознаграждение за выдачу товара — от 3 до 10%","Доход от оказания услуг по вашему тарифу","Комиссия платформы — 2% от фактически оказанных услуг","Стоимость K1 Пэй входит в комиссию платформы"],gain:["Оформление: панель-кронштейн, плакат, наклейка на дверь","Приложение К1 Про бесплатно","Сезонное хранение и утилизация шин — в разработке"]}};(function(){const e=o("#format-panels"),s=f(".tab");if(!e)return;e.innerHTML=Object.values(w).map((t,a)=>`
+      <section class="panel${a===0?" is-active":""}" id="panel-${t.key}"
+        role="tabpanel" aria-labelledby="tab-${t.key}" tabindex="0"
+        data-testid="panel-${t.key}"${a===0?"":" hidden"}>
+        <div class="panel-hero">
+          <figure class="panel-photo panel-motion" data-format-motion="${t.key}">
+            <video muted loop playsinline${h?"":" autoplay"} preload="metadata"
+              poster="${t.image}" aria-label="${t.imageAlt}" data-testid="video-format-${t.key}">
+              <source src="${t.video}" type="video/mp4">
+            </video>
+            <figcaption>${t.imageCaption}</figcaption>
+            <button class="motion-toggle" type="button" data-motion-toggle
+              aria-label="Поставить анимацию на паузу" aria-pressed="false"
+              data-testid="button-motion-${t.key}"><span aria-hidden="true">Ⅱ</span></button>
+            <div class="motion-steps" aria-label="Этапы процесса">
+              ${t.stages.map((i,r)=>`<button class="${r===0?"is-active":""}" type="button"
+                      data-motion-stage="${i.time}" data-stage-index="${r}"
+                      data-testid="button-motion-stage-${t.key}-${r}">${i.label}</button>`).join("")}
+            </div>
+          </figure>
+          <div class="panel-top">
+            <h3><small>${t.kicker}</small>${t.name}</h3>
+            <p>${t.lead}</p>
+            <div class="panel-badges">${t.badges.map(i=>`<span>${i}</span>`).join("")}</div>
+          </div>
+        </div>
+        <div class="panel-cols">
+          <div class="panel-col"><h4>Требования</h4><ul>${t.req.map(i=>`<li>${i}</li>`).join("")}</ul></div>
+          <div class="panel-col"><h4>Доход</h4><ul>${t.income.map(i=>`<li>${i}</li>`).join("")}</ul></div>
+          <div class="panel-col"><h4>Что даём</h4><ul>${t.gain.map(i=>`<li>${i}</li>`).join("")}</ul></div>
+        </div>
+        <div class="panel-foot">
+          <p>Точный формат платформа рекомендует после заявки — по площади, услугам и локации центра.</p>
+          <button class="btn btn-primary" type="button" data-open-modal data-testid="button-format-cta-${t.key}">Подобрать формат</button>
+        </div>
+      </section>`).join("");const n=(t,a=!1)=>{s.forEach((i,r)=>{const l=r===t;i.classList.toggle("is-active",l),i.setAttribute("aria-selected",String(l)),i.tabIndex=l?0:-1;const p=o("#"+i.getAttribute("aria-controls"));p.classList.toggle("is-active",l),p.hidden=!l;const d=o("video",p);d&&(l&&!h?d.play().catch(()=>{}):d.pause())}),a&&s[t].focus()};s.forEach((t,a)=>{t.addEventListener("click",()=>n(a)),t.addEventListener("keydown",i=>{const r=i.key;if(r!=="ArrowRight"&&r!=="ArrowLeft"&&r!=="Home"&&r!=="End")return;i.preventDefault();const l=r==="Home"?0:r==="End"?s.length-1:(a+(r==="ArrowRight"?1:-1)+s.length)%s.length;n(l,!0)})}),f("[data-format-motion]",e).forEach(t=>{const a=o("video",t),i=o("[data-motion-toggle]",t),r=f("[data-motion-stage]",t);if(!a||!i)return;const l=()=>{const d=a.paused;i.setAttribute("aria-pressed",String(d)),i.setAttribute("aria-label",d?"Продолжить анимацию":"Поставить анимацию на паузу"),o("span",i).textContent=d?"▶":"Ⅱ"},p=()=>{let d=0;r.forEach((c,m)=>{a.currentTime>=Number(c.dataset.motionStage)&&(d=m)}),r.forEach((c,m)=>c.classList.toggle("is-active",m===d))};i.addEventListener("click",async()=>{if(a.paused)try{await a.play()}catch{return}else a.pause();l()}),r.forEach(d=>{d.addEventListener("click",async()=>{if(a.currentTime=Number(d.dataset.motionStage),p(),!h)try{await a.play()}catch{return}})}),a.addEventListener("timeupdate",p),a.addEventListener("play",l),a.addEventListener("pause",l),l(),p()})})();const $=[{q:"К1 Про — это франшиза?",a:"Нет. К1 Про работает с партнёрами по агентским и лицензионным договорам: паушального взноса и роялти по франшизной модели нет."},{q:"Сколько стоит приложение К1 Про?",a:"Плата за использование приложения отсутствует. Обеспечительный платёж не требуется, если вы уже клиент b2b.4tochki.ru; для новых клиентов форматов с выдачей он составляет до 25 000 ₽."},{q:"Может ли партнёром стать физическое лицо?",a:"Нет. Партнёром программы становится юридическое лицо или индивидуальный предприниматель."},{q:"Помещение склада должно быть в собственности?",a:"Нет. Достаточно, чтобы у вас была необходимая для выбранного формата свободная площадь — арендованное помещение подходит."},{q:"Какую поддержку получает партнёр?",a:"Технологическую (автоматизация записи, аналитика, интеграция по API с вашей онлайн-записью), техническую (чат со специалистами и бот), маркетинговую (видимость, брендинг, рейтинг, промо и бонусные программы), а также базу знаний и бесплатное дистанционное обучение."},{q:"Не будет ли конфликта записей с моими клиентами?",a:"Нет: и ваши клиенты, и заказы с платформы попадают в один календарь К1 Про. Распределение слотов по постам и сменам остаётся за вами."},{q:"Сколько заказов будет приходить?",a:"Количество заказов зависит от локации, конкуренции, сезонности и рейтинга центра — программа не обещает гарантированный объём или доход."}];(function(){const e=o("#faq-acc");e&&(e.innerHTML=$.map((s,n)=>`
+    <div class="acc-item">
+      <h3>
+        <button class="acc-btn" type="button" id="acc-btn-${n}" aria-expanded="false"
+          aria-controls="acc-panel-${n}" data-testid="button-faq-${n}">
+          <span>${s.q}</span><span class="acc-sign" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="acc-panel" id="acc-panel-${n}" role="region" aria-labelledby="acc-btn-${n}"
+        data-testid="panel-faq-${n}"><div>${s.a}</div></div>
+    </div>`).join(""),f(".acc-btn",e).forEach(s=>{const n=o("#"+s.getAttribute("aria-controls"));s.addEventListener("click",()=>{const t=s.getAttribute("aria-expanded")==="true";f(".acc-btn",e).forEach(a=>{a!==s&&(a.setAttribute("aria-expanded","false"),o("#"+a.getAttribute("aria-controls")).style.height="0px")}),s.setAttribute("aria-expanded",String(!t)),n.style.height=t?"0px":n.scrollHeight+"px"})}),window.addEventListener("resize",()=>{f(".acc-btn",e).forEach(s=>{if(s.getAttribute("aria-expanded")!=="true")return;const n=o("#"+s.getAttribute("aria-controls"));n.style.height=n.scrollHeight+"px"})}))})();(function(){const e=o("#modal-root"),s=o(".modal-sheet",e),n=o("#modal-body"),t=n.innerHTML;let a=null;const i=()=>f("button, [href], input, select, textarea",s).filter(c=>!c.disabled),r=()=>{var m,g;a=document.activeElement,e.hidden=!1,document.body.classList.add("is-locked"),(g=(m=o("input, select, button",s)||s).focus)==null||g.call(m)},l=()=>{var c;e.hidden=!0,document.body.classList.remove("is-locked"),n.innerHTML=t,p(),(c=a==null?void 0:a.focus)==null||c.call(a)};document.addEventListener("click",c=>{c.target.closest("[data-open-modal]")?(c.preventDefault(),r()):c.target.closest("[data-close-modal]")&&l()}),document.addEventListener("keydown",c=>{if(e.hidden)return;if(c.key==="Escape")return l();if(c.key!=="Tab")return;const m=i();if(!m.length)return;const g=m[0],b=m[m.length-1];c.shiftKey&&document.activeElement===g?(c.preventDefault(),b.focus()):!c.shiftKey&&document.activeElement===b&&(c.preventDefault(),g.focus())});function p(){const c=o("#lead-form");c&&c.addEventListener("submit",m=>{var L;m.preventDefault();let g=!0;if(f(".field",c).forEach(k=>{const y=o("input, select",k),A=o("[data-err]",k);let v="";const E=y.value.trim();E?y.name==="phone"&&E.replace(/\D/g,"").length<10?v="Укажите телефон полностью":y.name==="name"&&E.length<2&&(v="Слишком короткое имя"):v="Заполните поле",k.classList.toggle("has-error",!!v),y.setAttribute("aria-invalid",v?"true":"false"),A.textContent=v,v&&g&&(y.focus(),g=!1)}),!g)return;const b=new FormData(c);n.innerHTML=`
+        <div class="modal-success" data-testid="modal-success">
+          <span class="success-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none"/></svg>
+          </span>
+          <h2 id="modal-title">Форма заполнена</h2>
+          <ul>
+            <li>Имя: ${d(b.get("name"))}</li>
+            <li>Телефон: ${d(b.get("phone"))}</li>
+            <li>Город: ${d(b.get("city"))}</li>
+            <li>Тип центра: ${d(b.get("type"))}</li>
+          </ul>
+          <p>Актуальные условия — на
+            <a href="https://pro.k1.ru/" target="_blank" rel="noopener noreferrer">pro.k1.ru</a>.</p>
+          <button class="btn btn-primary btn-block btn-lg" type="button" data-close-modal
+            data-testid="button-success-close">Понятно, закрыть</button>
+        </div>`,(L=o('[data-testid="button-success-close"]'))==null||L.focus()})}const d=c=>String(c??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[m]);p()})();(function(){const e=f(".num-row, .route-step, .app-copy, .app-mock, .step-line li, .acc-item, .final-copy, .hero-proof");if(h)return;e.forEach(n=>n.classList.add("reveal"));const s=new IntersectionObserver(n=>{n.forEach(t=>{t.isIntersecting&&(t.target.classList.add("is-in"),s.unobserve(t.target))})},{rootMargin:"0px 0px -8% 0px",threshold:.08});e.forEach(n=>s.observe(n))})();(function(){const e=f(".num-val[data-count]");if(h||!e.length)return;const s=t=>t.toLocaleString("ru-RU"),n=new IntersectionObserver(t=>{t.forEach(a=>{if(!a.isIntersecting)return;const i=a.target;n.unobserve(i);const r=Number(i.dataset.count),l=i.dataset.suffix||"",p=1100,d=performance.now(),c=m=>{const g=Math.min(1,(m-d)/p),b=1-Math.pow(1-g,3);i.textContent=s(Math.round(r*b))+l,g<1&&requestAnimationFrame(c)};requestAnimationFrame(c)})},{threshold:.5});e.forEach(t=>n.observe(t))})();
+</script>
+    <style>:root{--paper: #f5f6f8;--paper-2: #eef0f3;--surface: #ffffff;--ink: #1f2430;--ink-soft: #3d4d55;--muted: #6b7280;--line: #e3e6ea;--blue: #ff7a1a;--blue-deep: #d95d00;--blue-soft: #fff1e6;--lime: #ff8300;--lime-ink: #ffffff;--on-dark: #f4f3ef;--on-dark-muted: #c7cbd1;--dark-bg: #171a1f;--dark-surface: #20242b;--shell: 1240px;--pad: clamp(1.1rem, 4vw, 3.5rem);--r-s: 10px;--r-m: 18px;--r-l: 28px;--e-out: cubic-bezier(.22, 1, .36, 1);--e-io: cubic-bezier(.65, 0, .35, 1);--font-d: "Onest", "Segoe UI", system-ui, sans-serif;--font-b: "Manrope", "Segoe UI", system-ui, sans-serif;--bg: var(--paper);--fg: var(--ink);--card: var(--surface);--accent: var(--blue);--accent-fg: #fff;--accent-tint: var(--blue-soft);--border: var(--line);--fg-muted: var(--muted);--dark-section: #1f2430}[data-theme=dark]{--bg: var(--dark-bg);--fg: #eceae5;--card: var(--dark-surface);--accent: #ff963f;--accent-fg: #171a1f;--accent-tint: #3a2a20;--border: #353a43;--fg-muted: #aab0ba;--paper-2: #1d2127;--dark-section: #20242b;--lime: #ff963f}*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-b);font-size:17px;line-height:1.6;font-weight:450;overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background-color .35s var(--e-io),color .35s var(--e-io)}body.is-locked{overflow:hidden}h1,h2,h3{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line-height:.98;margin:0;text-wrap:balance}h1{font-size:clamp(2.45rem,7.6vw,6rem)}h2{font-size:clamp(2rem,5.2vw,4.1rem)}h3{font-size:clamp(1.22rem,2.2vw,1.7rem);line-height:1.1}p{margin:0}em{font-style:normal;color:var(--accent)}a{color:inherit;text-decoration:none}ul,ol{margin:0;padding:0;list-style:none}img,svg{max-width:100%}button,input,select{font:inherit;color:inherit}:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}.wrap{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--pad)}.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:var(--accent-fg);padding:.7rem 1.1rem}.skip-link:focus{left:.6rem;top:.6rem}.btn{--btn-bg: transparent;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:44px;padding:.72rem 1.25rem;border:1.5px solid transparent;border-radius:999px;background:var(--btn-bg);font-family:var(--font-b);font-weight:700;font-size:.98rem;letter-spacing:-.01em;cursor:pointer;transition:transform .18s var(--e-out),background-color .2s,color .2s,border-color .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(0)}.btn-lg{min-height:56px;padding:.95rem 1.7rem;font-size:1.05rem}.btn-block{width:100%}.btn-primary{--btn-bg: var(--accent);color:var(--accent-fg);box-shadow:0 8px 20px -12px color-mix(in srgb,var(--accent) 70%,transparent)}.btn-primary:hover{--btn-bg: var(--blue-deep)}[data-theme=dark] .btn-primary:hover{--btn-bg: #ffad69}.btn-lime{--btn-bg: var(--lime);color:var(--lime-ink)}.btn-lime:hover{--btn-bg: #e96e00}.btn-ghost{border-color:currentColor;color:var(--on-dark);opacity:.92}.btn-ghost:hover{background:#ffffff1a;opacity:1}.btn .arrow{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;transition:transform .22s var(--e-out)}.btn:hover .arrow{transform:translate(4px)}.icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border:1.5px solid var(--border);border-radius:50%;background:transparent;cursor:pointer;transition:border-color .2s,background .2s}.icon-btn:hover{border-color:var(--accent);background:var(--accent-tint)}.icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round}.icon-btn .ic-moon,[data-theme=dark] .icon-btn .ic-sun{display:none}[data-theme=dark] .icon-btn .ic-moon{display:block}.site-header{position:sticky;top:0;z-index:90;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s}.site-header.is-stuck{border-bottom-color:var(--border)}.header-inner{max-width:var(--shell);margin-inline:auto;padding:.6rem var(--pad);display:flex;align-items:center;gap:1.2rem}.brand{display:inline-flex;align-items:center;flex:0 0 auto}.brand-logo{display:block;width:auto;height:42px;object-fit:contain}[data-theme=dark] .site-header .brand-logo{background:#fff;border-radius:10px;padding:4px 8px}.nav-desktop{display:none;margin-left:auto;gap:.15rem}.nav-desktop a{padding:.6rem .72rem;border-radius:999px;font-size:.94rem;font-weight:600;color:var(--fg-muted);transition:color .18s,background .18s}.nav-desktop a:hover,.nav-desktop a.is-active{color:var(--fg);background:var(--accent-tint)}.header-actions{margin-left:auto;display:flex;align-items:center;gap:.5rem}.nav-desktop+.header-actions{margin-left:0}.btn-header{display:none}.burger{position:relative}.burger span{position:absolute;left:13px;width:18px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s var(--e-out),opacity .2s}.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}.burger[aria-expanded=true] span:nth-child(1){transform:translateY(6px) rotate(45deg)}.burger[aria-expanded=true] span:nth-child(2){opacity:0}.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}.mobile-menu{position:fixed;top:64px;right:0;bottom:0;left:0;min-height:calc(100dvh - 64px);z-index:89;background:var(--bg);border-top:1px solid var(--border);box-shadow:0 24px 60px #1f24301f;padding:1rem var(--pad) 2rem;overflow-y:auto;display:flex;flex-direction:column;justify-content:space-between;animation:sheetIn .28s var(--e-out)}.mobile-menu[hidden]{display:none}.mobile-menu nav{display:grid;margin-bottom:1rem}.mobile-menu nav a{display:flex;align-items:center;gap:.8rem;min-height:52px;font-family:var(--font-d);font-weight:700;font-size:1.24rem;letter-spacing:-.02em;border-bottom:1px solid var(--border)}.mobile-menu nav a span{font-family:var(--font-b);font-size:.72rem;font-weight:700;color:var(--accent);letter-spacing:.08em}@keyframes sheetIn{0%{transform:translateY(-10px)}}.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.79rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted);margin-bottom:1.1rem}.eyebrow--dark{color:var(--fg-muted)}.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px color-mix(in srgb,var(--lime) 25%,transparent)}.eyebrow--dark .dot{background:var(--accent);box-shadow:0 0 0 4px var(--accent-tint)}.sec-head{margin-bottom:clamp(2rem,5vw,3.6rem)}.sec-head--split{display:grid;gap:1.4rem}.sec-head--split p{color:var(--fg-muted);max-width:46ch;font-size:1.05rem}.hero{position:relative;isolation:isolate;background:var(--dark-section);color:var(--on-dark);min-height:min(860px,calc(100svh - 66px));display:flex;align-items:flex-end;padding:clamp(5rem,10vw,8rem) 0 clamp(2.6rem,6vw,4.5rem);overflow:hidden}.hero-inner{position:relative;z-index:3;max-width:var(--shell);margin-inline:auto;padding-inline:var(--pad)}.hero h1{max-width:19ch;font-size:clamp(2.2rem,4.7vw,4.6rem);margin-bottom:1.5rem;text-shadow:0 2px 32px rgba(0,0,0,.35)}.hero h1 em{color:#ff9d50}.hero-lead{max-width:52ch;color:#c9cdd8;font-size:clamp(1rem,1.5vw,1.18rem);margin-bottom:2rem}.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:clamp(2.4rem,6vw,4rem)}.hero-media{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;pointer-events:none}.hero-media video{width:100%;height:100%;object-fit:cover;object-position:center center}.hero-shade{position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(90deg,#060810f0,#060810c7 43%,#0608102e 74%),linear-gradient(0deg,rgba(6,8,16,.82) 0%,transparent 45%),linear-gradient(180deg,rgba(6,8,16,.28) 0%,transparent 28%)}.video-toggle{position:absolute;right:var(--pad);top:clamp(1rem,2vw,1.5rem);z-index:4}.hero-grid{position:absolute;top:0;right:0;bottom:0;left:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:68px 68px;-webkit-mask-image:radial-gradient(120% 80% at 20% 0%,#000 20%,transparent 75%);mask-image:radial-gradient(120% 80% at 20% 0%,#000 20%,transparent 75%)}.road{position:absolute;left:-10%;right:-10%;bottom:-6%;height:46%;background:radial-gradient(70% 100% at 50% 100%,rgba(36,56,240,.55),transparent 70%)}.road:after{content:"";position:absolute;left:0;right:0;bottom:22%;height:3px;background:repeating-linear-gradient(90deg,rgba(204,255,60,.85) 0 44px,transparent 44px 96px);animation:roadRun 2.6s linear infinite;opacity:.6}@keyframes roadRun{to{background-position-x:-96px}}.tire{position:absolute;right:-16vw;top:4vh;width:min(74vw,620px);opacity:.85}.tire circle,.tire path{fill:none;stroke:#ffffff2e;stroke-width:2}.tire .t-outer{stroke:#ffffff4d;stroke-width:3}.tire .t-rim{stroke:#2438f0d9;stroke-width:10}.tire .t-cap{fill:var(--lime);stroke:none}.tire .t-blocks rect{fill:#ffffff1f;stroke:none}.tire-spin{transform-origin:200px 200px;animation:spin 26s linear infinite}.fw-spin{transform-origin:100px 100px;animation:spin 34s linear infinite reverse}@keyframes spin{to{transform:rotate(360deg)}}.process-media{background:var(--dark-section);color:var(--on-dark);padding:clamp(3.5rem,8vw,7.5rem) 0 clamp(1.2rem,3vw,2rem);overflow:hidden}.process-media-head{margin-bottom:clamp(2rem,5vw,4.5rem)}.process-media-head h2{max-width:17ch}.process-media-head h2 em{color:#ff9d50}.process-gallery{width:min(100% - 2rem,1480px);margin-inline:auto;display:grid;grid-template-columns:1fr;gap:1rem}.process-shot{position:relative;min-height:440px;overflow:hidden;background:#171b25}.process-shot img{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--e-out),filter .5s var(--e-out)}.process-shot:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(0deg,#060810eb,#0608100a 72%)}.process-shot figcaption{position:absolute;z-index:2;left:clamp(1.2rem,3vw,2.4rem);right:clamp(1.2rem,3vw,2.4rem);bottom:clamp(1.2rem,3vw,2.2rem);display:grid;gap:.35rem}.process-shot figcaption span{color:var(--lime);font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.process-shot figcaption strong{font-family:var(--font-d);font-size:clamp(1.55rem,3vw,2.7rem);line-height:1.02;letter-spacing:-.04em;max-width:19ch}.process-shot figcaption p{color:#d4d7df;max-width:44ch;font-size:.94rem}@media (hover: hover){.process-shot:hover img{transform:scale(1.025);filter:saturate(1.08) contrast(1.03)}}.numbers{padding:0;overflow:hidden;background:#070b13;color:#f6f6f4}.network-copy{position:absolute;z-index:2;top:clamp(2rem,5.5vw,5.6rem);left:var(--pad);display:grid;gap:clamp(.7rem,1.4vw,1.15rem);width:min(72vw,920px);color:#fff;transition:opacity .55s var(--e-out),transform .55s var(--e-out)}.network-copy.is-secondary{opacity:0;transform:translateY(-14px);pointer-events:none}.network-copy .eyebrow{color:#ffffffd1}.network-copy h2{max-width:17ch;font-size:clamp(2.6rem,6.4vw,6.4rem);line-height:.92;letter-spacing:-.055em;text-shadow:0 2px 30px rgba(0,0,0,.34)}.network-copy h2 span{white-space:nowrap}.network-copy h2 em{color:var(--accent);font-style:normal;font-variant-numeric:tabular-nums}.network-copy>p:last-child{max-width:52ch;color:#ffffffc7;font-size:clamp(1rem,1.8vw,1.25rem);text-shadow:0 1px 16px rgba(0,0,0,.55)}.network-frame{position:relative;width:100%;aspect-ratio:16 / 9;overflow:hidden;background:#050911}.network-frame video{width:100%;height:100%;object-fit:cover}.network-shade{position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;background:linear-gradient(180deg,#05091166,#0509110d 48%,#050911db),linear-gradient(90deg,rgba(5,9,17,.76) 0%,rgba(5,9,17,.28) 53%,transparent 78%)}.network-stages{position:absolute;z-index:2;left:var(--pad);right:var(--pad);bottom:clamp(1rem,3vw,2.2rem);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}.network-stages span{display:flex;align-items:center;gap:.65rem;min-height:48px;padding:.65rem .8rem;border-top:1px solid rgba(255,255,255,.32);color:#fff9;font-size:.82rem;font-weight:700;transition:color .3s,border-color .3s,background .3s}.network-stages span.is-active{border-color:var(--accent);background:linear-gradient(90deg,rgba(255,111,0,.2),transparent);color:#fff}.network-stages b{color:var(--accent);font-size:.72rem}.network-toggle{position:absolute;z-index:3;top:clamp(.9rem,2vw,1.5rem);right:var(--pad);display:grid;place-items:center;width:48px;height:48px;border:1px solid rgba(255,255,255,.45);border-radius:50%;background:#050911a3;color:#fff;font-weight:800;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.network-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;padding-block:clamp(1.4rem,3vw,2.5rem)}.network-stats article{display:grid;gap:.3rem;padding:.5rem clamp(.8rem,2vw,1.5rem);border-left:1px solid rgba(255,255,255,.16)}.network-stats b{color:var(--accent);font-family:var(--font-d);font-size:clamp(1.6rem,4vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums}.network-stats span{max-width:25ch;color:#aeb5c4;font-size:.82rem}.change{background:var(--paper-2);padding:clamp(3.4rem,8vw,7rem) 0;border-block:1px solid var(--border)}.route{position:relative;display:grid;gap:clamp(2rem,4vw,3.2rem)}.route:before{content:"";position:absolute;left:21px;top:12px;bottom:12px;width:2px;background:repeating-linear-gradient(to bottom,var(--accent) 0 10px,transparent 10px 20px);opacity:.5}.route-step{position:relative;display:grid;grid-template-columns:44px 1fr;gap:.6rem 1rem;align-items:start}.route-marker{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-fg);font-family:var(--font-d);font-weight:800;font-size:1.1rem;z-index:2}.route-body h3{margin-bottom:.5rem}.route-body p{color:var(--fg-muted);max-width:54ch}.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}.chips li{font-size:.82rem;font-weight:600;padding:.34rem .7rem;border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--fg-muted)}.route-visual{grid-column:2;margin-top:1.1rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r-m);padding:1rem;display:grid;gap:.55rem}.mini-order{display:flex;align-items:center;gap:.6rem;font-size:.9rem;font-weight:600;padding:.6rem .8rem;border-radius:var(--r-s);background:var(--bg);border:1px solid var(--border)}.mo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:0 0 auto}.mini-order.is-new{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);animation:pop 3.4s ease-in-out infinite}.mini-order.is-new .mo-dot{background:#fff}@keyframes pop{0%,70%,to{transform:none}80%{transform:translate(6px)}}.sched-bar{position:relative;display:flex;align-items:center;height:38px;border-radius:var(--r-s);background:var(--bg);border:1px solid var(--border);overflow:hidden}.sched-bar i{position:absolute;inset:0 auto 0 0;width:var(--w);background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 55%,#fff));animation:grow 1.1s var(--e-out) both}[data-theme=dark] .sched-bar i{background:linear-gradient(90deg,var(--accent),#d95d00)}.sched-bar span{position:relative;z-index:2;padding-left:.75rem;font-size:.85rem;font-weight:700;color:#fff}@keyframes grow{0%{width:0}}.route-visual--pickup{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:.7rem}.stack-tire{width:54px;height:54px;border-radius:50%;border:9px solid var(--fg);opacity:.85;position:relative}.stack-tire:after{content:"";position:absolute;top:6px;right:6px;bottom:6px;left:6px;border-radius:50%;border:3px solid var(--accent)}.pickup-tag{font-family:var(--font-d);font-weight:800;font-size:.92rem;padding:.45rem .8rem;border-radius:999px;background:var(--lime);color:var(--lime-ink)}.route-visual--pay{grid-template-columns:1fr;gap:0;padding:0;overflow:hidden}.pay-video{position:relative;aspect-ratio:16 / 9;overflow:hidden;background:#081426}.pay-video video{width:100%;height:100%;object-fit:cover}.pay-video-caption{position:absolute;z-index:1;inset:auto 0 0;display:grid;gap:.08rem;padding:2rem 1rem .85rem;background:linear-gradient(transparent,#030a17e0);color:#fff}.pay-video-caption span{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}.pay-video-caption b{font-size:.9rem}.pay-video-toggle{position:absolute;z-index:2;top:.75rem;right:.75rem;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.45);border-radius:50%;background:#030a17b8;color:#fff;font-weight:800;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.pay-brief{display:grid;gap:.9rem;padding:clamp(1rem,2.6vw,1.45rem)}.pay-brief-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}.pay-brief-head>span{color:var(--accent);font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.pay-brief-head h4{font-family:var(--font-d);font-size:clamp(1.15rem,2.5vw,1.45rem);line-height:1.1}.pay-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;overflow:hidden;border:1px solid var(--border);border-radius:var(--r-s);background:var(--border)}.pay-benefits article{display:grid;align-content:start;gap:.3rem;min-height:112px;padding:.8rem;background:var(--card)}.pay-benefits strong{color:var(--fg);font-size:.9rem;font-weight:700}.pay-benefits article:first-child strong,.pay-benefits article:nth-child(2) strong{color:var(--accent)}.pay-benefits p{color:var(--fg-muted)!important;font-size:.74rem;line-height:1.4}.pay-legal{color:var(--fg-muted)!important;font-size:.7rem;line-height:1.45}.formats{padding:clamp(3rem,7vw,6.5rem) 0}.formats h2 em{color:var(--accent)}.tabs{display:flex;gap:.4rem;padding:.35rem;border:1px solid var(--border);border-radius:999px;background:var(--card);overflow-x:auto;scrollbar-width:none;margin-bottom:1.6rem}.tabs::-webkit-scrollbar{display:none}.tab{flex:1 0 auto;min-height:52px;padding:.5rem 1.1rem;border:0;border-radius:999px;background:transparent;cursor:pointer;display:grid;gap:.05rem;text-align:center;transition:background .22s var(--e-out),color .22s}.tab-name{font-family:var(--font-d);font-weight:800;font-size:1.02rem;letter-spacing:-.02em}.tab-meta{font-size:.76rem;color:var(--fg-muted)}.tab:hover{background:var(--accent-tint)}.tab.is-active{background:var(--fg);color:var(--bg)}.tab.is-active .tab-meta{color:color-mix(in srgb,var(--bg) 75%,var(--fg))}.panel{display:none;border:1px solid var(--border);border-radius:var(--r-l);overflow:hidden;background:var(--card);animation:fadeUp .4s var(--e-out)}.panel.is-active{display:block}@keyframes fadeUp{0%{opacity:0;transform:translateY(14px)}}.panel-top{padding:clamp(1.4rem,3.5vw,2.4rem);background:var(--dark-section);color:var(--on-dark);display:grid;gap:.7rem}.panel-hero{display:grid;background:var(--dark-section)}.panel-photo{position:relative;min-height:260px;margin:0;overflow:hidden;background:#dfe2e6}.panel-motion{aspect-ratio:16 / 9;min-height:0;background:#1f2430}.panel-motion video{width:100%;height:100%;min-height:260px;object-fit:cover;display:block;background:#dfe2e6}.panel-photo img{width:100%;height:100%;min-height:260px;object-fit:contain;padding:clamp(.75rem,2vw,1.4rem);display:block}.panel-photo figcaption{position:absolute;left:14px;top:14px;max-width:calc(100% - 28px);padding:.45rem .7rem;border-radius:999px;background:#1f2430d1;color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:.75rem;font-weight:700}.motion-toggle{position:absolute;top:12px;right:12px;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:999px;display:grid;place-items:center;color:#fff;background:#1f2430c7;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:2}.motion-toggle:hover{background:var(--accent);border-color:var(--accent)}.motion-toggle span{font-size:.8rem;font-weight:800}.motion-steps{position:absolute;left:12px;right:12px;bottom:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;border-radius:14px;background:#1f2430c7;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.motion-steps button{min-height:44px;padding:.45rem .55rem;border:0;border-radius:10px;background:transparent;color:#ffffffb8;font-size:.72rem;font-weight:700;line-height:1.15;text-align:center;cursor:pointer}.motion-steps button:hover,.motion-steps button.is-active{color:#fff;background:var(--accent)}.panel-top h3{font-size:clamp(1.7rem,4vw,2.6rem)}.panel-top h3 small{display:block;font-family:var(--font-b);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ff9d50;margin-bottom:.5rem}.panel-top p{color:#c6cad4;max-width:60ch}.panel-badges{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.3rem}.panel-badges span{font-size:.82rem;font-weight:700;padding:.4rem .75rem;border-radius:999px;border:1px solid rgba(255,255,255,.25)}.panel-badges span:first-child{background:var(--lime);color:var(--lime-ink);border-color:var(--lime)}[data-theme=dark] .panel-top{background:#20242b}.panel-cols{display:grid}.panel-col{padding:clamp(1.2rem,3vw,1.9rem);border-top:1px solid var(--border)}.panel-col h4{margin:0 0 .85rem;font-family:var(--font-b);font-size:.79rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted)}.panel-col ul{display:grid;gap:.6rem}.panel-col li{display:grid;grid-template-columns:18px 1fr;gap:.6rem;font-size:.98rem;line-height:1.45}.panel-col li:before{content:"";width:12px;height:12px;margin-top:.4rem;border-radius:50%;border:3px solid var(--accent)}.panel-foot{padding:clamp(1.1rem,3vw,1.6rem);border-top:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;background:var(--bg)}.panel-foot p{font-size:.92rem;color:var(--fg-muted);max-width:60ch}.app{background:var(--dark-section);color:var(--on-dark);padding:clamp(3.4rem,8vw,7rem) 0;overflow:hidden}.app h2 em{color:#ff9d50}.app-wrap{display:grid;gap:clamp(2.2rem,5vw,4rem);align-items:center}.app-lead{color:#c2c7d2;margin:1.2rem 0 1.6rem;max-width:50ch}.app-list{display:grid;gap:.85rem}.app-list li{padding-left:1.5rem;position:relative;color:#b9bfcc;font-size:1rem}.app-list li b{color:var(--on-dark)}.app-list li:before{content:"";position:absolute;left:0;top:.55rem;width:10px;height:10px;border-radius:3px;background:var(--accent)}.app-mock{position:relative;justify-self:center;width:100%;max-width:390px;margin:0}.phone{border-radius:34px;border:1px solid rgba(255,255,255,.18);background:#12151d;padding:.6rem;box-shadow:0 40px 80px -40px #000000e6}.phone--live{border-radius:42px;padding:.65rem;box-shadow:0 44px 90px -38px #000000eb,inset 0 0 0 1px #ffffff0f}.phone-top{display:grid;place-items:center;padding:.3rem 0 .55rem}.ph-pill{width:74px;height:5px;border-radius:999px;background:#fff3}.phone-screen{border-radius:26px;background:#f7f6f2;color:#10131a;padding:.9rem;display:grid;gap:.75rem}.phone-screen--live{position:relative;display:block;padding:0;border-radius:30px;overflow:hidden;aspect-ratio:576 / 1280;background:#f5f5f5}.phone-screen--live video{width:100%;height:100%;display:block;object-fit:contain;background:#f5f5f5}.phone-video-controls{position:absolute;left:auto;right:12px;top:12px;bottom:auto;display:flex;justify-content:flex-end;gap:8px;opacity:1}.phone-video-btn{min-width:44px;min-height:44px;padding:.55rem .75rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;color:#fff;background:#1f2430d6;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:.78rem;font-weight:700;cursor:pointer}.phone-video-btn:hover{background:var(--accent);border-color:var(--accent)}.app-mock figcaption{margin-top:.85rem;color:#969daa;font-size:.78rem;line-height:1.4;text-align:center}.ps-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem}.ps-title{font-family:var(--font-d);font-weight:800;font-size:.98rem;letter-spacing:-.02em}.ps-badge{font-size:.72rem;font-weight:700;padding:.25rem .55rem;border-radius:999px;background:#ff7a1a;color:#fff}.ps-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}.ps-kpis div{background:#fff;border:1px solid #e2ded4;border-radius:12px;padding:.5rem;display:grid;gap:.05rem;text-align:center}.ps-kpis b{font-family:var(--font-d);font-size:1.15rem;font-weight:800;line-height:1}.ps-kpis span{font-size:.66rem;color:#6a707c}.ps-cal{display:grid;gap:.35rem}.ps-row{display:grid;grid-template-columns:42px 1fr;gap:.45rem;align-items:center}.ps-time{font-size:.7rem;font-weight:700;color:#6a707c;font-variant-numeric:tabular-nums}.ps-slot{font-style:normal;font-size:.76rem;font-weight:700;padding:.45rem .6rem;border-radius:9px;border-left:4px solid}.ps-slot--own{background:#e9e6dd;border-color:#10131a}.ps-slot--k1{background:#dfe3ff;border-color:#ff7a1a;color:#14208c}.ps-slot--free{background:transparent;border:1px dashed #c9c4b8;color:#8b9099;font-weight:600}.ps-cta{text-align:center;font-weight:700;font-size:.85rem;padding:.7rem;border-radius:999px;background:#10131a;color:#fff}@media (hover: none){.phone-video-controls{opacity:1}}.steps{padding:clamp(3.4rem,8vw,7rem) 0}.steps h2 em{color:var(--accent)}.step-line{display:grid;gap:1px;background:var(--border);border-block:1px solid var(--border)}.step-line li{background:var(--bg);padding:1.5rem 0;display:grid;gap:.4rem;position:relative;transition:padding-left .25s var(--e-out),background .25s}@media (hover: hover){.step-line li:hover{background:var(--accent-tint);padding-left:.9rem}}.step-line b{font-family:var(--font-d);font-size:.9rem;font-weight:800;color:var(--accent);letter-spacing:.04em}.step-line p{color:var(--fg-muted);max-width:58ch}.steps-note{margin-top:1.6rem;font-size:.92rem;color:var(--fg-muted);max-width:68ch;padding-left:1rem;border-left:3px solid var(--accent)}.faq{background:var(--paper-2);border-block:1px solid var(--border);padding:clamp(3.4rem,8vw,7rem) 0}.faq h2 em{color:var(--accent)}.faq-side{margin-top:1rem;color:var(--fg-muted);font-size:.98rem}.faq-side a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}.acc{display:grid;border-top:1px solid var(--fg)}.acc-item{border-bottom:1px solid var(--border)}.acc-btn{width:100%;min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.05rem 0;border:0;background:transparent;cursor:pointer;text-align:left;font-family:var(--font-d);font-weight:700;font-size:clamp(1.02rem,2vw,1.32rem);letter-spacing:-.02em;line-height:1.2}.acc-btn:hover{color:var(--accent)}.acc-sign{position:relative;flex:0 0 auto;width:26px;height:26px}.acc-sign:before,.acc-sign:after{content:"";position:absolute;inset:50% 0 auto 0;height:2.5px;background:currentColor;border-radius:2px;transition:transform .28s var(--e-out)}.acc-sign:after{transform:rotate(90deg)}.acc-btn[aria-expanded=true] .acc-sign:after{transform:rotate(0)}.acc-panel{overflow:hidden;height:0;transition:height .32s var(--e-io)}.acc-panel>div{padding:0 0 1.2rem;color:var(--fg-muted);max-width:72ch}.final{position:relative;background:var(--blue);color:#fff;padding:clamp(3.4rem,8vw,6.5rem) 0;overflow:hidden}[data-theme=dark] .final{background:#1b28c4}.final-wrap{position:relative;z-index:2}.final h2{max-width:22ch;margin-bottom:1.1rem}.final h2 em{color:var(--lime)}.final-copy .btn{margin-top:1.6rem}.final-copy p{max-width:50ch;color:#ffffffe0;margin-bottom:1.8rem}.final-wheel{position:absolute;right:-12%;top:-20%;width:min(60vw,460px);opacity:.28;z-index:1}.final-wheel circle,.final-wheel path{fill:none;stroke:#fff;stroke-width:2}.site-footer{background:var(--dark-section);color:var(--on-dark);padding:clamp(2.6rem,6vw,4rem) 0 2rem}.footer-grid{display:grid;gap:2rem}.brand--foot{margin-bottom:.8rem;padding:8px 12px;border-radius:12px;background:#fff}.brand--foot .brand-logo{height:48px}.foot-brand p{color:var(--on-dark-muted);max-width:32ch;font-size:.95rem}.foot-nav{display:grid;gap:.5rem}.foot-nav a{color:var(--on-dark-muted);font-weight:600;font-size:.95rem;min-height:32px;display:inline-flex;align-items:center}.foot-nav a:hover{color:var(--lime)}.foot-legal p{color:var(--on-dark-muted);font-size:.88rem;max-width:58ch}.foot-legal a{color:var(--lime);text-decoration:underline;text-underline-offset:3px}.foot-fine{font-size:.8rem!important;opacity:.72}.media-toggle{display:grid;place-items:center;width:48px;height:48px;min-width:48px;min-height:48px;padding:0;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:#05091129;color:#fff;font-family:var(--font-d);font-size:.82rem;font-weight:800;line-height:1;-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);cursor:pointer}.media-toggle:hover,.media-toggle:focus-visible{background:#ffffff24;border-color:#ffffffd1}.media-toggle-icon{position:relative;display:block;width:12px;height:14px}.media-toggle-icon:before,.media-toggle-icon:after{content:"";position:absolute;top:0;width:4px;height:14px;border-radius:1px;background:currentColor}.media-toggle-icon:before{left:0}.media-toggle-icon:after{right:0}.media-toggle[aria-pressed=true] .media-toggle-icon{width:0;height:0;margin-left:2px;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:12px solid currentColor}.media-toggle[aria-pressed=true] .media-toggle-icon:before,.media-toggle[aria-pressed=true] .media-toggle-icon:after{display:none}.phone-video-btn.media-toggle{width:42px;height:42px;min-width:42px;min-height:42px}.modal-root{position:fixed;top:0;right:0;bottom:0;left:0;z-index:120;display:grid;align-items:end;justify-items:center}.modal-root[hidden]{display:none}.modal-backdrop{position:absolute;top:0;right:0;bottom:0;left:0;background:#080a109e;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:fade .25s ease both}@keyframes fade{0%{opacity:0}}.modal-sheet{position:relative;z-index:2;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;background:var(--card);color:var(--fg);border-radius:24px 24px 0 0;padding:clamp(1.4rem,5vw,2.2rem);animation:sheetUp .32s var(--e-out) both;box-shadow:0 -20px 60px -20px #00000080}@keyframes sheetUp{0%{transform:translateY(28px);opacity:0}}.modal-close{position:absolute;top:.8rem;right:.8rem;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;background:var(--bg);cursor:pointer}.modal-close svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}.modal-sheet h2{font-size:clamp(1.6rem,5vw,2.1rem);margin-bottom:.6rem;padding-right:2.5rem}.modal-lead{color:var(--fg-muted);font-size:.96rem;margin-bottom:1.4rem}.lead-form{display:grid;gap:.9rem}.field{display:grid;gap:.32rem}.field>span{font-size:.82rem;font-weight:700;color:var(--fg-muted)}.field input,.field select{min-height:48px;padding:.6rem .85rem;border:1.5px solid var(--border);border-radius:12px;background:var(--bg);transition:border-color .2s}.field input:focus,.field select:focus{border-color:var(--accent)}.field.has-error input,.field.has-error select{border-color:#c62a52}.err{font-style:normal;font-size:.78rem;color:#c62a52;min-height:0}.form-note{font-size:.8rem;color:var(--fg-muted);text-align:center}.modal-success{display:grid;gap:.9rem;padding:.6rem 0 .4rem}.success-badge{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--lime);color:var(--lime-ink)}.success-badge svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round}.modal-success p{color:var(--fg-muted)}.modal-success ul{display:grid;gap:.4rem;font-size:.92rem;color:var(--fg-muted)}.modal-success li{padding-left:1.1rem;position:relative}.modal-success li:before{content:"";position:absolute;left:0;top:.55rem;width:7px;height:7px;border-radius:50%;background:var(--accent)}.reveal{opacity:0;transition:opacity .55s var(--e-out)}.reveal.is-in{opacity:1}@media (max-width: 639px){.formats{padding-block:3rem}.formats .sec-head{margin-bottom:1.5rem}.tabs{margin-bottom:1rem}}@media (min-width: 640px){.panel-cols{grid-template-columns:repeat(2,1fr)}.panel-col+.panel-col{border-left:1px solid var(--border)}.footer-grid{grid-template-columns:1fr 1fr}.foot-nav{grid-template-columns:repeat(2,1fr)}}@media (min-width: 900px){html{scroll-padding-top:104px}.nav-desktop{display:flex}.btn-header{display:inline-flex}.burger{display:none}.mobile-menu{display:none!important}.sec-head--split{grid-template-columns:1.05fr .95fr;align-items:end;gap:2.5rem}.process-gallery{grid-template-columns:repeat(12,1fr)}.process-shot--receive{grid-column:span 7;min-height:590px}.process-shot--service{grid-column:span 5;min-height:590px}.process-shot--handover{grid-column:span 7;min-height:590px}.process-shot--pay{grid-column:span 5;min-height:590px}.num-row{grid-template-columns:80px minmax(0,1fr) minmax(0,22ch);align-items:end;gap:1.5rem}.num-label{grid-column:3;padding-bottom:.5rem}.route:before{left:50%}.route-step{grid-template-columns:1fr 56px 1fr;align-items:center;gap:2.5rem}.route-marker{grid-column:2;grid-row:1;width:56px;height:56px;font-size:1.3rem}.route-body{grid-column:1;grid-row:1;text-align:right}.route-body p,.route-body .chips{margin-left:auto}.route-body .chips{justify-content:flex-end}.route-visual{grid-column:3;grid-row:1;margin-top:0}.route-step:nth-child(2n) .route-body{grid-column:3;text-align:left}.route-step:nth-child(2n) .route-body p,.route-step:nth-child(2n) .route-body .chips{margin-left:0;margin-right:auto}.route-step:nth-child(2n) .route-body .chips{justify-content:flex-start}.route-step:nth-child(2n) .route-visual{grid-column:1;grid-row:1}.app-wrap{grid-template-columns:1.05fr .95fr}.panel-hero{grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr)}.panel-photo,.panel-photo img,.panel-motion video{min-height:390px}.panel-motion{aspect-ratio:auto}.panel-top{align-content:center}.step-line{grid-template-columns:repeat(4,1fr);gap:1px}.step-line li{padding:1.6rem 1.2rem}@media (hover: hover){.step-line li:hover{padding-left:1.2rem;transform:translateY(-4px)}}.faq-wrap .sec-head{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:2rem}.footer-grid{grid-template-columns:1.1fr .7fr 1.2fr}.final-wrap{display:grid;grid-template-columns:1.2fr .8fr;align-items:center}.modal-root{align-items:center}.modal-sheet{border-radius:26px}.foot-nav{grid-template-columns:1fr}.panel-cols{grid-template-columns:repeat(3,1fr)}}@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.reveal{opacity:1}.hero-media video{display:none}.hero-media{background:url(./img/hero.webp) center / cover no-repeat}.video-toggle{display:none}}@media (max-width: 767px){.video-toggle{top:1rem;right:1rem}.network-frame{aspect-ratio:3 / 4}.network-frame video{width:100%;height:100%;object-fit:cover;object-position:center}.network-shade{background:linear-gradient(180deg,#050911cc,#05091129 48%,#050911f0),linear-gradient(90deg,rgba(5,9,17,.45),transparent 82%)}.network-copy{top:1.35rem;left:1rem;right:4.6rem;width:auto;gap:.55rem}.network-copy .eyebrow{font-size:.68rem}.network-copy h2{max-width:14ch;font-size:clamp(2rem,10.4vw,3.1rem);line-height:.9}.network-copy>p:last-child{display:none}.network-stages{grid-template-columns:1fr;gap:.2rem}.network-stages span{min-height:34px;padding:.35rem .55rem;font-size:.72rem}.network-stats{grid-template-columns:1fr}.network-stats article{grid-template-columns:minmax(110px,auto) 1fr;align-items:baseline;border-left:0;border-top:1px solid rgba(255,255,255,.16)}.network-stats b{font-size:1.8rem}.pay-brief{padding:1rem}.pay-brief-head{align-items:flex-start;flex-direction:column;gap:.25rem}.pay-benefits{grid-template-columns:1fr}.pay-benefits article{min-height:0}.hero{min-height:820px}.hero-media video{object-position:68% center}.hero-shade{background:linear-gradient(90deg,#060810eb,#06081094),linear-gradient(0deg,#060810f5,#0608102e 74%)}.video-toggle{right:1rem;top:1rem}.process-gallery{width:100%;gap:2px}.process-shot{min-height:520px}.process-shot--receive img{object-position:60% center}.process-shot--service img{object-position:58% center}.hero-grid{background-size:48px 48px}.num-val{letter-spacing:-.055em}}
+</style>
+</head>
+  <body>
+    <a class="skip-link" href="#hero">Перейти к содержимому</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header" data-testid="header-main">
+      <div class="header-inner">
+        <a class="brand" href="#hero" data-testid="link-brand" aria-label="К1 Про — на главную">
+          <img class="brand-logo" src="./img/logo.png" width="399" height="133" alt="К1 Шинный СПА" />
+        </a>
+
+        <nav class="nav-desktop" aria-label="Основная навигация">
+          <a href="#numbers" data-testid="link-nav-numbers">Сеть</a>
+          <a href="#process" data-testid="link-nav-process">Как это работает</a>
+          <a href="#formats" data-testid="link-nav-formats">Форматы ПУШ</a>
+          <a href="#change" data-testid="link-nav-change">Маршрут</a>
+          <a href="#app" data-testid="link-nav-app">Приложение</a>
+          <a href="#steps" data-testid="link-nav-steps">Подключение</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn"
+            type="button"
+            id="theme-toggle"
+            data-testid="button-theme-toggle"
+            aria-label="Переключить тёмную тему"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ic-sun">
+              <circle cx="12" cy="12" r="4.4" />
+              <path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6M4.8 4.8l1.9 1.9M17.3 17.3l1.9 1.9M19.2 4.8l-1.9 1.9M6.7 17.3l-1.9 1.9" />
+            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="ic-moon">
+              <path d="M20 14.6A8.6 8.6 0 1 1 9.4 4a7.3 7.3 0 0 0 10.6 10.6Z" />
+            </svg>
+          </button>
+          <button class="btn btn-primary btn-header" type="button" data-open-modal data-testid="button-header-cta">
+            Стать партнёром
+          </button>
+          <button
+            class="icon-btn burger"
+            type="button"
+            id="burger"
+            data-testid="button-mobile-menu"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ MOBILE MENU ============ -->
+    <div class="mobile-menu" id="mobile-menu" data-testid="menu-mobile" hidden>
+      <nav aria-label="Мобильная навигация">
+        <a href="#numbers" data-testid="link-mnav-numbers"><span>01</span>Федеральная сеть</a>
+        <a href="#process" data-testid="link-mnav-process"><span>02</span>Как это работает</a>
+        <a href="#formats" data-testid="link-mnav-formats"><span>03</span>Форматы ПУШ</a>
+        <a href="#change" data-testid="link-mnav-change"><span>04</span>Маршрут заказа</a>
+        <a href="#app" data-testid="link-mnav-app"><span>05</span>Приложение</a>
+        <a href="#steps" data-testid="link-mnav-steps"><span>06</span>Подключение</a>
+        <a href="#faq" data-testid="link-mnav-faq"><span>07</span>Вопросы</a>
+      </nav>
+      <button class="btn btn-primary btn-block" type="button" data-open-modal data-testid="button-mobile-cta">
+        Стать партнёром
+      </button>
+    </div>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero" data-testid="section-hero">
+        <div class="hero-media" aria-hidden="true">
+          <video
+            id="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            data-testid="video-hero"
+          >
+            <source src="./video/main.webm" type="video/mp4" />
+          </video>
+          <div class="hero-shade"></div>
+        </div>
+
+        <button
+          class="video-toggle media-toggle"
+          type="button"
+          id="video-toggle"
+          aria-label="Поставить видео на паузу"
+          aria-pressed="false"
+          data-testid="button-video-toggle"
+        >
+          <span class="media-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="hero-inner">
+          <p class="eyebrow" data-testid="text-hero-eyebrow">
+            <span class="dot"></span> Партнёрская программа для шинных центров и шиномонтажей
+          </p>
+          <h1 data-testid="text-hero-title">
+            Больше заказов<br />
+            и услуг.<br />
+            <em>Доход с каждой</em><br />
+            выданной шины.<br />
+            Поставьте свой центр<br />
+            на маршрут заказов
+          </h1>
+          <div class="hero-cta">
+            <button class="btn btn-lime btn-lg" type="button" data-open-modal data-testid="button-hero-cta">
+              Стать партнёром
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow"><path d="M4 12h15M13 6l6 6-6 6" /></svg>
+            </button>
+            <a class="btn btn-ghost btn-lg" href="#formats" data-testid="link-hero-formats">Выбрать формат ПУШ</a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============ NUMBERS ============ -->
+      <section class="numbers network" id="numbers" data-testid="section-numbers">
+        <div class="network-frame" data-testid="video-federal-network">
+          <video
+            id="network-video"
+            muted
+            loop
+            autoplay
+            playsinline
+            preload="metadata"
+            aria-label="Федеральная сеть К1 Про: партнёры на карте России, логистический центр в Давыдово и доставка шин"
+          >
+            <source src="./video/logist.webm" type="video/mp4" />
+          </video>
+          <div class="network-shade"></div>
+          <div class="network-copy">
+            <p class="eyebrow"><span class="dot"></span> Федеральная сеть К1 Про</p>
+            <h2>
+              <em data-count="1000" data-suffix="+">1 000+</em> шинных центров<br />
+              уже в программе <span>К1 Про</span>
+            </h2>
+            <p>От завода и федеральных логистических центров — к партнёрам по всей стране.</p>
+          </div>
+          <div class="network-stages" aria-label="Сцены федеральной сети">
+            <span class="is-active" data-network-stage="0"><b>01</b> 1 000+ шинных центров</span>
+            <span data-network-stage="1"><b>02</b> Давыдово и логистические центры</span>
+            <span data-network-stage="2"><b>03</b> Доставка по всей России</span>
+          </div>
+          <button
+            class="network-toggle media-toggle"
+            id="network-video-toggle"
+            type="button"
+            aria-label="Приостановить федеральное видео"
+            aria-pressed="false"
+            data-testid="button-network-video"
+          >
+            <span class="media-toggle-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="wrap network-stats" data-testid="list-numbers">
+          <article data-testid="stat-payouts">
+            <b data-count="145" data-suffix=" млн ₽">145 млн ₽</b>
+            <span>вознаграждений выплачено партнёрам</span>
+          </article>
+          <article data-testid="stat-visitors">
+            <b data-count="14" data-suffix=" млн+">14 млн+</b>
+            <span>посетителей интернет-площадок в год</span>
+          </article>
+          <article data-testid="stat-skus">
+            <b data-count="40000" data-suffix="+">40 000+</b>
+            <span>позиций шин и дисков</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ PROCESS MEDIA ============ -->
+      <section class="process-media" id="process" aria-labelledby="process-media-title" data-testid="section-process-media">
+        <div class="wrap process-media-head">
+          <p class="eyebrow"><span class="dot"></span> ПУШ в работе</p>
+          <h2 id="process-media-title">От поставки до выдачи.<br /><em>Всё проходит через ваш центр.</em></h2>
+        </div>
+        <div class="process-gallery">
+          <figure class="process-shot process-shot--receive">
+            <img
+              src="./img/process-receive.png"
+              width="1600"
+              height="856"
+              loading="lazy"
+              decoding="async"
+              alt="Сотрудник шинного центра принимает и сканирует комплект шин"
+            />
+            <figcaption>
+              <span>01 · Приёмка</span>
+              <strong>Заказ приезжает в ПУШ</strong>
+              <p>Принимаете отправление, сканируете комплект и видите статус в К1 Про.</p>
+            </figcaption>
+          </figure>
+          <figure class="process-shot process-shot--service">
+            <img
+              src="./img/process-service.png"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              alt="Мастер выполняет шиномонтаж автомобиля на современном сервисном посту"
+            />
+            <figcaption>
+              <span>02 · Услуга</span>
+              <strong>Клиент записан, пост загружен</strong>
+              <p>Онлайн-запись с предоплатой попадает в единый календарь центра.</p>
+            </figcaption>
+          </figure>
+          <figure class="process-shot process-shot--handover">
+            <img
+              src="./img/process-handover.png"
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+              alt="Сотрудник шинного центра выдаёт подготовленный заказ клиенту"
+            />
+            <figcaption>
+              <span>03 · Выдача</span>
+              <strong>Клиент получает заказ, вы — вознаграждение</strong>
+              <p>Выдаёте шины и диски, получаете до 10% и превращаете визит в новые услуги.</p>
+            </figcaption>
+          </figure>
+          <figure class="process-shot process-shot--pay">
+            <img
+              src="./img/process-pay.png"
+              width="1000"
+              height="559"
+              loading="lazy"
+              decoding="async"
+              alt="Клиент оплачивает услугу в шинном центре"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ FORMATS ============ -->
+      <section class="formats" id="formats" data-testid="section-formats">
+        <div class="wrap">
+          <header class="sec-head sec-head--split">
+            <h2>Три формата <em>ПУШ</em></h2>
+            <p>
+              ПУШ — пункт удобного шиномонтажа. Формат подбирается под вашу площадь и услуги: можно
+              начать с записи без склада, а товарную программу подключить позже.
+            </p>
+          </header>
+
+          <div class="tabs" role="tablist" aria-label="Форматы ПУШ" data-testid="tabs-formats">
+            <button
+              class="tab is-active"
+              role="tab"
+              id="tab-express"
+              aria-controls="panel-express"
+              aria-selected="true"
+              data-testid="tab-express"
+            >
+              <span class="tab-name">Экспресс</span>
+              <span class="tab-meta">без склада</span>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-profi"
+              aria-controls="panel-profi"
+              aria-selected="false"
+              tabindex="-1"
+              data-testid="tab-profi"
+            >
+              <span class="tab-name">Профи</span>
+              <span class="tab-meta">от 15 м²</span>
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              id="tab-business"
+              aria-controls="panel-business"
+              aria-selected="false"
+              tabindex="-1"
+              data-testid="tab-business"
+            >
+              <span class="tab-name">Бизнес</span>
+              <span class="tab-meta">от 100 м²</span>
+            </button>
+          </div>
+
+          <div class="panels" id="format-panels">
+            <!-- panels rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ NARRATIVE ============ -->
+      <section class="change" id="change" data-testid="section-change">
+        <div class="wrap">
+          <header class="sec-head">
+            <p class="eyebrow eyebrow--dark"><span class="dot"></span> Что изменится в вашем центре</p>
+            <h2>Маршрут заказа<br />проходит <em>через вас</em></h2>
+          </header>
+
+          <ol class="route" data-testid="list-route">
+            <li class="route-step" data-testid="route-step-1">
+              <div class="route-marker"><span>1</span></div>
+              <div class="route-body">
+                <h3>Поток заказов</h3>
+                <p>
+                  Клиенты находят ваш центр на площадках К1 и бронируют время онлайн — со 100%
+                  предоплатой. Приходят и те, кто узнал о вас впервые, и те, кто отметил вас
+                  «любимым» в приложении К1.
+                </p>
+                <ul class="chips">
+                  <li>+25% клиентов</li>
+                  <li>онлайн-запись</li>
+                  <li>смарт-рассылки</li>
+                </ul>
+              </div>
+              <div class="route-visual route-visual--orders" aria-hidden="true">
+                <div class="mini-order"><span class="mo-dot"></span>Шиномонтаж R17 · 14:30</div>
+                <div class="mini-order"><span class="mo-dot"></span>Сезонная замена · 16:00</div>
+                <div class="mini-order is-new"><span class="mo-dot"></span>Новая запись · 17:15</div>
+              </div>
+            </li>
+
+            <li class="route-step" data-testid="route-step-2">
+              <div class="route-marker"><span>2</span></div>
+              <div class="route-body">
+                <h3>Единое расписание</h3>
+                <p>
+                  Ваши клиенты и заказы с платформы — в одном календаре. Вы сами распределяете
+                  записи между постами и сменами, видите загрузку и не держите двойной учёт.
+                </p>
+                <ul class="chips">
+                  <li>управление постами</li>
+                  <li>персонал и смены</li>
+                  <li>без двойного учёта</li>
+                </ul>
+              </div>
+              <div class="route-visual route-visual--sched" aria-hidden="true">
+                <div class="sched-bar"><i style="--w: 72%"></i><span>Пост 1</span></div>
+                <div class="sched-bar"><i style="--w: 46%"></i><span>Пост 2</span></div>
+                <div class="sched-bar"><i style="--w: 88%"></i><span>Пост 3</span></div>
+              </div>
+            </li>
+
+            <li class="route-step" data-testid="route-step-3">
+              <div class="route-marker"><span>3</span></div>
+              <div class="route-body">
+                <h3>Выдача шин и дисков</h3>
+                <p>
+                  Вы становитесь точкой выдачи заказов с площадок К1: принимаете отправления,
+                  выдаёте товар, оформляете возвраты — и получаете вознаграждение до 10% от
+                  стоимости товаров в заказе.
+                </p>
+                <ul class="chips">
+                  <li>40 000+ позиций</li>
+                  <li>до 10% за выдачу</li>
+                  <li>сезонное хранение</li>
+                </ul>
+              </div>
+              <div class="route-visual route-visual--pickup" aria-hidden="true">
+                <div class="stack-tire"></div>
+                <div class="stack-tire"></div>
+                <div class="stack-tire"></div>
+                <div class="pickup-tag">Выдано · +7,5%</div>
+              </div>
+            </li>
+
+            <li class="route-step" data-testid="route-step-4">
+              <div class="route-marker"><span>4</span></div>
+              <div class="route-body">
+                <h3>K1 Пэй: оплата и контроль</h3>
+                <p>
+                  Клиент оплачивает шиномонтаж по QR, сотрудник сразу видит подтверждение, а
+                  электронный чек, платежи и отчёты остаются в приложении К1 Про.
+                </p>
+                <ul class="chips">
+                  <li>без POS-терминала</li>
+                  <li>автоматический чек</li>
+                  <li>реестр и отчёты</li>
+                  <li>отзывы и рейтинг</li>
+                </ul>
+              </div>
+              <div class="route-visual route-visual--pay" data-testid="card-k1-pay">
+                <div class="pay-video">
+                  <video
+                    id="k1-pay-video"
+                    muted
+                    loop
+                    autoplay
+                    playsinline
+                    preload="metadata"
+                    aria-label="Клиент оплачивает шиномонтаж по QR-коду K1 Пэй и уезжает"
+                    data-testid="video-k1-pay"
+                  >
+                    <source src="./video/pay-qr.webm" type="video/mp4" />
+                  </video>
+                  <div class="pay-video-caption">
+                    <span>Оплата на месте</span>
+                    <b>QR → оплачено → можно ехать</b>
+                  </div>
+                  <button
+                    class="pay-video-toggle media-toggle"
+                    id="k1-pay-video-toggle"
+                    type="button"
+                    aria-label="Приостановить видео K1 Пэй"
+                    aria-pressed="false"
+                    data-testid="button-k1-pay-video"
+                  >
+                    <span class="media-toggle-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="pay-brief">
+                  <div class="pay-brief-head">
+                    <span>K1 Пэй</span>
+                    <h4>Почему это выгодно?</h4>
+                  </div>
+                  <div class="pay-benefits">
+                    <article>
+                      <strong>до 50 000 ₽</strong>
+                      <p>QR-платежи по СБП снижают затраты на эквайринг и расходники; экономия зависит от оборота.</p>
+                    </article>
+                    <article>
+                      <strong>2% за результат</strong>
+                      <p>Комиссия только с фактически оказанных услуг. K1 Пэй уже включён.</p>
+                    </article>
+                    <article>
+                      <strong>На следующий день</strong>
+                      <p>Платежи за смену поступают одной суммой на следующий рабочий день.</p>
+                    </article>
+                    <article>
+                      <strong>Без отдельного счёта</strong>
+                      <p>Переводим деньги на расчётный счёт вашего бизнеса в любом банке.</p>
+                    </article>
+                  </div>
+                  <p class="pay-legal">
+                    Отдельной платы за K1 Пэй нет: электронный чек формируется автоматически.
+                    Собственная ККМ остаётся у предпринимателя и используется по требованиям 54-ФЗ.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ APP MOCKUP ============ -->
+      <section class="app" id="app" data-testid="section-app">
+        <div class="wrap app-wrap">
+          <div class="app-copy">
+            <p class="eyebrow"><span class="dot"></span> К1 Про в работе</p>
+            <h2>Один экран<br />на весь <em>день</em></h2>
+            <p class="app-lead">
+              Приложение К1 Про заменяет журнал записей, таблицы по выдаче и переписки по сменам.
+              Всё, что нужно приёмщику и управляющему — в одном списке дел.
+            </p>
+            <ul class="app-list" data-testid="list-app-features">
+              <li><b>Расписание.</b> Записи с площадок и ваши собственные — в одном календаре.</li>
+              <li><b>Выдача.</b> Приёмка отправлений, выдача заказов, возвраты по шагам.</li>
+              <li><b>Загрузка.</b> Посты, персонал и слоты — с прогнозом на день и неделю.</li>
+              <li><b>Отчёты и отзывы.</b> Итоги смены, вознаграждение, обратная связь клиентов.</li>
+            </ul>
+          </div>
+
+          <figure class="app-mock" data-testid="mock-app">
+            <div class="phone phone--live">
+              <div class="phone-top"><span class="ph-pill"></span></div>
+              <div class="phone-screen phone-screen--live">
+                <video
+                  id="app-recording"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="./img/app-recording-poster.webp"
+                  aria-label="Оригинальная запись работы приложения К1 Про"
+                  data-testid="video-app-recording"
+                >
+                  <source src="./video/app-recording.mp4" type="video/mp4" />
+                </video>
+                <div class="phone-video-controls">
+                  <button
+                    class="phone-video-btn media-toggle"
+                    id="app-recording-toggle"
+                    type="button"
+                    aria-label="Воспроизвести запись экрана"
+                    aria-pressed="true"
+                    data-testid="button-app-video-toggle"
+                  >
+                    <span class="media-toggle-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <figcaption>Оригинальная запись экрана приложения К1 Про · 1:21</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ STEPS ============ -->
+      <section class="steps" id="steps" data-testid="section-steps">
+        <div class="wrap">
+          <header class="sec-head">
+            <h2>Подключение <em>за 4 шага</em></h2>
+          </header>
+          <ol class="step-line" data-testid="list-steps">
+            <li data-testid="step-1"><b>01</b><h3>Регистрация</h3><p>Заводите учётную запись на b2b.4tochki.ru — она же вход в приложение К1 Про.</p></li>
+            <li data-testid="step-2"><b>02</b><h3>Параметры центра</h3><p>Заполняете форму по шинному центру: площадь, посты, услуги — и выбираете формат ПУШ.</p></li>
+            <li data-testid="step-3"><b>03</b><h3>Условия</h3><p>Подписываете условия К1 Про: агентский и лицензионный договоры, без франшизных платежей.</p></li>
+            <li data-testid="step-4"><b>04</b><h3>Запуск</h3><p>Проходите бесплатное дистанционное обучение, получаете оформление точки и первые заказы.</p></li>
+          </ol>
+          <p class="steps-note" data-testid="text-steps-note">
+            Старт не требует сложных вложений: приложение бесплатно, а объём заказов зависит от
+            локации, сезона и рейтинга — гарантированный доход программа не обещает.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="faq" id="faq" data-testid="section-faq">
+        <div class="wrap faq-wrap">
+          <header class="sec-head">
+            <h2>Коротко<br />о <em>главном</em></h2>
+            <p class="faq-side">
+              Подробные ответы и полный список вопросов — на
+              <a href="https://pro.k1.ru/" target="_blank" rel="noopener noreferrer">pro.k1.ru</a>.
+            </p>
+          </header>
+          <div class="acc" id="faq-acc" data-testid="accordion-faq">
+            <!-- items rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FINAL CTA ============ -->
+      <section class="final" data-testid="section-final-cta">
+        <div class="wrap final-wrap">
+          <div class="final-copy">
+            <h2>Поставьте свой центр<br />на <em>маршрут заказов</em></h2>
+            <button class="btn btn-lime btn-lg" type="button" data-open-modal data-testid="button-final-cta">
+              Стать партнёром
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow"><path d="M4 12h15M13 6l6 6-6 6" /></svg>
+            </button>
+          </div>
+          <svg class="final-wheel" viewBox="0 0 200 200" aria-hidden="true">
+            <g class="fw-spin">
+              <circle cx="100" cy="100" r="94" />
+              <circle cx="100" cy="100" r="62" />
+              <circle cx="100" cy="100" r="30" />
+              <path d="M100 6v188M6 100h188M34 34l132 132M166 34L34 166" />
+            </g>
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer" data-testid="footer-main">
+      <div class="wrap footer-grid">
+        <div class="foot-brand">
+          <a class="brand brand--foot" href="#hero" aria-label="К1 Про — на главную">
+            <img class="brand-logo" src="./img/logo.png" width="399" height="133" alt="К1 Шинный СПА" />
+          </a>
+          <p>Партнёрская программа для шинных центров и шиномонтажей.</p>
+        </div>
+        <nav class="foot-nav" aria-label="Навигация в подвале">
+          <a href="#numbers">Федеральная сеть</a>
+          <a href="#process">Как это работает</a>
+          <a href="#formats">Форматы ПУШ</a>
+          <a href="#change">Маршрут заказа</a>
+          <a href="#app">Приложение</a>
+          <a href="#steps">Подключение</a>
+        </nav>
+        <div class="foot-legal">
+          <p class="foot-fine">
+            Программа партнёрства К1 Про — модель сотрудничества с ООО «Пауэр Интернэшнл-шины».
+            Условия сотрудничества, вознаграждение и требования к площади определяются договором.
+            Цифры приведены по данным pro.k1.ru.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ MODAL ============ -->
+    <div class="modal-root" id="modal-root" data-testid="modal-lead" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-close-modal aria-label="Закрыть форму" data-testid="button-modal-close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+        <div class="modal-body" id="modal-body">
+          <p class="eyebrow eyebrow--dark"><span class="dot"></span> Заявка на подключение</p>
+          <h2 id="modal-title">Стать партнёром К1 Про</h2>
+          <form class="lead-form" id="lead-form" novalidate>
+            <label class="field">
+              <span>Имя и фамилия</span>
+              <input type="text" name="name" required autocomplete="name" placeholder="Алексей Смирнов" data-testid="input-name" />
+              <em class="err" data-err></em>
+            </label>
+            <label class="field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" required autocomplete="tel" placeholder="+7 900 000-00-00" data-testid="input-phone" />
+              <em class="err" data-err></em>
+            </label>
+            <label class="field">
+              <span>Город</span>
+              <input type="text" name="city" required autocomplete="address-level2" placeholder="Казань" data-testid="input-city" />
+              <em class="err" data-err></em>
+            </label>
+            <label class="field">
+              <span>Тип центра</span>
+              <select name="type" required data-testid="select-type">
+                <option value="">Выберите вариант</option>
+                <option>Шиномонтаж без склада</option>
+                <option>Шинный центр с площадью от 15 м²</option>
+                <option>Шинный центр с площадью от 100 м²</option>
+                <option>Сеть шинных центров</option>
+              </select>
+              <em class="err" data-err></em>
+            </label>
+            <button class="btn btn-primary btn-block btn-lg" type="submit" data-testid="button-submit-lead">
+              Отправить заявку
+            </button>
+            <p class="form-note">Нажимая кнопку, вы ничего не отправляете: это демонстрация интерфейса.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
