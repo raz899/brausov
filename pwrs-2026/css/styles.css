@@ -59,6 +59,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .screen {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
   background: var(--black);
 }
@@ -1382,6 +1383,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .sidenav, .mark { display: none; }
   .burger { left: calc(20px - var(--hit)); top: calc(24px - var(--hit)); }
   .hero-brand { margin-top: 50px; }
+  .hero-actions { bottom: calc(36px + env(safe-area-inset-bottom, 0px)); }
   .screen--partners { padding-bottom: 50px; }
   .lang {
     right: auto;
