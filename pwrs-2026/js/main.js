@@ -92,40 +92,6 @@ function moveHistory(direction) {
   return false;
 }
 
-const mobileHistory = { anchor: null };
-
-function syncHistoryMobile() {
-  if (desktop.matches) return;
-  const rect = historySection.getBoundingClientRect();
-  const vh = window.innerHeight;
-  if (rect.bottom <= 0 || rect.top >= vh) {
-    mobileHistory.anchor = null;
-    return;
-  }
-  const y = window.scrollY;
-  if (mobileHistory.anchor === null) {
-    mobileHistory.anchor = y;
-    if (historyStep !== (rect.top > 0 ? 0 : historyLast)) {
-      setHistoryStep(rect.top > 0 ? 0 : historyLast);
-    }
-    return;
-  }
-  const delta = y - mobileHistory.anchor;
-  const threshold = Math.min(Math.max(vh * 0.5, 120), 400);
-  if (delta > threshold && historyStep < historyLast) {
-    mobileHistory.anchor = y;
-    setHistoryStep(historyStep + 1);
-  } else if (delta < -threshold && historyStep > 0) {
-    mobileHistory.anchor = y;
-    setHistoryStep(historyStep - 1);
-  }
-}
-
-window.addEventListener("scroll", () => {
-  if (desktop.matches) return;
-  syncHistoryMobile();
-}, { passive: true });
-
 const solutionsSection = document.querySelector("#solutions");
 const solutionsIndex = sections.indexOf(solutionsSection);
 const solutionsLast = 2;
@@ -221,15 +187,23 @@ scroller.addEventListener("wheel", (event) => {
 let touchStartX = 0;
 let touchStartY = 0;
 let touchInGallery = false;
+let touchInHistory = false;
 scroller.addEventListener("touchstart", (event) => {
   touchStartX = event.touches[0].clientX;
   touchStartY = event.touches[0].clientY;
   touchInGallery = Boolean(event.target.closest(".gallery"));
+  touchInHistory = Boolean(event.target.closest("#history"));
 }, { passive: true });
 scroller.addEventListener("touchend", (event) => {
-  if (!desktop.matches) return;
   const dx = touchStartX - event.changedTouches[0].clientX;
   const dy = touchStartY - event.changedTouches[0].clientY;
+  if (!desktop.matches) {
+    if (touchInHistory && Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+      const next = historyStep + (dx > 0 ? 1 : -1);
+      if (next >= 0 && next <= historyLast) setHistoryStep(next);
+    }
+    return;
+  }
   if (touchInGallery && Math.abs(dx) > Math.abs(dy)) return;
   if (Math.abs(dy) < 48) return;
   const direction = dy > 0 ? 1 : -1;

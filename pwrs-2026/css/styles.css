@@ -954,6 +954,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   white-space: nowrap;
   transition: font-size 0.6s ease, color 0.6s ease;
 }
+.timeline__short { display: none; }
 .timeline__marks {
   position: relative;
   width: 40px;
@@ -1409,18 +1410,50 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .solutions, .contacts__grid { flex-direction: column; display: flex; }
   .solutions { display: flex; height: auto; gap: 12px; }
   .screen--solutions { padding-top: 50px; }
-  .timeline__point.is-active .timeline__label {
-    font-size: clamp(22px, 11vw, 48px);
-    white-space: nowrap;
-    text-align: center;
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 68px;
+    margin-bottom: 32px;
   }
-  .timeline__point:not(.is-active) .timeline__label {
+  .timeline__glow {
+    top: auto;
+    bottom: -14px;
+    width: 100%;
+    height: auto;
+  }
+  .timeline__line { left: 0; right: 0; }
+  .timeline__point,
+  .timeline__point.is-active {
+    position: static;
+    bottom: auto;
+    left: auto;
+    gap: 8px;
+    transform: none;
+    margin-bottom: -20px;
+  }
+  .timeline__point.is-active { gap: 12px; }
+  .timeline__label {
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;
+  }
+  .timeline__short {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--gray);
+    white-space: nowrap;
+  }
+  .timeline__point.is-active .timeline__short {
+    font-size: 16px;
+    color: var(--white);
   }
   .history-pane { padding: 24px 20px; align-self: start; }
   .history-pane li {
