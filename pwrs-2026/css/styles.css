@@ -916,7 +916,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .timeline__glow {
   position: absolute;
   left: 50%;
-  top: 0;
+  bottom: 0;
   max-width: none;
   transform: translateX(-50%);
   pointer-events: none;
@@ -948,13 +948,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .timeline__label {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
   color: var(--gray);
   white-space: nowrap;
   transition: font-size 0.6s ease, color 0.6s ease;
 }
-.timeline__short { display: none; }
 .timeline__marks {
   position: relative;
   width: 40px;
@@ -1434,28 +1433,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     margin-bottom: -20px;
   }
   .timeline__point.is-active { gap: 12px; }
-  .timeline__label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-  .timeline__short {
-    display: block;
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 1;
-    color: var(--gray);
-    white-space: nowrap;
-  }
-  .timeline__point.is-active .timeline__short {
-    font-size: 16px;
-    color: var(--white);
-  }
+  .timeline__point.is-active .timeline__label { font-size: 15px; }
   .history-pane { padding: 24px 20px; align-self: start; }
+  .history-pane h3 { font-size: 16px; }
+  .history-pane time { font-size: 12px; }
+  .history-pane p { font-size: 12px; }
   .history-pane li {
     grid-template-columns: 56px 20px 1fr;
     gap: 12px;
