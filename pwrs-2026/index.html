@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=51">
+  <link rel="stylesheet" href="css/styles.css?v=52">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
@@ -623,7 +623,7 @@
               </div>
             </div>
           </div>
-          <iframe style="border-radius: 24px; filter: invert(90%) hue-rotate(530deg) brightness(115%) contrast(90%);" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac5b361a973314e79735f55a4462793bdbcd8bfa9955d10cdf30c8b069ad8c35f&amp;source=constructor" width="100%" height="511" frameborder="0"></iframe>
+          <div class="contacts__map" id="contacts-map" role="region" aria-label="Карта: Пауэр Интернэшнл-шины"></div>
         </div>
       </div>
       <footer class="footer">
@@ -655,7 +655,28 @@
     <button class="video-modal__close" type="button" aria-label="Закрыть видео"></button>
     <video class="video-modal__video" playsinline controls preload="none"></video>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js?v=28"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=607007ed-0904-4368-8445-809187c8313d&amp;lang=ru_RU"></script>
+    <script>
+      if (window.ymaps) {
+        ymaps.ready(function () {
+          var center = [55.791124, 37.542046];
+          var label = "Пауэр Интернэшнл-шины";
+          var map = new ymaps.Map("contacts-map", {
+            center: center,
+            zoom: 16,
+            controls: ["zoomControl", "fullscreenControl", "typeSelector"]
+          });
+          map.geoObjects.add(new ymaps.Placemark(center, {
+            balloonContent: label,
+            iconCaption: label
+          }, {
+            preset: "islands#blueCircleDot",
+            iconCaption: label
+          }));
+        });
+      }
+    </script>
+    <script src="js/main.js?v=28"></script>
 </body>
 </html>

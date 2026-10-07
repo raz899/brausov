@@ -1345,10 +1345,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .contacts__map {
   width: calc(100% - 372px);
-  height: auto;
-  align-self: stretch;
-  object-fit: cover;
+  height: 511px;
+  overflow: hidden;
   border-radius: 24px;
+  filter: invert(90%) hue-rotate(530deg) brightness(115%) contrast(90%);
 }
 .footer {
   display: flex;
