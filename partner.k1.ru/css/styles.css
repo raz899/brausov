@@ -319,9 +319,6 @@ select {
   align-items: center;
   gap: 0.5rem;
 }
-.nav-desktop + .header-actions {
-  margin-left: 0;
-}
 .btn-header {
   display: none;
 }
@@ -1729,28 +1726,6 @@ select {
 .acc-btn:hover {
   color: var(--accent);
 }
-.acc-sign {
-  position: relative;
-  flex: 0 0 auto;
-  width: 26px;
-  height: 26px;
-}
-.acc-sign:before,
-.acc-sign:after {
-  content: "";
-  position: absolute;
-  inset: 50% 0 auto 0;
-  height: 2.5px;
-  background: currentColor;
-  border-radius: 2px;
-  transition: transform 0.28s var(--e-out);
-}
-.acc-sign:after {
-  transform: rotate(90deg);
-}
-.acc-btn[aria-expanded="true"] .acc-sign:after {
-  transform: rotate(0);
-}
 .acc-panel {
   overflow: hidden;
   height: 0;
@@ -2127,6 +2102,9 @@ select {
   .nav-desktop {
     display: flex;
   }
+  .nav-desktop + .header-actions {
+    margin-left: 0;
+  }
   .btn-header {
     display: inline-flex;
   }
@@ -2397,6 +2375,10 @@ select {
     gap: 2px;
   }
   .process-shot {
+    margin: 0;
+    min-height: 280px;
+  }
+  .process-shot--pay {
     min-height: 520px;
   }
   .process-shot--receive img {
@@ -2404,6 +2386,17 @@ select {
   }
   .process-shot--service img {
     object-position: 58% center;
+  }
+  .route:before {
+    display: none;
+  }
+  .route-step {
+    grid-template-columns: 1fr;
+    gap: 0.75rem 0;
+  }
+  .route-body,
+  .route-visual {
+    grid-column: 1;
   }
   .hero-grid {
     background-size: 48px 48px;
