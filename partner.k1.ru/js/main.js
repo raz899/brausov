@@ -495,72 +495,29 @@ const w = {
         p());
     }));
 })();
-const $ = [
-  {
-    q: "К1 Про — это франшиза?",
-    a: "Нет. К1 Про работает с партнёрами по агентским и лицензионным договорам: паушального взноса и роялти по франшизной модели нет.",
-  },
-  {
-    q: "Сколько стоит приложение К1 Про?",
-    a: "Плата за использование приложения отсутствует. Обеспечительный платёж не требуется, если вы уже клиент b2b.4tochki.ru; для новых клиентов форматов с выдачей он составляет до 25 000 ₽.",
-  },
-  {
-    q: "Может ли партнёром стать физическое лицо?",
-    a: "Нет. Партнёром программы становится юридическое лицо или индивидуальный предприниматель.",
-  },
-  {
-    q: "Помещение склада должно быть в собственности?",
-    a: "Нет. Достаточно, чтобы у вас была необходимая для выбранного формата свободная площадь — арендованное помещение подходит.",
-  },
-  {
-    q: "Какую поддержку получает партнёр?",
-    a: "Технологическую (автоматизация записи, аналитика, интеграция по API с вашей онлайн-записью), техническую (чат со специалистами и бот), маркетинговую (видимость, брендинг, рейтинг, промо и бонусные программы), а также базу знаний и бесплатное дистанционное обучение.",
-  },
-  {
-    q: "Не будет ли конфликта записей с моими клиентами?",
-    a: "Нет: и ваши клиенты, и заказы с платформы попадают в один календарь К1 Про. Распределение слотов по постам и сменам остаётся за вами.",
-  },
-  {
-    q: "Сколько заказов будет приходить?",
-    a: "Количество заказов зависит от локации, конкуренции, сезонности и рейтинга центра — программа не обещает гарантированный объём или доход.",
-  },
-];
 (function () {
   const e = o("#faq-acc");
-  e &&
-    ((e.innerHTML = $.map(
-      (s, n) => `
-    <div class="acc-item">
-      <h3>
-        <button class="acc-btn" type="button" id="acc-btn-${n}" aria-expanded="false"
-          aria-controls="acc-panel-${n}" data-testid="button-faq-${n}">
-          <span>${s.q}</span><span class="acc-sign" aria-hidden="true"></span>
-        </button>
-      </h3>
-      <div class="acc-panel" id="acc-panel-${n}" role="region" aria-labelledby="acc-btn-${n}"
-        data-testid="panel-faq-${n}"><div>${s.a}</div></div>
-    </div>`,
-    ).join("")),
+  if (!e) return;
+  f(".acc-btn", e).forEach((s) => {
+    const n = o("#" + s.getAttribute("aria-controls"));
+    s.addEventListener("click", () => {
+      const t = s.getAttribute("aria-expanded") === "true";
+      f(".acc-btn", e).forEach((a) => {
+        a !== s &&
+          (a.setAttribute("aria-expanded", "false"),
+          (o("#" + a.getAttribute("aria-controls")).style.height = "0px"));
+      }),
+        s.setAttribute("aria-expanded", String(!t)),
+        (n.style.height = t ? "0px" : n.scrollHeight + "px");
+    });
+  });
+  window.addEventListener("resize", () => {
     f(".acc-btn", e).forEach((s) => {
+      if (s.getAttribute("aria-expanded") !== "true") return;
       const n = o("#" + s.getAttribute("aria-controls"));
-      s.addEventListener("click", () => {
-        const t = s.getAttribute("aria-expanded") === "true";
-        (f(".acc-btn", e).forEach((a) => {
-          a !== s &&
-            (a.setAttribute("aria-expanded", "false"),
-            (o("#" + a.getAttribute("aria-controls")).style.height = "0px"));
-        }),
-          s.setAttribute("aria-expanded", String(!t)),
-          (n.style.height = t ? "0px" : n.scrollHeight + "px"));
-      });
-    }),
-    window.addEventListener("resize", () => {
-      f(".acc-btn", e).forEach((s) => {
-        if (s.getAttribute("aria-expanded") !== "true") return;
-        const n = o("#" + s.getAttribute("aria-controls"));
-        n.style.height = n.scrollHeight + "px";
-      });
-    }));
+      n.style.height = n.scrollHeight + "px";
+    });
+  });
 })();
 (function () {
   const e = o("#modal-root"),
