@@ -2288,7 +2288,7 @@ select {
     right: 1rem;
   }
   /* на мобильной ширине не фиксируем пропорции — высоту блока задаёт само видео */
-  .panel-motion {
+  .panel-motion, .pay-video {
     aspect-ratio: auto;
   }
   .network-frame {
