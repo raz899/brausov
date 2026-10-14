@@ -701,11 +701,17 @@ select {
   gap: clamp(0.7rem, 1.4vw, 1.15rem);
   width: min(72vw, 920px);
   color: #fff;
+}
+.network-copy-pane {
+  display: grid;
+  align-content: start;
+  gap: inherit;
+  grid-area: 1 / 1;
   transition:
     opacity 0.55s var(--e-out),
     transform 0.55s var(--e-out);
 }
-.network-copy.is-secondary {
+.network-copy-pane.is-secondary {
   opacity: 0;
   transform: translateY(-14px);
   pointer-events: none;
@@ -728,7 +734,7 @@ select {
   font-style: normal;
   font-variant-numeric: tabular-nums;
 }
-.network-copy > p:last-child {
+.network-copy-pane > p:last-child {
   max-width: 52ch;
   color: #ffffffc7;
   font-size: clamp(1rem, 1.8vw, 1.25rem);
@@ -2281,6 +2287,10 @@ select {
     top: 1rem;
     right: 1rem;
   }
+  /* на мобильной ширине не фиксируем пропорции — высоту блока задаёт само видео */
+  .panel-motion {
+    aspect-ratio: auto;
+  }
   .network-frame {
     /* во всю ширину вьюпорта и без обрезки: блок принимает натуральные пропорции видео */
     aspect-ratio: auto;
@@ -2320,7 +2330,7 @@ select {
     font-size: clamp(1.75rem, 8.6vw, 2.6rem);
     line-height: 0.92;
   }
-  .network-copy > p:last-child {
+  .network-copy-pane > p:last-child {
     display: none;
   }
   .network-stages {

@@ -126,7 +126,7 @@ const o = (u, e = document) => e.querySelector(u),
 (function () {
   const e = o("#network-video"),
     s = o("#network-video-toggle"),
-    n = o(".network-copy"),
+    n = f("[data-network-copy]"),
     t = f("[data-network-stage]");
   if (!e || !s) return;
   const a = () => {
@@ -142,7 +142,11 @@ const o = (u, e = document) => e.querySelector(u),
     i = () => {
       const l = e.currentTime < 7.5 ? 0 : e.currentTime < 15 ? 1 : 2;
       (t.forEach((p, d) => p.classList.toggle("is-active", d === l)),
-        n == null || n.classList.toggle("is-secondary", l > 0));
+        n.forEach((p, d) => {
+          const c = d !== l;
+          (p.classList.toggle("is-secondary", c),
+            p.setAttribute("aria-hidden", String(c)));
+        }));
     };
   if (
     (s.addEventListener("click", () => {
