@@ -2382,7 +2382,7 @@ select {
   .hero-media {
     top: 0;
     bottom: auto;
-    height: 40%;
+    /* height: 40%; */
   }
   .hero-media video {
     object-position: 50% center;
