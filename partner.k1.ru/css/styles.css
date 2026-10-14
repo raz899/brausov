@@ -2282,40 +2282,55 @@ select {
     right: 1rem;
   }
   .network-frame {
-    aspect-ratio: 3 / 4;
+    /* во всю ширину вьюпорта и без обрезки: блок принимает натуральные пропорции видео */
+    aspect-ratio: auto;
   }
   .network-frame video {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 1290 / 720;
     object-fit: cover;
     object-position: center;
   }
   .network-shade {
+    inset: 0 0 auto 0;
+    aspect-ratio: 1290 / 720;
     background:
       linear-gradient(180deg, #050911cc, #05091129 48%, #050911f0),
       linear-gradient(90deg, rgba(5, 9, 17, 0.45), transparent 82%);
+    width: 101%;
   }
   .network-copy {
-    top: 1.35rem;
-    left: 1rem;
-    right: 4.6rem;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 2;
     width: auto;
-    gap: 0.55rem;
+    /* большая часть — под видео, сверху лишь небольшой нахлёст */
+    margin: -2.5rem 1rem 0.25rem;
+    gap: 0.6rem;
   }
   .network-copy .eyebrow {
     font-size: 0.68rem;
   }
   .network-copy h2 {
-    max-width: 14ch;
-    font-size: clamp(2rem, 10.4vw, 3.1rem);
-    line-height: 0.9;
+    max-width: 16ch;
+    font-size: clamp(1.75rem, 8.6vw, 2.6rem);
+    line-height: 0.92;
   }
   .network-copy > p:last-child {
     display: none;
   }
   .network-stages {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
     grid-template-columns: 1fr;
     gap: 0.2rem;
+    padding: 0.85rem 1rem 1rem;
   }
   .network-stages span {
     min-height: 34px;
