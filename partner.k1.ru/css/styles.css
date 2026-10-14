@@ -499,9 +499,9 @@ select {
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
+  display: block;
   background:
-    linear-gradient(90deg, #060810f0, #060810c7 43%, #0608102e 74%),
+    linear-gradient(90deg, #060810f0, #060810c7 15%, #0608102e 74%),
     linear-gradient(0deg, rgba(6, 8, 16, 0.82) 0%, transparent 45%),
     linear-gradient(180deg, rgba(6, 8, 16, 0.28) 0%, transparent 28%);
 }
