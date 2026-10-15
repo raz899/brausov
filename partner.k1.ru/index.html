@@ -46,7 +46,7 @@
         <nav class="nav-desktop" aria-label="Основная навигация">
           <a href="#numbers" data-testid="link-nav-numbers">Сеть</a>
           <a href="#process" data-testid="link-nav-process">Как это работает</a>
-          <a href="#formats" data-testid="link-nav-formats">Форматы ПУШ</a>
+          <a href="#formats" data-testid="link-nav-formats">Сортудничество</a>
           <a href="#change" data-testid="link-nav-change">Маршрут</a>
           <a href="#app" data-testid="link-nav-app">Приложение</a>
           <a href="#steps" data-testid="link-nav-steps">Подключение</a>
@@ -92,7 +92,7 @@
       <nav aria-label="Мобильная навигация">
         <a href="#numbers" data-testid="link-mnav-numbers"><span>01</span>Федеральная сеть</a>
         <a href="#process" data-testid="link-mnav-process"><span>02</span>Как это работает</a>
-        <a href="#formats" data-testid="link-mnav-formats"><span>03</span>Форматы ПУШ</a>
+        <a href="#formats" data-testid="link-mnav-formats"><span>03</span>Сортудничество</a>
         <a href="#change" data-testid="link-mnav-change"><span>04</span>Маршрут заказа</a>
         <a href="#app" data-testid="link-mnav-app"><span>05</span>Приложение</a>
         <a href="#steps" data-testid="link-mnav-steps"><span>06</span>Подключение</a>
@@ -109,14 +109,15 @@
         <div class="hero-media" aria-hidden="true">
           <video
             id="hero-video"
-            autoplay
             muted
             loop
             playsinline
+            preload="none"
+            data-autoplay
             data-testid="video-hero"
           >
-            <source src="./video/main.webm" type="video/webm" />
-            <source src="./video/main.mp4" type="video/mp4" />
+            <source data-src="./video/main.webm" type="video/webm" />
+            <source data-src="./video/main.mp4" type="video/mp4" />
           </video>
           <div class="hero-shade"></div>
         </div>
@@ -162,13 +163,13 @@
             id="network-video"
             muted
             loop
-            autoplay
             playsinline
-            preload="metadata"
+            preload="none"
+            data-autoplay
             aria-label="Федеральная сеть К1 Про: партнёры на карте России, логистический центр в Давыдово и доставка шин"
           >
-            <source src="./video/logist.webm" type="video/webm" />
-            <source src="./video/logist.mp4" type="video/mp4" />
+            <source data-src="./video/logist.webm" type="video/webm" />
+            <source data-src="./video/logist.mp4" type="video/mp4" />
           </video>
           <div class="network-shade"></div>
           <div class="network-copy">
@@ -239,7 +240,7 @@
         <div class="process-gallery">
           <figure class="process-shot process-shot--receive">
             <img
-              src="./img/process-receive.png"
+              src="./img/process-receive.webp"
               width="1600"
               height="856"
               loading="lazy"
@@ -254,7 +255,7 @@
           </figure>
           <figure class="process-shot process-shot--service">
             <img
-              src="./img/process-service.png"
+              src="./img/process-service.webp"
               width="1536"
               height="1024"
               loading="lazy"
@@ -269,7 +270,7 @@
           </figure>
           <figure class="process-shot process-shot--handover">
             <img
-              src="./img/process-handover.png"
+              src="./img/process-handover.webp"
               width="1536"
               height="1024"
               loading="lazy"
@@ -284,7 +285,7 @@
           </figure>
           <figure class="process-shot process-shot--pay">
             <img
-              src="./img/process-pay.png"
+              src="./img/process-pay.webp"
               width="1000"
               height="559"
               loading="lazy"
@@ -446,14 +447,14 @@
                     id="k1-pay-video"
                     muted
                     loop
-                    autoplay
                     playsinline
-                    preload="metadata"
+                    preload="none"
+                    data-autoplay
                     aria-label="Клиент оплачивает шиномонтаж по QR-коду K1 Пэй и уезжает"
                     data-testid="video-k1-pay"
                   >
-                    <source src="./video/pay-qr.webm" type="video/webm" />
-                    <source src="./video/pay-qr.mp4" type="video/mp4" />
+                    <source data-src="./video/pay-qr.webm" type="video/webm" />
+                    <source data-src="./video/pay-qr.mp4" type="video/mp4" />
                   </video>
                   <div class="pay-video-caption">
                     <span>Оплата на месте</span>
@@ -531,12 +532,14 @@
                   muted
                   loop
                   playsinline
-                  preload="metadata"
+                  preload="none"
+                  data-autoplay
                   poster="./img/app-recording-poster.webp"
                   aria-label="Оригинальная запись работы приложения К1 Про"
                   data-testid="video-app-recording"
                 >
-                  <source src="./video/app-recording.mp4" type="video/mp4" />
+                  <source data-src="./video/app-recording.mp4" type="video/mp4" />
+                  <source data-src="./video/app-recording.webm" type="video/webm" />
                 </video>
                 <div class="phone-video-controls">
                   <button
@@ -800,7 +803,7 @@
         <nav class="foot-nav" aria-label="Навигация в подвале">
           <a href="#numbers">Федеральная сеть</a>
           <a href="#process">Как это работает</a>
-          <a href="#formats">Форматы ПУШ</a>
+          <a href="#formats">Сортудничество</a>
           <a href="#change">Маршрут заказа</a>
           <a href="#app">Приложение</a>
           <a href="#steps">Подключение</a>

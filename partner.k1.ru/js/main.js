@@ -32,6 +32,39 @@ const o = (u, e = document) => e.querySelector(u),
   f = (u, e = document) => Array.from(e.querySelectorAll(u)),
   h = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 (function () {
+  const e = f("video");
+  if (e.length) {
+    const s = (n) => {
+      if (n.dataset.videoSrc) return;
+      n.dataset.videoSrc = "1";
+      const t = f("source[data-src]", n);
+      t.forEach((a) => {
+        (a.src = a.dataset.src), a.removeAttribute("data-src");
+      }),
+        t.length && n.load();
+    };
+    if (!("IntersectionObserver" in window)) (window.__k1LazyVideo = s), e.forEach(s);
+    else {
+      const n = new IntersectionObserver(
+        (t) => {
+          t.forEach((a) => {
+            const i = a.target;
+            a.isIntersecting
+              ? (s(i),
+                !h &&
+                  i.hasAttribute("data-autoplay") &&
+                  i.play().catch(() => {}))
+              : i.paused || i.pause();
+          });
+        },
+        { rootMargin: "200px 0px" },
+      );
+      e.forEach((t) => n.observe(t)),
+        (window.__k1LazyVideo = (t) => n.observe(t));
+    }
+  }
+})();
+(function () {
   const e = o("#hero-video"),
     s = o("#video-toggle");
   if (!e || !s || h) return;
@@ -378,10 +411,10 @@ const w = {
         data-testid="panel-${t.key}"${a === 0 ? "" : " hidden"}>
         <div class="panel-hero">
           <figure class="panel-photo panel-motion" data-format-motion="${t.key}">
-            <video muted loop playsinline${h ? "" : " autoplay"} preload="metadata"
+            <video muted loop playsinline preload="none"${h ? "" : " data-autoplay"}
               poster="${t.image}" aria-label="${t.imageAlt}" data-testid="video-format-${t.key}">
-              <source src="${t.video}" type="video/webm">
-              <source src="${t.videoMp4}" type="video/mp4">
+              <source data-src="${t.video}" type="video/webm">
+              <source data-src="${t.videoMp4}" type="video/mp4">
             </video>
             <figcaption>${t.imageCaption}</figcaption>
             <button class="motion-toggle media-toggle" type="button" data-motion-toggle
@@ -418,6 +451,7 @@ const w = {
       </section>`,
     )
     .join("");
+  f("video", e).forEach((t) => window.__k1LazyVideo && window.__k1LazyVideo(t));
   const n = (t, a = !1) => {
     (s.forEach((i, r) => {
       const l = r === t;
