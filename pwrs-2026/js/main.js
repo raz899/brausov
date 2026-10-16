@@ -341,6 +341,74 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !videoModal.hidden) closeVideoModal();
 });
 
+const CITIES_ENDPOINT = "https://b2b.4tochki.ru/export_data/sto/jfp.json";
+const centersPill = document.querySelector("[data-centers-pill]");
+const branchNodes = document.querySelectorAll("[data-branches]");
+const partnerNodes = document.querySelectorAll("[data-partner-centers]");
+
+/* Русское склонение по числу: one/few/many */
+function pluralRu(count, one, few, many) {
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+  return many;
+}
+
+/* «Число + слово»: для русского берём склонение, для английского — единственное/множественное */
+function withCount(count, ruForms, enForms) {
+  const num = en ? count.toLocaleString("en-US") : String(count);
+  return en
+    ? `${num} ${count === 1 ? enForms[0] : enForms[1]}`
+    : `${num} ${pluralRu(count, ruForms[0], ruForms[1], ruForms[2])}`;
+}
+
+function fillNodes(nodes, text) {
+  nodes.forEach((node) => {
+    node.textContent = text;
+  });
+}
+
+if (centersPill || branchNodes.length || partnerNodes.length) {
+  fetch(CITIES_ENDPOINT)
+    .then((response) => (response.ok ? response.json() : Promise.reject(new Error(response.status))))
+    .then((data) => {
+      const counts = data.counts || {};
+      const branches = Number(counts.branches) || 0;
+      const partner = Number(counts.partnerServiceCenters) || 0;
+      if (centersPill && partner) {
+        centersPill.textContent = withCount(
+          partner,
+          ["сервисный центр", "сервисных центра", "сервисных центров"],
+          ["service center", "service centers"],
+        );
+      }
+      if (branchNodes.length && branches) {
+        fillNodes(
+          branchNodes,
+          withCount(branches, ["филиал", "филиала", "филиалов"], ["branch", "branches"]),
+        );
+      }
+      if (partnerNodes.length && partner) {
+        fillNodes(
+          partnerNodes,
+          withCount(
+            partner,
+            [
+              "партнерский сервисный центр",
+              "партнерских сервисных центра",
+              "партнерских сервисных центров",
+            ],
+            ["partner service center", "partner service centers"],
+          ),
+        );
+      }
+    })
+    .catch(() => {
+      /* остаётся зашитое в разметке значение */
+    });
+}
+
 document.querySelector(".tabs").addEventListener("click", (event) => {
   const tab = event.target.closest("button");
   if (!tab) return;
