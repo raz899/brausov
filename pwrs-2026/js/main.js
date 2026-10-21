@@ -128,32 +128,47 @@ function moveSolutions(direction) {
   return false;
 }
 
-const solutionsAltSection = document.querySelector("#solutions-alt");
-const solutionsAltIndex = sections.indexOf(solutionsAltSection);
-const solutionsAltLast = 2;
-let solutionsAltStep = 0;
+const solutionStacks = [...document.querySelectorAll(".solutions--stack")].map((board) => {
+  const section = board.closest(".screen");
+  return {
+    board,
+    section,
+    index: sections.indexOf(section),
+    id: `#${section.id}`,
+    last: board.querySelectorAll(".solutions__row").length - 1,
+    step: Number(board.dataset.step) || 0,
+  };
+});
 
-function setSolutionsAltStep(step) {
-  solutionsAltStep = step;
-  const board = solutionsAltSection.querySelector(".solutions--stack");
-  board.dataset.step = String(step);
-  board.querySelectorAll(".solutions__row").forEach((row) => {
-    row.classList.toggle("is-active", Number(row.dataset.step) === step);
+function setStackStep(stack, step, mode = 0) {
+  stack.step = step;
+  stack.board.dataset.step = String(step);
+  stack.board.querySelectorAll(".solutions__row").forEach((row) => {
+    const active = Number(row.dataset.step) === step;
+    row.classList.toggle("is-active", active);
+    row.classList.remove("is-entering", "is-entering-back");
+    if (active && mode) {
+      void row.offsetWidth;
+      row.classList.add(mode > 0 ? "is-entering" : "is-entering-back");
+    }
   });
 }
 
-function moveSolutionsAlt(direction) {
+function moveStacks(direction) {
   const index = currentIndex();
-  if (index === solutionsAltIndex) {
-    const next = solutionsAltStep + direction;
-    if (next >= 0 && next <= solutionsAltLast) {
-      setSolutionsAltStep(next);
+  for (const stack of solutionStacks) {
+    if (index !== stack.index) continue;
+    const next = stack.step + direction;
+    if (next >= 0 && next <= stack.last) {
+      setStackStep(stack, next, direction);
       return true;
     }
-    return false;
   }
-  if (direction > 0 && index + 1 === solutionsAltIndex) setSolutionsAltStep(0);
-  if (direction < 0 && index - 1 === solutionsAltIndex) setSolutionsAltStep(solutionsAltLast);
+  for (const stack of solutionStacks) {
+    if (index === stack.index) continue;
+    if (direction > 0 && index + 1 === stack.index) setStackStep(stack, 0, 1);
+    if (direction < 0 && index - 1 === stack.index) setStackStep(stack, stack.last, -1);
+  }
   return false;
 }
 
@@ -199,7 +214,8 @@ function moveClients(direction) {
 function moveScreen(direction) {
   if (moveClients(direction)) return 900;
   if (moveSolutions(direction)) return 700;
-  if (moveSolutionsAlt(direction)) return 700;
+  if (moveStacks(direction)) return 1200;
+  if (moveSolutionsSlider(direction)) return 900;
   if (moveHistory(direction)) return 700;
   return 0;
 }
@@ -268,7 +284,9 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
     if (!section) return;
     if (id === "#history") setHistoryStep(0);
     if (id === "#solutions") setSolutionsStep(0);
-    if (id === "#solutions-alt") setSolutionsAltStep(0);
+    const stack = solutionStacks.find((item) => item.id === id);
+    if (stack) setStackStep(stack, 0, 1);
+    if (id === "#solutions-alt2" && solutionsSlider) solutionsSlider.slideTo(0);
     if (id === "#clients") setClientsSide("retail");
     syncMark(id.slice(1));
     event.preventDefault();
@@ -347,6 +365,54 @@ videoPanel.querySelectorAll(".gallery__slide").forEach((slide) => {
   const video = slide.querySelector("video");
   slide.querySelector(".gallery__play").addEventListener("click", () => openVideoModal(video));
 });
+
+const solutionsSliderSection = document.querySelector("#solutions-alt2");
+let solutionsSlider = null;
+let solutionsSliderIndex = -1;
+if (solutionsSliderSection) {
+  solutionsSliderIndex = sections.indexOf(solutionsSliderSection);
+  const solutionsBar = solutionsSliderSection.querySelector(".solutions-slider__bar span");
+  solutionsSlider = new Swiper(solutionsSliderSection.querySelector(".solutions-slider"), {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 8,
+    speed: 700,
+    grabCursor: true,
+    watchOverflow: true,
+    keyboard: { enabled: true, onlyInViewport: true },
+    a11y: {
+      prevSlideMessage: en ? "Previous cards" : "Предыдущие карточки",
+      nextSlideMessage: en ? "Next cards" : "Следующие карточки",
+    },
+    navigation: {
+      prevEl: solutionsSliderSection.querySelector(".solutions-slider__prev"),
+      nextEl: solutionsSliderSection.querySelector(".solutions-slider__next"),
+    },
+    on: {
+      progress(s) {
+        solutionsBar.style.transform = `scaleX(${Math.max(0.02, s.progress)})`;
+      },
+    },
+  });
+  solutionsBar.style.transform = `scaleX(${Math.max(0.02, solutionsSlider.progress)})`;
+}
+
+function moveSolutionsSlider(direction) {
+  if (!solutionsSlider) return false;
+  const index = currentIndex();
+  const group = solutionsSlider.params.slidesPerGroup || 1;
+  const last = solutionsSlider.slides.length - solutionsSlider.params.slidesPerView;
+  if (index === solutionsSliderIndex) {
+    const next = solutionsSlider.activeIndex + direction * group;
+    if (next < 0 || next > last) return false;
+    solutionsSlider.slideTo(next);
+    return true;
+  }
+  if (direction > 0 && index + 1 === solutionsSliderIndex) solutionsSlider.slideTo(0);
+  if (direction < 0 && index - 1 === solutionsSliderIndex) solutionsSlider.slideTo(last);
+  return false;
+}
+
 
 const videoModal = document.querySelector('[data-modal="video"]');
 const modalVideo = videoModal.querySelector(".video-modal__video");
