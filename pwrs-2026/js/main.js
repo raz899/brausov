@@ -372,6 +372,13 @@ let solutionsSliderIndex = -1;
 if (solutionsSliderSection) {
   solutionsSliderIndex = sections.indexOf(solutionsSliderSection);
   const solutionsBar = solutionsSliderSection.querySelector(".solutions-slider__bar span");
+  /* Ширина полосы = (1 + progress*(страниц-1)) / страниц:
+     1-я страница → 33%, 2-я → 66%, 3-я → 100% при 3 страницах. */
+  const solutionsBarScale = (s) => {
+    const perView = Number(s.params.slidesPerView) || 1;
+    const pages = Math.max(1, Math.round(s.slides.length / perView));
+    return Math.max(0.02, (1 + s.progress * (pages - 1)) / pages);
+  };
   solutionsSlider = new Swiper(solutionsSliderSection.querySelector(".solutions-slider"), {
     slidesPerView: 3,
     slidesPerGroup: 3,
@@ -394,11 +401,11 @@ if (solutionsSliderSection) {
     },
     on: {
       progress(s) {
-        solutionsBar.style.transform = `scaleX(${Math.max(0.02, s.progress)})`;
+        solutionsBar.style.transform = `scaleX(${solutionsBarScale(s)})`;
       },
     },
   });
-  solutionsBar.style.transform = `scaleX(${Math.max(0.02, solutionsSlider.progress)})`;
+  solutionsBar.style.transform = `scaleX(${solutionsBarScale(solutionsSlider)})`;
 }
 
 function moveSolutionsSlider(direction) {

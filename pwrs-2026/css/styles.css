@@ -1056,9 +1056,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   position: absolute;
   inset: 0;
   border-radius: 999px;
-  background: var(--orange);
+  background: linear-gradient(90deg, #521f05 0%, var(--orange) 100%);
   transform: scaleX(0);
   transform-origin: left center;
+  transition: transform 0.7s ease;
 }
 .solutions-slider__prev,
 .solutions-slider__next {
