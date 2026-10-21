@@ -379,6 +379,10 @@ if (solutionsSliderSection) {
     speed: 700,
     grabCursor: true,
     watchOverflow: true,
+    breakpoints: {
+      0: { slidesPerView: 1.5, slidesPerGroup: 1 },
+      1101: { slidesPerView: 3, slidesPerGroup: 3 },
+    },
     keyboard: { enabled: true, onlyInViewport: true },
     a11y: {
       prevSlideMessage: en ? "Previous cards" : "Предыдущие карточки",

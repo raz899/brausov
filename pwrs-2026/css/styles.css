@@ -1034,17 +1034,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Solutions 3 — swiper slider */
 .solutions-slider { margin-top: 40px; overflow: visible; }
-.solutions-slider .solution { height: 560px; }
+.solutions-slider .solution.swiper-slide {
+  display: flex;
+  height: 560px;
+}
 .solutions-slider__controls {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 12px;
   margin-top: 24px;
 }
 .solutions-slider__bar {
   position: relative;
   flex: 1;
   height: 4px;
+  margin-right: 24px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
 }
@@ -1646,8 +1650,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     transform: none !important;
   }
   .solutions-slider { margin-top: 40px; }
-  .solutions-slider .solution { height: auto; min-height: 360px; }
-  .solutions-slider__controls { gap: 16px; }
+  .solutions-slider .solution.swiper-slide { height: auto; min-height: 360px; }
+  .solutions-slider__controls { gap: 10px; }
+  .solutions-slider__bar { margin-right: 16px; }
   .card { height: auto; min-height: 180px; }
   .card__inner { min-height: 164px; gap: 24px; padding: 16px; }
   .card h3 { font-size: 16px; }
