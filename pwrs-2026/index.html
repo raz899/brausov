@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Unbounded:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=52">
+  <link rel="stylesheet" href="css/styles.css?v=57">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
@@ -33,6 +33,7 @@
       <li><a href="#partners">Партнеры</a></li>
       <li><a href="#clients">Клиенты</a></li>
       <li><a href="#solutions">Решения</a></li>
+      <li><a href="#solutions-alt">Решения 2</a></li>
       <li><a href="#history">История</a></li>
       <li><a href="#map">На карте</a></li>
       <li><a href="#gallery">Галерея</a></li>
@@ -46,6 +47,7 @@
     <a class="sidenav__link" href="#partners"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Партнеры</span></a>
     <a class="sidenav__link" href="#clients"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Клиенты</span></a>
     <a class="sidenav__link" href="#solutions"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Решения</span></a>
+    <a class="sidenav__link" href="#solutions-alt"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Решения 2</span></a>
     <a class="sidenav__link" href="#history"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>История</span></a>
     <a class="sidenav__link" href="#map"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>На карте</span></a>
     <a class="sidenav__link" href="#gallery"><img src="assets/nav-dot.svg" alt="" width="16" height="16"><span>Галерея</span></a>
@@ -305,7 +307,98 @@
     <section class="screen screen--solutions" id="solutions">
       <div class="wrap">
         <h2>Отраслевые решения</h2>
+        <div class="solutions-progress" role="group" aria-label="Этапы решений">
+          <button class="solutions-progress__item is-active" type="button" data-solutions-go="0" aria-label="Этап 1"><span></span></button>
+          <button class="solutions-progress__item" type="button" data-solutions-go="1" aria-label="Этап 2"><span></span></button>
+          <button class="solutions-progress__item" type="button" data-solutions-go="2" aria-label="Этап 3"><span></span></button>
+        </div>
         <div class="solutions" data-step="0">
+          <div class="solutions__row is-active" data-step="0">
+            <article class="solution">
+              <img src="assets/sol-1.png" alt="Склад фулфилмента">
+              <div class="solution__body">
+                <h3>3PL фулфилмент</h3>
+                <p>Хранение, комплектация, товарный учет, документальное сопровождение и возможность заказа транспортных услуг</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/services-3pl" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-2.png" alt="Производство резиновых смесей">
+              <div class="solution__body">
+                <h3>Резиновые смеси <br></h3>
+                <p>Контрактное производство резиновых смесей</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/services-rubber" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-3.png" alt="Резиновая крошка">
+              <div class="solution__body">
+                <h3>Резиновая крошка</h3>
+                <p>Для строительства, благоустройства, производства новых РТИ и шин</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/rubber-crumb" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+          </div>
+          <div class="solutions__row" data-step="1">
+            <article class="solution">
+              <img src="assets/sol-4.png" alt="Восстановление грузовой шины">
+              <div class="solution__body">
+                <h3>Восстановленные грузовые шины</h3>
+                <p>Технология премиального заводского восстановления</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/production-retread" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-5.png" alt="Склад колёс в сборе">
+              <div class="solution__body">
+                <h3>Колёса в сборе</h3>
+                <p>Изготовление и поставка собранных колёсных комплектов легковых, грузовых и специальных шин</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/production-wheels" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-6.png" alt="Ошиповка шины">
+              <div class="solution__body">
+                <h3>Шипование шин</h3>
+                <p>Заводская ошиповка легковых, грузовых и специальных шин</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/services-studding" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+          </div>
+          <div class="solutions__row" data-step="2">
+            <article class="solution">
+              <img src="assets/sol-7.png" alt="Шиповальный станок Studmatic">
+              <div class="solution__body">
+                <h3>Автоматический шиповальный станок Studmatic</h3>
+                <p>Для серийного шипования шин в заводских условиях</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/studmatic" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/sol-8.png" alt="Испытание шины">
+              <div class="solution__body">
+                <h3>Испытания шин</h3>
+                <p>Тестирование характеристик и подготовка к сертификации</p>
+                <a class="btn btn--line" href="https://www.davydovotyres.ru/engineering" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+            <article class="solution">
+              <img src="assets/tirexp.jpg" alt="Шинный Эксперт">
+              <div class="solution__body">
+                <h3>Шинный Эксперт</h3>
+                <p>Авторский медиа продукт о шинном рынке №1 в России</p>
+                <a class="btn btn--line" href="https://tirexp.ru/" target="_blank" rel="noopener">Узнать больше <img src="assets/arrow.svg" alt="" width="17" height="12"></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--solutions" id="solutions-alt">
+      <div class="wrap">
+        <h2>Решения 2</h2>
+        <div class="solutions solutions--stack" data-step="0">
           <div class="solutions__row is-active" data-step="0">
             <article class="solution">
               <img src="assets/sol-1.png" alt="Склад фулфилмента">
@@ -722,6 +815,6 @@
         });
       }
     </script>
-    <script src="js/main.js?v=32"></script>
+    <script src="js/main.js?v=35"></script>
 </body>
 </html>

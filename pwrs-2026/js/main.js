@@ -15,7 +15,7 @@ menu.addEventListener("click", (event) => {
 });
 
 const links = [...document.querySelectorAll(".sidenav__link")];
-const sections = links.map((link) => document.querySelector(link.getAttribute("href")));
+const sections = [...document.querySelectorAll("main > .screen")];
 const activeIcon = "assets/nav-active.svg";
 const idleIcon = "assets/nav-dot.svg";
 
@@ -34,12 +34,13 @@ function syncMark(id) {
 const spy = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
+    const navId = entry.target.dataset.nav || entry.target.id;
     links.forEach((link) => {
-      const on = link.getAttribute("href") === `#${entry.target.id}`;
+      const on = link.getAttribute("href") === `#${navId}`;
       link.classList.toggle("is-active", on);
       link.querySelector("img").src = on ? activeIcon : idleIcon;
     });
-    if (!desktop.matches) syncMark(entry.target.id);
+    if (!desktop.matches) syncMark(navId);
   });
 }, { root: desktop.matches ? scroller : null, threshold: 0.6 });
 
@@ -56,8 +57,9 @@ function currentIndex() {
 
 function goTo(index) {
   const next = Math.max(0, Math.min(sections.length - 1, index));
-  syncMark(sections[next].id);
-  sections[next].scrollIntoView({ behavior: "smooth", block: "start" });
+  const target = sections[next];
+  syncMark(target.dataset.nav || target.id);
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 const historySection = document.querySelector("#history");
@@ -104,6 +106,11 @@ function setSolutionsStep(step) {
   board.querySelectorAll(".solutions__row").forEach((row) => {
     row.classList.toggle("is-active", Number(row.dataset.step) === step);
   });
+  solutionsSection.querySelectorAll("[data-solutions-go]").forEach((item) => {
+    const itemStep = Number(item.dataset.solutionsGo);
+    item.classList.toggle("is-active", itemStep === step);
+    item.classList.toggle("is-passed", itemStep < step);
+  });
 }
 
 function moveSolutions(direction) {
@@ -118,6 +125,35 @@ function moveSolutions(direction) {
   }
   if (direction > 0 && index + 1 === solutionsIndex) setSolutionsStep(0);
   if (direction < 0 && index - 1 === solutionsIndex) setSolutionsStep(solutionsLast);
+  return false;
+}
+
+const solutionsAltSection = document.querySelector("#solutions-alt");
+const solutionsAltIndex = sections.indexOf(solutionsAltSection);
+const solutionsAltLast = 2;
+let solutionsAltStep = 0;
+
+function setSolutionsAltStep(step) {
+  solutionsAltStep = step;
+  const board = solutionsAltSection.querySelector(".solutions--stack");
+  board.dataset.step = String(step);
+  board.querySelectorAll(".solutions__row").forEach((row) => {
+    row.classList.toggle("is-active", Number(row.dataset.step) === step);
+  });
+}
+
+function moveSolutionsAlt(direction) {
+  const index = currentIndex();
+  if (index === solutionsAltIndex) {
+    const next = solutionsAltStep + direction;
+    if (next >= 0 && next <= solutionsAltLast) {
+      setSolutionsAltStep(next);
+      return true;
+    }
+    return false;
+  }
+  if (direction > 0 && index + 1 === solutionsAltIndex) setSolutionsAltStep(0);
+  if (direction < 0 && index - 1 === solutionsAltIndex) setSolutionsAltStep(solutionsAltLast);
   return false;
 }
 
@@ -163,6 +199,7 @@ function moveClients(direction) {
 function moveScreen(direction) {
   if (moveClients(direction)) return 900;
   if (moveSolutions(direction)) return 700;
+  if (moveSolutionsAlt(direction)) return 700;
   if (moveHistory(direction)) return 700;
   return 0;
 }
@@ -170,7 +207,8 @@ function moveScreen(direction) {
 let wheelLock = false;
 scroller.addEventListener("scrollend", () => {
   if (!desktop.matches) return;
-  syncMark(sections[currentIndex()].id);
+  const active = sections[currentIndex()];
+  syncMark(active.dataset.nav || active.id);
 });
 
 scroller.addEventListener("wheel", (event) => {
@@ -230,6 +268,7 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
     if (!section) return;
     if (id === "#history") setHistoryStep(0);
     if (id === "#solutions") setSolutionsStep(0);
+    if (id === "#solutions-alt") setSolutionsAltStep(0);
     if (id === "#clients") setClientsSide("retail");
     syncMark(id.slice(1));
     event.preventDefault();
@@ -261,6 +300,10 @@ document.querySelectorAll(".clients__idle").forEach((button) => {
 
 historySection.querySelectorAll(".timeline__point").forEach((point) => {
   point.addEventListener("click", () => setHistoryStep(Number(point.dataset.step)));
+});
+
+solutionsSection.querySelectorAll("[data-solutions-go]").forEach((item) => {
+  item.addEventListener("click", () => setSolutionsStep(Number(item.dataset.solutionsGo)));
 });
 const photoPanel = document.querySelector('[data-panel="photo"]');
 const videoPanel = document.querySelector('[data-panel="video"]');
