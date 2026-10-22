@@ -100,6 +100,7 @@ const solutionsLast = 2;
 let solutionsStep = 0;
 
 function setSolutionsStep(step) {
+  if (!solutionsSection) return;
   solutionsStep = step;
   const board = solutionsSection.querySelector(".solutions");
   board.dataset.step = String(step);
@@ -320,7 +321,7 @@ historySection.querySelectorAll(".timeline__point").forEach((point) => {
   point.addEventListener("click", () => setHistoryStep(Number(point.dataset.step)));
 });
 
-solutionsSection.querySelectorAll("[data-solutions-go]").forEach((item) => {
+solutionsSection?.querySelectorAll("[data-solutions-go]").forEach((item) => {
   item.addEventListener("click", () => setSolutionsStep(Number(item.dataset.solutionsGo)));
 });
 const photoPanel = document.querySelector('[data-panel="photo"]');
