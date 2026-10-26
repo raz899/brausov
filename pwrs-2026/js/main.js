@@ -22,6 +22,82 @@ const idleIcon = "assets/nav-dot.svg";
 const scroller = document.querySelector("main");
 const desktop = window.matchMedia("(min-width: 1101px)");
 
+function writeHash(id) {
+  const url = new URL(location.href);
+  url.hash = id ? `#${id}` : "";
+  if (url.href === location.href) return;
+  history.replaceState(history.state, "", url);
+}
+
+function hashId(hash) {
+  try {
+    return decodeURIComponent(hash.replace(/^#/, ""));
+  } catch {
+    return hash.replace(/^#/, "");
+  }
+}
+
+function activeSection() {
+  const probe = window.innerHeight * 0.5;
+  let active = sections[0] || null;
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= probe) active = section;
+  });
+  return active;
+}
+
+let hashTarget = "";
+let hashTargetTimer = 0;
+
+function holdHash(id) {
+  hashTarget = id;
+  window.clearTimeout(hashTargetTimer);
+  hashTargetTimer = window.setTimeout(() => {
+    hashTarget = "";
+  }, 1500);
+}
+
+function releaseHash() {
+  hashTarget = "";
+  window.clearTimeout(hashTargetTimer);
+}
+
+function updateHash() {
+  const active = activeSection();
+  if (!active) return;
+  if (hashTarget) {
+    if (active.id !== hashTarget) return;
+    releaseHash();
+  }
+  writeHash(active.id);
+}
+
+let hashTimer = 0;
+
+function scheduleHashUpdate(delay = 120) {
+  window.clearTimeout(hashTimer);
+  hashTimer = window.setTimeout(updateHash, delay);
+}
+
+function scrollToSection(section, behavior = "smooth") {
+  const top = desktop.matches
+    ? section.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop
+    : section.getBoundingClientRect().top + window.scrollY;
+  const target = desktop.matches ? scroller : window;
+  target.scrollTo({ top, behavior });
+}
+
+scroller.addEventListener("scroll", () => scheduleHashUpdate(), { passive: true });
+window.addEventListener("scroll", () => scheduleHashUpdate(), { passive: true });
+scroller.addEventListener("scrollend", () => {
+  releaseHash();
+  updateHash();
+});
+window.addEventListener("scrollend", () => {
+  releaseHash();
+  updateHash();
+});
+
 const mark = document.querySelector(".mark");
 const markScreens = ["hero", "about", "partners"];
 
@@ -58,8 +134,9 @@ function currentIndex() {
 function goTo(index) {
   const next = Math.max(0, Math.min(sections.length - 1, index));
   const target = sections[next];
+  holdHash(target.id);
   syncMark(target.dataset.nav || target.id);
-  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  scrollToSection(target);
 }
 
 const historySection = document.querySelector("#history");
@@ -280,9 +357,10 @@ window.addEventListener("keydown", (event) => {
 document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((link) => {
   link.addEventListener("click", (event) => {
     const id = link.getAttribute("href");
-    if (!id || !id.startsWith("#") || !desktop.matches) return;
+    if (!id || !id.startsWith("#")) return;
     const section = document.querySelector(id);
-    if (!section) return;
+    if (!section || !sections.includes(section)) return;
+    event.preventDefault();
     if (id === "#history") setHistoryStep(0);
     if (id === "#solutions") setSolutionsStep(0);
     const stack = solutionStacks.find((item) => item.id === id);
@@ -290,8 +368,9 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
     if (id === "#solutions-alt2" && solutionsSlider) solutionsSlider.slideTo(0);
     if (id === "#clients") setClientsSide("retail");
     syncMark(id.slice(1));
-    event.preventDefault();
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    holdHash(section.id);
+    writeHash(section.id);
+    scrollToSection(section, "smooth");
   });
 });
 
@@ -544,3 +623,25 @@ document.querySelector(".tabs").addEventListener("click", (event) => {
   if (photo) gallery.update();
   else videoGallery.update();
 });
+
+/* Восстановление позиции по хэшу при загрузке: работает и в main, и в window. */
+const initialHash = location.hash;
+const initialSection = initialHash ? document.getElementById(hashId(initialHash)) : null;
+
+if (initialSection) {
+  const applyInitialHash = () => {
+    scrollToSection(initialSection, "instant");
+    if (!sections.includes(initialSection)) return;
+    syncMark(initialSection.id);
+    if (initialSection.id === "history") setHistoryStep(0);
+    if (initialSection.id === "solutions") setSolutionsStep(0);
+    if (initialSection.id === "clients") setClientsSide("retail", false);
+    const stack = solutionStacks.find((item) => item.id === `#${initialSection.id}`);
+    if (stack) setStackStep(stack, 0, 1);
+    if (initialSection.id === "solutions-alt2" && solutionsSlider) solutionsSlider.slideTo(0);
+  };
+  applyInitialHash();
+  window.addEventListener("load", () => {
+    if (location.hash === initialHash) applyInitialHash();
+  });
+}
