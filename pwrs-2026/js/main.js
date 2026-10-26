@@ -462,7 +462,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !videoModal.hidden) closeVideoModal();
 });
 
-const CITIES_ENDPOINT = "https://b2b.4tochki.ru/export_data/sto/jfp.json";
+const UNIT_COUNT_ENDPOINT = "https://b2b.4tochki.ru/export_data/info/unit_count.json";
 const centersPill = document.querySelector("[data-centers-pill]");
 const branchNodes = document.querySelectorAll("[data-branches]");
 const partnerNodes = document.querySelectorAll("[data-partner-centers]");
@@ -491,26 +491,26 @@ function fillNodes(nodes, text) {
 }
 
 if (centersPill || branchNodes.length || partnerNodes.length) {
-  fetch(CITIES_ENDPOINT)
+  fetch(UNIT_COUNT_ENDPOINT)
     .then((response) => (response.ok ? response.json() : Promise.reject(new Error(response.status))))
     .then((data) => {
-      const counts = data.counts || {};
-      const branches = Number(counts.branches) || 0;
-      const partner = Number(counts.partnerServiceCenters) || 0;
-      if (centersPill && partner) {
+      const counts = data || {};
+      const branches = Number(counts["КоличествоПодразделений"]);
+      const partner = Number(counts["КоличествоСервисныхЦентров"]);
+      if (centersPill && Number.isInteger(partner) && partner >= 0) {
         centersPill.textContent = withCount(
           partner,
           ["сервисный центр", "сервисных центра", "сервисных центров"],
           ["service center", "service centers"],
         );
       }
-      if (branchNodes.length && branches) {
+      if (branchNodes.length && Number.isInteger(branches) && branches >= 0) {
         fillNodes(
           branchNodes,
           withCount(branches, ["филиал", "филиала", "филиалов"], ["branch", "branches"]),
         );
       }
-      if (partnerNodes.length && partner) {
+      if (partnerNodes.length && Number.isInteger(partner) && partner >= 0) {
         fillNodes(
           partnerNodes,
           withCount(
