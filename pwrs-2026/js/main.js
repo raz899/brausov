@@ -386,7 +386,7 @@ lang.addEventListener("click", (event) => {
   }
   if (!location.hash) return;
   event.preventDefault();
-  const file = link.dataset.lang === "en" ? "index_en.html" : "index.html";
+  const file = link.dataset.lang === "en" ? "/en/index.html" : "index.html";
   location.href = file + location.hash;
 });
 
