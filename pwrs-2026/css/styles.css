@@ -1622,6 +1622,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .solutions, .contacts__grid { flex-direction: column; display: flex; }
   .solutions { display: flex; height: auto; gap: 12px; }
   .screen--solutions { padding-top: 50px; }
+  .screen--history { min-height: auto; }
   .timeline {
     display: flex;
     justify-content: space-between;
@@ -1647,7 +1648,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   }
   .timeline__point.is-active { gap: 12px; }
   .timeline__point.is-active .timeline__label { font-size: 15px; }
-  .history-pane { padding: 24px 20px; align-self: start; }
+  .history-pane { display: none; padding: 24px 20px; align-self: start; }
+  .history-pane.is-active { display: block; }
   .history-pane h3 { font-size: 16px; }
   .history-pane time { font-size: 12px; }
   .history-pane p { font-size: 12px; }
