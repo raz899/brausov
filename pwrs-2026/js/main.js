@@ -99,7 +99,7 @@ window.addEventListener("scrollend", () => {
 });
 
 const mark = document.querySelector(".mark");
-const markScreens = ["hero", "about", "partners"];
+const markScreens = ["main", "about", "partners"];
 
 function syncMark(id) {
   const step = markScreens.indexOf(id);
@@ -365,7 +365,7 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
     if (id === "#solutions") setSolutionsStep(0);
     const stack = solutionStacks.find((item) => item.id === id);
     if (stack) setStackStep(stack, 0, 1);
-    if (id === "#solutions-alt2" && solutionsSlider) solutionsSlider.slideTo(0);
+    if (id === "#solutions" && solutionsSlider) solutionsSlider.slideTo(0);
     if (id === "#clients") setClientsSide("retail");
     syncMark(id.slice(1));
     holdHash(section.id);
@@ -374,7 +374,7 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
   });
 });
 
-syncMark(location.hash.replace("#", "") || "hero");
+syncMark(location.hash.replace("#", "") || "main");
 
 const lang = document.querySelector(".lang");
 lang.addEventListener("click", (event) => {
@@ -446,7 +446,7 @@ videoPanel.querySelectorAll(".gallery__slide").forEach((slide) => {
   slide.querySelector(".gallery__play").addEventListener("click", () => openVideoModal(video));
 });
 
-const solutionsSliderSection = document.querySelector("#solutions-alt2");
+const solutionsSliderSection = document.querySelector("#solutions");
 let solutionsSlider = null;
 let solutionsSliderIndex = -1;
 if (solutionsSliderSection) {
@@ -638,7 +638,7 @@ if (initialSection) {
     if (initialSection.id === "clients") setClientsSide("retail", false);
     const stack = solutionStacks.find((item) => item.id === `#${initialSection.id}`);
     if (stack) setStackStep(stack, 0, 1);
-    if (initialSection.id === "solutions-alt2" && solutionsSlider) solutionsSlider.slideTo(0);
+    if (initialSection.id === "solutions" && solutionsSlider) solutionsSlider.slideTo(0);
   };
   applyInitialHash();
   window.addEventListener("load", () => {
