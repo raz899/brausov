@@ -16,8 +16,8 @@ menu.addEventListener("click", (event) => {
 
 const links = [...document.querySelectorAll(".sidenav__link")];
 const sections = [...document.querySelectorAll("main > .screen")];
-const activeIcon = "assets/nav-active.svg";
-const idleIcon = "assets/nav-dot.svg";
+const activeIcon = "/assets/nav-active.svg";
+const idleIcon = "/assets/nav-dot.svg";
 
 const scroller = document.querySelector("main");
 const desktop = window.matchMedia("(min-width: 1101px)");
