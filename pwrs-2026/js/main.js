@@ -171,41 +171,6 @@ function moveHistory(direction) {
   return false;
 }
 
-const solutionsSection = document.querySelector("#solutions");
-const solutionsIndex = sections.indexOf(solutionsSection);
-const solutionsLast = 2;
-let solutionsStep = 0;
-
-function setSolutionsStep(step) {
-  if (!solutionsSection) return;
-  solutionsStep = step;
-  const board = solutionsSection.querySelector(".solutions");
-  board.dataset.step = String(step);
-  board.querySelectorAll(".solutions__row").forEach((row) => {
-    row.classList.toggle("is-active", Number(row.dataset.step) === step);
-  });
-  solutionsSection.querySelectorAll("[data-solutions-go]").forEach((item) => {
-    const itemStep = Number(item.dataset.solutionsGo);
-    item.classList.toggle("is-active", itemStep === step);
-    item.classList.toggle("is-passed", itemStep < step);
-  });
-}
-
-function moveSolutions(direction) {
-  const index = currentIndex();
-  if (index === solutionsIndex) {
-    const next = solutionsStep + direction;
-    if (next >= 0 && next <= solutionsLast) {
-      setSolutionsStep(next);
-      return true;
-    }
-    return false;
-  }
-  if (direction > 0 && index + 1 === solutionsIndex) setSolutionsStep(0);
-  if (direction < 0 && index - 1 === solutionsIndex) setSolutionsStep(solutionsLast);
-  return false;
-}
-
 const solutionStacks = [...document.querySelectorAll(".solutions--stack")].map((board) => {
   const section = board.closest(".screen");
   return {
@@ -291,7 +256,6 @@ function moveClients(direction) {
 
 function moveScreen(direction) {
   if (moveClients(direction)) return 900;
-  if (moveSolutions(direction)) return 700;
   if (moveStacks(direction)) return 1200;
   if (moveSolutionsSlider(direction)) return 900;
   if (moveHistory(direction)) return 700;
@@ -362,7 +326,6 @@ document.querySelectorAll(".sidenav__link, .menu a, .hero-actions a").forEach((l
     if (!section || !sections.includes(section)) return;
     event.preventDefault();
     if (id === "#history") setHistoryStep(0);
-    if (id === "#solutions") setSolutionsStep(0);
     const stack = solutionStacks.find((item) => item.id === id);
     if (stack) setStackStep(stack, 0, 1);
     if (id === "#solutions" && solutionsSlider) solutionsSlider.slideTo(0);
@@ -400,9 +363,6 @@ historySection.querySelectorAll(".timeline__point").forEach((point) => {
   point.addEventListener("click", () => setHistoryStep(Number(point.dataset.step)));
 });
 
-solutionsSection?.querySelectorAll("[data-solutions-go]").forEach((item) => {
-  item.addEventListener("click", () => setSolutionsStep(Number(item.dataset.solutionsGo)));
-});
 const photoPanel = document.querySelector('[data-panel="photo"]');
 const videoPanel = document.querySelector('[data-panel="video"]');
 const en = document.documentElement.lang === "en";
@@ -634,7 +594,6 @@ if (initialSection) {
     if (!sections.includes(initialSection)) return;
     syncMark(initialSection.id);
     if (initialSection.id === "history") setHistoryStep(0);
-    if (initialSection.id === "solutions") setSolutionsStep(0);
     if (initialSection.id === "clients") setClientsSide("retail", false);
     const stack = solutionStacks.find((item) => item.id === `#${initialSection.id}`);
     if (stack) setStackStep(stack, 0, 1);
