@@ -1,3 +1,12 @@
+/* Tilda Sans variable webfont, distributed by Tilda: https://tilda.cc/lp/tildasans/ */
+@font-face {
+  font-family: "Tilda Sans";
+  src: url("../fonts/TildaSans-VF.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+}
+
 :root {
   --paper: #f5f6f8;
   --paper-2: #eef0f3;
@@ -6,10 +15,12 @@
   --ink-soft: #3d4d55;
   --muted: #6b7280;
   --line: #e3e6ea;
+  --brand-orange: #F07F14;
+  --brand-orange-hover: #d66d0b;
   --blue: #ff7a1a;
   --blue-deep: #d95d00;
   --blue-soft: #fff1e6;
-  --lime: #ff8300;
+  --lime: var(--brand-orange);
   --lime-ink: #ffffff;
   --on-dark: #f4f3ef;
   --on-dark-muted: #c7cbd1;
@@ -22,8 +33,8 @@
   --r-l: 28px;
   --e-out: cubic-bezier(0.22, 1, 0.36, 1);
   --e-io: cubic-bezier(0.65, 0, 0.35, 1);
-  --font-d: "Onest", "Segoe UI", system-ui, sans-serif;
-  --font-b: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --font-d: "Tilda Sans", "Segoe UI", system-ui, sans-serif;
+  --font-b: "Tilda Sans", "Segoe UI", system-ui, sans-serif;
   --bg: var(--paper);
   --fg: var(--ink);
   --card: var(--surface);
@@ -45,7 +56,7 @@
   --fg-muted: #aab0ba;
   --paper-2: #1d2127;
   --dark-section: #20242b;
-  --lime: #ff963f;
+  --lime: var(--brand-orange);
 }
 *,
 *:before,
@@ -183,23 +194,20 @@ select {
   width: 100%;
 }
 .btn-primary {
-  --btn-bg: var(--accent);
-  color: var(--accent-fg);
+  --btn-bg: var(--brand-orange);
+  color: #fff;
   box-shadow: 0 8px 20px -12px
-    color-mix(in srgb, var(--accent) 70%, transparent);
+    color-mix(in srgb, var(--brand-orange) 70%, transparent);
 }
 .btn-primary:hover {
-  --btn-bg: var(--blue-deep);
-}
-[data-theme="dark"] .btn-primary:hover {
-  --btn-bg: #ffad69;
+  --btn-bg: var(--brand-orange-hover);
 }
 .btn-lime {
   --btn-bg: var(--lime);
   color: var(--lime-ink);
 }
 .btn-lime:hover {
-  --btn-bg: #e96e00;
+  --btn-bg: var(--brand-orange-hover);
 }
 .btn-ghost {
   border-color: currentColor;
@@ -718,11 +726,18 @@ select {
 }
 .network-copy .eyebrow {
   color: #ffffffd1;
+  font-size: 1.58rem;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+.network-copy .eyebrow .dot {
+  flex: 0 0 8px;
 }
 .network-copy h2 {
   max-width: 17ch;
   font-size: clamp(2.6rem, 6.4vw, 6.4rem);
-  line-height: 0.92;
+  line-height: 1.08;
   letter-spacing: -0.055em;
   text-shadow: 0 2px 30px rgba(0, 0, 0, 0.34);
 }
@@ -1374,6 +1389,13 @@ select {
   text-transform: uppercase;
   color: var(--fg-muted);
 }
+.format-commission {
+  margin-top: 1.5rem;
+}
+.format-commission p {
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
 .panel-col ul {
   display: grid;
   gap: 0.6rem;
@@ -1677,6 +1699,10 @@ select {
 .step-line p {
   color: var(--fg-muted);
   max-width: 58ch;
+}
+.step-line a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 .steps-note {
   margin-top: 1.6rem;
@@ -2323,12 +2349,12 @@ select {
     gap: 0.6rem;
   }
   .network-copy .eyebrow {
-    font-size: 0.68rem;
+    font-size: 1.36rem;
   }
   .network-copy h2 {
     max-width: 16ch;
     font-size: clamp(1.75rem, 8.6vw, 2.6rem);
-    line-height: 0.92;
+    line-height: 1.08;
   }
   .network-copy-pane > p:last-child {
     display: none;
