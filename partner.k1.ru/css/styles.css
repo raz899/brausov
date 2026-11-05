@@ -638,7 +638,8 @@ select {
   overflow: hidden;
   background: #171b25;
 }
-.process-shot img {
+.process-shot img,
+.process-pay-links {
   position: absolute;
   top: 0;
   right: 0;
@@ -650,6 +651,14 @@ select {
   transition:
     transform 0.8s var(--e-out),
     filter 0.5s var(--e-out);
+}
+.process-pay-links {
+  z-index: 2;
+  pointer-events: none;
+}
+.process-qr-link {
+  pointer-events: all;
+  cursor: pointer;
 }
 .process-shot:after {
   content: "";
@@ -689,7 +698,8 @@ select {
   font-size: 0.94rem;
 }
 @media (hover: hover) {
-  .process-shot:hover img {
+  .process-shot:hover img,
+  .process-shot:hover .process-pay-links {
     transform: scale(1.025);
     filter: saturate(1.08) contrast(1.03);
   }
