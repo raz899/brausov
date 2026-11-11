@@ -296,10 +296,14 @@ select {
   height: 42px;
   object-fit: contain;
 }
+.brand-logo.dark {
+  display: none;
+}
 [data-theme="dark"] .site-header .brand-logo {
-  background: #fff;
-  border-radius: 10px;
-  padding: 4px 8px;
+  display: none;
+}
+[data-theme="dark"] .site-header .brand-logo.dark {
+  display: block;
 }
 .nav-desktop {
   display: none;
